@@ -39,14 +39,14 @@ export default function ImpressumPage() {
           <div>
             <p className="eyebrow">Berufsbezeichnung</p>
             <p className="mt-2">
-              Ärztin – verliehen in [wird ergänzt]. Fachärztin für Innere Medizin und Kardiologie.
+              Ärztin, verliehen in [wird ergänzt]. Fachärztin für Innere Medizin und Kardiologie.
             </p>
           </div>
 
           <div id="aufsichtsbehoerden">
             <p className="eyebrow">Aufsichtsbehörden</p>
-            <p className="mt-2">Ärztekammer des Saarlandes – [wird ergänzt]</p>
-            <p>Kassenärztliche Vereinigung Saarland – [wird ergänzt]</p>
+            <p className="mt-2">Ärztekammer des Saarlandes, [wird ergänzt]</p>
+            <p>Kassenärztliche Vereinigung Saarland, [wird ergänzt]</p>
           </div>
 
           <div>

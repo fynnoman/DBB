@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import PlaceholderImage from "./PlaceholderImage";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -46,10 +46,9 @@ export default function ParallaxImage({
         style={{ y, scale }}
         className="absolute inset-0 will-change-transform"
       >
-        <Image
+        <PlaceholderImage
           src={src}
           alt={alt}
-          fill
           sizes={sizes}
           priority={priority}
           quality={72}

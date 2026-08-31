@@ -21,11 +21,11 @@ export default function AboutSection() {
           <ParallaxImage
             src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1400&auto=format&fit=crop"
             alt="Dr. medic Denisa Babeanu-Bauer"
-            className="aspect-[3/4] w-full max-w-md mx-auto md:max-w-none"
+            className="aspect-[4/5] sm:aspect-[3/4] w-full max-w-sm sm:max-w-md mx-auto md:max-w-none"
             intensity={70}
             sizes="(min-width: 768px) 40vw, 90vw"
           />
-          <p className="mt-3 text-center md:text-left text-xs uppercase tracking-brand-wide text-forest-500">
+          <p className="mt-3 text-center md:text-left text-[11px] sm:text-xs uppercase tracking-brand-wide text-forest-500">
             Portraitfoto wird ergänzt
           </p>
         </motion.div>
@@ -49,7 +49,7 @@ export default function AboutSection() {
             individueller Prävention und einer verständlichen Sprache.
           </p>
 
-          <ul className="mt-8 md:mt-10 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-7 sm:mt-8 md:mt-10 grid gap-3 sm:gap-3.5 grid-cols-1 sm:grid-cols-2">
             <Fact label="Ausbildung" value="Facharztausbildung Kardiologie" />
             <Fact label="Schwerpunkt" value="Echokardiographie, Speckle Tracking" />
             <Fact label="Zusatzfokus" value="Cardio-Onkologie · Frauenherz" />
@@ -74,9 +74,11 @@ export default function AboutSection() {
 
 function Fact({ label, value }: { label: string; value: string }) {
   return (
-    <li className="glass rounded-2xl p-4">
+    <li className="glass rounded-2xl p-4 sm:p-4">
       <p className="eyebrow">{label}</p>
-      <p className="mt-1 font-serif text-lg text-forest-800">{value}</p>
+      <p className="mt-1.5 font-serif text-[17px] sm:text-lg leading-snug text-forest-800">
+        {value}
+      </p>
     </li>
   );
 }

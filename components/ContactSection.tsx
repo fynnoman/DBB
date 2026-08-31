@@ -30,13 +30,16 @@ export default function ContactSection() {
               <InfoRow label="Sprechzeiten" value={site.hours} />
             </div>
 
-            <div className="mt-8 md:mt-10 glass rounded-2xl border border-gold-400/40 p-4">
+            <div className="mt-8 md:mt-10 glass rounded-2xl border border-gold-400/40 p-4 sm:p-5">
               <p className="text-[11px] uppercase tracking-brand-wide text-gold-500">
                 Kein Notfalldienst
               </p>
-              <p className="mt-1 text-sm text-forest-800">
+              <p className="mt-1.5 text-sm sm:text-[15px] text-forest-800 leading-relaxed">
                 Bei akuten Beschwerden wählen Sie bitte{" "}
-                <a href="tel:112" className="font-semibold underline underline-offset-2">
+                <a
+                  href="tel:112"
+                  className="font-semibold underline underline-offset-2 inline-flex min-h-[24px] items-center"
+                >
                   112
                 </a>.
               </p>
@@ -117,11 +120,11 @@ export default function ContactSection() {
 
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 border-b border-forest-800/10 pb-3">
+    <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 border-b border-forest-800/10 pb-3 sm:pb-3.5">
       <span className="sm:w-28 shrink-0 text-[10px] uppercase tracking-brand-wide text-forest-500">
         {label}
       </span>
-      <span className="font-serif text-forest-800 text-base sm:text-lg leading-tight">
+      <span className="font-serif text-forest-800 text-[15px] sm:text-lg leading-snug break-words min-w-0">
         {value}
       </span>
     </div>

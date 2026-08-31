@@ -1,27 +1,17 @@
 "use client";
 
-import Image from "next/image";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import PlaceholderImage from "./PlaceholderImage";
 import { site } from "@/lib/site";
 
 const HERO_IMG =
   "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?q=80&w=1600&auto=format&fit=crop";
 
 export default function Hero() {
-  const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], reduced ? [0, 0] : [0, 140]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 1], reduced ? [1, 1] : [1, 1.06]);
 
   return (
     <section
-      ref={ref}
       className="relative w-full overflow-hidden bg-ivory-50 min-h-[100dvh]"
       style={{ paddingTop: "calc(var(--sait) + 88px)" }}
     >
@@ -31,12 +21,9 @@ export default function Hero() {
         <div className="bg-noise relative h-full w-full" />
       </div>
 
-      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 gap-8 px-4 md:grid-cols-12 md:gap-10 md:px-8 md:pt-24 lg:pt-32">
+      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 gap-8 px-4 sm:gap-10 sm:px-6 md:grid-cols-12 md:gap-10 md:px-8 md:pt-24 lg:pt-32">
         {/* Left: editorial text block */}
-        <motion.div
-          style={{ opacity }}
-          className="md:col-span-6 flex flex-col"
-        >
+        <div className="md:col-span-6 flex flex-col">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -50,7 +37,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-5 md:mt-6 font-serif text-forest-800 leading-[0.98] tracking-brand-tight text-[clamp(2.25rem,10vw,5.5rem)]"
+            className="mt-4 sm:mt-5 md:mt-6 font-serif text-forest-800 leading-[0.98] tracking-brand-tight text-[clamp(2rem,10vw,5.5rem)]"
           >
             Ihre Gesundheit
             <span className="block italic text-forest-700">
@@ -63,7 +50,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 md:mt-8 max-w-xl text-base md:text-lg leading-relaxed text-forest-700/90"
+            className="mt-5 sm:mt-6 md:mt-8 max-w-xl text-[15px] sm:text-base md:text-lg leading-relaxed text-forest-700/90"
           >
             {site.claim}
           </motion.p>
@@ -72,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
+            className="mt-7 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
           >
             <a
               href={site.doctolibUrl}
@@ -95,7 +82,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.5 }}
-            className="mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 md:pb-10 md:pr-6"
+            className="mt-8 sm:mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:pb-10 md:pr-6"
           >
             <MetaItem
               label="Adresse"
@@ -104,18 +91,14 @@ export default function Hero() {
             <MetaItem label="Sprechzeiten" value={site.hours} />
             <MetaItem label="Ausrichtung" value={site.audience} />
           </motion.div>
-        </motion.div>
+        </div>
 
-        {/* Right: parallax card with portrait/ambient */}
-        <motion.div
-          style={{ y, scale }}
-          className="md:col-span-6 relative pb-16 md:pb-0"
-        >
-          <div className="relative h-[60dvh] max-h-[560px] md:h-[78dvh] md:max-h-none w-full overflow-hidden rounded-[28px] md:rounded-[36px] ring-1 ring-forest-800/10 bg-forest-900">
-            <Image
+        {/* Right: hero card with portrait/ambient */}
+        <div className="md:col-span-6 relative pb-16 md:pb-0">
+          <div className="relative h-[56dvh] max-h-[520px] sm:h-[60dvh] sm:max-h-[560px] md:h-[78dvh] md:max-h-none w-full overflow-hidden rounded-[24px] sm:rounded-[28px] md:rounded-[36px] ring-1 ring-forest-800/10 bg-forest-900">
+            <PlaceholderImage
               src={HERO_IMG}
               alt="Kardiologische Diagnostik"
-              fill
               priority
               fetchPriority="high"
               sizes="(min-width: 768px) 50vw, 100vw"
@@ -126,14 +109,14 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-tr from-forest-900/55 via-forest-900/10 to-transparent" />
 
             {/* liquid glass badge */}
-            <div className="absolute left-4 top-4 md:left-6 md:top-6">
-              <div className="glass rounded-full px-3.5 py-2 text-[10px] md:text-[11px] uppercase tracking-brand-wide text-forest-800">
+            <div className="absolute left-3 top-3 sm:left-4 sm:top-4 md:left-6 md:top-6">
+              <div className="glass rounded-full px-3 py-1.5 sm:px-3.5 sm:py-2 text-[10px] md:text-[11px] uppercase tracking-brand-wide text-forest-800">
                 Privatpraxis · Saarpfalz
               </div>
             </div>
 
             {/* signature block */}
-            <div className="absolute inset-x-4 bottom-4 md:inset-x-6 md:bottom-6">
+            <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 md:inset-x-6 md:bottom-6">
               <div className="glass-dark rounded-2xl px-4 py-3.5 md:px-6 md:py-5 text-ivory-50">
                 <p className="eyebrow text-gold-300">Ihre Kardiologin</p>
                 <p className="mt-1 font-serif text-xl md:text-3xl leading-tight">
@@ -146,22 +129,38 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* floating vitals card — desktop only */}
+          {/* floating info card with continuous figure-8 motion */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.7 }}
-            className="hidden lg:block absolute -left-8 top-20"
+            animate={
+              reduced
+                ? { opacity: 1, y: 0 }
+                : {
+                    opacity: 1,
+                    x: [0, 4, 5, 4, 0, -4, -5, -4, 0],
+                    y: [0, 2.5, 0, -2.5, 0, 2.5, 0, -2.5, 0],
+                  }
+            }
+            transition={
+              reduced
+                ? { duration: 0.6 }
+                : {
+                    opacity: { duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] },
+                    x: { duration: 12, ease: "linear", repeat: Infinity, delay: 0.9 },
+                    y: { duration: 12, ease: "linear", repeat: Infinity, delay: 0.9 },
+                  }
+            }
+            className="hidden md:block absolute -left-6 top-16 lg:-left-8 lg:top-20 will-change-transform"
           >
-            <div className="glass rounded-2xl px-4 py-3 w-[220px]">
-              <p className="eyebrow">Live · Echo</p>
-              <p className="mt-1 font-serif text-forest-800 text-2xl">
-                LV-EF 62<span className="text-gold-400">%</span>
+            <div className="glass rounded-2xl px-4 py-3 w-[240px] lg:w-[260px]">
+              <p className="eyebrow">Standort</p>
+              <p className="mt-1 font-serif text-forest-800 text-lg lg:text-xl leading-snug">
+                Ihre kardiologische Praxis in{" "}
+                <span className="italic text-gold-400">St. Ingbert</span>
               </p>
-              <SineWave />
             </div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
 
       {/* scroll cue — hidden on mobile to avoid overlap with floating CTA */}
@@ -202,19 +201,6 @@ function Arrow() {
         strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function SineWave() {
-  return (
-    <svg viewBox="0 0 200 40" className="mt-2 h-8 w-full text-gold-400">
-      <path
-        d="M0 20 Q 15 5, 30 20 T 60 20 T 90 20 L 100 6 L 108 34 L 116 12 L 124 28 L 132 20 T 200 20"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.4"
       />
     </svg>
   );

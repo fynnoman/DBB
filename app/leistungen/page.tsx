@@ -31,7 +31,7 @@ export default function LeistungenPage() {
             Früh erkennen. <span className="italic text-gold-300">Klar handeln.</span>
           </>
         }
-        paragraph="Ein individueller kardiologischer Check-up gibt Ihnen Sicherheit – und schafft die Grundlage, um Ihr Herz nachhaltig zu schützen."
+        paragraph="Ein individueller kardiologischer Check-up gibt Ihnen Sicherheit und schafft die Grundlage, um Ihr Herz nachhaltig zu schützen."
       />
 
       <section className="bg-ivory-50 py-20 sm:py-24 md:py-32 cv-auto">

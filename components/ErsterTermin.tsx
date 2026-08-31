@@ -20,7 +20,7 @@ export default function ErsterTermin() {
             </h2>
             <p className="mt-6 md:mt-8 max-w-xl text-[15px] md:text-lg leading-relaxed text-ivory-100/90">
               Bei Ihrer ersten Vorstellung erfolgen eine ausführliche Anamnese, eine körperliche
-              Untersuchung, ein EKG sowie eine Echokardiographie — bei Bedarf einschließlich
+              Untersuchung, ein EKG sowie eine Echokardiographie, bei Bedarf einschließlich
               Speckle Tracking. Weitere Untersuchungen richten sich gezielt nach Ihren Beschwerden
               und dem individuellen Krankheitsbild.
             </p>
@@ -29,17 +29,17 @@ export default function ErsterTermin() {
               Medikamentenliste und Informationen zu Allergien mit.
             </p>
 
-            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full border border-gold-300/40 px-4 py-2 text-[11px] uppercase tracking-brand-wide text-gold-200 min-h-[40px]">
+            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-2.5 sm:gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-gold-300/40 px-3.5 sm:px-4 py-2 text-[10.5px] sm:text-[11px] uppercase tracking-brand-wide text-gold-200 min-h-[40px]">
                 Datenschutzformular · wird ergänzt
               </span>
-              <span className="inline-flex items-center gap-2 rounded-full border border-gold-300/40 px-4 py-2 text-[11px] uppercase tracking-brand-wide text-gold-200 min-h-[40px]">
+              <span className="inline-flex items-center gap-2 rounded-full border border-gold-300/40 px-3.5 sm:px-4 py-2 text-[10.5px] sm:text-[11px] uppercase tracking-brand-wide text-gold-200 min-h-[40px]">
                 Anamnesebogen · wird ergänzt
               </span>
               <button
                 type="button"
                 onClick={() => typeof window !== "undefined" && window.print()}
-                className="inline-flex items-center gap-2 rounded-full bg-gold-300 px-5 py-3 text-sm font-semibold text-forest-800 hover:bg-gold-200 transition-colors min-h-[44px]"
+                className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-gold-300 px-5 py-3 text-sm font-semibold text-forest-800 hover:bg-gold-200 transition-colors min-h-[48px]"
               >
                 <Printer />
                 Checkliste drucken

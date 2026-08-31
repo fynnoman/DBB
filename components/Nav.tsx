@@ -80,14 +80,14 @@ export default function Nav() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Termin bei Doctolib buchen"
-                className="inline-flex items-center gap-1.5 rounded-full bg-forest-700 px-3 py-2 text-xs font-semibold text-ivory-50 min-h-[36px]"
+                className="inline-flex items-center gap-1.5 rounded-full bg-forest-700 px-3.5 text-xs font-semibold text-ivory-50 min-h-[44px]"
               >
                 <BookIcon />
                 Termin
               </a>
               <button
                 type="button"
-                className="grid h-10 w-10 place-items-center rounded-full text-forest-800 min-h-[44px] min-w-[44px]"
+                className="grid place-items-center rounded-full text-forest-800 min-h-[44px] min-w-[44px]"
                 onClick={() => setOpen((v) => !v)}
                 aria-label={open ? "Menü schließen" : "Menü öffnen"}
                 aria-expanded={open}

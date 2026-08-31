@@ -3,9 +3,9 @@ import { site } from "@/lib/site";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-forest-900 text-ivory-100 pt-16 sm:pt-20 pb-8 pb-safe">
-      <div className="mx-auto max-w-[1400px] px-4 md:px-8">
-        <div className="grid gap-10 md:gap-14 md:grid-cols-12">
+    <footer className="relative bg-forest-900 text-ivory-100 pt-14 sm:pt-20 pb-8 pb-safe">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-6 md:px-8">
+        <div className="grid gap-8 sm:gap-10 md:gap-14 md:grid-cols-12">
           <div className="md:col-span-5">
             <p className="font-serif text-2xl sm:text-3xl md:text-4xl leading-tight tracking-brand-tight">
               DBB <span className="italic text-gold-300">Kardio</span>
@@ -39,24 +39,24 @@ export default function Footer() {
 
             <div className="col-span-2 md:col-span-1">
               <p className="eyebrow text-gold-300">Information</p>
-              <ul className="mt-4 grid grid-cols-2 md:grid-cols-1 gap-y-1 gap-x-3 text-sm text-ivory-100/85">
+              <ul className="mt-4 grid grid-cols-2 md:grid-cols-1 gap-y-0.5 gap-x-3 text-sm text-ivory-100/85">
                 <li>
-                  <Link href="/impressum" prefetch={false} className="hover:text-gold-200 py-1 inline-block">
+                  <Link href="/impressum" prefetch={false} className="hover:text-gold-200 py-2 inline-flex min-h-[36px] items-center">
                     Impressum
                   </Link>
                 </li>
                 <li>
-                  <Link href="/datenschutz" prefetch={false} className="hover:text-gold-200 py-1 inline-block">
+                  <Link href="/datenschutz" prefetch={false} className="hover:text-gold-200 py-2 inline-flex min-h-[36px] items-center">
                     Datenschutz
                   </Link>
                 </li>
                 <li>
-                  <Link href="/impressum#aufsichtsbehoerden" prefetch={false} className="hover:text-gold-200 py-1 inline-block">
+                  <Link href="/impressum#aufsichtsbehoerden" prefetch={false} className="hover:text-gold-200 py-2 inline-flex min-h-[36px] items-center">
                     Aufsichtsbehörden
                   </Link>
                 </li>
                 <li>
-                  <Link href="/barrierefreiheit" prefetch={false} className="hover:text-gold-200 py-1 inline-block">
+                  <Link href="/barrierefreiheit" prefetch={false} className="hover:text-gold-200 py-2 inline-flex min-h-[36px] items-center">
                     Barrierefreiheit
                   </Link>
                 </li>
@@ -65,8 +65,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 sm:mt-16 flex flex-col-reverse gap-4 border-t border-ivory-100/10 pt-6 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-ivory-100/60">
+        <div className="mt-10 sm:mt-12 md:mt-16 flex flex-col-reverse gap-4 border-t border-ivory-100/10 pt-6 md:flex-row md:items-center md:justify-between">
+          <p className="text-[11px] sm:text-xs text-ivory-100/60 leading-relaxed">
             © 2026 DBB Kardiologische Privatpraxis Saarpfalz. Alle Rechte vorbehalten.
           </p>
           <a

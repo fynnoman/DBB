@@ -22,7 +22,7 @@ export default function UeberMichPage() {
           </h1>
           <p className="mt-5 md:mt-6 max-w-2xl text-[15px] md:text-lg leading-relaxed text-forest-700/90">
             Kardiologin in St. Ingbert. Ich arbeite für Menschen, die ihre Herzgesundheit ernst
-            nehmen — mit Zeit, Ruhe und einer klaren, verständlichen Sprache.
+            nehmen, mit Zeit, Ruhe und einer klaren, verständlichen Sprache.
           </p>
         </div>
       </section>

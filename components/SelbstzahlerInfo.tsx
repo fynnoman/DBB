@@ -35,7 +35,7 @@ export default function SelbstzahlerInfo() {
               Rechnung bleibt eine GOÄ-konforme Einzelabrechnung.
             </p>
 
-            <ul className="mt-6 md:mt-8 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-3">
+            <ul className="mt-6 md:mt-8 grid gap-2.5 sm:gap-4 grid-cols-1 sm:grid-cols-3">
               <Pill title="Privatpatienten" />
               <Pill title="Beihilfeberechtigte" />
               <Pill title="Selbstzahler" />
@@ -49,8 +49,8 @@ export default function SelbstzahlerInfo() {
 
 function Pill({ title }: { title: string }) {
   return (
-    <li className="glass rounded-2xl px-4 py-4 text-center">
-      <p className="font-serif text-forest-800 text-lg">{title}</p>
+    <li className="glass rounded-2xl px-4 py-3.5 sm:py-4 text-center">
+      <p className="font-serif text-forest-800 text-[17px] sm:text-lg">{title}</p>
     </li>
   );
 }

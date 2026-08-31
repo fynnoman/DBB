@@ -23,7 +23,7 @@ export default function HomePage() {
             <span className="italic text-gold-300">Funktion des Herzens.</span>
           </>
         }
-        paragraph="Hochauflösender Herzultraschall mit Speckle-Tracking-Analyse macht selbst feinste Veränderungen der Herzfunktion sichtbar – lange bevor sie Beschwerden verursachen."
+        paragraph="Hochauflösender Herzultraschall mit Speckle-Tracking-Analyse macht selbst feinste Veränderungen der Herzfunktion sichtbar, lange bevor sie Beschwerden verursachen."
       />
 
       <ServicesGrid />

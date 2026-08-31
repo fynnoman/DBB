@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import PlaceholderImage from "./PlaceholderImage";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -46,7 +46,7 @@ export default function PraxisGallery() {
           </div>
           <p className="md:col-span-5 md:col-start-8 text-[15px] md:text-lg leading-relaxed text-forest-700/85">
             Eigene Praxisfotos werden ergänzt. Bis dahin geben diese Aufnahmen einen Eindruck von
-            der Atmosphäre, die wir in der Poststraße 43 schaffen möchten — ruhig, hell, hochwertig.
+            der Atmosphäre, die wir in der Poststraße 43 schaffen möchten: ruhig, hell, hochwertig.
           </p>
         </div>
 
@@ -55,10 +55,10 @@ export default function PraxisGallery() {
             <GalleryItem {...rows[0]} className="aspect-[4/3]" />
           </motion.div>
           <motion.div style={{ y: y2 }} className="md:col-span-5 md:row-start-1 md:mt-24">
-            <GalleryItem {...rows[1]} className="aspect-[3/4]" />
+            <GalleryItem {...rows[1]} className="aspect-[4/5] sm:aspect-[3/4]" />
           </motion.div>
           <motion.div style={{ y: y3 }} className="md:col-span-8 md:col-start-3">
-            <GalleryItem {...rows[2]} className="aspect-[16/9] md:aspect-[16/8]" />
+            <GalleryItem {...rows[2]} className="aspect-[16/10] sm:aspect-[16/9] md:aspect-[16/8]" />
           </motion.div>
         </div>
       </div>
@@ -79,17 +79,16 @@ function GalleryItem({
     <figure
       className={`group relative overflow-hidden rounded-2xl md:rounded-3xl ring-1 ring-forest-800/10 bg-forest-900 ${className}`}
     >
-      <Image
+      <PlaceholderImage
         src={src}
         alt={label}
-        fill
         sizes="(min-width: 768px) 50vw, 100vw"
         quality={72}
         className="object-cover transition-transform duration-700 ease-cozy md:group-hover:scale-105"
         draggable={false}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-forest-900/50 via-transparent to-transparent" />
-      <figcaption className="absolute bottom-3 left-3 glass rounded-full px-3 py-1.5 text-[10px] md:text-[11px] uppercase tracking-brand-wide text-forest-800">
+      <figcaption className="absolute bottom-2.5 left-2.5 sm:bottom-3 sm:left-3 glass rounded-full px-2.5 py-1 sm:px-3 sm:py-1.5 text-[10px] md:text-[11px] uppercase tracking-brand-wide text-forest-800">
         {label}
       </figcaption>
     </figure>

@@ -2,7 +2,7 @@
 
 import PlaceholderImage from "./PlaceholderImage";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const rows = [
   {
@@ -22,6 +22,16 @@ const rows = [
 export default function PraxisGallery() {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const upd = () => setIsDesktop(mq.matches);
+    upd();
+    mq.addEventListener("change", upd);
+    return () => mq.removeEventListener("change", upd);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
@@ -51,13 +61,13 @@ export default function PraxisGallery() {
         </div>
 
         <div className="mt-10 sm:mt-14 md:mt-16 grid gap-4 sm:gap-6 md:grid-cols-12">
-          <motion.div style={{ y: y1 }} className="md:col-span-7 md:row-start-1">
+          <motion.div style={isDesktop ? { y: y1 } : undefined} className="md:col-span-7 md:row-start-1">
             <GalleryItem {...rows[0]} className="aspect-[4/3]" />
           </motion.div>
-          <motion.div style={{ y: y2 }} className="md:col-span-5 md:row-start-1 md:mt-24">
+          <motion.div style={isDesktop ? { y: y2 } : undefined} className="md:col-span-5 md:row-start-1 md:mt-24">
             <GalleryItem {...rows[1]} className="aspect-[4/5] sm:aspect-[3/4]" />
           </motion.div>
-          <motion.div style={{ y: y3 }} className="md:col-span-8 md:col-start-3">
+          <motion.div style={isDesktop ? { y: y3 } : undefined} className="md:col-span-8 md:col-start-3">
             <GalleryItem {...rows[2]} className="aspect-[16/10] sm:aspect-[16/9] md:aspect-[16/8]" />
           </motion.div>
         </div>

@@ -23,17 +23,19 @@ export default function Nav() {
 
   return (
     <>
-      <motion.header
-        initial={false}
-        animate={{
-          paddingTop: condensed ? 8 : 14,
-          paddingBottom: condensed ? 8 : 14,
-        }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+      <header
         className="fixed inset-x-0 top-0 z-50"
-        style={{ paddingTop: `calc(var(--sait) + 8px)` }}
+        style={{ paddingTop: "var(--sait)" }}
       >
-        <div className="mx-auto max-w-[1400px] px-3 md:px-8">
+        <motion.div
+          initial={false}
+          animate={{
+            paddingTop: condensed ? 8 : 14,
+            paddingBottom: condensed ? 8 : 14,
+          }}
+          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          className="mx-auto max-w-[1400px] px-3 md:px-8"
+        >
           <div className="glass rounded-full pl-4 pr-2 md:pl-6 md:pr-3 flex items-center justify-between h-12 md:h-16">
             <Link
               href="/"
@@ -96,8 +98,8 @@ export default function Nav() {
               </button>
             </div>
           </div>
-        </div>
-      </motion.header>
+        </motion.div>
+      </header>
 
       <AnimatePresence>
         {open && (

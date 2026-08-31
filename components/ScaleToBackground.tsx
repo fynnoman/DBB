@@ -8,7 +8,7 @@ import {
   useTransform,
   MotionValue,
 } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 type Props = {
   image: string;
@@ -18,25 +18,17 @@ type Props = {
   children?: React.ReactNode;
 };
 
-export default function ScaleToBackground({
-  image,
-  eyebrow,
-  headline,
-  paragraph,
-  children,
-}: Props) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    const upd = () => setIsMobile(mq.matches);
-    upd();
-    mq.addEventListener("change", upd);
-    return () => mq.removeEventListener("change", upd);
-  }, []);
-
-  if (isMobile) return <MobileVariant {...{ image, eyebrow, headline, paragraph, children }} />;
-  return <DesktopVariant {...{ image, eyebrow, headline, paragraph, children }} />;
+export default function ScaleToBackground(props: Props) {
+  return (
+    <>
+      <div className="hidden md:block">
+        <DesktopVariant {...props} />
+      </div>
+      <div className="md:hidden">
+        <MobileVariant {...props} />
+      </div>
+    </>
+  );
 }
 
 function DesktopVariant({ image, eyebrow, headline, paragraph, children }: Props) {

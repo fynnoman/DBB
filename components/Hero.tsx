@@ -17,7 +17,7 @@ export default function Hero() {
     >
       {/* Ambient warm gradient */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(80vw_60vh_at_10%_-10%,rgba(210,177,94,0.28),transparent_60%),radial-gradient(80vw_60vh_at_100%_10%,rgba(51,74,46,0.22),transparent_65%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(80vw_60vh_at_10%_-10%,rgba(210,177,94,0.28),transparent_60%),radial-gradient(80vw_60vh_at_100%_10%,rgba(31,86,71,0.22),transparent_65%)]" />
         <div className="bg-noise relative h-full w-full" />
       </div>
 

@@ -46,7 +46,7 @@ export default function FloatingBookingButton() {
       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       className="group fixed z-40 bottom-safe right-safe md:bottom-8 md:right-8"
     >
-      <span className="relative flex items-center gap-2 md:gap-3 rounded-full pl-2.5 pr-4 md:pl-3 md:pr-5 py-2.5 md:py-3.5 bg-forest-700 text-ivory-50 ring-1 ring-gold-300/40 hover:bg-forest-800 transition-colors shadow-[0_18px_40px_-12px_rgba(19,32,20,0.55)] min-h-[52px]">
+      <span className="relative flex items-center gap-2 md:gap-3 rounded-full pl-2.5 pr-4 md:pl-3 md:pr-5 py-2.5 md:py-3.5 bg-forest-700 text-ivory-50 ring-1 ring-gold-300/40 hover:bg-forest-800 transition-colors shadow-[0_18px_40px_-12px_rgba(13,49,40,0.55)] min-h-[52px]">
         <span className="relative">
           <span className="absolute inset-0 rounded-full bg-gold-300/40 motion-safe:animate-ping" aria-hidden />
           <span className="relative flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-full bg-gold-300 text-forest-800">

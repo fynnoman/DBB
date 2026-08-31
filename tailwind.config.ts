@@ -19,16 +19,16 @@ const config: Config = {
         },
         // cozy deep forest green
         forest: {
-          50: "#EEF2EC",
-          100: "#D6DFD1",
-          200: "#A7B7A0",
-          300: "#75896C",
-          400: "#4C6244",
-          500: "#334A2E",
-          600: "#243922",
-          700: "#1B2C1B",
-          800: "#132014",
-          900: "#0C160D",
+          50: "#EAF3EF",
+          100: "#C9DED5",
+          200: "#8FB6A7",
+          300: "#5A8B78",
+          400: "#2E6553",
+          500: "#1F5647",
+          600: "#185045",
+          700: "#14483C",
+          800: "#0D3128",
+          900: "#071B16",
         },
         // muted antique gold accent
         gold: {
@@ -51,7 +51,7 @@ const config: Config = {
       },
       boxShadow: {
         glass:
-          "0 1px 0 0 rgba(255,255,255,0.35) inset, 0 12px 40px -12px rgba(19,32,20,0.25), 0 0 0 1px rgba(19,32,20,0.06)",
+          "0 1px 0 0 rgba(255,255,255,0.35) inset, 0 12px 40px -12px rgba(13,49,40,0.25), 0 0 0 1px rgba(13,49,40,0.06)",
         glassDark:
           "0 1px 0 0 rgba(255,255,255,0.06) inset, 0 20px 60px -20px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)",
         gold: "0 10px 30px -10px rgba(184,137,78,0.55)",

@@ -9,58 +9,81 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // warm beige / ivory base
-        ivory: {
-          50: "#FBF7EE",
-          100: "#F6EFDF",
-          200: "#EFE4C9",
-          300: "#E4D2A9",
-          400: "#D6BC88",
-        },
-        // cozy deep forest green
-        forest: {
-          50: "#EAF3EF",
-          100: "#C9DED5",
-          200: "#8FB6A7",
-          300: "#5A8B78",
-          400: "#2E6553",
-          500: "#1F5647",
-          600: "#185045",
-          700: "#14483C",
-          800: "#0D3128",
-          900: "#071B16",
-        },
-        // muted antique gold accent
         gold: {
-          50: "#FBF3DF",
-          100: "#F1E1B0",
-          200: "#E4CB84",
-          300: "#D2B15E",
-          400: "#B8894E",
-          500: "#9C7239",
-          600: "#7E5A29",
+          DEFAULT: "#b79a62",
+          50: "#faf4e6",
+          100: "#f0e3c1",
+          200: "#e2cf9a",
+          300: "#d1b878",
+          400: "#c2a56a",
+          500: "#b79a62",
+          600: "#9a8253",
+          700: "#7d6a44",
+          800: "#5d5033",
+          900: "#3e361f",
         },
+        cream: {
+          DEFAULT: "#fbfaf7",
+          50: "#ffffff",
+          100: "#fdfcf9",
+          200: "#fbfaf7",
+          300: "#f6f2e9",
+          400: "#efe8d6",
+        },
+        ink: "#181818",
+        muted: "#69645e",
+        line: "#e8e1d5",
+        forest: "#234f43",
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Georgia", "serif"],
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "Times New Roman", "serif"],
+        sans: [
+          "var(--font-sans)",
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "Segoe UI",
+          "sans-serif",
+        ],
       },
       letterSpacing: {
-        "brand-tight": "-0.02em",
-        "brand-wide": "0.24em",
+        kicker: "0.17em",
+        brand: "0.09em",
       },
       boxShadow: {
-        glass:
-          "0 1px 0 0 rgba(255,255,255,0.35) inset, 0 12px 40px -12px rgba(13,49,40,0.25), 0 0 0 1px rgba(13,49,40,0.06)",
-        glassDark:
-          "0 1px 0 0 rgba(255,255,255,0.06) inset, 0 20px 60px -20px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06)",
-        gold: "0 10px 30px -10px rgba(184,137,78,0.55)",
-      },
-      backdropBlur: {
-        xs: "6px",
+        soft: "0 18px 50px rgba(0,0,0,.055)",
+        header: "0 6px 24px rgba(0,0,0,.035)",
+        booking: "0 12px 34px rgba(0,0,0,.10)",
+        menu: "0 18px 50px rgba(0,0,0,.10)",
+        cardHover: "0 22px 60px -20px rgba(183,154,98,.35)",
       },
       transitionTimingFunction: {
-        cozy: "cubic-bezier(0.22, 1, 0.36, 1)",
+        editorial: "cubic-bezier(.22,1,.36,1)",
+      },
+      keyframes: {
+        pulse60: {
+          "0%,100%": { transform: "scale(1)", filter: "brightness(1)" },
+          "12%": { transform: "scale(1.014)", filter: "brightness(1.04)" },
+          "24%": { transform: "scale(1)", filter: "brightness(1)" },
+        },
+        sweep: {
+          from: { transform: "translate3d(0,0,0)" },
+          to: { transform: "translate3d(-50%,0,0)" },
+        },
+        drawIn: {
+          from: { strokeDashoffset: "800" },
+          to: { strokeDashoffset: "0" },
+        },
+        floatIn: {
+          from: { opacity: "0", transform: "translate3d(0,10px,0)" },
+          to: { opacity: "1", transform: "translate3d(0,0,0)" },
+        },
+      },
+      animation: {
+        pulse60: "pulse60 1s ease-in-out infinite",
+        sweep: "sweep 14s linear infinite",
+        drawIn: "drawIn 2.4s ease-out forwards",
+        floatIn: "floatIn .9s cubic-bezier(.22,1,.36,1) both",
       },
     },
   },

@@ -1,40 +1,30 @@
 import Hero from "@/components/Hero";
-import AboutSection from "@/components/AboutSection";
-import ServicesGrid from "@/components/ServicesGrid";
-import ScaleToBackground from "@/components/ScaleToBackground";
-import PraxisGallery from "@/components/PraxisGallery";
-import ErsterTermin from "@/components/ErsterTermin";
-import SelbstzahlerInfo from "@/components/SelbstzahlerInfo";
-import ContactSection from "@/components/ContactSection";
+import PortraitIntro from "@/components/PortraitIntro";
+import Leistungen from "@/components/Leistungen";
+import Praxis from "@/components/Praxis";
+import Abrechnung from "@/components/Abrechnung";
+import PatientenService from "@/components/PatientenService";
+import Medikamente from "@/components/Medikamente";
+import Kooperationen from "@/components/Kooperationen";
+import AbrechnungDatenschutz from "@/components/AbrechnungDatenschutz";
+import Kontakt from "@/components/Kontakt";
 
 export default function HomePage() {
   return (
     <>
       <Hero />
+      <PortraitIntro />
 
-      <AboutSection />
-
-      <ScaleToBackground
-        image="https://images.unsplash.com/photo-1631815587646-b85a1bb027e1?q=80&w=1800&auto=format&fit=crop"
-        eyebrow="Diagnostik · Speckle Tracking"
-        headline={
-          <>
-            Ein präziser Blick auf die{" "}
-            <span className="italic text-gold-300">Funktion des Herzens.</span>
-          </>
-        }
-        paragraph="Hochauflösender Herzultraschall mit Speckle-Tracking-Analyse macht selbst feinste Veränderungen der Herzfunktion sichtbar, lange bevor sie Beschwerden verursachen."
-      />
-
-      <ServicesGrid />
-
-      <PraxisGallery />
-
-      <ErsterTermin />
-
-      <SelbstzahlerInfo />
-
-      <ContactSection />
+      <div className="border-t border-line bg-white/[0.62]">
+        <Leistungen />
+        <Praxis />
+        <Abrechnung />
+        <PatientenService />
+        <Medikamente />
+        <Kooperationen />
+        <AbrechnungDatenschutz />
+        <Kontakt />
+      </div>
     </>
   );
 }

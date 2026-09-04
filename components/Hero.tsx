@@ -1,206 +1,186 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
-import PlaceholderImage from "./PlaceholderImage";
+import Image from "next/image";
 import { site } from "@/lib/site";
 
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?q=80&w=1600&auto=format&fit=crop";
-
+/**
+ * Editorial hero.
+ * Signature: a very faint gold ECG waveform sweeping across the section,
+ * plus a 60bpm breathing pulse on the central logo mark.
+ *
+ * All entrance animations are pure CSS (fill-mode: both) so content is
+ * present in the initial HTML and never gets stuck invisible.
+ */
 export default function Hero() {
-  const reduced = useReducedMotion();
-
   return (
     <section
-      className="relative w-full overflow-hidden bg-ivory-50 min-h-[100dvh]"
-      style={{ paddingTop: "calc(var(--sait) + 88px)" }}
+      id="start"
+      className="relative overflow-hidden isolate"
+      aria-labelledby="hero-title"
     >
-      {/* Ambient warm gradient */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(80vw_60vh_at_10%_-10%,rgba(210,177,94,0.28),transparent_60%),radial-gradient(80vw_60vh_at_100%_10%,rgba(31,86,71,0.22),transparent_65%)]" />
-        <div className="bg-noise relative h-full w-full" />
+      {/* Ambient warm wash */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(1000px 500px at 50% -10%, rgba(183,154,98,0.14), transparent 60%), radial-gradient(600px 400px at 85% 110%, rgba(35,79,67,0.05), transparent 70%)",
+        }}
+      />
+
+      {/* Signature ECG line */}
+      <div className="ecg-track" aria-hidden>
+        <div className="ecg-scroll animate-sweep">
+          <EcgWave />
+          <EcgWave />
+        </div>
       </div>
 
-      <div className="relative mx-auto grid max-w-[1400px] grid-cols-1 gap-8 px-4 sm:gap-10 sm:px-6 md:grid-cols-12 md:gap-10 md:px-8 md:pt-24 lg:pt-32">
-        {/* Left: editorial text block */}
-        <div className="md:col-span-6 flex flex-col">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="eyebrow"
+      <div className="container-shell max-w-[1220px] min-h-[calc(100vh-88px)] grid place-items-center text-center py-[64px] md:py-[90px] min-w-0">
+        <div className="max-w-[1000px] w-full min-w-0">
+          <div
+            className="mx-auto mb-6 w-[96px] h-[96px] md:w-[112px] md:h-[112px] rounded-full overflow-hidden relative animate-floatIn"
+            style={{ animationDelay: "0.05s" }}
           >
-            {site.descriptor} · {site.location}
-          </motion.p>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-4 sm:mt-5 md:mt-6 font-serif text-forest-800 leading-[0.98] tracking-brand-tight text-[clamp(2rem,10vw,5.5rem)]"
-          >
-            Ihre Gesundheit
-            <span className="block italic text-forest-700">
-              liegt mir am
-              <span className="text-gold-400"> Herzen.</span>
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-5 sm:mt-6 md:mt-8 max-w-xl text-[15px] sm:text-base md:text-lg leading-relaxed text-forest-700/90"
-          >
-            {site.claim}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-7 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
-          >
-            <a
-              href={site.doctolibUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-forest-700 px-6 py-4 text-sm font-semibold text-ivory-50 ring-1 ring-gold-300/30 hover:bg-forest-800 transition-colors min-h-[52px]"
-            >
-              Termin bei Doctolib buchen
-              <Arrow />
-            </a>
-            <a
-              href="#leistungen"
-              className="inline-flex items-center justify-center gap-2 rounded-full glass px-6 py-4 text-sm font-semibold text-forest-800 hover:bg-white/70 transition-colors min-h-[52px]"
-            >
-              Leistungen entdecken
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.5 }}
-            className="mt-8 sm:mt-10 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:pb-10 md:pr-6"
-          >
-            <MetaItem
-              label="Adresse"
-              value={`${site.address.street} · ${site.address.zipCity}`}
-            />
-            <MetaItem label="Sprechzeiten" value={site.hours} />
-            <MetaItem label="Ausrichtung" value={site.audience} />
-          </motion.div>
-        </div>
-
-        {/* Right: hero card with portrait/ambient */}
-        <div className="md:col-span-6 relative pb-16 md:pb-0">
-          <div className="relative h-[56dvh] max-h-[520px] sm:h-[60dvh] sm:max-h-[560px] md:h-[78dvh] md:max-h-none w-full overflow-hidden rounded-[24px] sm:rounded-[28px] md:rounded-[36px] ring-1 ring-forest-800/10 bg-forest-900">
-            <PlaceholderImage
-              src={HERO_IMG}
-              alt="Kardiologische Diagnostik"
-              priority
-              fetchPriority="high"
-              sizes="(min-width: 768px) 50vw, 100vw"
-              quality={78}
-              className="object-cover"
-              draggable={false}
-            />
-            <div className="absolute inset-0 bg-gradient-to-tr from-forest-900/55 via-forest-900/10 to-transparent" />
-
-            {/* liquid glass badge */}
-            <div className="absolute left-3 top-3 sm:left-4 sm:top-4 md:left-6 md:top-6">
-              <div className="glass rounded-full px-3 py-1.5 sm:px-3.5 sm:py-2 text-[10px] md:text-[11px] uppercase tracking-brand-wide text-forest-800">
-                Privatpraxis · Saarpfalz
-              </div>
-            </div>
-
-            {/* signature block */}
-            <div className="absolute inset-x-3 bottom-3 sm:inset-x-4 sm:bottom-4 md:inset-x-6 md:bottom-6">
-              <div className="glass-dark rounded-2xl px-4 py-3.5 md:px-6 md:py-5 text-ivory-50">
-                <p className="eyebrow text-gold-300">Ihre Kardiologin</p>
-                <p className="mt-1 font-serif text-xl md:text-3xl leading-tight">
-                  Dr. medic Denisa <span className="italic text-gold-300">Babeanu-Bauer</span>
-                </p>
-                <p className="mt-2 text-[13px] md:text-sm text-ivory-100/85 max-w-md leading-snug">
-                  Persönlich. Ruhig. Präzise. Für Menschen, die ihre Herzgesundheit ernst nehmen.
-                </p>
-              </div>
+            <div className="absolute inset-0 animate-pulse60 will-change-transform">
+              <Image
+                src="/logo.png"
+                alt="DBB KARDIO"
+                fill
+                priority
+                sizes="112px"
+                className="object-contain"
+              />
             </div>
           </div>
 
-          {/* floating info card with continuous figure-8 motion */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={
-              reduced
-                ? { opacity: 1, y: 0 }
-                : {
-                    opacity: 1,
-                    x: [0, 4, 5, 4, 0, -4, -5, -4, 0],
-                    y: [0, 2.5, 0, -2.5, 0, 2.5, 0, -2.5, 0],
-                  }
-            }
-            transition={
-              reduced
-                ? { duration: 0.6 }
-                : {
-                    opacity: { duration: 0.9, delay: 0.7, ease: [0.22, 1, 0.36, 1] },
-                    x: { duration: 12, ease: "linear", repeat: Infinity, delay: 0.9 },
-                    y: { duration: 12, ease: "linear", repeat: Infinity, delay: 0.9 },
-                  }
-            }
-            className="hidden md:block absolute -left-6 top-16 lg:-left-8 lg:top-20 will-change-transform"
+          <p
+            className="kicker mb-4 animate-floatIn"
+            style={{ animationDelay: "0.15s" }}
           >
-            <div className="glass rounded-2xl px-4 py-3 w-[240px] lg:w-[260px]">
-              <p className="eyebrow">Standort</p>
-              <p className="mt-1 font-serif text-forest-800 text-lg lg:text-xl leading-snug">
-                Ihre kardiologische Praxis in{" "}
-                <span className="italic text-gold-400">St. Ingbert</span>
-              </p>
-            </div>
-          </motion.div>
+            {site.descriptor}
+          </p>
+
+          <h1
+            id="hero-title"
+            className="font-display leading-[1.08] tracking-[-0.02em] text-ink text-[clamp(26px,5.8vw,88px)] m-0 animate-floatIn"
+            style={{ animationDelay: "0.25s" }}
+          >
+            <span className="block sm:inline">Dr. medic Denisa</span>{" "}
+            <span className="block sm:inline">Babeanu-Bauer</span>
+          </h1>
+
+          <div
+            className="font-display leading-[1.15] tracking-[0.01em] mt-5 text-[clamp(17px,3.2vw,52px)] animate-floatIn break-words"
+            style={{ animationDelay: "0.4s" }}
+          >
+            KARDIOLOGISCHE PRIVATPRAXIS
+          </div>
+
+          <div
+            aria-hidden
+            className="mx-auto mt-7 h-px w-[120px] bg-gradient-to-r from-transparent via-gold to-transparent animate-floatIn"
+            style={{ animationDelay: "0.55s" }}
+          />
+
+          <p
+            className="max-w-[820px] mx-auto mt-7 mb-8 text-[16px] md:text-[17px] leading-[1.7] text-[#4a4743] animate-floatIn"
+            style={{ animationDelay: "0.7s" }}
+          >
+            Für Privatpatienten, Beihilfeberechtigte und Selbstzahler.
+            <br className="hidden sm:inline" /> Gesetzlich Versicherte können
+            Termine als Selbstzahler vereinbaren.
+          </p>
+
+          <div
+            className="flex gap-2.5 justify-center flex-wrap animate-floatIn"
+            style={{ animationDelay: "0.85s" }}
+          >
+            <a
+              href="#kontakt"
+              className="min-h-[48px] px-5 md:px-6 rounded-full inline-flex items-center justify-center text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
+            >
+              TERMIN BUCHEN
+            </a>
+            <a
+              href="#leistungen"
+              className="min-h-[48px] px-5 md:px-6 rounded-full inline-flex items-center justify-center text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-all duration-500 ease-editorial"
+            >
+              LEISTUNGEN ANSEHEN
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* scroll cue — hidden on mobile to avoid overlap with floating CTA */}
-      <div className="hidden md:flex absolute inset-x-0 bottom-6 justify-center">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.1, duration: 1 }}
-          className="flex flex-col items-center gap-2 text-forest-700/70"
-        >
-          <span className="text-[10px] uppercase tracking-brand-wide">Scroll</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="h-8 w-px bg-forest-700/40"
-          />
-        </motion.div>
+      {/* Down cue */}
+      <div
+        aria-hidden
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted text-[11px] tracking-[0.24em] uppercase flex flex-col items-center gap-2 animate-floatIn"
+        style={{ animationDelay: "1.2s", opacity: 0.6 }}
+      >
+        <span>Scrollen</span>
+        <span className="block h-[26px] w-px bg-gradient-to-b from-gold to-transparent" />
       </div>
     </section>
   );
 }
 
-function MetaItem({ label, value }: { label: string; value: string }) {
+function EcgWave() {
   return (
-    <div className="border-l border-forest-800/15 pl-3">
-      <p className="eyebrow">{label}</p>
-      <p className="mt-1 text-xs leading-snug text-forest-700">{value}</p>
-    </div>
-  );
-}
-
-function Arrow() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <svg
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+      aria-hidden
+      className="text-gold"
+    >
+      <defs>
+        <linearGradient id="ecgFade" x1="0" x2="1">
+          <stop offset="0%" stopColor="currentColor" stopOpacity="0" />
+          <stop offset="20%" stopColor="currentColor" stopOpacity="0.5" />
+          <stop offset="80%" stopColor="currentColor" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <line
+        x1="0"
+        y1="60"
+        x2="1200"
+        y2="60"
+        stroke="url(#ecgFade)"
+        strokeWidth="1"
+        opacity="0.35"
+      />
       <path
-        d="M5 12h14M13 5l7 7-7 7"
+        d="M0,60 L120,60
+           Q135,54 150,60
+           L200,60
+           L206,58 L212,68 L215,60
+           L222,60 L226,20 L232,100 L238,60
+           L250,60
+           Q270,52 290,60
+           L400,60
+
+           L520,60
+           Q535,54 550,60
+           L600,60
+           L606,58 L612,68 L615,60
+           L622,60 L626,20 L632,100 L638,60
+           L650,60
+           Q670,52 690,60
+           L800,60
+
+           L920,60
+           Q935,54 950,60
+           L1000,60
+           L1006,58 L1012,68 L1015,60
+           L1022,60 L1026,20 L1032,100 L1038,60
+           L1050,60
+           Q1070,52 1090,60
+           L1200,60"
+        fill="none"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="1.4"
         strokeLinecap="round"
         strokeLinejoin="round"
+        opacity="0.85"
       />
     </svg>
   );

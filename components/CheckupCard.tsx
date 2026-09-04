@@ -3,6 +3,24 @@
 import { useState, type ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+type Tone = "default" | "gold";
+
+const toneStyles: Record<
+  Tone,
+  { card: string; cardOpen: string; hover: string }
+> = {
+  default: {
+    card: "border-line bg-white/40",
+    cardOpen: "border-gold/70 bg-white/70",
+    hover: "hover:border-gold/50",
+  },
+  gold: {
+    card: "border-gold/40 bg-gradient-to-br from-gold-50/60 to-white/60",
+    cardOpen: "border-gold/80 bg-gradient-to-br from-gold-50/85 to-white/70",
+    hover: "hover:border-gold/70",
+  },
+};
+
 export default function CheckupCard({
   id,
   kicker,
@@ -11,6 +29,7 @@ export default function CheckupCard({
   items,
   notice,
   ctaLabel,
+  tone = "default",
 }: {
   id: string;
   kicker: string;
@@ -19,18 +38,25 @@ export default function CheckupCard({
   items: string[];
   notice: ReactNode;
   ctaLabel: string;
+  tone?: Tone;
 }) {
   const [open, setOpen] = useState(false);
+  const styles = toneStyles[tone];
 
   return (
     <article
       id={id}
-      className={`relative rounded-[20px] border transition-colors duration-500 ease-editorial ${
-        open
-          ? "border-gold/70 bg-white/70"
-          : "border-line bg-white/40 hover:border-gold/50"
+      className={`relative rounded-[22px] border transition-colors duration-500 ease-editorial ${
+        open ? styles.cardOpen : `${styles.card} ${styles.hover}`
       } overflow-hidden card-lift`}
     >
+      {tone === "gold" && (
+        <span
+          aria-hidden
+          className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
+        />
+      )}
+
       <button
         type="button"
         aria-expanded={open}
@@ -39,7 +65,7 @@ export default function CheckupCard({
         className="w-full text-left p-7 md:p-8 pr-16 relative cursor-pointer"
       >
         <div className="kicker">{kicker}</div>
-        <h3 className="font-display text-[22px] md:text-[24px] mt-2 mb-1.5">
+        <h3 className="font-display text-[22px] md:text-[26px] mt-2 mb-1.5">
           {title}
         </h3>
         <div className="mt-2 text-muted text-[13px] font-semibold tracking-[0.02em]">
@@ -48,9 +74,11 @@ export default function CheckupCard({
 
         <span
           aria-hidden
-          className={`absolute right-6 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full border border-gold text-gold grid place-items-center transition-transform duration-500 ease-editorial ${
-            open ? "rotate-45" : ""
-          }`}
+          className={`absolute right-6 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border grid place-items-center transition-transform duration-500 ease-editorial ${
+            tone === "gold"
+              ? "border-gold bg-gold text-white"
+              : "border-gold text-gold"
+          } ${open ? "rotate-45" : ""}`}
         >
           <PlusIcon />
         </span>
@@ -95,13 +123,7 @@ export default function CheckupCard({
 
 function PlusIcon() {
   return (
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 14 14"
-      fill="none"
-      aria-hidden
-    >
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
       <path
         d="M7 1v12M1 7h12"
         stroke="currentColor"

@@ -120,11 +120,12 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-[1000] backdrop-blur-xl transition-[background,border-color,box-shadow] duration-500 ease-editorial ${
+      className={`sticky top-0 z-[1000] transition-[background,border-color,box-shadow] duration-500 ease-editorial ${
         scrolled
-          ? "bg-white/95 border-b border-[rgba(183,154,98,0.45)] shadow-header"
-          : "bg-white/80 border-b border-transparent"
+          ? "bg-white/98 border-b border-[rgba(183,154,98,0.45)] shadow-header backdrop-blur-md"
+          : "bg-white/92 border-b border-transparent"
       }`}
+      style={{ willChange: scrolled ? "auto" : "auto" }}
     >
       <div className="container-shell min-h-[76px] md:min-h-[88px] py-[11px] grid grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-3 md:gap-4 xl:gap-6">
         {/* Brand */}
@@ -213,7 +214,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -6, scale: 0.98 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute right-0 top-[54px] w-[min(400px,92vw)] rounded-[20px] border border-line bg-white/98 backdrop-blur-xl shadow-menu p-[18px] origin-top-right"
+                  className="absolute right-0 top-[54px] w-[min(400px,92vw)] rounded-[20px] border border-line bg-white shadow-menu p-[18px] origin-top-right"
                 >
                   <h4 className="font-display text-[20px] mt-1 mb-3">Menü</h4>
                   <ul className="max-h-[70vh] overflow-y-auto -mx-[18px] px-[18px]">

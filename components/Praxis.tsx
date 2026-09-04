@@ -49,7 +49,7 @@ const rooms = [
 
 export default function Praxis() {
   return (
-    <section id="praxis" className="relative">
+    <section id="praxis" className="relative cv-auto">
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
         <SectionTitle
           kicker="Praxis"
@@ -82,7 +82,16 @@ export default function Praxis() {
                     className="absolute inset-[10px] rounded-[16px] pointer-events-none"
                     style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.18)" }}
                   />
-                  <div className="absolute left-4 top-4 rounded-full bg-white/85 backdrop-blur px-3 py-1 text-[10px] tracking-[0.18em] uppercase font-extrabold text-gold">
+                  {/* Big faded PLATZHALTER watermark */}
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 grid place-items-center pointer-events-none"
+                  >
+                    <span className="font-display text-white/28 tracking-[0.22em] text-[clamp(22px,4.2vw,42px)] uppercase select-none drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+                      Platzhalter
+                    </span>
+                  </div>
+                  <div className="absolute left-4 top-4 rounded-full bg-white/85 px-3 py-1 text-[10px] tracking-[0.18em] uppercase font-extrabold text-gold">
                     Bild {String(i + 1).padStart(2, "0")}
                   </div>
                 </div>

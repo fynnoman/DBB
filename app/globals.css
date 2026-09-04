@@ -48,14 +48,22 @@ body {
   min-height: 100dvh;
   font-family: var(--font-sans), Inter, system-ui, -apple-system, "Segoe UI",
     sans-serif;
+  background: var(--cream);
+  position: relative;
+}
+
+/* Ambient warm wash — painted once, sits behind everything, does not scroll-repaint */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background:
-    radial-gradient(circle at 15% 4%, rgba(183, 154, 98, 0.055), transparent 30%),
-    radial-gradient(circle at 90% 92%, rgba(35, 79, 67, 0.03), transparent 35%),
-    linear-gradient(130deg, rgba(0, 0, 0, 0.012) 1px, transparent 1px),
-    linear-gradient(35deg, rgba(183, 154, 98, 0.02) 1px, transparent 1px),
+    radial-gradient(circle at 15% 4%, rgba(183, 154, 98, 0.055), transparent 40%),
+    radial-gradient(circle at 90% 92%, rgba(35, 79, 67, 0.03), transparent 45%),
     var(--cream);
-  background-size: auto, auto, 220px 220px, 250px 250px, auto;
-  background-attachment: fixed;
+  will-change: auto;
 }
 
 a {
@@ -137,14 +145,21 @@ a {
 /* Card motion primitives */
 .card-lift {
   transition:
-    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 0.4s ease;
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease;
+  contain: layout paint;
 }
 .card-lift:hover {
   transform: translateY(-3px);
   box-shadow: 0 22px 60px -22px rgba(183, 154, 98, 0.32);
   border-color: rgba(183, 154, 98, 0.55);
+}
+
+/* Below-fold rendering hint: browser skips layout/paint until near viewport */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 800px;
 }
 
 /* Hairline under section titles */
@@ -184,12 +199,15 @@ a {
     #000 85%,
     transparent 100%
   );
+  contain: strict;
 }
 .ecg-scroll {
   position: absolute;
   inset: 0;
   width: 200%;
   display: flex;
+  will-change: transform;
+  transform: translateZ(0);
 }
 .ecg-scroll svg {
   width: 50%;

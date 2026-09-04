@@ -8,7 +8,7 @@ export default function Kontakt() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
 
   return (
-    <section id="kontakt" className="relative">
+    <section id="kontakt" className="relative cv-auto">
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
         <Reveal>
           <div className="mb-9 md:mb-10 max-w-[900px]">

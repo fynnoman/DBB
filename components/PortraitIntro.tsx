@@ -40,6 +40,17 @@ export default function PortraitIntro() {
                 "linear-gradient(180deg, rgba(24,24,24,0.10) 0%, rgba(24,24,24,0.35) 55%, rgba(24,24,24,0.72) 100%)",
             }}
           />
+
+          {/* Big faded PLATZHALTER watermark */}
+          <div
+            aria-hidden
+            className="absolute inset-0 grid place-items-center pointer-events-none"
+          >
+            <span className="font-display text-white/25 tracking-[0.22em] text-[clamp(28px,6vw,54px)] uppercase select-none">
+              Platzhalter
+            </span>
+          </div>
+
           {/* Placeholder caption pinned to the bottom */}
           <div className="absolute inset-x-0 bottom-0 p-6 md:p-7 text-left">
             <div className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold">

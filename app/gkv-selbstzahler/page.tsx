@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -69,6 +70,14 @@ export default function GkvSelbstzahlerPage() {
           </>
         }
         lead="Gesetzlich Versicherte können unsere Leistungen als Selbstzahler in Anspruch nehmen. Sie erhalten dieselbe Zeit, dieselbe Diagnostik und eine transparente Rechnung nach GOÄ."
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — gleicher Standard für alle Patienten"
+        overline="Standard"
+        caption="Derselbe Standard für alle, die kommen — der Unterschied liegt in der Abrechnung, nicht in der Sorgfalt."
+        aspect="cinema"
       />
 
       <SplitFeature

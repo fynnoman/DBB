@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -83,6 +84,14 @@ export default function NachsorgePage() {
           </>
         }
         lead="Nach einem kardialen Ereignis oder bei bekannter Herzerkrankung braucht es kontinuierliche, strukturierte Betreuung — mit denselben Standards wie am ersten Termin."
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — Nachsorge und Verlaufskontrolle"
+        overline="Verlaufskontrolle"
+        caption="Kontinuität, die den Unterschied macht — nicht nur Kontrolle nach Schema F."
+        aspect="cinema"
       />
 
       <SplitFeature

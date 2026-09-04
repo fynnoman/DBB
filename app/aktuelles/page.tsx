@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { PullQuote } from "@/components/PullQuote";
 import { Reveal } from "@/components/Reveal";
@@ -46,6 +47,14 @@ export default function AktuellesPage() {
           </>
         }
         lead="An dieser Stelle veröffentlichen wir kurzfristige Änderungen der Sprechzeiten, geplante Urlaubszeiten und die jeweils zuständigen Vertretungen."
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1682706841281-f723c5bfcd83?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — Praxis-Feed"
+        overline="Praxis-Feed"
+        caption="Was gerade wichtig ist — knapp, aktuell, verlässlich."
+        aspect="cinema"
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">

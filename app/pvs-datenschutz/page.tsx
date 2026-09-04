@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { PullQuote } from "@/components/PullQuote";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -65,6 +66,14 @@ export default function PvsDatenschutzPage() {
           </>
         }
         lead="Wie Ihre Rechnung entsteht, welche Daten wohin gehen — und wie Sie jederzeit die Kontrolle behalten. Auf dieser Seite bündeln wir das Wesentliche."
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — Vertraulichkeit und Datenschutz"
+        overline="Vertraulich"
+        caption="Ohne Ihre Einwilligung geht kein Datensatz aus dieser Praxis."
+        aspect="cinema"
       />
 
       <SplitFeature

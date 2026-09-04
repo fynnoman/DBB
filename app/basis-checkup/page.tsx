@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -59,6 +60,14 @@ export default function BasisCheckupPage() {
           </>
         }
         lead="Das strukturierte Fundament einer kardiologischen Standortbestimmung: Anamnese, EKG, Echokardiographie, Lipidprofil und persönliche Befundbesprechung — in einem einzigen Termin."
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — kardiologische Basisuntersuchung"
+        overline="Basis Check-up"
+        caption="Ein Termin, der reicht — für Klarheit statt Nachfragen."
+        aspect="cinema"
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">

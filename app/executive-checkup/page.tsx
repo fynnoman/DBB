@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -81,6 +82,14 @@ export default function ExecutiveCheckupPage() {
           </>
         }
         lead="Die umfassendere Variante für eine vertiefte kardiovaskuläre Risikoanalyse — mit Carotis-Diagnostik, Ergometrie, erweitertem Labor und individuellem Präventionskonzept."
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — Executive-Diagnostik"
+        overline="Executive Check-up"
+        caption="Ein tragfähiges Bild — nicht nur eine Momentaufnahme."
+        aspect="cinema"
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">

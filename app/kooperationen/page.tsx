@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -76,6 +77,14 @@ export default function KooperationenPage() {
           </>
         }
         lead="Kardiologie funktioniert selten allein. Wir arbeiten mit Kliniken, Hausärzten und ausgewählten Fachdisziplinen zusammen — damit Diagnostik, Therapie und Nachsorge nahtlos ineinander greifen."
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — kollegiale Zusammenarbeit"
+        overline="Netzwerk"
+        caption="Kurze Wege, klare Befunde — Kooperationen leben von Verlässlichkeit."
+        aspect="cinema"
       />
 
       <SplitFeature

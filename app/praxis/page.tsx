@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { PullQuote } from "@/components/PullQuote";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -84,6 +85,14 @@ export default function PraxisPage() {
           </>
         }
         lead={`Die Privatpraxis in ${site.city} ist bewusst so angelegt, dass sie nicht wie ein Wartesaal wirkt. Wer hierher kommt, findet Ruhe, warmes Licht und die Zeit, die eine gute Untersuchung braucht.`}
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — Empfang und Wartebereich"
+        overline="Ankunft"
+        caption="Ruhige Räume, die auch bei ernsten Themen atmen lassen."
+        aspect="cinema"
       />
 
       <SplitFeature

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
+import { EditorialImage } from "@/components/EditorialImage";
 import { PullQuote } from "@/components/PullQuote";
 import { Reveal } from "@/components/Reveal";
 import Kontakt from "@/components/Kontakt";
@@ -46,6 +47,14 @@ export default function KontaktPage() {
           </>
         }
         lead="Wir vereinbaren Termine individuell. Für Rückfragen zu Vorbereitung, Abrechnung oder speziellen Anliegen sind Telefon, E-Mail und Formular gleichermaßen möglich."
+      />
+
+      <EditorialImage
+        src="https://images.unsplash.com/photo-1682706841281-f723c5bfcd83?w=1600&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — ruhige Kommunikation"
+        overline="Kontakt"
+        caption="Zehn Minuten am Telefon ersparen zwei Fragen im Termin."
+        aspect="cinema"
       />
 
       <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">

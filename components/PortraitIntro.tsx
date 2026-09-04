@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Reveal } from "@/components/Reveal";
 import { site } from "@/lib/site";
@@ -15,25 +16,40 @@ export default function PortraitIntro() {
     >
       <Reveal>
         <div
-          className="relative mx-auto mb-6 rounded-[28px] overflow-hidden border border-[rgba(183,154,98,0.42)] shadow-soft"
+          className="relative mx-auto mb-6 rounded-[28px] overflow-hidden border border-[rgba(183,154,98,0.42)] shadow-soft group"
           style={{
             width: "min(430px, 82vw)",
             aspectRatio: "4 / 5",
-            background:
-              "linear-gradient(145deg, rgba(183,154,98,0.10), rgba(255,255,255,0.96))",
           }}
         >
-          {/* Placeholder plate. Replace with <Image src="/portrait.jpg" fill … /> when real photo is available. */}
-          <div className="absolute inset-0 grid place-items-center text-muted text-[14px] leading-[1.6] px-6">
-            <div>
-              <strong className="block text-ink/85 font-medium">
-                Portraitfoto von
-                <br />
-                {site.fullName}
-              </strong>
-              <span className="block mt-2 text-[13px]">
-                Wird ergänzt, sobald das professionelle Foto vorliegt.
-              </span>
+          {/* Symbolic still-life until the real portrait is delivered. */}
+          <Image
+            src="https://images.unsplash.com/photo-1682706841281-f723c5bfcd83?w=900&auto=format&fit=crop&q=80"
+            alt="ECG-Herzrhythmus, symbolisches Bild"
+            fill
+            sizes="(max-width: 640px) 82vw, 430px"
+            className="object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.02]"
+            priority
+          />
+          {/* Warm gradient wash so the caption stays readable */}
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(24,24,24,0.10) 0%, rgba(24,24,24,0.35) 55%, rgba(24,24,24,0.72) 100%)",
+            }}
+          />
+          {/* Placeholder caption pinned to the bottom */}
+          <div className="absolute inset-x-0 bottom-0 p-6 md:p-7 text-left">
+            <div className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold">
+              Portraitfoto folgt
+            </div>
+            <div className="mt-1.5 font-display text-white text-[18px] md:text-[20px] leading-tight">
+              {site.fullName}
+            </div>
+            <div className="mt-1 text-white/75 text-[12px] md:text-[13px]">
+              Symbolisches Bild bis zur Übergabe des professionellen Fotos.
             </div>
           </div>
 
@@ -41,7 +57,7 @@ export default function PortraitIntro() {
           <div
             aria-hidden
             className="absolute inset-[10px] rounded-[20px] pointer-events-none"
-            style={{ boxShadow: "inset 0 0 0 1px rgba(183,154,98,0.28)" }}
+            style={{ boxShadow: "inset 0 0 0 1px rgba(183,154,98,0.35)" }}
           />
         </div>
       </Reveal>

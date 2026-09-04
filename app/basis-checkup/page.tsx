@@ -67,7 +67,7 @@ export default function BasisCheckupPage() {
         alt="Symbolisches Bild — kardiologische Basisuntersuchung"
         overline="Basis Check-up"
         caption="Ein Termin, der reicht — für Klarheit statt Nachfragen."
-        aspect="cinema"
+        aspect="wide"
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">

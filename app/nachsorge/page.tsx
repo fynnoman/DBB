@@ -91,7 +91,7 @@ export default function NachsorgePage() {
         alt="Symbolisches Bild — Nachsorge und Verlaufskontrolle"
         overline="Verlaufskontrolle"
         caption="Kontinuität, die den Unterschied macht — nicht nur Kontrolle nach Schema F."
-        aspect="cinema"
+        aspect="wide"
       />
 
       <SplitFeature

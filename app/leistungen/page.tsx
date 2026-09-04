@@ -125,11 +125,12 @@ export default function LeistungenPage() {
       />
 
       <EditorialImage
-        src="https://images.unsplash.com/photo-1587351021355-a479a299d2f9?w=1600&auto=format&fit=crop&q=80"
+        src="https://images.unsplash.com/photo-1587351021355-a479a299d2f9?w=1920&auto=format&fit=crop&q=80"
         alt="Symbolisches Bild — Untersuchungsraum bei DBB Kardio"
         overline="Diagnostik-Raum"
         caption="Ein Untersuchungsraum, viele Perspektiven — Bildgebung, Belastung, Rhythmus."
         aspect="cinema"
+        fullBleed
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-28 px-4">

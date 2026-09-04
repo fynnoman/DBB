@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
-import { EditorialImage } from "@/components/EditorialImage";
+import { EditorialSplit } from "@/components/EditorialSplit";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -68,12 +68,32 @@ export default function FirmenCheckupPage() {
         lead="Strukturierte kardiovaskuläre Vorsorge für Führungskräfte und Teams — mit individuell konfigurierbarem Umfang, festen Ansprechpartnern und diskreter Kommunikation."
       />
 
-      <EditorialImage
-        src="https://images.unsplash.com/photo-1587351021355-a479a299d2f9?w=1600&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — diskrete Firmen-Betreuung"
+      <EditorialSplit
+        src="https://images.unsplash.com/photo-1587351021355-a479a299d2f9?w=1200&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — diskretes Executive-Setting"
         overline="Firmen-Mandat"
-        caption="Diskrete Kardiologie für Ihre Schlüsselpersonen — jenseits von Corporate-Wellness."
-        aspect="cinema"
+        kicker="Diskretion als Standard"
+        side="left"
+        aspect="wide"
+        heading={
+          <>
+            Kardiologie für<br />
+            <span className="italic text-muted">Ihre Schlüsselpersonen.</span>
+          </>
+        }
+        body={
+          <>
+            <p>
+              Ein Untersuchungstermin, der ohne Corporate-Logistik auskommt: ruhiger
+              Ablauf, keine Wartesaal-Situationen, keine Rückfragen aus der HR ohne
+              Ihre Freigabe.
+            </p>
+            <p>
+              Wir stimmen Umfang und Kommunikation vorher persönlich mit Ihnen ab —
+              nicht mit einem Rahmenvertrag, sondern in einem 20-Minuten-Vorgespräch.
+            </p>
+          </>
+        }
       />
 
       <SplitFeature

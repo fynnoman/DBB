@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
-import { EditorialImage } from "@/components/EditorialImage";
+import { EditorialSplit } from "@/components/EditorialSplit";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -99,12 +99,33 @@ export default function PatientenPage() {
         lead="Transparente Abrechnung, klare Vorbereitung, verlässliche Kommunikation. Alles Wesentliche für Ihren Besuch — kompakt an einem Ort."
       />
 
-      <EditorialImage
-        src="https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1600&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — persönliches Patientengespräch"
-        overline="Patientenkontakt"
-        caption="Der wichtigste Teil einer Untersuchung ist das Gespräch, das ihr vorausgeht."
-        aspect="cinema"
+      <EditorialSplit
+        src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&auto=format&fit=crop&q=80"
+        alt="Symbolisches Bild — Herzmotiv"
+        overline="Vor dem Termin"
+        kicker="Willkommen"
+        side="right"
+        aspect="portrait"
+        heading={
+          <>
+            Alles Wichtige<br />
+            <span className="italic text-muted">an einem Ort.</span>
+          </>
+        }
+        body={
+          <>
+            <p>
+              Diese Seite fasst zusammen, was Sie vor Ihrem Besuch bei uns wissen
+              sollten. Wer bei uns behandelt wird, wie die Abrechnung läuft, was Sie
+              zum Termin mitbringen und wo Sie kurzfristige Hinweise finden.
+            </p>
+            <p>
+              Bei Rückfragen greifen wir zum Telefon, nicht zum Chatbot. Und wenn
+              etwas unklar bleibt, ist das keine Belastung — sondern ein Anlass, ins
+              Gespräch zu kommen.
+            </p>
+          </>
+        }
       />
 
       <SplitFeature

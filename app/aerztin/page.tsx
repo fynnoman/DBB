@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
-import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { PullQuote } from "@/components/PullQuote";
@@ -71,13 +70,6 @@ export default function AerztinPage() {
           </>
         }
         lead="Kardiologie beginnt für mich mit einem Gespräch, nicht mit einem Gerät. Wer Zeit für seine Patienten hat, sieht mehr — und muss weniger reparieren."
-      />
-
-      <EditorialImage
-        src="https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1600&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — Handschrift der Ärztin"
-        overline="Handschrift"
-        caption="Präzision, die man in den Händen spürt — nicht in der Broschüre."
       />
 
       <section className="container-shell max-w-[1440px] px-4 pb-20 md:pb-32">

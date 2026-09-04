@@ -85,11 +85,12 @@ export default function ExecutiveCheckupPage() {
       />
 
       <EditorialImage
-        src="https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1600&auto=format&fit=crop&q=80"
+        src="https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1920&auto=format&fit=crop&q=80"
         alt="Symbolisches Bild — Executive-Diagnostik"
         overline="Executive Check-up"
         caption="Ein tragfähiges Bild — nicht nur eine Momentaufnahme."
         aspect="cinema"
+        fullBleed
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">

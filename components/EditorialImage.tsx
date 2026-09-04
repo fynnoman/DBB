@@ -7,12 +7,14 @@ export function EditorialImage({
   caption,
   overline,
   aspect = "wide",
+  fullBleed = false,
 }: {
   src: string;
   alt: string;
   caption?: string;
   overline?: string;
   aspect?: "wide" | "portrait" | "square" | "cinema";
+  fullBleed?: boolean;
 }) {
   const ratio =
     aspect === "portrait"
@@ -24,9 +26,21 @@ export function EditorialImage({
           : "16 / 9";
   return (
     <section className="relative">
-      <div className="container-shell max-w-[1440px] px-4 py-12 md:py-20">
+      <div
+        className={
+          fullBleed
+            ? "w-full py-8 md:py-14"
+            : "container-shell max-w-[1440px] px-4 py-12 md:py-20"
+        }
+      >
         <Reveal>
-          <figure className="relative overflow-hidden rounded-[24px] md:rounded-[28px] border border-line group">
+          <figure
+            className={`relative overflow-hidden group ${
+              fullBleed
+                ? "border-y border-line"
+                : "rounded-[24px] md:rounded-[28px] border border-line"
+            }`}
+          >
             <div className="relative" style={{ aspectRatio: ratio }}>
               <Image
                 src={src}

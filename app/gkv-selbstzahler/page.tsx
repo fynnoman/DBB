@@ -73,11 +73,11 @@ export default function GkvSelbstzahlerPage() {
       />
 
       <EditorialImage
-        src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1600&auto=format&fit=crop&q=80"
+        src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1400&auto=format&fit=crop&q=80"
         alt="Symbolisches Bild — gleicher Standard für alle Patienten"
         overline="Standard"
         caption="Derselbe Standard für alle, die kommen — der Unterschied liegt in der Abrechnung, nicht in der Sorgfalt."
-        aspect="cinema"
+        aspect="square"
       />
 
       <SplitFeature

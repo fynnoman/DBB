@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
-import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { PullQuote } from "@/components/PullQuote";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -68,13 +67,34 @@ export default function PvsDatenschutzPage() {
         lead="Wie Ihre Rechnung entsteht, welche Daten wohin gehen — und wie Sie jederzeit die Kontrolle behalten. Auf dieser Seite bündeln wir das Wesentliche."
       />
 
-      <EditorialImage
-        src="https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1600&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — Vertraulichkeit und Datenschutz"
-        overline="Vertraulich"
-        caption="Ohne Ihre Einwilligung geht kein Datensatz aus dieser Praxis."
-        aspect="cinema"
-      />
+      <section className="relative border-y border-line bg-white/60">
+        <div className="container-shell max-w-[1440px] px-4 py-14 md:py-18">
+          <Reveal>
+            <div className="grid gap-6 md:grid-cols-4 items-start">
+              {[
+                { label: "GOÄ", note: "Gebührenordnung für Ärzte" },
+                { label: "PVS", note: "Private Verrechnungsstelle" },
+                { label: "DSGVO", note: "Datenschutz-Grundverordnung" },
+                { label: "§ 630", note: "BGB · Behandlungsvertrag" },
+              ].map((k, i) => (
+                <div key={k.label} className="flex md:block items-center gap-4">
+                  <span className="font-display text-gold/70 leading-none text-[clamp(38px,4vw,60px)] tracking-[-0.03em]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div className="md:mt-4">
+                    <div className="font-display text-[22px] leading-tight">
+                      {k.label}
+                    </div>
+                    <div className="text-[12px] tracking-[0.10em] uppercase font-extrabold text-muted mt-1.5">
+                      {k.note}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       <SplitFeature
         eyebrow="Drei Bausteine"

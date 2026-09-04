@@ -80,11 +80,12 @@ export default function KooperationenPage() {
       />
 
       <EditorialImage
-        src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1600&auto=format&fit=crop&q=80"
+        src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1920&auto=format&fit=crop&q=80"
         alt="Symbolisches Bild — kollegiale Zusammenarbeit"
         overline="Netzwerk"
         caption="Kurze Wege, klare Befunde — Kooperationen leben von Verlässlichkeit."
         aspect="cinema"
+        fullBleed
       />
 
       <SplitFeature

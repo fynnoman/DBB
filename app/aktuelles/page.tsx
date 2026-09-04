@@ -54,7 +54,7 @@ export default function AktuellesPage() {
         alt="Symbolisches Bild — Praxis-Feed"
         overline="Praxis-Feed"
         caption="Was gerade wichtig ist — knapp, aktuell, verlässlich."
-        aspect="cinema"
+        aspect="wide"
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">

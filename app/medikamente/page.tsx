@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
-import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
 import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
@@ -112,13 +111,40 @@ export default function MedikamentePage() {
         lead="Die folgenden Informationen dienen der Orientierung und ersetzen keine individuelle ärztliche Beratung. Für konkrete Fragen zu Ihrer Medikation sprechen Sie uns bitte persönlich an."
       />
 
-      <EditorialImage
-        src="https://images.unsplash.com/photo-1587351021355-a479a299d2f9?w=1600&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — Herzmedikamente und Wirkstoffe"
-        overline="Wirkstoffe"
-        caption="Wissen ist gut — Kontext ist besser."
-        aspect="cinema"
-      />
+      <section className="relative overflow-hidden border-y border-line bg-cream-300/40">
+        <div className="container-shell max-w-[1440px] px-4 py-14 md:py-20 text-center">
+          <Reveal>
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span
+                aria-hidden
+                className="inline-block h-px w-8 bg-gradient-to-r from-transparent to-gold"
+              />
+              <span className="text-[10px] tracking-[0.24em] uppercase font-extrabold text-gold">
+                Index
+              </span>
+              <span
+                aria-hidden
+                className="inline-block h-px w-8 bg-gradient-to-l from-transparent to-gold"
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={0.05}>
+            <div
+              aria-hidden
+              className="font-display tracking-[-0.03em] leading-none text-ink/[0.10] select-none text-[clamp(80px,16vw,240px)]"
+            >
+              A · B · S · D · A
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="font-display italic text-muted text-[clamp(16px,1.8vw,22px)] leading-[1.5] mt-6 max-w-[720px] mx-auto">
+              ACE-Hemmer, Betablocker, Statine, Diuretika, Antikoagulanzien — was
+              hinter den Buchstaben steckt, entscheidet über den Alltag mit dem
+              Herzen.
+            </p>
+          </Reveal>
+        </div>
+      </section>
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">
         <Reveal>

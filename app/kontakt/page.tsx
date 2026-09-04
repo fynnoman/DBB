@@ -54,7 +54,7 @@ export default function KontaktPage() {
         alt="Symbolisches Bild — ruhige Kommunikation"
         overline="Kontakt"
         caption="Zehn Minuten am Telefon ersparen zwei Fragen im Termin."
-        aspect="cinema"
+        aspect="wide"
       />
 
       <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">

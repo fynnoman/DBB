@@ -3,62 +3,49 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { site } from "@/lib/site";
-import { useMenuOnly } from "@/components/MenuOnly";
 
 type MenuLink = {
-  hash?: string;
-  href?: string;
+  href: string;
   label: string;
-  reveal?: string;
+  group?: string;
 };
 
 const menuLinks: MenuLink[] = [
-  { hash: "ueber", label: "Über mich" },
-  { hash: "praxis", label: "Praxis & Räumlichkeiten" },
-  { hash: "leistungen", label: "Leistungen" },
-  { hash: "basis-checkup", label: "Basis Check-up" },
-  { hash: "executive-checkup", label: "Executive Check-up" },
-  { hash: "firmen-checkup", label: "Kardio-Check-up für Firmen" },
-  { hash: "nachsorge", label: "Nachsorge" },
-  { hash: "patienten", label: "Privatpatienten & Beihilfe" },
-  {
-    hash: "patienten-service",
-    label: "Aktuelles & Abwesenheiten",
-    reveal: "patienten-service",
-  },
-  { hash: "medikamente", label: "Medikamente erklärt", reveal: "medikamente" },
-  { hash: "kooperationen", label: "Kooperationen", reveal: "kooperationen" },
-  {
-    hash: "abrechnung-datenschutz",
-    label: "PVS & Datenschutz",
-    reveal: "abrechnung-datenschutz",
-  },
-  { hash: "patienten", label: "GKV als Selbstzahler" },
-  { hash: "kontakt", label: "Kontakt" },
-  { href: "/datenschutz", label: "Datenschutz" },
-  { href: "/impressum", label: "Impressum" },
-  { href: "/barrierefreiheit", label: "Barrierefreiheit" },
+  { href: "/aerztin", label: "Über mich", group: "Praxis" },
+  { href: "/praxis", label: "Praxis & Räumlichkeiten", group: "Praxis" },
+  { href: "/leistungen", label: "Leistungen — Übersicht", group: "Leistungen" },
+  { href: "/basis-checkup", label: "Basis Check-up", group: "Leistungen" },
+  { href: "/executive-checkup", label: "Executive Check-up", group: "Leistungen" },
+  { href: "/firmen-checkup", label: "Kardio-Check-up für Firmen", group: "Leistungen" },
+  { href: "/nachsorge", label: "Nachsorge", group: "Leistungen" },
+  { href: "/patienten", label: "Privatpatienten & Beihilfe", group: "Patienten" },
+  { href: "/gkv-selbstzahler", label: "GKV als Selbstzahler", group: "Patienten" },
+  { href: "/aktuelles", label: "Aktuelles & Abwesenheiten", group: "Patienten" },
+  { href: "/medikamente", label: "Medikamente erklärt", group: "Patienten" },
+  { href: "/pvs-datenschutz", label: "PVS & Datenschutz", group: "Patienten" },
+  { href: "/kooperationen", label: "Kooperationen", group: "Netzwerk" },
+  { href: "/kontakt", label: "Kontakt", group: "Kontakt" },
+  { href: "/datenschutz", label: "Datenschutz", group: "Rechtliches" },
+  { href: "/impressum", label: "Impressum", group: "Rechtliches" },
+  { href: "/barrierefreiheit", label: "Barrierefreiheit", group: "Rechtliches" },
 ];
 
 const primaryNav = [
-  { hash: "ueber", label: "Über mich" },
-  { hash: "leistungen", label: "Leistungen" },
-  { hash: "praxis", label: "Praxis" },
-  { hash: "patienten", label: "Patienteninfo" },
-  { hash: "kontakt", label: "Kontakt" },
+  { href: "/aerztin", label: "Über mich" },
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/praxis", label: "Praxis" },
+  { href: "/patienten", label: "Patienteninfo" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const wrapRef = useRef<HTMLDivElement | null>(null);
-  const { reveal } = useMenuOnly();
   const pathname = usePathname();
-  const router = useRouter();
-  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
@@ -84,39 +71,13 @@ export default function Header() {
     };
   }, [open]);
 
-  const goToHash = (hash: string) => {
-    if (isHome) {
-      const el = document.getElementById(hash);
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-      else window.location.hash = hash;
-    } else {
-      router.push(`/#${hash}`);
-    }
-  };
-
-  const goToReveal = (id: string) => {
-    if (isHome) {
-      reveal(id);
-    } else {
-      router.push(`/?menu=${id}#${id}`);
-    }
-  };
-
-  const handleMenuClick = (link: MenuLink, e: React.MouseEvent) => {
-    setOpen(false);
-    if (link.reveal) {
-      e.preventDefault();
-      goToReveal(link.reveal);
-      return;
-    }
-    if (link.hash) {
-      e.preventDefault();
-      goToHash(link.hash);
-    }
-  };
-
-  const primaryHref = (hash: string) => (isHome ? `#${hash}` : `/#${hash}`);
-  const bookHref = isHome ? "#kontakt" : "/#kontakt";
+  const bookHref = "/kontakt";
+  const groupedMenu = menuLinks.reduce<Record<string, MenuLink[]>>((acc, link) => {
+    const g = link.group ?? "Weitere";
+    if (!acc[g]) acc[g] = [];
+    acc[g].push(link);
+    return acc;
+  }, {});
 
   return (
     <header
@@ -156,21 +117,24 @@ export default function Header() {
 
         {/* Desktop primary nav */}
         <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-[12px] xl:text-[13px] text-ink/85">
-          {primaryNav.map((item) => (
-            <a
-              key={item.hash}
-              href={primaryHref(item.hash)}
-              onClick={(e) => {
-                if (isHome) {
-                  e.preventDefault();
-                  goToHash(item.hash);
-                }
-              }}
-              className="relative py-1 transition-colors hover:text-ink after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-gold after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-500 after:ease-editorial"
-            >
-              {item.label}
-            </a>
-          ))}
+          {primaryNav.map((item) => {
+            const active =
+              pathname === item.href ||
+              (item.href !== "/" && pathname?.startsWith(item.href));
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`relative py-1 transition-colors hover:text-ink after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-gold after:origin-left after:transition-transform after:duration-500 after:ease-editorial ${
+                  active
+                    ? "text-ink after:scale-x-100"
+                    : "after:scale-x-0 hover:after:scale-x-100"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Actions */}
@@ -217,40 +181,35 @@ export default function Header() {
                   className="absolute right-0 top-[54px] w-[min(400px,92vw)] rounded-[20px] border border-line bg-white shadow-menu p-[18px] origin-top-right"
                 >
                   <h4 className="font-display text-[20px] mt-1 mb-3">Menü</h4>
-                  <ul className="max-h-[70vh] overflow-y-auto -mx-[18px] px-[18px]">
-                    {menuLinks.map((link, i) => {
-                      if (link.href) {
-                        return (
-                          <li key={link.href + link.label + i}>
-                            <Link
-                              href={link.href}
-                              onClick={() => setOpen(false)}
-                              className="block py-[10px] border-b border-line last:border-b-0 text-[14px] text-ink/85 hover:text-ink transition-colors"
-                            >
-                              {link.label}
-                            </Link>
-                          </li>
-                        );
-                      }
-                      return (
-                        <li key={(link.hash ?? "") + link.label + i}>
-                          <a
-                            href={
-                              link.hash
-                                ? isHome
-                                  ? `#${link.hash}`
-                                  : `/#${link.hash}`
-                                : "#"
-                            }
-                            onClick={(e) => handleMenuClick(link, e)}
-                            className="block py-[10px] border-b border-line last:border-b-0 text-[14px] text-ink/85 hover:text-ink transition-colors"
-                          >
-                            {link.label}
-                          </a>
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  <div className="max-h-[70vh] overflow-y-auto -mx-[18px] px-[18px] pr-2">
+                    {Object.entries(groupedMenu).map(([group, links]) => (
+                      <div key={group} className="mb-4 last:mb-0">
+                        <div className="text-[10px] tracking-[0.18em] uppercase font-extrabold text-gold mb-1.5 mt-3 first:mt-0">
+                          {group}
+                        </div>
+                        <ul>
+                          {links.map((link) => {
+                            const active = pathname === link.href;
+                            return (
+                              <li key={link.href}>
+                                <Link
+                                  href={link.href}
+                                  onClick={() => setOpen(false)}
+                                  className={`block py-[10px] border-b border-line last:border-b-0 text-[14px] transition-colors ${
+                                    active
+                                      ? "text-ink font-semibold"
+                                      : "text-ink/85 hover:text-ink"
+                                  }`}
+                                >
+                                  {link.label}
+                                </Link>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

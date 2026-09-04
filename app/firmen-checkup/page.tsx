@@ -1,0 +1,162 @@
+import type { Metadata } from "next";
+import { site } from "@/lib/site";
+import { PageHero } from "@/components/PageHero";
+import { PageCta } from "@/components/PageCta";
+import { Reveal } from "@/components/Reveal";
+
+export const metadata: Metadata = {
+  title: `Kardio-Check-up für Firmen | ${site.brand}`,
+  description:
+    "Kardiovaskuläre Check-ups für Führungskräfte und Teams. DBB Kardio in St. Ingbert bietet strukturierte Firmen-Programme mit diskreter Kommunikation und individuellem Umfang.",
+};
+
+const formats = [
+  {
+    kicker: "Einzel-Mandat",
+    title: "Für einzelne Führungskräfte",
+    body: "Persönlicher Check-up in ruhiger Atmosphäre. Kommunikation direkt mit der Person, ohne Umweg über die HR.",
+  },
+  {
+    kicker: "Team-Programm",
+    title: "Für Führungsteams",
+    body: "Strukturierte Untersuchungsreihe für Vorstand, Geschäftsleitung oder Schlüsselpersonen — mit einheitlichem Berichtsformat.",
+  },
+  {
+    kicker: "Wiederkehrend",
+    title: "Jahresprogramm",
+    body: "Kardiovaskuläre Betreuung im festen Rhythmus, damit Trends erkennbar bleiben statt Einzelpunkten.",
+  },
+];
+
+const principles = [
+  {
+    kicker: "Diskretion",
+    body: "Berichte gehen ausschließlich an die untersuchte Person. Kommunikation mit der HR nur nach ausdrücklicher Freigabe.",
+  },
+  {
+    kicker: "Skalierbar",
+    body: "Umfang je Person individuell zwischen Basis- und Executive-Check-up konfigurierbar.",
+  },
+  {
+    kicker: "On-Site optional",
+    body: "Onboarding-Termine oder Vorbesprechungen auf Wunsch beim Unternehmen vor Ort.",
+  },
+];
+
+export default function FirmenCheckupPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Für Unternehmen"
+        kicker="Kardio-Check-up für Firmen"
+        chapter="09"
+        title={
+          <>
+            Kardiologie<br />
+            <span className="text-muted italic">für Ihre Schlüsselpersonen.</span>
+          </>
+        }
+        lead="Strukturierte kardiovaskuläre Vorsorge für Führungskräfte und Teams — mit individuell konfigurierbarem Umfang, festen Ansprechpartnern und diskreter Kommunikation."
+      />
+
+      <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">
+        <Reveal>
+          <div className="max-w-[900px] mb-9 md:mb-10">
+            <div className="kicker mb-3">Formate</div>
+            <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
+              Drei Wege, Verantwortung zu übernehmen.
+            </h2>
+          </div>
+        </Reveal>
+
+        <div className="grid gap-5 md:grid-cols-3">
+          {formats.map((f) => (
+            <Reveal key={f.kicker} delay={0.05}>
+              <article className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
+                <div className="kicker mb-3">{f.kicker}</div>
+                <h3 className="font-display text-[22px] leading-[1.2] mb-3">
+                  {f.title}
+                </h3>
+                <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
+                  {f.body}
+                </p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-t border-line bg-white/[0.62]">
+        <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
+          <div className="grid gap-10 md:grid-cols-2 items-start">
+            <Reveal>
+              <div>
+                <div className="kicker mb-3">Prinzipien</div>
+                <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
+                  Wie wir mit Unternehmen arbeiten.
+                </h2>
+                <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-6 max-w-[520px]">
+                  Wir behandeln Firmen-Mandate wie jedes andere ärztliche Verhältnis:
+                  vertraulich, präzise und ohne Blick auf Corporate-Kalender. Umfang
+                  und Kommunikation stimmen wir vor dem ersten Termin klar ab.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <ul className="rounded-[22px] border border-line bg-white/70 divide-y divide-line overflow-hidden">
+                {principles.map((p) => (
+                  <li key={p.kicker} className="p-6 md:p-7">
+                    <div className="kicker mb-2">{p.kicker}</div>
+                    <p className="text-muted text-[14px] leading-[1.7]">{p.body}</p>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
+        <Reveal>
+          <article className="relative overflow-hidden rounded-[28px] bg-forest text-cream shadow-soft">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 opacity-[0.10]"
+              style={{
+                background:
+                  "radial-gradient(600px 300px at 90% -10%, rgba(183,154,98,0.9), transparent 60%), radial-gradient(400px 200px at 5% 110%, rgba(183,154,98,0.6), transparent 55%)",
+              }}
+            />
+            <span
+              aria-hidden
+              className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
+            />
+            <div className="relative p-8 md:p-14">
+              <div className="text-[12px] tracking-[0.18em] uppercase font-extrabold text-gold-200 mb-4">
+                Unternehmen · Anfrage
+              </div>
+              <h3 className="font-display text-[clamp(26px,3.4vw,42px)] leading-[1.1] max-w-[720px]">
+                Ein persönliches Vorgespräch klärt in 20 Minuten, was für Ihre
+                Situation richtig ist.
+              </h3>
+              <p className="text-cream/80 leading-[1.7] mt-6 max-w-[620px]">
+                Wir stimmen Zielgruppe, Untersuchungsumfang, Berichtsformat und
+                Rhythmus vorab persönlich ab. Diskret, unverbindlich, ohne
+                Rahmenvertrag im Vorfeld.
+              </p>
+            </div>
+          </article>
+        </Reveal>
+      </section>
+
+      <PageCta
+        title="Firmen-Programm anfragen."
+        lead="Nutzen Sie das Kontaktformular oder rufen Sie uns direkt an. Wir melden uns diskret und persönlich zurück."
+        primaryLabel="ANFRAGE STARTEN"
+        secondaryLabel="Zu den Leistungen"
+        secondaryHref="/leistungen"
+      />
+    </>
+  );
+}

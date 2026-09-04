@@ -9,11 +9,12 @@ const legal = [
 ];
 
 const sitemap = [
-  { href: "/#ueber", label: "Über die Ärztin" },
-  { href: "/#leistungen", label: "Leistungen" },
-  { href: "/#praxis", label: "Praxis" },
-  { href: "/#patienten", label: "Patienten" },
-  { href: "/#kontakt", label: "Kontakt" },
+  { href: "/aerztin", label: "Über die Ärztin" },
+  { href: "/leistungen", label: "Leistungen" },
+  { href: "/praxis", label: "Praxis" },
+  { href: "/patienten", label: "Patienten" },
+  { href: "/kooperationen", label: "Kooperationen" },
+  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Footer() {

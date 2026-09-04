@@ -3,6 +3,8 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
 import { PageCta } from "@/components/PageCta";
+import { Statement } from "@/components/Statement";
+import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -13,10 +15,13 @@ export const metadata: Metadata = {
 
 const checkups = [
   {
-    tag: "BASIS",
+    tag: "01",
+    label: "Basis",
     title: "Basis Check-up",
     duration: "60 – 75 Min.",
-    body: "Anamnese, klinische Untersuchung, EKG, Belastungs-EKG, Echokardiographie inklusive Speckle Tracking. Das strukturierte Fundament einer kardiologischen Standortbestimmung.",
+    href: "/basis-checkup",
+    body:
+      "Anamnese, klinische Untersuchung, EKG, Belastungs-EKG, Echokardiographie inklusive Speckle Tracking. Das strukturierte Fundament einer kardiologischen Standortbestimmung.",
     highlights: [
       "Ausführliches Erstgespräch",
       "Ruhe- und Belastungs-EKG",
@@ -25,10 +30,13 @@ const checkups = [
     ],
   },
   {
-    tag: "EXECUTIVE",
+    tag: "02",
+    label: "Executive",
     title: "Executive Check-up",
     duration: "90 – 120 Min.",
-    body: "Erweitertes Untersuchungsprogramm mit zusätzlichen Modulen für Menschen mit hoher Alltagsbelastung, Reisetätigkeit oder familiärer Vorbelastung.",
+    href: "/executive-checkup",
+    body:
+      "Erweitertes Untersuchungsprogramm mit zusätzlichen Modulen für Menschen mit hoher Alltagsbelastung, Reisetätigkeit oder familiärer Vorbelastung.",
     highlights: [
       "Alles aus dem Basis Check-up",
       "Erweitertes Laborprofil",
@@ -37,10 +45,13 @@ const checkups = [
     ],
   },
   {
-    tag: "FIRMEN",
+    tag: "03",
+    label: "Firmen",
     title: "Kardio-Check-up für Firmen",
     duration: "nach Absprache",
-    body: "Kardiovaskuläre Vorsorge für Führungskräfte und Mitarbeitende — als Einzelmandat oder als strukturiertes Programm für ganze Teams.",
+    href: "/firmen-checkup",
+    body:
+      "Kardiovaskuläre Vorsorge für Führungskräfte und Mitarbeitende — als Einzelmandat oder als strukturiertes Programm für ganze Teams.",
     highlights: [
       "Individuell konfigurierbar",
       "Diskreter Ablauf",
@@ -52,31 +63,32 @@ const checkups = [
 
 const diagnostik = [
   {
+    numeral: "01",
     kicker: "Bildgebung",
-    items: [
-      "Farbdoppler-Echokardiographie",
-      "Speckle-Tracking-Analyse",
-      "Stress-Echokardiographie",
-      "Karotis-Duplex-Sonographie",
-    ],
+    title: "Farbdoppler-Echokardiographie",
+    body:
+      "Hochauflösende Darstellung von Herzkammern, Klappenfunktion und Blutfluss. Basis jeder kardiologischen Untersuchung — bei uns inklusive Speckle-Tracking-Analyse.",
   },
   {
-    kicker: "Elektrophysiologie",
-    items: [
-      "Ruhe-EKG",
-      "Belastungs-EKG (Ergometrie)",
-      "Langzeit-EKG (24 h / 72 h)",
-      "Event-Recorder-Auswertung",
-    ],
+    numeral: "02",
+    kicker: "Belastung",
+    title: "Ergometrie & Stress-Echo",
+    body:
+      "Belastungsabhängige Diagnostik zur Beurteilung von Rhythmus, Sauerstoffversorgung und Herzfunktion unter definierten Anforderungen.",
   },
   {
-    kicker: "Funktion & Prävention",
-    items: [
-      "Langzeit-Blutdruckmessung",
-      "Kardiovaskuläres Risiko-Screening",
-      "Erweitertes Labor (Lipide, Biomarker)",
-      "Lebensstil- und Bewegungsberatung",
-    ],
+    numeral: "03",
+    kicker: "Rhythmus",
+    title: "Ruhe-, Langzeit- & Event-EKG",
+    body:
+      "Von der punktuellen Aufnahme bis zur mehrtägigen Rhythmusüberwachung — je nachdem, welche Fragestellung wirklich beantwortet werden muss.",
+  },
+  {
+    numeral: "04",
+    kicker: "Gefäße",
+    title: "Karotis-Duplex-Sonographie",
+    body:
+      "Ultraschall der hirnversorgenden Gefäße zur frühen Erkennung arteriosklerotischer Veränderungen und Einordnung des Schlaganfall-Risikos.",
   },
 ];
 
@@ -104,31 +116,38 @@ export default function LeistungenPage() {
         chapter="02"
         title={
           <>
-            Kardiologie mit Zeit.<br />
-            <span className="text-muted italic">Struktur, die Sie spüren.</span>
+            Kardiologie<br />
+            <span className="italic text-muted">mit Zeit.</span>
           </>
         }
         lead="Vom präzise abgestimmten Basis-Check bis zum umfassenden Executive-Programm — jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
       />
 
-      <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">
+      <section className="container-shell max-w-[1440px] pb-20 md:pb-28 px-4">
         <div className="grid gap-6 md:grid-cols-3">
           {checkups.map((c) => (
             <Reveal key={c.tag} delay={0.05}>
-              <article className="group relative flex flex-col rounded-[24px] border border-line bg-white/70 p-7 md:p-8 h-full overflow-hidden transition-all duration-500 ease-editorial hover:shadow-cardHover hover:-translate-y-[2px]">
-                <div
+              <Link
+                href={c.href}
+                className="group relative flex flex-col rounded-[26px] border border-line bg-white/70 p-7 md:p-8 h-full overflow-hidden transition-all duration-500 ease-editorial hover:shadow-cardHover hover:-translate-y-[2px] hover:border-gold/60"
+              >
+                <span
                   aria-hidden
                   className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
-                <div className="flex items-center justify-between mb-4">
-                  <span className="inline-flex items-center rounded-full border border-gold/40 bg-gold/[0.06] px-3 py-1 text-[10px] tracking-[0.18em] font-extrabold uppercase text-gold">
+                <div className="flex items-start justify-between mb-5">
+                  <span className="font-display text-gold/60 leading-none text-[clamp(52px,6vw,80px)] tracking-[-0.03em]">
                     {c.tag}
                   </span>
-                  <span className="text-[11px] tracking-[0.10em] uppercase text-muted">
-                    {c.duration}
+                  <span className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-muted mt-2 text-right">
+                    {c.label}
+                    <br />
+                    <span className="font-normal text-ink/70 tracking-[0.08em] text-[10px]">
+                      {c.duration}
+                    </span>
                   </span>
                 </div>
-                <h3 className="font-display text-[24px] md:text-[26px] leading-[1.2] mb-3">
+                <h3 className="font-display text-[26px] leading-[1.15] mb-4">
                   {c.title}
                 </h3>
                 <p className="text-muted text-[14px] md:text-[15px] leading-[1.7] mb-5">
@@ -145,56 +164,52 @@ export default function LeistungenPage() {
                     </li>
                   ))}
                 </ul>
-              </article>
+                <span className="mt-6 inline-flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase font-extrabold text-ink/85 group-hover:text-gold transition-colors">
+                  Zur Übersicht
+                  <span
+                    aria-hidden
+                    className="inline-block transition-transform duration-500 ease-editorial group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </span>
+              </Link>
             </Reveal>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-line bg-white/[0.62]">
-        <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
-          <Reveal>
-            <div className="max-w-[900px] mb-9 md:mb-10">
-              <div className="kicker mb-3">Diagnostik-Spektrum</div>
-              <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-                Ein Untersuchungsraum, drei Perspektiven.
-              </h2>
-              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-5 max-w-[720px]">
-                Bildgebung, Elektrophysiologie und funktionelle Diagnostik greifen in
-                der Praxis nahtlos ineinander — für einen Befund, der mehr ist als eine
-                Sammlung einzelner Werte.
-              </p>
-            </div>
-          </Reveal>
+      <Statement
+        eyebrow="Diagnostik"
+        tone="forest"
+        footer={
+          <>
+            Alle Untersuchungen werden persönlich durch die Ärztin durchgeführt.
+            Kein Delegieren an Assistenzpersonal, keine anonyme Befund-Übergabe per
+            E-Mail. Diagnostik und Gespräch gehören bei uns in dieselben 90 Minuten.
+          </>
+        }
+      >
+        Ein Untersuchungsraum,<br />
+        <span className="italic text-cream/85">viele Perspektiven.</span>
+      </Statement>
 
-          <div className="grid gap-5 md:grid-cols-3">
-            {diagnostik.map((d) => (
-              <Reveal key={d.kicker} delay={0.05}>
-                <div className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
-                  <div className="kicker mb-4">{d.kicker}</div>
-                  <ul className="space-y-3 text-[14px] leading-[1.65] text-ink/85">
-                    {d.items.map((i) => (
-                      <li key={i} className="flex gap-3 items-start">
-                        <span
-                          aria-hidden
-                          className="mt-[9px] inline-block h-px w-4 bg-gold flex-shrink-0"
-                        />
-                        <span>{i}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <SplitFeature
+        eyebrow="Diagnostik-Spektrum"
+        heading={
+          <>
+            Vier Fenster<br />in dasselbe Herz.
+          </>
+        }
+        intro="Bildgebung, Belastung, Rhythmus, Gefäße. Jede Modalität erzählt eine andere Geschichte — erst in der Kombination ergibt sich ein tragfähiges Bild."
+        items={diagnostik}
+      />
 
-      <section className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
+      <section className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
         <Reveal>
-          <div className="max-w-[900px] mb-9 md:mb-10">
+          <div className="max-w-[900px] mb-10 md:mb-14">
             <div className="kicker mb-3">Spezialsprechstunden</div>
-            <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
+            <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,50px)] tracking-[-0.015em] title-rule">
               Wenn Standard nicht reicht.
             </h2>
           </div>

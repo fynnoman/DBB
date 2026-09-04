@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
 import { PageCta } from "@/components/PageCta";
+import { PullQuote } from "@/components/PullQuote";
+import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -12,19 +14,25 @@ export const metadata: Metadata = {
 
 const blocks = [
   {
+    numeral: "01",
     kicker: "Private Verrechnungsstelle",
     title: "Abrechnung über eine PVS",
-    body: "Die privatärztliche Abrechnung kann über eine private Verrechnungsstelle (PVS) erfolgen. Hierfür ist, soweit erforderlich, Ihre Einwilligung zur Datenübermittlung notwendig — wir informieren Sie transparent, bevor Daten weitergegeben werden.",
+    body:
+      "Die privatärztliche Abrechnung kann über eine private Verrechnungsstelle (PVS) erfolgen. Hierfür ist, soweit erforderlich, Ihre Einwilligung zur Datenübermittlung notwendig — wir informieren Sie transparent, bevor Daten weitergegeben werden.",
   },
   {
+    numeral: "02",
     kicker: "Labor & Datenübermittlung",
     title: "Kooperationslabor",
-    body: "Wenn Laboruntersuchungen über ein Kooperationslabor durchgeführt werden, erhalten Sie zu Beginn der Behandlung die notwendigen Datenschutz- und Einwilligungsformulare. Ohne Ihre Zustimmung erfolgt keine Datenweitergabe.",
+    body:
+      "Wenn Laboruntersuchungen über ein Kooperationslabor durchgeführt werden, erhalten Sie zu Beginn der Behandlung die notwendigen Datenschutz- und Einwilligungsformulare. Ohne Ihre Zustimmung erfolgt keine Datenweitergabe.",
   },
   {
+    numeral: "03",
     kicker: "Ihre Rechte",
     title: "Auskunft, Berichtigung, Widerruf",
-    body: "Sie haben jederzeit das Recht auf Auskunft über gespeicherte Daten, Berichtigung, Löschung und Widerruf erteilter Einwilligungen. Wir stellen die dafür notwendigen Wege klar auf der Datenschutzseite dar.",
+    body:
+      "Sie haben jederzeit das Recht auf Auskunft über gespeicherte Daten, Berichtigung, Löschung und Widerruf erteilter Einwilligungen. Die Wege dorthin sind auf der vollständigen Datenschutzseite dokumentiert.",
   },
 ];
 
@@ -53,51 +61,58 @@ export default function PvsDatenschutzPage() {
         title={
           <>
             Transparent geregelt,<br />
-            <span className="text-muted italic">von Anfang an.</span>
+            <span className="italic text-muted">von Anfang an.</span>
           </>
         }
         lead="Wie Ihre Rechnung entsteht, welche Daten wohin gehen — und wie Sie jederzeit die Kontrolle behalten. Auf dieser Seite bündeln wir das Wesentliche."
       />
 
-      <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">
-        <div className="grid gap-5 md:grid-cols-3">
-          {blocks.map((b) => (
-            <Reveal key={b.title} delay={0.05}>
-              <article className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
-                <div className="kicker mb-3">{b.kicker}</div>
-                <h3 className="font-display text-[22px] leading-[1.2] mb-3">
-                  {b.title}
-                </h3>
-                <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
-                  {b.body}
-                </p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <SplitFeature
+        eyebrow="Drei Bausteine"
+        heading={
+          <>
+            Was Sie<br />
+            <span className="italic text-muted">wissen sollten.</span>
+          </>
+        }
+        intro="Abrechnung und Datenschutz sind bei uns keine Kleingedrucktes — sie sind Teil der ärztlichen Vereinbarung. Diese drei Bausteine bilden den Rahmen."
+        items={blocks}
+      />
+
+      <PullQuote author="Grundsatz" role="Datenschutz">
+        Ohne Ihre Einwilligung geht kein Datensatz aus dieser Praxis. Das ist keine
+        Marketing-Formel, sondern die Grundlage unserer Arbeit.
+      </PullQuote>
 
       <section className="border-t border-line bg-white/[0.62]">
-        <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
+        <div className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
           <Reveal>
-            <div className="max-w-[900px] mb-9 md:mb-10">
+            <div className="max-w-[900px] mb-10 md:mb-14">
               <div className="kicker mb-3">Häufige Fragen</div>
-              <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-                Was Patientinnen und Patienten meist fragen.
+              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+                Was Patientinnen<br />
+                <span className="italic text-muted">und Patienten meist fragen.</span>
               </h2>
             </div>
           </Reveal>
 
-          <ul className="rounded-[22px] border border-line bg-white/70 divide-y divide-line overflow-hidden">
-            {clarifications.map((c) => (
+          <ul className="divide-y divide-line border-y border-line">
+            {clarifications.map((c, i) => (
               <Reveal key={c.q} delay={0.05}>
-                <li className="p-6 md:p-7">
-                  <div className="font-display text-[19px] md:text-[20px] leading-[1.3] mb-2">
-                    {c.q}
+                <li className="grid grid-cols-1 md:grid-cols-[minmax(0,0.35fr)_minmax(0,1fr)] gap-4 md:gap-14 py-10 md:py-12">
+                  <div>
+                    <span className="font-display text-gold/70 leading-none text-[clamp(44px,5vw,72px)] tracking-[-0.03em]">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
                   </div>
-                  <p className="text-muted text-[14px] md:text-[15px] leading-[1.75] m-0">
-                    {c.a}
-                  </p>
+                  <div className="md:pt-4">
+                    <h3 className="font-display text-[clamp(20px,2.2vw,28px)] leading-[1.25] mb-3">
+                      {c.q}
+                    </h3>
+                    <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] max-w-[60ch] m-0">
+                      {c.a}
+                    </p>
+                  </div>
                 </li>
               </Reveal>
             ))}

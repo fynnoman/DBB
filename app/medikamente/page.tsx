@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
 import { PageCta } from "@/components/PageCta";
+import { Statement } from "@/components/Statement";
+import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -31,7 +33,7 @@ const meds = [
   },
   {
     badge: "Herzinsuffizienz",
-    title: "Sacubitril / Valsartan (Entresto)",
+    title: "Sacubitril / Valsartan",
     effect:
       "kombiniert Gefäß- und Hormonwirkungen zur Entlastung bei bestimmten Formen der Herzinsuffizienz.",
     side:
@@ -71,16 +73,25 @@ const meds = [
 
 const rules = [
   {
+    numeral: "01",
     kicker: "Nichts eigenständig",
-    body: "Medikamente sollten nie eigenständig begonnen, abgesetzt oder in der Dosis verändert werden — Rücksprache mit der Ärztin ist entscheidend.",
+    title: "Keine Selbst-Anpassung.",
+    body:
+      "Medikamente sollten nie eigenständig begonnen, abgesetzt oder in der Dosis verändert werden — Rücksprache mit der Ärztin ist entscheidend, auch wenn es „nur eine Kleinigkeit“ ist.",
   },
   {
+    numeral: "02",
     kicker: "Wechselwirkungen",
-    body: "Bitte informieren Sie uns über alle regelmäßig eingenommenen Präparate — inklusive frei verkäuflicher Mittel und Nahrungsergänzung.",
+    title: "Alles auf den Tisch.",
+    body:
+      "Bitte informieren Sie uns über alle regelmäßig eingenommenen Präparate — inklusive frei verkäuflicher Mittel, Nahrungsergänzung und pflanzlicher Präparate.",
   },
   {
+    numeral: "03",
     kicker: "Nebenwirkungen ernst nehmen",
-    body: "Ungewohnte Beschwerden bitte zeitnah melden, damit wir Dosis oder Präparat gemeinsam anpassen können.",
+    title: "Beim Auftreten melden.",
+    body:
+      "Ungewohnte Beschwerden bitte zeitnah melden, damit wir Dosis oder Präparat gemeinsam anpassen können. Das ist keine Belastung, sondern Teil einer guten Therapie.",
   },
 ];
 
@@ -94,34 +105,41 @@ export default function MedikamentePage() {
         title={
           <>
             Herzmedikamente,<br />
-            <span className="text-muted italic">verständlich erklärt.</span>
+            <span className="italic text-muted">verständlich erklärt.</span>
           </>
         }
         lead="Die folgenden Informationen dienen der Orientierung und ersetzen keine individuelle ärztliche Beratung. Für konkrete Fragen zu Ihrer Medikation sprechen Sie uns bitte persönlich an."
       />
 
-      <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">
+      <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">
         <Reveal>
-          <div className="max-w-[900px] mb-9 md:mb-10">
+          <div className="max-w-[900px] mb-10 md:mb-14">
             <div className="kicker mb-3">Häufig verordnete Wirkstoffgruppen</div>
-            <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-              Wirkung und typische Nebenwirkungen.
+            <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              Wirkung<br />
+              <span className="italic text-muted">und typische Nebenwirkungen.</span>
             </h2>
           </div>
         </Reveal>
 
         <div className="grid gap-5 md:grid-cols-2">
-          {meds.map((m) => (
+          {meds.map((m, i) => (
             <Reveal key={m.title} delay={0.05}>
-              <article className="rounded-[22px] border border-line bg-white/70 p-6 md:p-7 h-full transition-shadow duration-500 ease-editorial hover:shadow-cardHover">
-                <div className="text-[11px] text-gold font-extrabold tracking-[0.10em] uppercase">
+              <article className="group relative rounded-[22px] border border-line bg-white/70 p-6 md:p-8 h-full transition-all duration-500 ease-editorial hover:shadow-cardHover hover:border-gold/60 overflow-hidden">
+                <span
+                  aria-hidden
+                  className="absolute top-6 right-6 md:top-8 md:right-8 font-display text-gold/25 leading-none text-[clamp(40px,5vw,64px)] tracking-[-0.03em]"
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div className="text-[11px] text-gold font-extrabold tracking-[0.14em] uppercase">
                   {m.badge}
                 </div>
-                <h3 className="font-display text-[21px] mt-1.5 mb-2">{m.title}</h3>
-                <p className="text-muted leading-[1.62] m-0 text-[14px] md:text-[15px]">
+                <h3 className="font-display text-[24px] mt-2 mb-4">{m.title}</h3>
+                <p className="text-muted leading-[1.7] m-0 text-[14px] md:text-[15px]">
                   <strong className="text-ink">Wirkung:</strong> {m.effect}
                 </p>
-                <p className="text-muted leading-[1.62] mt-2 text-[14px] md:text-[15px]">
+                <p className="text-muted leading-[1.7] mt-3 text-[14px] md:text-[15px]">
                   <strong className="text-ink">Mögliche Nebenwirkungen:</strong>{" "}
                   {m.side}
                 </p>
@@ -131,43 +149,48 @@ export default function MedikamentePage() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-white/[0.62]">
-        <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
-          <Reveal>
-            <div className="max-w-[900px] mb-9 md:mb-10">
-              <div className="kicker mb-3">Drei Grundregeln</div>
-              <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-                Sicher durch die Therapie.
-              </h2>
-            </div>
-          </Reveal>
-          <div className="grid gap-5 md:grid-cols-3">
-            {rules.map((r) => (
-              <Reveal key={r.kicker} delay={0.05}>
-                <article className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
-                  <div className="kicker mb-3">{r.kicker}</div>
-                  <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
-                    {r.body}
-                  </p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+      <Statement
+        eyebrow="Wichtig"
+        tone="ink"
+        footer={
+          <>
+            Diese Übersicht ist eine Orientierungshilfe — kein Ersatz für die
+            persönliche Beratung. Ob eine Substanzklasse zu Ihnen passt, hängt von
+            Diagnose, Vorerkrankungen, weiterer Medikation und individuellen Werten
+            ab.
+          </>
+        }
+      >
+        Wissen ist gut.<br />
+        <span className="italic text-cream/85">Kontext ist besser.</span>
+      </Statement>
 
-          <Reveal delay={0.15}>
-            <div className="mt-12 rounded-[22px] border border-[#e2c9c6] bg-[#fdf1ef] p-6 md:p-7">
-              <div className="text-[12px] tracking-[0.10em] uppercase font-extrabold text-[#b3261e] mb-1.5">
-                Notfall
-              </div>
-              <p className="text-[14px] leading-[1.7] text-ink m-0">
-                Bei akuten Symptomen — Brustschmerz, plötzliche Luftnot, Schwindel
-                mit Übelkeit — bitte umgehend die{" "}
-                <strong className="tracking-wider">{site.emergencyNumber}</strong>{" "}
-                wählen. Diese Seite ersetzt keinen Notruf.
-              </p>
+      <SplitFeature
+        eyebrow="Drei Grundregeln"
+        heading={
+          <>
+            Sicher durch<br />
+            <span className="italic text-muted">die Therapie.</span>
+          </>
+        }
+        intro="Die meisten kardiovaskulären Medikamente sind gut verträglich — vorausgesetzt, drei einfache Regeln werden konsequent eingehalten."
+        items={rules}
+      />
+
+      <section className="container-shell max-w-[1440px] pb-16 md:pb-20 px-4">
+        <Reveal>
+          <div className="rounded-[22px] border border-[#e2c9c6] bg-[#fdf1ef] p-6 md:p-8">
+            <div className="text-[12px] tracking-[0.10em] uppercase font-extrabold text-[#b3261e] mb-2">
+              Notfall
             </div>
-          </Reveal>
-        </div>
+            <p className="text-[15px] leading-[1.7] text-ink m-0 max-w-[720px]">
+              Bei akuten Symptomen — Brustschmerz, plötzliche Luftnot, Schwindel mit
+              Übelkeit — bitte umgehend die{" "}
+              <strong className="tracking-wider">{site.emergencyNumber}</strong>{" "}
+              wählen. Diese Seite ersetzt keinen Notruf.
+            </p>
+          </div>
+        </Reveal>
       </section>
 
       <PageCta

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
 import { PageCta } from "@/components/PageCta";
+import { Statement } from "@/components/Statement";
+import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -12,19 +14,25 @@ export const metadata: Metadata = {
 
 const flow = [
   {
-    kicker: "01",
-    title: "Terminvereinbarung",
-    body: "Vor dem Termin klären wir Umfang und voraussichtliche Kosten transparent — damit es beim Rechnungserhalt keine Überraschungen gibt.",
+    numeral: "01",
+    kicker: "Terminvereinbarung",
+    title: "Umfang & Kosten transparent klären.",
+    body:
+      "Vor dem Termin klären wir Umfang und voraussichtliche Kosten transparent — damit es beim Rechnungserhalt keine Überraschungen gibt.",
   },
   {
-    kicker: "02",
-    title: "Untersuchung",
-    body: "Ablauf und Diagnostik unterscheiden sich nicht von unseren privatärztlichen Terminen. Sie erhalten dieselbe Zeit, dieselben Untersuchungen und denselben Bericht.",
+    numeral: "02",
+    kicker: "Untersuchung",
+    title: "Identisch zur privatärztlichen Sprechstunde.",
+    body:
+      "Ablauf und Diagnostik unterscheiden sich nicht von unseren privatärztlichen Terminen. Sie erhalten dieselbe Zeit, dieselben Untersuchungen und denselben Bericht.",
   },
   {
-    kicker: "03",
-    title: "Rechnung nach GOÄ",
-    body: "Sie erhalten eine transparente Rechnung nach der Gebührenordnung für Ärzte. Die Zahlung erfolgt direkt an die Praxis oder über eine PVS.",
+    numeral: "03",
+    kicker: "Rechnung nach GOÄ",
+    title: "Transparent, nachvollziehbar, dokumentiert.",
+    body:
+      "Sie erhalten eine transparente Rechnung nach der Gebührenordnung für Ärzte. Die Zahlung erfolgt direkt an die Praxis oder über eine PVS.",
   },
 ];
 
@@ -57,54 +65,47 @@ export default function GkvSelbstzahlerPage() {
         title={
           <>
             Privatpraxis nutzen —<br />
-            <span className="text-muted italic">auch als GKV-Versicherte.</span>
+            <span className="italic text-muted">auch als GKV-Versicherte.</span>
           </>
         }
         lead="Gesetzlich Versicherte können unsere Leistungen als Selbstzahler in Anspruch nehmen. Sie erhalten dieselbe Zeit, dieselbe Diagnostik und eine transparente Rechnung nach GOÄ."
       />
 
-      <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">
-        <Reveal>
-          <div className="max-w-[900px] mb-9 md:mb-10">
-            <div className="kicker mb-3">So läuft es ab</div>
-            <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-              Drei Schritte, ein klarer Weg.
-            </h2>
-          </div>
-        </Reveal>
+      <SplitFeature
+        eyebrow="So läuft es ab"
+        heading={
+          <>
+            Drei Schritte,<br />
+            <span className="italic text-muted">ein klarer Weg.</span>
+          </>
+        }
+        intro="Als Selbstzahlerin oder Selbstzahler durchlaufen Sie denselben ärztlichen Weg wie unsere Privatpatienten — mit demselben Standard und einer transparenten Kostenstruktur."
+        items={flow}
+      />
 
-        <div className="grid gap-5 md:grid-cols-3">
-          {flow.map((f) => (
-            <Reveal key={f.kicker} delay={0.05}>
-              <article className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
-                <div className="flex items-baseline gap-4 mb-3">
-                  <span className="font-display text-[26px] text-gold/80">
-                    {f.kicker}
-                  </span>
-                  <span
-                    aria-hidden
-                    className="h-px flex-1 bg-gradient-to-r from-gold/60 to-transparent"
-                  />
-                </div>
-                <h3 className="font-display text-[22px] leading-[1.2] mb-3">
-                  {f.title}
-                </h3>
-                <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
-                  {f.body}
-                </p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <Statement
+        eyebrow="Prinzip"
+        tone="forest"
+        footer={
+          <>
+            Für uns gibt es medizinisch keine Zwei-Klassen-Gesellschaft. Der
+            Unterschied liegt ausschließlich in der administrativen Abwicklung —
+            nicht in Umfang, Zeit oder Sorgfalt der Untersuchung.
+          </>
+        }
+      >
+        Derselbe Standard<br />
+        <span className="italic text-cream/85">für alle, die kommen.</span>
+      </Statement>
 
       <section className="border-t border-line bg-white/[0.62]">
-        <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
+        <div className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
           <Reveal>
-            <div className="max-w-[900px] mb-9 md:mb-10">
+            <div className="max-w-[900px] mb-10 md:mb-14">
               <div className="kicker mb-3">Was Sie wissen sollten</div>
-              <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-                Vier Fakten vorab.
+              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+                Vier Fakten<br />
+                <span className="italic text-muted">vorab.</span>
               </h2>
             </div>
           </Reveal>

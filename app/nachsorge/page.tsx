@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
 import { PageCta } from "@/components/PageCta";
+import { Statement } from "@/components/Statement";
+import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -12,19 +14,25 @@ export const metadata: Metadata = {
 
 const situations = [
   {
+    numeral: "01",
     kicker: "Nach dem Ereignis",
     title: "Nach Herzinfarkt, Stent oder Bypass",
-    body: "Strukturierte Weiterbetreuung nach einem kardialen Ereignis — mit klarem Fokus auf Sekundärprävention und Lebensqualität.",
+    body:
+      "Strukturierte Weiterbetreuung nach einem kardialen Ereignis — mit klarem Fokus auf Sekundärprävention, Belastbarkeit und Lebensqualität.",
   },
   {
+    numeral: "02",
     kicker: "Chronisch",
     title: "Bei bekannter Herzerkrankung",
-    body: "Verlaufskontrolle bei Herzinsuffizienz, koronarer Herzkrankheit, Vorhofflimmern oder Klappenveränderungen.",
+    body:
+      "Verlaufskontrolle bei Herzinsuffizienz, koronarer Herzkrankheit, Vorhofflimmern oder Klappenveränderungen — im Rhythmus, den die Erkrankung braucht.",
   },
   {
+    numeral: "03",
     kicker: "Nach Diagnostik",
     title: "Kontrolle nach Untersuchungen",
-    body: "Wenn Vorbefunde eine Beobachtung nahelegen — etwa nach auffälligem EKG, Herzultraschall oder Bildgebung.",
+    body:
+      "Wenn Vorbefunde eine Beobachtung nahelegen — etwa nach auffälligem EKG, Herzultraschall oder Bildgebung — geben wir dem Verlauf einen Rahmen.",
   },
 ];
 
@@ -70,47 +78,48 @@ export default function NachsorgePage() {
         chapter="10"
         title={
           <>
-            Nachsorge, die weiterdenkt.<br />
-            <span className="text-muted italic">Verlässlich. Ohne Automatismus.</span>
+            Nachsorge,<br />
+            <span className="italic text-muted">die weiterdenkt.</span>
           </>
         }
         lead="Nach einem kardialen Ereignis oder bei bekannter Herzerkrankung braucht es kontinuierliche, strukturierte Betreuung — mit denselben Standards wie am ersten Termin."
       />
 
-      <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">
-        <Reveal>
-          <div className="max-w-[900px] mb-9 md:mb-10">
-            <div className="kicker mb-3">Für wen</div>
-            <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-              Drei typische Anlässe für eine Nachsorge.
-            </h2>
-          </div>
-        </Reveal>
+      <SplitFeature
+        eyebrow="Für wen"
+        heading={
+          <>
+            Drei typische<br />
+            <span className="italic text-muted">Anlässe.</span>
+          </>
+        }
+        intro="Ob nach einem konkreten Ereignis, bei einer bekannten chronischen Diagnose oder als Reaktion auf einen Vorbefund — Nachsorge ist keine Einheitsleistung, sondern eine Antwort auf Kontext."
+        items={situations}
+      />
 
-        <div className="grid gap-5 md:grid-cols-3">
-          {situations.map((s) => (
-            <Reveal key={s.kicker} delay={0.05}>
-              <article className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
-                <div className="kicker mb-3">{s.kicker}</div>
-                <h3 className="font-display text-[22px] leading-[1.2] mb-3">
-                  {s.title}
-                </h3>
-                <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
-                  {s.body}
-                </p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <Statement
+        eyebrow="Prinzip"
+        tone="ink"
+        footer={
+          <>
+            Deshalb keine standardisierten Kontroll-Slots, keine anonyme
+            Werte-Verwaltung. Jede Nachsorge ist so aufgebaut, dass sie die
+            eigentliche Frage beantwortet — nicht nur Häkchen setzt.
+          </>
+        }
+      >
+        Verlaufskontrolle ist<br />
+        <span className="italic text-cream/85">keine Wiederholung.</span>
+      </Statement>
 
       <section className="border-t border-line bg-white/[0.62]">
-        <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
+        <div className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
           <Reveal>
-            <div className="max-w-[900px] mb-9 md:mb-10">
+            <div className="max-w-[900px] mb-10 md:mb-14">
               <div className="kicker mb-3">Umfang eines Nachsorge-Termins</div>
-              <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-                Sechs Bausteine, individuell gewichtet.
+              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+                Sechs Bausteine,<br />
+                <span className="italic text-muted">individuell gewichtet.</span>
               </h2>
             </div>
           </Reveal>
@@ -127,18 +136,19 @@ export default function NachsorgePage() {
         </div>
       </section>
 
-      <section className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
-        <div className="grid gap-10 md:grid-cols-2 items-start">
+      <section className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
+        <div className="grid gap-12 md:grid-cols-2 items-start">
           <Reveal>
             <div>
               <div className="kicker mb-3">Rhythmus</div>
-              <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-                Wie oft ist sinnvoll?
+              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+                Wie oft<br />
+                <span className="italic text-muted">ist sinnvoll?</span>
               </h2>
-              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-6 max-w-[520px]">
+              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
                 Der Termintakt ergibt sich aus Diagnose, Medikation und individueller
-                Situation. Wir stimmen ihn beim Erstgespräch mit Ihnen ab und passen ihn
-                bei Bedarf an.
+                Situation. Wir stimmen ihn beim Erstgespräch mit Ihnen ab und passen
+                ihn bei Bedarf an.
               </p>
             </div>
           </Reveal>
@@ -148,7 +158,7 @@ export default function NachsorgePage() {
               {cadence.map((c) => (
                 <li
                   key={c.label}
-                  className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-2 md:gap-6 px-6 py-5"
+                  className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-2 md:gap-6 px-6 py-6"
                 >
                   <div className="kicker">{c.label}</div>
                   <p className="text-muted text-[14px] leading-[1.7] m-0">{c.body}</p>

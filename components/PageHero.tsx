@@ -8,28 +8,50 @@ export function PageHero({
   lead,
   chapter,
   eyebrow,
+  align = "left",
 }: {
   kicker: string;
   title: ReactNode;
   lead?: ReactNode;
   chapter?: string;
   eyebrow?: string;
+  align?: "left" | "center";
 }) {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative isolate overflow-hidden">
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(60% 60% at 100% 0%, rgba(183,154,98,0.10) 0%, rgba(183,154,98,0) 60%), radial-gradient(60% 60% at 0% 100%, rgba(35,79,67,0.06) 0%, rgba(35,79,67,0) 60%)",
+            "radial-gradient(65% 55% at 85% 10%, rgba(183,154,98,0.14) 0%, rgba(183,154,98,0) 55%), radial-gradient(45% 45% at 10% 95%, rgba(35,79,67,0.08) 0%, rgba(35,79,67,0) 55%), linear-gradient(180deg, #fbfaf7 0%, #f6f2e9 100%)",
         }}
       />
-      <div className="container-shell max-w-[1440px] pt-14 md:pt-24 pb-14 md:pb-20 px-4 relative">
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, rgba(24,24,24,0.6) 1px, transparent 0)",
+          backgroundSize: "3px 3px",
+        }}
+      />
+      {chapter && (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-4 md:right-4 lg:right-10 top-1/2 -translate-y-1/2 font-display text-gold/[0.07] leading-none select-none text-[clamp(260px,42vw,560px)] tracking-[-0.04em]"
+        >
+          {chapter}
+        </div>
+      )}
+
+      <div className="container-shell max-w-[1440px] relative px-4 pt-14 md:pt-24 pb-16 md:pb-28">
         <Reveal>
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-[12px] tracking-[0.10em] uppercase text-muted mb-6 md:mb-8"
+            className={`flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase text-muted mb-10 md:mb-14 ${
+              align === "center" ? "justify-center" : ""
+            }`}
           >
             <Link
               href="/"
@@ -40,54 +62,92 @@ export function PageHero({
             <span aria-hidden className="text-gold/70">
               /
             </span>
-            <span className="text-ink/80">{kicker}</span>
+            <span className="text-ink/85">{kicker}</span>
           </nav>
         </Reveal>
 
-        <div className="grid gap-10 md:gap-14 md:grid-cols-[minmax(0,1fr)_auto] items-end">
-          <div className="max-w-[880px]">
+        <div className={align === "center" ? "text-center" : ""}>
+          {eyebrow && (
             <Reveal>
-              {eyebrow && (
-                <div className="kicker mb-4">{eyebrow}</div>
-              )}
-              <h1 className="font-display leading-[1.03] text-[clamp(38px,6vw,74px)] tracking-[-0.015em] text-ink">
-                {title}
-              </h1>
-            </Reveal>
-            {lead && (
-              <Reveal delay={0.1}>
-                <p className="text-muted text-[17px] md:text-[19px] leading-[1.7] mt-7 md:mt-9 max-w-[720px]">
-                  {lead}
-                </p>
-              </Reveal>
-            )}
-          </div>
-
-          {chapter && (
-            <Reveal delay={0.2}>
-              <div className="hidden md:flex flex-col items-end gap-2 pb-2">
+              <div
+                className={`inline-flex items-center gap-3 mb-6 md:mb-8 ${
+                  align === "center" ? "" : ""
+                }`}
+              >
                 <span
                   aria-hidden
-                  className="h-px w-16 bg-gradient-to-r from-transparent to-gold"
+                  className="h-px w-10 bg-gradient-to-r from-gold to-transparent"
                 />
-                <span className="font-display italic text-muted text-[15px]">
-                  Kapitel
-                </span>
-                <span className="font-display text-[64px] leading-none text-gold/80 tracking-[-0.02em]">
-                  {chapter}
+                <span className="text-[11px] tracking-[0.22em] uppercase font-extrabold text-gold">
+                  {eyebrow}
                 </span>
               </div>
             </Reveal>
           )}
+
+          <Reveal delay={0.05}>
+            <h1
+              className={`font-display leading-[0.98] tracking-[-0.02em] text-ink text-[clamp(44px,8vw,112px)] ${
+                align === "center" ? "mx-auto max-w-[16ch]" : "max-w-[18ch]"
+              }`}
+            >
+              {title}
+            </h1>
+          </Reveal>
+
+          {lead && (
+            <Reveal delay={0.15}>
+              <p
+                className={`text-muted text-[17px] md:text-[20px] leading-[1.65] mt-8 md:mt-12 max-w-[720px] ${
+                  align === "center" ? "mx-auto" : ""
+                }`}
+              >
+                {lead}
+              </p>
+            </Reveal>
+          )}
         </div>
 
-        <Reveal delay={0.15}>
-          <span
-            aria-hidden
-            className="mt-10 md:mt-14 inline-block h-px w-24 bg-gradient-to-r from-gold to-transparent"
-          />
+        <Reveal delay={0.25}>
+          <div
+            className={`mt-14 md:mt-20 flex items-center gap-4 ${
+              align === "center" ? "justify-center" : ""
+            }`}
+          >
+            {chapter && (
+              <span className="font-display italic text-muted text-[13px] tracking-wide">
+                Kapitel {chapter}
+              </span>
+            )}
+            <span
+              aria-hidden
+              className="h-px flex-1 max-w-[220px] bg-gradient-to-r from-gold via-gold/40 to-transparent"
+            />
+            <Heartline />
+          </div>
         </Reveal>
       </div>
     </section>
+  );
+}
+
+function Heartline() {
+  return (
+    <svg
+      width="80"
+      height="16"
+      viewBox="0 0 80 16"
+      aria-hidden
+      className="text-gold/80"
+    >
+      <path
+        d="M0 8 L18 8 L22 3 L28 13 L34 1 L40 15 L46 5 L52 8 L80 8"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }

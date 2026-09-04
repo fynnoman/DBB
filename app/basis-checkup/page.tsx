@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
 import { PageCta } from "@/components/PageCta";
+import { Statement } from "@/components/Statement";
+import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -21,19 +23,25 @@ const included = [
 
 const steps = [
   {
-    kicker: "01",
-    title: "Vorgespräch",
-    body: "Wir klären, welche Fragestellungen im Vordergrund stehen, und stimmen die Untersuchung darauf ab.",
+    numeral: "01",
+    kicker: "Vorgespräch",
+    title: "Fragestellung schärfen.",
+    body:
+      "Wir klären, welche Fragestellungen im Vordergrund stehen, und stimmen die Untersuchung darauf ab. Kein Standardprotokoll — sondern eine Auswahl mit klarem Ziel.",
   },
   {
-    kicker: "02",
-    title: "Untersuchung",
-    body: "EKG, Echokardiographie und Blutentnahme werden persönlich durchgeführt — ohne Delegation an fachfremdes Personal.",
+    numeral: "02",
+    kicker: "Untersuchung",
+    title: "EKG, Echo, Labor — persönlich.",
+    body:
+      "EKG, Echokardiographie und Blutentnahme werden persönlich durchgeführt — ohne Delegation an fachfremdes Personal. Alles im selben Raum, in einem Zug.",
   },
   {
-    kicker: "03",
-    title: "Persönlicher Befund",
-    body: "Direkt im Anschluss besprechen wir die Ergebnisse, das Risikoprofil und die nächsten sinnvollen Schritte.",
+    numeral: "03",
+    kicker: "Persönlicher Befund",
+    title: "Klarheit statt Nachfrage.",
+    body:
+      "Direkt im Anschluss besprechen wir die Ergebnisse, das Risikoprofil und die nächsten sinnvollen Schritte. Sie gehen nicht mit Fragen, sondern mit einem Plan.",
   },
 ];
 
@@ -47,36 +55,55 @@ export default function BasisCheckupPage() {
         title={
           <>
             Basis Check-up.<br />
-            <span className="text-muted italic">Struktur für den Start.</span>
+            <span className="italic text-muted">Struktur für den Start.</span>
           </>
         }
         lead="Das strukturierte Fundament einer kardiologischen Standortbestimmung: Anamnese, EKG, Echokardiographie, Lipidprofil und persönliche Befundbesprechung — in einem einzigen Termin."
       />
 
-      <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">
-        <div className="grid gap-6 md:grid-cols-[1.1fr_0.9fr] items-start">
+      <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">
+        <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] items-start">
           <Reveal>
             <div>
               <div className="kicker mb-3">Für wen sinnvoll</div>
-              <h2 className="font-display text-[clamp(26px,3vw,38px)] leading-[1.2] title-rule">
-                Kardiologische Ersteinschätzung — bewusst gewählt.
+              <h2 className="font-display text-[clamp(28px,3.6vw,44px)] leading-[1.15] tracking-[-0.015em] title-rule">
+                Kardiologische Ersteinschätzung —<br />
+                <span className="italic text-muted">bewusst gewählt.</span>
               </h2>
-              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-6 max-w-[560px]">
+              <p className="text-muted text-[15px] md:text-[17px] leading-[1.8] mt-8 max-w-[560px]">
                 Der Basis Check-up eignet sich für Menschen, die eine strukturierte
                 kardiologische Standortbestimmung wünschen — sei es aus präventiven
                 Gründen, wegen familiärer Vorbelastung oder als Reaktion auf erste
                 unspezifische Beschwerden.
               </p>
-              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-4 max-w-[560px]">
+              <p className="text-muted text-[14px] md:text-[15px] leading-[1.75] mt-5 max-w-[560px]">
                 Er ersetzt keine Notfalluntersuchung. Für akute Symptome ist der Weg
                 über die {site.emergencyNumber} oder die nächste Notaufnahme der
                 richtige.
               </p>
+              <div className="mt-10 border-t border-line pt-8 grid grid-cols-2 gap-6">
+                <div>
+                  <div className="font-display text-gold/80 leading-none text-[clamp(40px,5vw,68px)] tracking-[-0.02em]">
+                    ~70
+                  </div>
+                  <div className="mt-3 text-[12px] tracking-[0.10em] uppercase font-extrabold text-ink">
+                    Minuten
+                  </div>
+                </div>
+                <div>
+                  <div className="font-display text-gold/80 leading-none text-[clamp(40px,5vw,68px)] tracking-[-0.02em]">
+                    1×
+                  </div>
+                  <div className="mt-3 text-[12px] tracking-[0.10em] uppercase font-extrabold text-ink">
+                    Termin
+                  </div>
+                </div>
+              </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.1}>
-            <div className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8">
+            <div className="rounded-[24px] border border-line bg-white/70 p-7 md:p-8">
               <div className="kicker mb-4">Enthaltene Leistungen</div>
               <ul className="space-y-3 text-[14px] leading-[1.65] text-ink/85">
                 {included.map((i) => (
@@ -89,7 +116,7 @@ export default function BasisCheckupPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 pt-5 border-t border-line text-[12px] leading-[1.6] text-muted">
+              <p className="mt-6 pt-5 border-t border-line text-[12px] leading-[1.6] text-muted">
                 Laborleistungen werden vom kooperierenden Labor separat in Rechnung
                 gestellt.
               </p>
@@ -98,41 +125,32 @@ export default function BasisCheckupPage() {
         </div>
       </section>
 
-      <section className="border-t border-line bg-white/[0.62]">
-        <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
-          <Reveal>
-            <div className="max-w-[900px] mb-9 md:mb-10">
-              <div className="kicker mb-3">Ablauf</div>
-              <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-                Drei Schritte, ein Termin.
-              </h2>
-            </div>
-          </Reveal>
-          <div className="grid gap-5 md:grid-cols-3">
-            {steps.map((s) => (
-              <Reveal key={s.kicker} delay={0.05}>
-                <article className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
-                  <div className="flex items-baseline gap-4 mb-3">
-                    <span className="font-display text-[26px] text-gold/80">
-                      {s.kicker}
-                    </span>
-                    <span
-                      aria-hidden
-                      className="h-px flex-1 bg-gradient-to-r from-gold/60 to-transparent"
-                    />
-                  </div>
-                  <h3 className="font-display text-[22px] leading-[1.2] mb-3">
-                    {s.title}
-                  </h3>
-                  <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
-                    {s.body}
-                  </p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <SplitFeature
+        eyebrow="Ablauf"
+        heading={
+          <>
+            Drei Schritte,<br />
+            <span className="italic text-muted">ein Termin.</span>
+          </>
+        }
+        intro="Der Basis Check-up ist so aufgebaut, dass Vorgespräch, Diagnostik und Befund-Klärung an einem einzigen Nachmittag zusammenfinden."
+        items={steps}
+      />
+
+      <Statement
+        eyebrow="Grundsatz"
+        tone="forest"
+        footer={
+          <>
+            Deshalb keine Serien-Vorstellung, keine anonyme Befund-Zustellung, keine
+            Delegation an fachfremdes Personal. Sie gehen mit einem Bild von Ihrem
+            Herzen — nicht mit einer Rechnung und offenen Fragen.
+          </>
+        }
+      >
+        Ein Termin, der<br />
+        <span className="italic text-cream/85">wirklich reicht.</span>
+      </Statement>
 
       <PageCta
         title="Basis Check-up buchen."

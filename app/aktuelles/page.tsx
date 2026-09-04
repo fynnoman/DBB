@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
 import { PageCta } from "@/components/PageCta";
+import { PullQuote } from "@/components/PullQuote";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
@@ -40,57 +41,71 @@ export default function AktuellesPage() {
         chapter="11"
         title={
           <>
-            Was gerade wichtig ist.<br />
-            <span className="text-muted italic">Sprechzeiten. Vertretungen. Hinweise.</span>
+            Was gerade<br />
+            <span className="italic text-muted">wichtig ist.</span>
           </>
         }
         lead="An dieser Stelle veröffentlichen wir kurzfristige Änderungen der Sprechzeiten, geplante Urlaubszeiten und die jeweils zuständigen Vertretungen."
       />
 
-      <section className="container-shell max-w-[1440px] pb-16 md:pb-24 px-4">
+      <section className="container-shell max-w-[1440px] pb-20 md:pb-24 px-4">
         <Reveal>
-          <div className="max-w-[900px] mb-9 md:mb-10">
+          <div className="max-w-[900px] mb-10 md:mb-14">
             <div className="kicker mb-3">Neueste Hinweise</div>
-            <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-              Aktuell in der Praxis.
+            <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              Aktuell<br />
+              <span className="italic text-muted">in der Praxis.</span>
             </h2>
           </div>
         </Reveal>
 
-        <ul className="grid gap-5">
-          {news.map((n) => (
+        <ul className="divide-y divide-line border-y border-line">
+          {news.map((n, i) => (
             <Reveal key={n.title} delay={0.05}>
-              <li className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8">
-                <div className="flex flex-wrap items-center gap-4 mb-3">
-                  <span className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold">
-                    {n.date}
+              <li className="py-10 md:py-14 grid grid-cols-1 md:grid-cols-[minmax(0,0.4fr)_minmax(0,1fr)] gap-6 md:gap-14 group">
+                <div>
+                  <span className="font-display text-gold/70 leading-none text-[clamp(48px,6vw,88px)] tracking-[-0.03em]">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="inline-flex items-center rounded-full border border-line bg-white px-3 py-1 text-[11px] tracking-[0.05em] text-ink/75">
-                    {n.tag}
-                  </span>
+                  <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <span className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold">
+                      {n.date}
+                    </span>
+                    <span className="inline-flex items-center rounded-full border border-line bg-white px-3 py-1 text-[11px] tracking-[0.05em] text-ink/75">
+                      {n.tag}
+                    </span>
+                  </div>
                 </div>
-                <h3 className="font-display text-[22px] leading-[1.2] mb-2">
-                  {n.title}
-                </h3>
-                <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
-                  {n.body}
-                </p>
+                <div className="md:pt-6">
+                  <h3 className="font-display text-[clamp(22px,2.4vw,30px)] leading-[1.2] mb-3">
+                    {n.title}
+                  </h3>
+                  <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] max-w-[60ch]">
+                    {n.body}
+                  </p>
+                </div>
               </li>
             </Reveal>
           ))}
         </ul>
       </section>
 
+      <PullQuote author="Grundsatz" role="Erreichbarkeit">
+        Vorhersehbare Abwesenheiten kündigen wir früh an — kurzfristige klären wir
+        persönlich, nie über eine Warteschleife.
+      </PullQuote>
+
       <section className="border-t border-line bg-white/[0.62]">
-        <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
-          <div className="grid gap-10 md:grid-cols-2 items-start">
+        <div className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
+          <div className="grid gap-12 md:grid-cols-2 items-start">
             <Reveal>
               <div>
                 <div className="kicker mb-3">Reguläre Sprechzeiten</div>
-                <h2 className="font-display leading-[1.1] text-[clamp(28px,3.5vw,44px)] title-rule">
-                  Wann Sie uns erreichen.
+                <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+                  Wann Sie uns<br />
+                  <span className="italic text-muted">erreichen.</span>
                 </h2>
-                <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-6 max-w-[520px]">
+                <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
                   Die regulären Sprechzeiten dienen als Orientierung. Termine werden
                   ausschließlich nach persönlicher Vereinbarung vergeben.
                 </p>

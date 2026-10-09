@@ -8,20 +8,11 @@ const legal = [
   { href: "/impressum#aufsichtsbehoerden", label: "Aufsichtsbehörden" },
 ];
 
-const sitemap = [
-  { href: "/aerztin", label: "Über die Ärztin" },
-  { href: "/leistungen", label: "Leistungen" },
-  { href: "/praxis", label: "Praxis" },
-  { href: "/patienten", label: "Patienten" },
-  { href: "/kooperationen", label: "Kooperationen" },
-  { href: "/kontakt", label: "Kontakt" },
-];
-
 export default function Footer() {
   return (
     <footer className="relative border-t border-line bg-white/60">
-      <div className="container-shell max-w-[1440px] px-4 pt-14 md:pt-16 pb-8 md:pb-10">
-        <div className="grid gap-10 md:gap-8 md:grid-cols-4">
+      <div className="container-shell max-w-[1440px] px-4 pt-14 md:pt-16 pb-10">
+        <div className="grid gap-10 md:gap-8 md:grid-cols-3">
           <div className="md:col-span-1">
             <div className="text-[12px] tracking-[0.10em] font-extrabold uppercase text-ink mb-3">
               {site.brand}
@@ -41,6 +32,8 @@ export default function Footer() {
               {site.address.street}
               <br />
               {site.address.zipCity}
+              <br />
+              Stadtteil {site.address.district}
             </address>
             <div className="mt-3 text-[13px] leading-[1.7] text-muted">
               <div>Telefon: {site.phone}</div>
@@ -51,7 +44,7 @@ export default function Footer() {
           <FooterCol label="Sprechzeiten">
             <ul className="text-[13px] leading-[1.7] text-muted space-y-1">
               <li className="flex justify-between gap-4">
-                <span>Mo – Do</span>
+                <span>Mo bis Do</span>
                 <span>[wird ergänzt]</span>
               </li>
               <li className="flex justify-between gap-4">
@@ -59,40 +52,26 @@ export default function Footer() {
                 <span>[wird ergänzt]</span>
               </li>
               <li className="flex justify-between gap-4">
-                <span>Sa / So</span>
+                <span>Sa und So</span>
                 <span>Geschlossen</span>
               </li>
             </ul>
             <p className="mt-3 text-[12px] leading-[1.6] text-muted/80">
-              Termine ausschließlich nach Vereinbarung.
+              Termine ausschließlich nach Vereinbarung. Bitte spätestens 24
+              Stunden vor dem Termin absagen.
             </p>
-          </FooterCol>
-
-          <FooterCol label="Sitemap">
-            <ul className="text-[13px] leading-[1.7] space-y-1">
-              {sitemap.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-muted hover:text-ink transition-colors underline-offset-4 hover:underline decoration-gold/60"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </FooterCol>
         </div>
       </div>
 
-      <div className="border-t border-line/70">
-        <div className="container-shell max-w-[1440px] py-8 md:py-10 pb-24 md:pb-14 px-4 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 text-[13px] text-muted">
+      <div className="bg-forest text-cream/85">
+        <div className="container-shell max-w-[1440px] py-8 md:py-10 pb-24 md:pb-14 px-4 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 text-[13px]">
           <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
             {legal.map((l) => (
               <Link
                 key={l.href + l.label}
                 href={l.href}
-                className="hover:text-ink transition-colors underline-offset-4 hover:underline decoration-gold/60"
+                className="hover:text-white transition-colors underline-offset-4 hover:underline decoration-gold/80"
               >
                 {l.label}
               </Link>

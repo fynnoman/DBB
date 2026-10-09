@@ -9,7 +9,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `PVS & Datenschutz | ${site.brand}`,
   description:
-    "Transparente privatärztliche Abrechnung über eine PVS, Datenübermittlung an Kooperationslabore und die dazugehörigen Einwilligungsformulare bei DBB Kardio St. Ingbert.",
+    "Transparente privatärztliche Abrechnung über eine PVS, Datenübermittlung an Partnerlabore und die dazugehörigen Einwilligungsformulare bei DBB Kardio Saarlouis.",
 };
 
 const blocks = [
@@ -18,14 +18,14 @@ const blocks = [
     kicker: "Private Verrechnungsstelle",
     title: "Abrechnung über eine PVS",
     body:
-      "Die privatärztliche Abrechnung kann über eine private Verrechnungsstelle (PVS) erfolgen. Hierfür ist, soweit erforderlich, Ihre Einwilligung zur Datenübermittlung notwendig — wir informieren Sie transparent, bevor Daten weitergegeben werden.",
+      "Die privatärztliche Abrechnung kann über eine private Verrechnungsstelle (PVS) erfolgen. Hierfür ist, soweit erforderlich, Ihre Einwilligung zur Datenübermittlung notwendig. Wir informieren Sie transparent, bevor Daten weitergegeben werden.",
   },
   {
     numeral: "02",
     kicker: "Labor & Datenübermittlung",
-    title: "Kooperationslabor",
+    title: "Partnerlabor",
     body:
-      "Wenn Laboruntersuchungen über ein Kooperationslabor durchgeführt werden, erhalten Sie zu Beginn der Behandlung die notwendigen Datenschutz- und Einwilligungsformulare. Ohne Ihre Zustimmung erfolgt keine Datenweitergabe.",
+      "Wenn Laboruntersuchungen über ein Partnerlabor durchgeführt werden, erhalten Sie zu Beginn der Behandlung die notwendigen Datenschutz- und Einwilligungsformulare. Ohne Ihre Zustimmung erfolgt keine Datenweitergabe.",
   },
   {
     numeral: "03",
@@ -43,7 +43,7 @@ const clarifications = [
   },
   {
     q: "Was passiert mit meinen Daten?",
-    a: "Es werden ausschließlich die für die Rechnungsstellung erforderlichen Daten übermittelt — nach Ihrer Einwilligung und im Rahmen der geltenden Datenschutzgesetze.",
+    a: "Es werden ausschließlich die für die Rechnungsstellung erforderlichen Daten übermittelt. Nach Ihrer Einwilligung und im Rahmen der geltenden Datenschutzgesetze.",
   },
   {
     q: "Kann ich die Einwilligung widerrufen?",
@@ -64,7 +64,7 @@ export default function PvsDatenschutzPage() {
             <span className="italic text-muted">von Anfang an.</span>
           </>
         }
-        lead="Wie Ihre Rechnung entsteht, welche Daten wohin gehen — und wie Sie jederzeit die Kontrolle behalten. Auf dieser Seite bündeln wir das Wesentliche."
+        lead="Wie Ihre Rechnung entsteht, welche Daten wohin gehen. Und wie Sie jederzeit die Kontrolle behalten. Auf dieser Seite bündeln wir das Wesentliche."
       />
 
       <section className="relative border-y border-line bg-white/60">
@@ -104,7 +104,7 @@ export default function PvsDatenschutzPage() {
             <span className="italic text-muted">wissen sollten.</span>
           </>
         }
-        intro="Abrechnung und Datenschutz sind bei uns keine Kleingedrucktes — sie sind Teil der ärztlichen Vereinbarung. Diese drei Bausteine bilden den Rahmen."
+        intro="Abrechnung und Datenschutz sind bei uns keine Kleingedrucktes. Sie sind Teil der ärztlichen Vereinbarung. Diese drei Bausteine bilden den Rahmen."
         items={blocks}
       />
 

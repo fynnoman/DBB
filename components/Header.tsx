@@ -14,19 +14,18 @@ type MenuLink = {
 };
 
 const menuLinks: MenuLink[] = [
+  { href: "/", label: "Home", group: "Praxis" },
   { href: "/aerztin", label: "Über mich", group: "Praxis" },
-  { href: "/praxis", label: "Praxis & Räumlichkeiten", group: "Praxis" },
-  { href: "/leistungen", label: "Leistungen — Übersicht", group: "Leistungen" },
+  { href: "/praxis", label: "Praxisräume", group: "Praxis" },
+  { href: "/leistungen", label: "Leistungen, Übersicht", group: "Leistungen" },
   { href: "/basis-checkup", label: "Basis Check-up", group: "Leistungen" },
   { href: "/executive-checkup", label: "Executive Check-up", group: "Leistungen" },
-  { href: "/firmen-checkup", label: "Kardio-Check-up für Firmen", group: "Leistungen" },
-  { href: "/nachsorge", label: "Nachsorge", group: "Leistungen" },
+  { href: "/seltene-herzerkrankungen", label: "Seltene Herzerkrankungen", group: "Leistungen" },
   { href: "/patienten", label: "Privatpatienten & Beihilfe", group: "Patienten" },
-  { href: "/gkv-selbstzahler", label: "GKV als Selbstzahler", group: "Patienten" },
+  { href: "/selbstzahler", label: "Selbstzahler", group: "Patienten" },
   { href: "/aktuelles", label: "Aktuelles & Abwesenheiten", group: "Patienten" },
   { href: "/medikamente", label: "Medikamente erklärt", group: "Patienten" },
   { href: "/pvs-datenschutz", label: "PVS & Datenschutz", group: "Patienten" },
-  { href: "/kooperationen", label: "Kooperationen", group: "Netzwerk" },
   { href: "/kontakt", label: "Kontakt", group: "Kontakt" },
   { href: "/datenschutz", label: "Datenschutz", group: "Rechtliches" },
   { href: "/impressum", label: "Impressum", group: "Rechtliches" },
@@ -34,9 +33,10 @@ const menuLinks: MenuLink[] = [
 ];
 
 const primaryNav = [
+  { href: "/", label: "Home" },
   { href: "/aerztin", label: "Über mich" },
   { href: "/leistungen", label: "Leistungen" },
-  { href: "/praxis", label: "Praxis" },
+  { href: "/praxis", label: "Praxisräume" },
   { href: "/patienten", label: "Patienteninfo" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -84,14 +84,13 @@ export default function Header() {
       className={`sticky top-0 z-[1000] transition-[background,border-color,box-shadow] duration-500 ease-editorial ${
         scrolled
           ? "bg-white/98 border-b border-[rgba(183,154,98,0.45)] shadow-header backdrop-blur-md"
-          : "bg-white/92 border-b border-transparent"
+          : "bg-white/95 border-b border-transparent backdrop-blur-sm"
       }`}
-      style={{ willChange: scrolled ? "auto" : "auto" }}
     >
       <div className="container-shell min-h-[76px] md:min-h-[88px] py-[11px] grid grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-3 md:gap-4 xl:gap-6">
         {/* Brand */}
         <Link
-          href="/#start"
+          href="/"
           className="flex items-center gap-3 group min-w-0"
         >
           <span className="relative block w-[42px] h-[42px] md:w-[52px] md:h-[52px] xl:w-[62px] xl:h-[62px] rounded-full overflow-hidden flex-shrink-0">
@@ -119,8 +118,10 @@ export default function Header() {
         <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-[12px] xl:text-[13px] text-ink/85">
           {primaryNav.map((item) => {
             const active =
-              pathname === item.href ||
-              (item.href !== "/" && pathname?.startsWith(item.href));
+              item.href === "/"
+                ? pathname === "/"
+                : pathname === item.href ||
+                  (item.href !== "/" && pathname?.startsWith(item.href));
             return (
               <Link
                 key={item.href}
@@ -148,7 +149,7 @@ export default function Header() {
           <a
             href={bookHref}
             aria-label="Telefon"
-            className="hidden sm:grid w-11 h-11 rounded-full border border-line place-items-center text-ink/80 hover:text-ink hover:border-gold transition-colors"
+            className="hidden sm:grid w-11 h-11 rounded-full border border-forest/40 text-white bg-forest hover:bg-forest/90 place-items-center transition-colors"
           >
             <PhoneIcon />
           </a>

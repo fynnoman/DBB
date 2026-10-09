@@ -12,19 +12,17 @@ type Service = {
   tone?: Tone;
 };
 
-// Rhythm: two warm accents distributed across the grid keeps the eye moving
-// without breaking the beige/gold palette.
 const services: Service[] = [
   {
     kicker: "Herzultraschall",
-    title: "Echokardiographie & Speckle Tracking",
+    title: "Echokardiographie und Speckle Tracking",
     body: "Hochauflösender Herzultraschall mit differenzierter Funktionsanalyse und bei Bedarf Speckle-Tracking-Analyse.",
     tone: "warm",
   },
   {
     kicker: "Rhythmus",
-    title: "EKG & Langzeitdiagnostik",
-    body: "Ruhe-, Belastungs- und Langzeit-EKG sowie Langzeit-Blutdruckmessung zur gezielten Abklärung.",
+    title: "EKG und Langzeitdiagnostik",
+    body: "Ruhe, Belastungs- und Langzeit-EKG sowie Langzeit-Blutdruckmessung zur gezielten Abklärung.",
   },
   {
     kicker: "Funktionsdiagnostik",
@@ -33,7 +31,7 @@ const services: Service[] = [
   },
   {
     kicker: "Gefäße",
-    title: "Carotis- & Gefäßdiagnostik",
+    title: "Carotis und Gefäßdiagnostik",
     body: "Ultraschallgestützte Untersuchung ausgewählter Gefäßregionen zur kardiovaskulären Risikoeinschätzung.",
   },
   {
@@ -49,15 +47,10 @@ const services: Service[] = [
     tone: "warm",
   },
   {
+    id: "seltene-herzerkrankungen",
     kicker: "Spezialdiagnostik",
     title: "Seltene Herzerkrankungen",
-    body: "Abklärung bei Verdacht auf Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie.",
-  },
-  {
-    id: "nachsorge",
-    kicker: "Nachsorge",
-    title: "Kardiologische Verlaufskontrolle",
-    body: "Verlaufskontrolle bei bekannter Herzerkrankung, nach Diagnostik oder nach therapeutischen Veränderungen.",
+    body: "Abklärung bei Verdacht auf Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie. Die Praxis ist Mitglied der Deutschen Gesellschaft für Amyloid-Krankheiten.",
     tone: "forest",
   },
 ];
@@ -100,10 +93,10 @@ export default function Leistungen() {
               "körperliche Untersuchung",
               "12-Kanal-EKG",
               "Basis-Echokardiographie",
-              "Lipidprofil über unser Kooperationslabor",
+              "Lipidprofil über unser Partnerlabor",
               "kurzer ärztlicher Bericht",
             ]}
-            notice="Laborleistungen werden vom kooperierenden Labor separat in Rechnung gestellt."
+            notice="Laborleistungen werden vom Partnerlabor separat in Rechnung gestellt."
             ctaLabel="BASIS CHECK-UP BUCHEN"
             tone="gold"
           />
@@ -114,19 +107,18 @@ export default function Leistungen() {
             intro="Der Executive Check-up ist die umfassendere Variante für eine vertiefte kardiovaskuläre Risikoanalyse und individuelle Prävention."
             items={[
               "alle Leistungen des Basis Check-ups",
-              "Carotis-Doppler / Duplexsonographie",
-              "Ergometrie / Belastungs-EKG",
-              "umfassendere Labordiagnostik über das Kooperationslabor",
+              "Carotis-Doppler sowie Duplexsonographie",
+              "Ergometrie und Belastungs-EKG",
+              "umfassendere Labordiagnostik über das Partnerlabor",
               "vertiefte Anamnese und individuelle Risikoeinschätzung",
-              "ausführlicher ärztlicher Bericht mit personalisierten Empfehlungen",
+              "ausführlicher ärztlicher Bericht mit persönlichen Empfehlungen",
             ]}
-            notice="Laborleistungen werden vom kooperierenden Labor separat in Rechnung gestellt."
+            notice="Laborleistungen werden vom Partnerlabor separat in Rechnung gestellt."
             ctaLabel="EXECUTIVE CHECK-UP BUCHEN"
             tone="gold"
           />
         </div>
 
-        {/* Sub-header before the specialty grid */}
         <div className="mt-16 md:mt-20 mb-8 md:mb-10 max-w-[720px]">
           <div className="kicker mb-3">Spektrum</div>
           <h3 className="font-display text-[24px] md:text-[32px] leading-[1.15] title-rule">
@@ -175,71 +167,7 @@ export default function Leistungen() {
             );
           })}
         </Stagger>
-
-        {/* Firmen: dark anchor tile */}
-        <div className="mt-12 md:mt-14" id="firmen-checkup">
-          <article className="relative overflow-hidden rounded-[24px] bg-forest text-cream shadow-soft">
-            <span
-              aria-hidden
-              className="pointer-events-none absolute inset-0 opacity-[0.09]"
-              style={{
-                background:
-                  "radial-gradient(600px 300px at 90% -10%, rgba(183,154,98,0.9), transparent 60%), radial-gradient(400px 200px at 5% 110%, rgba(183,154,98,0.6), transparent 55%)",
-              }}
-            />
-            <span
-              aria-hidden
-              className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
-            />
-
-            <div className="relative grid md:grid-cols-[1.15fr_.85fr] gap-8 md:gap-10 p-8 md:p-12">
-              <div>
-                <div className="text-[12px] tracking-[0.18em] uppercase font-extrabold text-gold-200">
-                  Unternehmen · Anfrage
-                </div>
-                <h3 className="font-display text-[clamp(26px,3.4vw,42px)] mt-3 mb-4 leading-[1.1]">
-                  Kardio-Check-up für Firmen.
-                </h3>
-                <p className="text-cream/85 leading-[1.7] max-w-[540px] m-0">
-                  Individuell abgestimmte kardiologische Check-up-Angebote für
-                  Unternehmen und Mitarbeitende. Einzelheiten, Umfang und
-                  individuelle Anforderungen werden vorab persönlich
-                  besprochen.
-                </p>
-              </div>
-
-              <div className="md:pl-4 md:border-l border-gold/25 flex flex-col justify-between gap-6">
-                <ul className="space-y-2.5 text-cream/85 leading-[1.55] text-[14px]">
-                  <li className="flex items-start gap-2.5">
-                    <Dot /> Onboarding-Termin auf Wunsch vor Ort
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Dot /> Untersuchungspakete nach Bedarf skalierbar
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <Dot /> Diskrete Kommunikation mit Ihrer HR
-                  </li>
-                </ul>
-                <a
-                  href="#kontakt"
-                  className="inline-flex self-start min-h-[48px] px-6 rounded-full items-center justify-center text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
-                >
-                  ANFRAGE ÜBER KONTAKTFORMULAR
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
       </div>
     </section>
-  );
-}
-
-function Dot() {
-  return (
-    <span
-      aria-hidden
-      className="mt-2 inline-block h-1 w-1 rounded-full bg-gold flex-shrink-0"
-    />
   );
 }

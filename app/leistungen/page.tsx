@@ -9,9 +9,9 @@ import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: `Leistungen | ${site.brand} — Kardiologie ${site.city}`,
+  title: `Leistungen | ${site.brand}, Kardiologie ${site.city}`,
   description:
-    "Kardiologische Leistungen bei DBB Kardio: Basis Check-up, Executive Check-up, Firmen-Check-up, Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz, Nachsorge.",
+    "Kardiologische Leistungen bei DBB Kardio in Saarlouis: Basis Check-up, Executive Check-up, Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz und spezialisierte Diagnostik seltener Herzerkrankungen.",
 };
 
 const checkups = [
@@ -19,10 +19,10 @@ const checkups = [
     tag: "01",
     label: "Basis",
     title: "Basis Check-up",
-    duration: "60 – 75 Min.",
+    duration: "60 bis 75 Min.",
     href: "/basis-checkup",
     body:
-      "Anamnese, klinische Untersuchung, EKG, Belastungs-EKG, Echokardiographie inklusive Speckle Tracking. Das strukturierte Fundament einer kardiologischen Standortbestimmung.",
+      "Anamnese, klinische Untersuchung, EKG, Belastungs-EKG und Echokardiographie inklusive Speckle Tracking. Das strukturierte Fundament einer kardiologischen Standortbestimmung.",
     highlights: [
       "Ausführliches Erstgespräch",
       "Ruhe- und Belastungs-EKG",
@@ -34,30 +34,30 @@ const checkups = [
     tag: "02",
     label: "Executive",
     title: "Executive Check-up",
-    duration: "90 – 120 Min.",
+    duration: "90 bis 120 Min.",
     href: "/executive-checkup",
     body:
       "Erweitertes Untersuchungsprogramm mit zusätzlichen Modulen für Menschen mit hoher Alltagsbelastung, Reisetätigkeit oder familiärer Vorbelastung.",
     highlights: [
       "Alles aus dem Basis Check-up",
       "Erweitertes Laborprofil",
-      "Langzeit-Blutdruck / Langzeit-EKG",
+      "Langzeit-Blutdruck und Langzeit-EKG",
       "Individuelles Präventionskonzept",
     ],
   },
   {
     tag: "03",
-    label: "Firmen",
-    title: "Kardio-Check-up für Firmen",
-    duration: "nach Absprache",
-    href: "/firmen-checkup",
+    label: "Spezial",
+    title: "Seltene Herzerkrankungen",
+    duration: "nach Vereinbarung",
+    href: "/seltene-herzerkrankungen",
     body:
-      "Kardiovaskuläre Vorsorge für Führungskräfte und Mitarbeitende — als Einzelmandat oder als strukturiertes Programm für ganze Teams.",
+      "Spezialisierte Diagnostik bei Verdacht auf kardiale Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie. Die Praxis ist Mitglied der Deutschen Gesellschaft für Amyloid-Krankheiten.",
     highlights: [
-      "Individuell konfigurierbar",
-      "Diskreter Ablauf",
-      "Berichtsformat nach Abstimmung",
-      "Wiederkehrende Intervalle möglich",
+      "Fokussierte Spezialanamnese",
+      "Speckle-Tracking-Echokardiographie",
+      "Enge Netzwerk-Anbindung",
+      "Verlaufsplan über Jahre",
     ],
   },
 ];
@@ -68,28 +68,28 @@ const diagnostik = [
     kicker: "Bildgebung",
     title: "Farbdoppler-Echokardiographie",
     body:
-      "Hochauflösende Darstellung von Herzkammern, Klappenfunktion und Blutfluss. Basis jeder kardiologischen Untersuchung — bei uns inklusive Speckle-Tracking-Analyse.",
+      "Hochauflösende Darstellung von Herzkammern, Klappenfunktion und Blutfluss. Basis jeder kardiologischen Untersuchung und bei uns inklusive Speckle-Tracking-Analyse.",
   },
   {
     numeral: "02",
     kicker: "Belastung",
-    title: "Ergometrie & Stress-Echo",
+    title: "Ergometrie und Stress-Echo",
     body:
       "Belastungsabhängige Diagnostik zur Beurteilung von Rhythmus, Sauerstoffversorgung und Herzfunktion unter definierten Anforderungen.",
   },
   {
     numeral: "03",
     kicker: "Rhythmus",
-    title: "Ruhe-, Langzeit- & Event-EKG",
+    title: "Ruhe, Langzeit und Event-EKG",
     body:
-      "Von der punktuellen Aufnahme bis zur mehrtägigen Rhythmusüberwachung — je nachdem, welche Fragestellung wirklich beantwortet werden muss.",
+      "Von der punktuellen Aufnahme bis zur mehrtägigen Rhythmusüberwachung. Immer so, wie es die jeweilige Fragestellung erfordert.",
   },
   {
     numeral: "04",
     kicker: "Gefäße",
     title: "Karotis-Duplex-Sonographie",
     body:
-      "Ultraschall der hirnversorgenden Gefäße zur frühen Erkennung arteriosklerotischer Veränderungen und Einordnung des Schlaganfall-Risikos.",
+      "Ultraschall der hirnversorgenden Gefäße zur frühen Erkennung arteriosklerotischer Veränderungen und zur Einordnung des Schlaganfall-Risikos.",
   },
 ];
 
@@ -103,8 +103,8 @@ const spezial = [
     body: "Dedizierte Diagnostik unter Berücksichtigung geschlechtsspezifischer Symptomatik und Risikoprofile.",
   },
   {
-    title: "Nachsorge nach kardialem Ereignis",
-    body: "Strukturierte Weiterbetreuung nach Infarkt, Bypass, Stent oder Klappen-Intervention — in enger Abstimmung mit Klinik und Hausarzt.",
+    title: "Seltene Herzerkrankungen",
+    body: "Spezialisierte Abklärung bei Verdacht auf kardiale Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie. Die Praxis ist Mitglied der Deutschen Gesellschaft für Amyloid-Krankheiten.",
   },
 ];
 
@@ -121,14 +121,14 @@ export default function LeistungenPage() {
             <span className="italic text-muted">mit Zeit.</span>
           </>
         }
-        lead="Vom präzise abgestimmten Basis-Check bis zum umfassenden Executive-Programm — jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
+        lead="Vom präzise abgestimmten Basis-Check bis zum umfassenden Executive-Programm. Jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
       />
 
       <EditorialImage
         src="https://images.unsplash.com/photo-1587351021355-a479a299d2f9?w=1920&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — Untersuchungsraum bei DBB Kardio"
+        alt="Symbolisches Bild eines Untersuchungsraums bei DBB Kardio"
         overline="Diagnostik-Raum"
-        caption="Ein Untersuchungsraum, viele Perspektiven — Bildgebung, Belastung, Rhythmus."
+        caption="Ein Untersuchungsraum, viele Perspektiven. Bildgebung, Belastung und Rhythmus im Zusammenspiel."
         aspect="cinema"
         fullBleed
       />
@@ -195,8 +195,9 @@ export default function LeistungenPage() {
         footer={
           <>
             Alle Untersuchungen werden persönlich durch die Ärztin durchgeführt.
-            Kein Delegieren an Assistenzpersonal, keine anonyme Befund-Übergabe per
-            E-Mail. Diagnostik und Gespräch gehören bei uns in dieselben 90 Minuten.
+            Kein Delegieren an Assistenzpersonal, keine anonyme Befund-Übergabe
+            per E-Mail. Diagnostik und Gespräch gehören bei uns in dieselben 90
+            Minuten.
           </>
         }
       >
@@ -211,7 +212,7 @@ export default function LeistungenPage() {
             Vier Fenster<br />in dasselbe Herz.
           </>
         }
-        intro="Bildgebung, Belastung, Rhythmus, Gefäße. Jede Modalität erzählt eine andere Geschichte — erst in der Kombination ergibt sich ein tragfähiges Bild."
+        intro="Bildgebung, Belastung, Rhythmus und Gefäße. Jede Modalität erzählt eine andere Geschichte. Erst in der Kombination ergibt sich ein tragfähiges Bild."
         items={diagnostik}
       />
 
@@ -243,25 +244,6 @@ export default function LeistungenPage() {
             </Reveal>
           ))}
         </div>
-
-        <Reveal delay={0.15}>
-          <div className="mt-14 flex flex-wrap items-center justify-between gap-4 rounded-[22px] border border-line bg-white/70 p-6 md:p-8">
-            <div>
-              <div className="kicker mb-2">Kostenübernahme</div>
-              <p className="text-muted text-[14px] md:text-[15px] leading-[1.7] max-w-[640px]">
-                Abrechnung nach GOÄ. Für Privatpatienten und Beihilfeberechtigte
-                erstattungsfähig; für gesetzlich Versicherte als Selbstzahler-Leistung
-                möglich.
-              </p>
-            </div>
-            <Link
-              href="/patienten"
-              className="min-h-[48px] px-5 rounded-full inline-flex items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-line text-ink hover:border-gold transition-colors"
-            >
-              Zur Patienten-Info
-            </Link>
-          </div>
-        </Reveal>
       </section>
 
       <PageCta

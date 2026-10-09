@@ -25,7 +25,7 @@ export default function BookingBar() {
         <a
           href="/kontakt"
           title="Anrufen"
-          className="whitespace-nowrap min-h-[40px] px-4 rounded-full inline-flex items-center gap-2 text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-colors"
+          className="whitespace-nowrap min-h-[40px] px-4 rounded-full inline-flex items-center gap-2 text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-forest text-white border border-forest hover:bg-forest/90 transition-colors"
         >
           <PhoneMark /> ANRUF
         </a>

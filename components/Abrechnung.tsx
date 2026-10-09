@@ -13,9 +13,9 @@ const items = [
     body: "Auch beihilfeberechtigte Patientinnen und Patienten können sämtliche angebotenen Leistungen in Anspruch nehmen.",
   },
   {
-    kicker: "Gesetzlich versichert",
-    title: "GKV als Selbstzahler",
-    body: "Gesetzlich Versicherte sind als Selbstzahler willkommen. Die Behandlung wird privatärztlich nach GOÄ abgerechnet.",
+    kicker: "Selbstzahler",
+    title: "Selbstzahler",
+    body: "Selbstzahlerinnen und Selbstzahler sind willkommen. Die Behandlung wird privatärztlich nach GOÄ abgerechnet.",
   },
 ];
 

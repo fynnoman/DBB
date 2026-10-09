@@ -9,7 +9,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Aktuelles & Abwesenheiten | ${site.brand}`,
   description:
-    "Aktuelle Sprechzeiten, geplante Abwesenheiten und Vertretungsregelungen der Privatpraxis DBB Kardio in St. Ingbert.",
+    "Aktuelle Sprechzeiten, geplante Abwesenheiten und Vertretungsregelungen der Privatpraxis DBB Kardio in Saarlouis für Patientinnen und Patienten aus Saarlouis, Merzig und Saarbrücken.",
 };
 
 const news = [
@@ -23,7 +23,7 @@ const news = [
     date: "[Datum]",
     tag: "Urlaub",
     title: "Geplante Praxisabwesenheit",
-    body: "Urlaubszeiten und Fortbildungen werden hier bekannt gegeben — inklusive der zuständigen kardiologischen Vertretung.",
+    body: "Urlaubszeiten und Fortbildungen werden hier bekannt gegeben, inklusive der zuständigen kardiologischen Vertretung.",
   },
   {
     date: "[Datum]",
@@ -51,9 +51,9 @@ export default function AktuellesPage() {
 
       <EditorialImage
         src="https://images.unsplash.com/photo-1682706841281-f723c5bfcd83?w=1600&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — Praxis-Feed"
+        alt="Symbolisches Bild. Praxis-Feed"
         overline="Praxis-Feed"
-        caption="Was gerade wichtig ist — knapp, aktuell, verlässlich."
+        caption="Was gerade wichtig ist. Knapp, aktuell und verlässlich."
         aspect="wide"
       />
 
@@ -100,8 +100,8 @@ export default function AktuellesPage() {
       </section>
 
       <PullQuote author="Grundsatz" role="Erreichbarkeit">
-        Vorhersehbare Abwesenheiten kündigen wir früh an — kurzfristige klären wir
-        persönlich, nie über eine Warteschleife.
+        Vorhersehbare Abwesenheiten kündigen wir früh an. Kurzfristige klären
+        wir persönlich und nie über eine Warteschleife.
       </PullQuote>
 
       <section className="border-t border-line bg-white/[0.62]">
@@ -125,7 +125,7 @@ export default function AktuellesPage() {
               <div className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8">
                 <ul className="divide-y divide-line text-[14px] leading-[1.7]">
                   <li className="flex justify-between py-3">
-                    <span>Montag – Donnerstag</span>
+                    <span>Montag bis Donnerstag</span>
                     <span className="text-muted">[wird ergänzt]</span>
                   </li>
                   <li className="flex justify-between py-3">
@@ -133,20 +133,17 @@ export default function AktuellesPage() {
                     <span className="text-muted">[wird ergänzt]</span>
                   </li>
                   <li className="flex justify-between py-3">
-                    <span>Samstag / Sonntag</span>
+                    <span>Samstag und Sonntag</span>
                     <span className="text-muted">Geschlossen</span>
                   </li>
                 </ul>
-                <div className="mt-6 rounded-[16px] border border-[#e2c9c6] bg-[#fdf1ef] p-4">
-                  <div className="text-[11px] tracking-[0.10em] uppercase font-extrabold text-[#b3261e] mb-1">
-                    Notfall
+                <div className="mt-6 rounded-[16px] border border-forest/25 bg-forest/[0.06] p-4">
+                  <div className="text-[11px] tracking-[0.14em] uppercase font-extrabold text-forest mb-1">
+                    Terminabsage
                   </div>
                   <p className="text-[13px] leading-[1.6] text-ink m-0">
-                    Bei akuten Beschwerden bitte die{" "}
-                    <strong className="tracking-wider">
-                      {site.emergencyNumber}
-                    </strong>{" "}
-                    wählen.
+                    Bitte sagen Sie Termine spätestens 24 Stunden vorher ab.
+                    Nicht abgesagte Termine müssen wir in Rechnung stellen.
                   </p>
                 </div>
               </div>

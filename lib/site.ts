@@ -2,14 +2,19 @@ export const site = {
   brand: "DBB KARDIO",
   fullName: "Dr. medic Denisa Babeanu-Bauer",
   descriptor: "Kardiologische Privatpraxis",
-  city: "St. Ingbert",
-  location: "St. Ingbert",
+  city: "Saarlouis",
+  location: "Saarlouis-Fraulautern",
   address: {
-    street: "Poststraße 43",
-    zipCity: "66386 St. Ingbert",
+    street: "Brückenstraße 30",
+    zipCity: "66740 Saarlouis",
+    district: "Fraulautern",
   },
   phone: "[wird ergänzt]",
   email: "[wird ergänzt]",
-  emergencyNumber: "112",
   copyrightYear: 2026,
+  serviceArea: ["Saarlouis", "Merzig", "Saarbrücken"],
+  mapsEmbed:
+    "https://www.google.com/maps?q=Br%C3%BCckenstra%C3%9Fe+30%2C+66740+Saarlouis&output=embed",
+  mapsLink:
+    "https://www.google.com/maps/search/?api=1&query=Br%C3%BCckenstra%C3%9Fe+30%2C+66740+Saarlouis",
 };

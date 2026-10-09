@@ -8,18 +8,18 @@ import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: `GKV als Selbstzahler | ${site.brand} ${site.city}`,
+  title: `Selbstzahler | ${site.brand} ${site.city}`,
   description:
-    "Gesetzlich Versicherte können die kardiologischen Leistungen der Privatpraxis DBB Kardio in St. Ingbert als Selbstzahler in Anspruch nehmen. Transparente GOÄ-Rechnung.",
+    "Selbstzahlerinnen und Selbstzahler können die kardiologischen Leistungen der Privatpraxis DBB Kardio in Saarlouis in Anspruch nehmen. Transparente GOÄ-Rechnung.",
 };
 
 const flow = [
   {
     numeral: "01",
     kicker: "Terminvereinbarung",
-    title: "Umfang & Kosten transparent klären.",
+    title: "Umfang und Kosten transparent klären.",
     body:
-      "Vor dem Termin klären wir Umfang und voraussichtliche Kosten transparent — damit es beim Rechnungserhalt keine Überraschungen gibt.",
+      "Vor dem Termin klären wir Umfang und voraussichtliche Kosten transparent. Beim Rechnungserhalt gibt es keine Überraschungen.",
   },
   {
     numeral: "02",
@@ -40,11 +40,11 @@ const flow = [
 const facts = [
   {
     kicker: "GOÄ",
-    body: "Alle Leistungen werden nach der Gebührenordnung für Ärzte (GOÄ) abgerechnet — verbindlich und einheitlich.",
+    body: "Alle Leistungen werden nach der Gebührenordnung für Ärzte (GOÄ) abgerechnet. Verbindlich und einheitlich.",
   },
   {
-    kicker: "Keine GKV-Erstattung",
-    body: "Eine Kostenerstattung durch die gesetzliche Krankenkasse ist grundsätzlich nicht vorgesehen — bitte einplanen.",
+    kicker: "Selbstzahler-Prinzip",
+    body: "Die Rechnung wird direkt mit Ihnen als Selbstzahlerin oder Selbstzahler abgerechnet. Bitte entsprechend einplanen.",
   },
   {
     kicker: "Steuerlich relevant",
@@ -56,27 +56,27 @@ const facts = [
   },
 ];
 
-export default function GkvSelbstzahlerPage() {
+export default function SelbstzahlerPage() {
   return (
     <>
       <PageHero
-        eyebrow="Für gesetzlich Versicherte"
-        kicker="GKV als Selbstzahler"
+        eyebrow="Für Selbstzahlerinnen und Selbstzahler"
+        kicker="Selbstzahler"
         chapter="14"
         title={
           <>
-            Privatpraxis nutzen —<br />
-            <span className="italic text-muted">auch als GKV-Versicherte.</span>
+            Privatpraxis nutzen,<br />
+            <span className="italic text-muted">als Selbstzahler.</span>
           </>
         }
-        lead="Gesetzlich Versicherte können unsere Leistungen als Selbstzahler in Anspruch nehmen. Sie erhalten dieselbe Zeit, dieselbe Diagnostik und eine transparente Rechnung nach GOÄ."
+        lead="Alle Leistungen der Praxis stehen Ihnen auch als Selbstzahlerin oder Selbstzahler offen. Sie erhalten dieselbe Zeit, dieselbe Diagnostik und eine transparente Rechnung nach GOÄ."
       />
 
       <EditorialImage
         src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1400&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — gleicher Standard für alle Patienten"
+        alt="Symbolisches Bild. Gleicher Standard für alle Patienten"
         overline="Standard"
-        caption="Derselbe Standard für alle, die kommen — der Unterschied liegt in der Abrechnung, nicht in der Sorgfalt."
+        caption="Derselbe Standard für alle, die kommen. Der Unterschied liegt in der Abrechnung, nicht in der Sorgfalt."
         aspect="square"
       />
 
@@ -88,7 +88,7 @@ export default function GkvSelbstzahlerPage() {
             <span className="italic text-muted">ein klarer Weg.</span>
           </>
         }
-        intro="Als Selbstzahlerin oder Selbstzahler durchlaufen Sie denselben ärztlichen Weg wie unsere Privatpatienten — mit demselben Standard und einer transparenten Kostenstruktur."
+        intro="Als Selbstzahlerin oder Selbstzahler durchlaufen Sie denselben ärztlichen Weg wie unsere Privatpatienten. Mit demselben Standard und einer transparenten Kostenstruktur."
         items={flow}
       />
 
@@ -98,7 +98,7 @@ export default function GkvSelbstzahlerPage() {
         footer={
           <>
             Für uns gibt es medizinisch keine Zwei-Klassen-Gesellschaft. Der
-            Unterschied liegt ausschließlich in der administrativen Abwicklung —
+            Unterschied liegt ausschließlich in der administrativen Abwicklung,
             nicht in Umfang, Zeit oder Sorgfalt der Untersuchung.
           </>
         }
@@ -130,17 +130,6 @@ export default function GkvSelbstzahlerPage() {
               </Reveal>
             ))}
           </div>
-
-          <Reveal delay={0.15}>
-            <div className="mt-12 rounded-[22px] border border-line bg-white/70 p-6 md:p-7">
-              <div className="kicker mb-2">Notfall</div>
-              <p className="text-[14px] leading-[1.7] text-ink m-0">
-                Diese Seite gilt für elektive kardiologische Untersuchungen. Bei
-                akuten Beschwerden wählen Sie bitte umgehend die{" "}
-                <strong className="tracking-wider">{site.emergencyNumber}</strong>.
-              </p>
-            </div>
-          </Reveal>
         </div>
       </section>
 

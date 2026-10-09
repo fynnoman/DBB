@@ -10,7 +10,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Basis Check-up | ${site.brand} ${site.city}`,
   description:
-    "Basis Check-up bei DBB Kardio in St. Ingbert: Anamnese, körperliche Untersuchung, 12-Kanal-EKG, Basis-Echokardiographie, Lipidprofil und persönlicher Bericht.",
+    "Basis Check-up bei DBB Kardio in Saarlouis: Anamnese, körperliche Untersuchung, 12-Kanal-EKG, Basis-Echokardiographie, Lipidprofil und persönlicher Bericht. Für Patientinnen und Patienten aus Saarlouis, Merzig und Saarbrücken.",
 };
 
 const included = [
@@ -18,7 +18,7 @@ const included = [
   "Körperliche Untersuchung",
   "12-Kanal-EKG",
   "Basis-Echokardiographie",
-  "Lipidprofil (Kooperationslabor)",
+  "Lipidprofil über das Partnerlabor",
   "Kurzer ärztlicher Bericht",
 ];
 
@@ -28,14 +28,14 @@ const steps = [
     kicker: "Vorgespräch",
     title: "Fragestellung schärfen.",
     body:
-      "Wir klären, welche Fragestellungen im Vordergrund stehen, und stimmen die Untersuchung darauf ab. Kein Standardprotokoll — sondern eine Auswahl mit klarem Ziel.",
+      "Wir klären, welche Fragestellungen im Vordergrund stehen, und stimmen die Untersuchung darauf ab. Kein Standardprotokoll. Sondern eine Auswahl mit klarem Ziel.",
   },
   {
     numeral: "02",
     kicker: "Untersuchung",
-    title: "EKG, Echo, Labor — persönlich.",
+    title: "EKG, Echo, Labor. Persönlich.",
     body:
-      "EKG, Echokardiographie und Blutentnahme werden persönlich durchgeführt — ohne Delegation an fachfremdes Personal. Alles im selben Raum, in einem Zug.",
+      "EKG, Echokardiographie und Blutentnahme werden persönlich durchgeführt. Ohne Delegation an fachfremdes Personal. Alles im selben Raum, in einem Zug.",
   },
   {
     numeral: "03",
@@ -59,14 +59,14 @@ export default function BasisCheckupPage() {
             <span className="italic text-muted">Struktur für den Start.</span>
           </>
         }
-        lead="Das strukturierte Fundament einer kardiologischen Standortbestimmung: Anamnese, EKG, Echokardiographie, Lipidprofil und persönliche Befundbesprechung — in einem einzigen Termin."
+        lead="Das strukturierte Fundament einer kardiologischen Standortbestimmung: Anamnese, EKG, Echokardiographie, Lipidprofil und persönliche Befundbesprechung. In einem einzigen Termin."
       />
 
       <EditorialImage
         src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1600&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — kardiologische Basisuntersuchung"
+        alt="Symbolisches Bild. Kardiologische Basisuntersuchung"
         overline="Basis Check-up"
-        caption="Ein Termin, der reicht — für Klarheit statt Nachfragen."
+        caption="Ein Termin, der reicht. Für Klarheit statt Nachfragen."
         aspect="wide"
       />
 
@@ -76,19 +76,19 @@ export default function BasisCheckupPage() {
             <div>
               <div className="kicker mb-3">Für wen sinnvoll</div>
               <h2 className="font-display text-[clamp(28px,3.6vw,44px)] leading-[1.15] tracking-[-0.015em] title-rule">
-                Kardiologische Ersteinschätzung —<br />
+                Kardiologische Ersteinschätzung,<br />
                 <span className="italic text-muted">bewusst gewählt.</span>
               </h2>
               <p className="text-muted text-[15px] md:text-[17px] leading-[1.8] mt-8 max-w-[560px]">
                 Der Basis Check-up eignet sich für Menschen, die eine strukturierte
-                kardiologische Standortbestimmung wünschen — sei es aus präventiven
+                kardiologische Standortbestimmung wünschen. Sei es aus präventiven
                 Gründen, wegen familiärer Vorbelastung oder als Reaktion auf erste
                 unspezifische Beschwerden.
               </p>
               <p className="text-muted text-[14px] md:text-[15px] leading-[1.75] mt-5 max-w-[560px]">
-                Er ersetzt keine Notfalluntersuchung. Für akute Symptome ist der Weg
-                über die {site.emergencyNumber} oder die nächste Notaufnahme der
-                richtige.
+                Er ersetzt keine Notfalluntersuchung. Für akute Symptome wenden
+                Sie sich bitte direkt an den Rettungsdienst oder die nächste
+                Notaufnahme.
               </p>
               <div className="mt-10 border-t border-line pt-8 grid grid-cols-2 gap-6">
                 <div>
@@ -153,7 +153,7 @@ export default function BasisCheckupPage() {
           <>
             Deshalb keine Serien-Vorstellung, keine anonyme Befund-Zustellung, keine
             Delegation an fachfremdes Personal. Sie gehen mit einem Bild von Ihrem
-            Herzen — nicht mit einer Rechnung und offenen Fragen.
+            Herzen. Nicht mit einer Rechnung und offenen Fragen.
           </>
         }
       >

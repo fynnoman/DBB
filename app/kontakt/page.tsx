@@ -8,8 +8,8 @@ import { Reveal } from "@/components/Reveal";
 import Kontakt from "@/components/Kontakt";
 
 export const metadata: Metadata = {
-  title: `Kontakt & Termin | ${site.brand}`,
-  description: `Kontakt zur kardiologischen Privatpraxis ${site.brand} in ${site.city}. Adresse, Sprechzeiten, Kontaktformular und Anfahrtshinweise.`,
+  title: `Kontakt und Termin | ${site.brand}`,
+  description: `Kontakt zur kardiologischen Privatpraxis ${site.brand} in ${site.city}, ${site.address.district}. Adresse, Sprechzeiten, Kontaktformular und Anfahrtshinweise.`,
 };
 
 const ways = [
@@ -38,7 +38,7 @@ export default function KontaktPage() {
     <>
       <PageHero
         eyebrow="Kontakt"
-        kicker="Kontakt & Termin"
+        kicker="Kontakt und Termin"
         chapter="06"
         title={
           <>
@@ -51,7 +51,7 @@ export default function KontaktPage() {
 
       <EditorialImage
         src="https://images.unsplash.com/photo-1682706841281-f723c5bfcd83?w=1600&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — ruhige Kommunikation"
+        alt="Symbolisches Bild. Ruhige Kommunikation"
         overline="Kontakt"
         caption="Zehn Minuten am Telefon ersparen zwei Fragen im Termin."
         aspect="wide"
@@ -80,7 +80,7 @@ export default function KontaktPage() {
 
       <PullQuote author="Grundsatz" role="Termin-Vergabe">
         Wir wollen keinen Termin verkaufen, sondern den richtigen Termin
-        vereinbaren — nach einem kurzen persönlichen Gespräch.
+        vereinbaren, nach einem kurzen persönlichen Gespräch.
       </PullQuote>
 
       <Kontakt />
@@ -96,9 +96,9 @@ export default function KontaktPage() {
                   <span className="italic text-muted">zu uns.</span>
                 </h2>
                 <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
-                  Die Praxis liegt zentral in {site.city}. Detaillierte Hinweise zu
-                  Parkmöglichkeiten und öffentlicher Anbindung werden ergänzt, sobald
-                  der Praxisbetrieb beginnt.
+                  Die Praxis befindet sich in {site.city}-{site.address.district}.
+                  Gut erreichbar für Patientinnen und Patienten aus {site.city},
+                  Merzig und Saarbrücken.
                 </p>
                 <address className="not-italic mt-8 text-[15px] leading-[1.7] text-ink">
                   <span className="font-display text-[18px]">{site.brand}</span>
@@ -114,25 +114,25 @@ export default function KontaktPage() {
                   >
                     Zur Praxis-Seite
                   </Link>
+                  <a
+                    href={site.mapsLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="min-h-[44px] px-5 rounded-full inline-flex items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-forest text-forest hover:bg-forest hover:text-white transition-colors"
+                  >
+                    In Google Maps öffnen
+                  </a>
                 </div>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <div className="relative rounded-[22px] border border-line bg-white/70 p-7 md:p-8 overflow-hidden">
-                <div
-                  aria-hidden
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    background:
-                      "radial-gradient(50% 60% at 100% 0%, rgba(183,154,98,0.10), transparent 60%)",
-                  }}
-                />
-                <div className="relative">
+              <div className="relative rounded-[22px] border border-line bg-white/70 overflow-hidden">
+                <div className="p-7 md:p-8">
                   <div className="kicker mb-3">Sprechzeiten</div>
                   <ul className="divide-y divide-line text-[14px] leading-[1.7]">
                     <li className="flex justify-between py-3">
-                      <span>Montag – Donnerstag</span>
+                      <span>Montag bis Donnerstag</span>
                       <span className="text-muted">[wird ergänzt]</span>
                     </li>
                     <li className="flex justify-between py-3">
@@ -140,7 +140,7 @@ export default function KontaktPage() {
                       <span className="text-muted">[wird ergänzt]</span>
                     </li>
                     <li className="flex justify-between py-3">
-                      <span>Samstag / Sonntag</span>
+                      <span>Samstag und Sonntag</span>
                       <span className="text-muted">Geschlossen</span>
                     </li>
                   </ul>
@@ -148,18 +148,25 @@ export default function KontaktPage() {
                     Termine ausschließlich nach Vereinbarung.
                   </p>
 
-                  <div className="mt-6 rounded-[16px] border border-[#e2c9c6] bg-[#fdf1ef] p-4">
-                    <div className="text-[11px] tracking-[0.10em] uppercase font-extrabold text-[#b3261e] mb-1">
-                      Notfall
+                  <div className="mt-6 rounded-[16px] border border-forest/25 bg-forest/[0.06] p-4">
+                    <div className="text-[11px] tracking-[0.14em] uppercase font-extrabold text-forest mb-1">
+                      Terminabsage
                     </div>
                     <p className="text-[13px] leading-[1.6] text-ink m-0">
-                      Bei akuten Beschwerden bitte umgehend die{" "}
-                      <strong className="tracking-wider">
-                        {site.emergencyNumber}
-                      </strong>{" "}
-                      wählen.
+                      Bitte sagen Sie Termine spätestens 24 Stunden vorher ab.
+                      Nicht abgesagte Termine müssen wir in Rechnung stellen.
                     </p>
                   </div>
+                </div>
+                <div className="relative aspect-[16/9] w-full border-t border-line">
+                  <iframe
+                    src={site.mapsEmbed}
+                    title="Karte zur Praxis"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="absolute inset-0 h-full w-full border-0"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </Reveal>

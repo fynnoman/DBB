@@ -11,7 +11,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Für Patienten | ${site.brand}`,
   description:
-    "Informationen für Privatpatienten, Beihilfeberechtigte und Selbstzahler. Vorbereitung auf den Termin, Abrechnung nach GOÄ, Aktuelles zu Sprechzeiten und Medikamente.",
+    "Informationen für Privatpatienten, Beihilfeberechtigte und Selbstzahlerinnen und Selbstzahler. Vorbereitung auf den Termin, Abrechnung nach GOÄ, Aktuelles zu Sprechzeiten und Medikamente.",
 };
 
 const groups = [
@@ -20,21 +20,21 @@ const groups = [
     kicker: "Privat",
     title: "Privatversicherte",
     body:
-      "Ihre Untersuchungen werden nach der Gebührenordnung für Ärzte (GOÄ) abgerechnet. Wir stellen Ihnen die Rechnung persönlich aus; die Erstattung erfolgt über Ihre private Krankenversicherung.",
+      "Ihre Untersuchungen werden nach der Gebührenordnung für Ärzte (GOÄ) abgerechnet. Wir stellen Ihnen die Rechnung persönlich aus. Die Erstattung erfolgt über Ihre private Krankenversicherung.",
   },
   {
     numeral: "02",
     kicker: "Beihilfe",
     title: "Beihilfeberechtigte",
     body:
-      "Beamtinnen und Beamte sind ebenso willkommen. Die Rechnung entspricht den Anforderungen der Beihilfestellen des Bundes und der Länder — inklusive der geforderten Positionsschlüssel.",
+      "Beamtinnen und Beamte sind ebenso willkommen. Die Rechnung entspricht den Anforderungen der Beihilfestellen des Bundes und der Länder, inklusive der geforderten Positionsschlüssel.",
   },
   {
     numeral: "03",
     kicker: "Selbstzahler",
-    title: "GKV als Selbstzahler",
+    title: "Selbstzahler",
     body:
-      "Gesetzlich Versicherte können unsere Leistungen als Selbstzahler in Anspruch nehmen. Sie erhalten eine transparente GOÄ-Rechnung; eine Erstattung durch die GKV ist grundsätzlich nicht vorgesehen.",
+      "Selbstzahlerinnen und Selbstzahler können alle Leistungen der Praxis in Anspruch nehmen. Sie erhalten eine transparente Rechnung nach GOÄ.",
   },
 ];
 
@@ -42,7 +42,7 @@ const prep = [
   {
     kicker: "01",
     title: "Vor dem Termin",
-    body: "Bitte bringen Sie einen aktuellen Medikamentenplan und relevante Vorbefunde mit. Für Belastungsuntersuchungen sportliche Kleidung.",
+    body: "Bitte bringen Sie einen aktuellen Medikamentenplan und relevante Vorbefunde mit. Für Belastungsuntersuchungen bitte sportliche Kleidung.",
   },
   {
     kicker: "02",
@@ -59,8 +59,8 @@ const prep = [
 const news = [
   {
     date: "[Datum]",
-    title: "Sprechzeiten & Urlaub",
-    body: "Aktuelle Sprechzeiten und geplante Abwesenheiten werden hier bekannt gegeben — ergänzt wenn der Praxisbetrieb offiziell startet.",
+    title: "Sprechzeiten und Urlaub",
+    body: "Aktuelle Sprechzeiten und geplante Abwesenheiten werden hier bekannt gegeben und ergänzt, wenn der Praxisbetrieb offiziell startet.",
   },
   {
     date: "[Datum]",
@@ -76,7 +76,7 @@ const news = [
 
 const meds = [
   "Betablocker",
-  "ACE-Hemmer / Sartane",
+  "ACE-Hemmer und Sartane",
   "Statine",
   "Antikoagulantien",
   "Diuretika",
@@ -96,12 +96,12 @@ export default function PatientenPage() {
             <span className="italic text-muted">bevor Sie kommen.</span>
           </>
         }
-        lead="Transparente Abrechnung, klare Vorbereitung, verlässliche Kommunikation. Alles Wesentliche für Ihren Besuch — kompakt an einem Ort."
+        lead="Transparente Abrechnung, klare Vorbereitung und verlässliche Kommunikation. Alles Wesentliche für Ihren Besuch, kompakt an einem Ort."
       />
 
       <EditorialSplit
         src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=1200&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — Herzmotiv"
+        alt="Symbolisches Bild. Herzmotiv"
         overline="Vor dem Termin"
         kicker="Willkommen"
         side="right"
@@ -115,14 +115,15 @@ export default function PatientenPage() {
         body={
           <>
             <p>
-              Diese Seite fasst zusammen, was Sie vor Ihrem Besuch bei uns wissen
-              sollten. Wer bei uns behandelt wird, wie die Abrechnung läuft, was Sie
-              zum Termin mitbringen und wo Sie kurzfristige Hinweise finden.
+              Diese Seite fasst zusammen, was Sie vor Ihrem Besuch bei uns
+              wissen sollten. Wer bei uns behandelt wird, wie die Abrechnung
+              läuft, was Sie zum Termin mitbringen und wo Sie kurzfristige
+              Hinweise finden.
             </p>
             <p>
-              Bei Rückfragen greifen wir zum Telefon, nicht zum Chatbot. Und wenn
-              etwas unklar bleibt, ist das keine Belastung — sondern ein Anlass, ins
-              Gespräch zu kommen.
+              Bei Rückfragen greifen wir zum Telefon, nicht zum Chatbot. Und
+              wenn etwas unklar bleibt, ist das keine Belastung, sondern ein
+              Anlass, ins Gespräch zu kommen.
             </p>
           </>
         }
@@ -136,7 +137,7 @@ export default function PatientenPage() {
             <span className="italic text-muted">offen ist.</span>
           </>
         }
-        intro="Wir behandeln Privatversicherte, Beihilfeberechtigte und gesetzlich Versicherte als Selbstzahler. Der medizinische Standard ist derselbe — die administrative Abwicklung unterscheidet sich."
+        intro="Wir behandeln Privatversicherte, Beihilfeberechtigte sowie Selbstzahlerinnen und Selbstzahler. Der medizinische Standard ist derselbe. Nur die administrative Abwicklung unterscheidet sich."
         items={groups}
       />
 
@@ -145,9 +146,10 @@ export default function PatientenPage() {
         tone="ink"
         footer={
           <>
-            Je besser wir vorab wissen, wo Sie stehen, desto klarer ist das Ergebnis
-            am Ende des Termins. Bringen Sie Ihren Medikamentenplan, aktuelle
-            Vorbefunde und — falls vorhanden — Werte aus Selbstmessungen mit.
+            Je besser wir vorab wissen, wo Sie stehen, desto klarer ist das
+            Ergebnis am Ende des Termins. Bringen Sie Ihren Medikamentenplan,
+            aktuelle Vorbefunde und, falls vorhanden, Werte aus
+            Selbstmessungen mit.
           </>
         }
       >
@@ -188,6 +190,20 @@ export default function PatientenPage() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={0.15}>
+          <div className="mt-12 rounded-[22px] border border-forest/30 bg-forest/[0.06] p-6 md:p-7">
+            <div className="text-[12px] tracking-[0.14em] uppercase font-extrabold text-forest mb-1.5">
+              Terminabsage
+            </div>
+            <p className="text-[14px] leading-[1.7] text-ink m-0 max-w-[720px]">
+              Bitte sagen Sie vereinbarte Termine spätestens 24 Stunden vorher
+              ab. Nur so können wir den freiwerdenden Platz an andere
+              Patientinnen und Patienten vergeben. Später oder nicht abgesagte
+              Termine müssen wir in Rechnung stellen.
+            </p>
+          </div>
+        </Reveal>
       </section>
 
       <section className="border-t border-line bg-white/[0.62]">
@@ -198,11 +214,12 @@ export default function PatientenPage() {
                 <div className="kicker mb-3">Aktuelles</div>
                 <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
                   Sprechzeiten<br />
-                  <span className="italic text-muted">& Abwesenheiten.</span>
+                  <span className="italic text-muted">und Abwesenheiten.</span>
                 </h2>
                 <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
-                  Hier veröffentlichen wir kurzfristige Änderungen der Sprechzeiten,
-                  geplante Urlaubszeiten und die zuständigen Vertretungen.
+                  Hier veröffentlichen wir kurzfristige Änderungen der
+                  Sprechzeiten, geplante Urlaubszeiten und die zuständigen
+                  Vertretungen.
                 </p>
                 <Link
                   href="/aktuelles"
@@ -239,13 +256,14 @@ export default function PatientenPage() {
             <div>
               <div className="kicker mb-3">Medikamente erklärt</div>
               <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
-                Was Sie einnehmen —<br />
+                Was Sie einnehmen<br />
                 <span className="italic text-muted">und warum.</span>
               </h2>
               <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
-                In der Sprechstunde nehmen wir uns die Zeit, gängige kardiologische
-                Medikamente in verständlicher Sprache zu erklären: Wirkung,
-                Wechselwirkungen und typische Nebenwirkungen.
+                In der Sprechstunde nehmen wir uns die Zeit, gängige
+                kardiologische Medikamente in verständlicher Sprache zu
+                erklären. Wirkung, Wechselwirkungen und typische
+                Nebenwirkungen.
               </p>
               <Link
                 href="/medikamente"
@@ -270,25 +288,11 @@ export default function PatientenPage() {
             </div>
           </Reveal>
         </div>
-
-        <Reveal delay={0.15}>
-          <div className="mt-12 rounded-[22px] border border-[#e2c9c6] bg-[#fdf1ef] p-6 md:p-7">
-            <div className="text-[12px] tracking-[0.10em] uppercase font-extrabold text-[#b3261e] mb-1.5">
-              Notfall
-            </div>
-            <p className="text-[14px] leading-[1.7] text-ink m-0">
-              Bei akuten Beschwerden — Brustschmerz, plötzliche Luftnot, kalter
-              Schweiß — bitte umgehend die{" "}
-              <strong className="tracking-wider">{site.emergencyNumber}</strong>{" "}
-              wählen. Diese Website ersetzt keinen Notruf.
-            </p>
-          </div>
-        </Reveal>
       </section>
 
       <PageCta
         title="Fragen zur Abrechnung oder Vorbereitung?"
-        lead="Wir klären alle Details vor Ihrem Termin — telefonisch, per E-Mail oder über das Kontaktformular."
+        lead="Wir klären alle Details vor Ihrem Termin. Telefonisch, per E-Mail oder über das Kontaktformular."
         primaryLabel="TERMIN ANFRAGEN"
         secondaryLabel="Zu den Leistungen"
         secondaryHref="/leistungen"

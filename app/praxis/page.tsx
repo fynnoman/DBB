@@ -8,41 +8,21 @@ import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: `Praxis & Räumlichkeiten | ${site.brand} ${site.city}`,
+  title: `Praxisräume | ${site.brand} ${site.city}`,
   description:
-    "Kardiologische Privatpraxis DBB Kardio in St. Ingbert. Ruhige Räumlichkeiten, warmes Licht, diskrete Privatsphäre. Ein Ort, an dem Medizin unaufgeregt stattfindet.",
+    "Kardiologische Privatpraxis DBB Kardio in Saarlouis, Stadtteil Fraulautern. Ruhige Räumlichkeiten, warmes Licht, diskrete Privatsphäre. Für Patientinnen und Patienten aus Saarlouis, Merzig und Saarbrücken.",
 };
 
 const rooms = [
   {
-    src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&auto=format&fit=crop&q=80",
-    label: "Empfang",
-    caption: "Ruhige Ankunft ohne Wartesaal-Atmosphäre.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1587351021355-a479a299d2f9?w=1200&auto=format&fit=crop&q=80",
+    src: "https://images.unsplash.com/photo-1758448093806-88b2089068ab?w=1200&auto=format&fit=crop&q=80",
     label: "Sprechzimmer",
-    caption: "Warmes Licht, klare Linien, Zeit für das Gespräch.",
+    caption: "Warmes Licht, klare Linien und Zeit für das Gespräch.",
   },
   {
-    src: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1200&auto=format&fit=crop&q=80",
+    src: "https://images.unsplash.com/photo-1778151270886-f227700b0eba?w=1200&auto=format&fit=crop&q=80",
     label: "Untersuchungsraum",
-    caption: "Moderne Diagnostik, ruhig eingebettet.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1200&auto=format&fit=crop&q=80",
-    label: "Echo-Raum",
-    caption: "Hochauflösende Bildgebung in konzentrierter Ruhe.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1200&auto=format&fit=crop&q=80",
-    label: "EKG & Belastung",
-    caption: "Ergometrie in geräumiger, temperierter Umgebung.",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1200&auto=format&fit=crop&q=80",
-    label: "Ruhezone",
-    caption: "Für Erholung nach Belastungsuntersuchungen.",
+    caption: "Ausgestattet für Echokardiographie, EKG und Belastungsdiagnostik.",
   },
 ];
 
@@ -52,21 +32,21 @@ const principles = [
     kicker: "Zeit",
     title: "Ein Termin, ein Anliegen.",
     body:
-      "Wir überbuchen nicht. Jeder Termin ist so bemessen, dass Diagnostik, Gespräch und Befund an einem Nachmittag Platz haben — nicht getaktet auf 15-Minuten-Slots.",
+      "Wir überbuchen nicht. Jeder Termin ist so bemessen, dass Diagnostik, Gespräch und Befund an einem Nachmittag Platz haben und nicht in 15-Minuten-Slots getaktet sind.",
   },
   {
     numeral: "02",
     kicker: "Diskretion",
     title: "Getrennte Wege im Raumkonzept.",
     body:
-      "Empfang, Wartebereich und Untersuchungsräume sind so angeordnet, dass Sie andere Patientinnen und Patienten nicht kreuzen müssen. Bewusst — nicht zufällig.",
+      "Empfang, Wartebereich und Untersuchungsräume sind so angeordnet, dass Sie andere Patientinnen und Patienten nicht kreuzen müssen. Bewusst und nicht zufällig.",
   },
   {
     numeral: "03",
     kicker: "Atmosphäre",
     title: "Wenig Weiß, wenig Neon.",
     body:
-      "Naturmaterialien, warme Farbtöne und indirektes Licht. Ein Raum, in dem man ruhig atmen kann — auch bei ernsten Themen und schwer verdaulichen Befunden.",
+      "Naturmaterialien, warme Farbtöne und indirektes Licht. Ein Raum, in dem man ruhig atmen kann, auch bei ernsten Themen und schwer verdaulichen Befunden.",
   },
 ];
 
@@ -75,7 +55,7 @@ export default function PraxisPage() {
     <>
       <PageHero
         eyebrow="Praxis"
-        kicker="Praxis & Räumlichkeiten"
+        kicker="Praxisräume"
         chapter="03"
         title={
           <>
@@ -83,7 +63,7 @@ export default function PraxisPage() {
             <span className="italic text-muted">Medizin.</span>
           </>
         }
-        lead={`Die Privatpraxis in ${site.city} ist bewusst so angelegt, dass sie nicht wie ein Wartesaal wirkt. Wer hierher kommt, findet Ruhe, warmes Licht und die Zeit, die eine gute Untersuchung braucht.`}
+        lead={`Die Privatpraxis in ${site.city}-${site.address.district} ist bewusst so angelegt, dass sie nicht wie ein Wartesaal wirkt. Wer hierher kommt, findet Ruhe, warmes Licht und die Zeit, die eine gute Untersuchung braucht.`}
       />
 
       <SplitFeature
@@ -94,7 +74,7 @@ export default function PraxisPage() {
             <span className="italic text-muted">anfühlen darf.</span>
           </>
         }
-        intro="Die Praxisräume folgen keiner klinischen Effizienzlogik, sondern einer bewussten Haltung. Diese drei Prinzipien haben jede Entscheidung geleitet — vom Grundriss bis zum Griff der Untersuchungstür."
+        intro="Die Praxisräume folgen keiner klinischen Effizienzlogik, sondern einer bewussten Haltung. Diese drei Prinzipien haben jede Entscheidung geleitet, vom Grundriss bis zum Griff der Untersuchungstür."
         items={principles}
       />
 
@@ -102,27 +82,28 @@ export default function PraxisPage() {
         <div className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
           <Reveal>
             <div className="max-w-[900px] mb-10 md:mb-14">
-              <div className="kicker mb-3">Raum-Rundgang</div>
+              <div className="kicker mb-3">Praxisräume</div>
               <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
-                Sechs Räume, eine Handschrift.
+                Zwei Räume, eine Handschrift.
               </h2>
               <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-5 max-w-[720px]">
-                Die abgebildeten Fotos sind Platzhalter bis zur eigenen Bildproduktion.
-                Sie geben einen ersten Eindruck der Atmosphäre, die uns wichtig ist.
+                Die abgebildeten Fotos sind Platzhalter bis zur eigenen
+                Bildproduktion. Sie geben einen ersten Eindruck der Atmosphäre,
+                die uns wichtig ist.
               </p>
             </div>
           </Reveal>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2">
             {rooms.map((r, i) => (
               <Reveal key={r.label + i} delay={0.05}>
                 <figure className="group relative overflow-hidden rounded-[22px] border border-line bg-white">
                   <div className="relative aspect-[4/5]">
                     <Image
                       src={r.src}
-                      alt={`Platzhalter — ${r.label}`}
+                      alt={`Platzhalter zum Raum ${r.label}`}
                       fill
-                      sizes="(max-width: 768px) 90vw, 30vw"
+                      sizes="(max-width: 768px) 90vw, 46vw"
                       className="object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.03]"
                     />
                     <div
@@ -158,8 +139,8 @@ export default function PraxisPage() {
         </div>
       </section>
 
-      <PullQuote author="Zur Raumauswahl" role="Grundriss & Ausbau">
-        Ein Raum, in dem man ruhig atmen kann, ist keine Kür — er ist Teil der
+      <PullQuote author="Zur Raumauswahl" role="Grundriss und Ausbau">
+        Ein Raum, in dem man ruhig atmen kann, ist keine Kür. Er ist Teil der
         Diagnostik.
       </PullQuote>
 
@@ -173,9 +154,9 @@ export default function PraxisPage() {
                 <span className="italic text-muted">{site.address.street}.</span>
               </h2>
               <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
-                Die Praxis liegt zentral, gut erreichbar und mit ruhigem Straßenbild.
-                Parkmöglichkeiten und Anfahrt-Hinweise werden auf der Kontaktseite
-                gebündelt.
+                Die Praxis befindet sich im Stadtteil {site.address.district},
+                verkehrsgünstig und ruhig zugleich. Patientinnen und Patienten
+                erreichen uns bequem aus Saarlouis, Merzig und Saarbrücken.
               </p>
               <address className="not-italic mt-8 text-[15px] leading-[1.7] text-ink">
                 <span className="font-display text-[18px]">{site.brand}</span>
@@ -184,28 +165,50 @@ export default function PraxisPage() {
                 <br />
                 {site.address.zipCity}
               </address>
+              <div className="mt-6">
+                <a
+                  href={site.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[44px] px-5 rounded-full items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-forest text-forest hover:bg-forest hover:text-white transition-colors"
+                >
+                  In Google Maps öffnen
+                </a>
+              </div>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8">
-              <div className="kicker mb-4">Sprechzeiten</div>
-              <ul className="divide-y divide-line text-[14px] leading-[1.7]">
-                <li className="flex justify-between py-3">
-                  <span>Montag – Donnerstag</span>
-                  <span className="text-muted">[wird ergänzt]</span>
-                </li>
-                <li className="flex justify-between py-3">
-                  <span>Freitag</span>
-                  <span className="text-muted">[wird ergänzt]</span>
-                </li>
-                <li className="flex justify-between py-3">
-                  <span>Samstag / Sonntag</span>
-                  <span className="text-muted">Geschlossen</span>
-                </li>
-              </ul>
-              <p className="mt-4 text-[12px] leading-[1.6] text-muted">
-                Termine ausschließlich nach Vereinbarung.
-              </p>
+            <div className="rounded-[22px] border border-line bg-white/70 overflow-hidden">
+              <div className="p-7 md:p-8">
+                <div className="kicker mb-4">Sprechzeiten</div>
+                <ul className="divide-y divide-line text-[14px] leading-[1.7]">
+                  <li className="flex justify-between py-3">
+                    <span>Montag bis Donnerstag</span>
+                    <span className="text-muted">[wird ergänzt]</span>
+                  </li>
+                  <li className="flex justify-between py-3">
+                    <span>Freitag</span>
+                    <span className="text-muted">[wird ergänzt]</span>
+                  </li>
+                  <li className="flex justify-between py-3">
+                    <span>Samstag und Sonntag</span>
+                    <span className="text-muted">Geschlossen</span>
+                  </li>
+                </ul>
+                <p className="mt-4 text-[12px] leading-[1.6] text-muted">
+                  Termine ausschließlich nach Vereinbarung.
+                </p>
+              </div>
+              <div className="relative aspect-[16/9] w-full border-t border-line">
+                <iframe
+                  src={site.mapsEmbed}
+                  title="Karte zur Praxis"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 h-full w-full border-0"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </Reveal>
         </div>

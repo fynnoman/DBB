@@ -23,6 +23,8 @@ export default function ImpressumPage() {
             {site.address.street}
             <br />
             {site.address.zipCity}
+            <br />
+            Stadtteil {site.address.district}
           </p>
         </div>
 
@@ -35,29 +37,94 @@ export default function ImpressumPage() {
         <div>
           <p className="kicker">Berufsbezeichnung</p>
           <p className="mt-2">
-            Ärztin, verliehen in [wird ergänzt]. Fachärztin für Innere Medizin
-            und Kardiologie.
+            Ärztin, Fachärztin für Innere Medizin und Kardiologie. Verliehen in
+            der Bundesrepublik Deutschland.
+          </p>
+        </div>
+
+        <div>
+          <p className="kicker">Zuständige Kammer</p>
+          <p className="mt-2 text-ink">Ärztekammer des Saarlandes</p>
+          <p>
+            Faktoreistraße 4
+            <br />
+            66111 Saarbrücken
+            <br />
+            Telefon: 0681 / 4003-0
+            <br />
+            E-Mail: info@aeksaar.de
+            <br />
+            <a
+              href="https://www.aerztekammer-saarland.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-gold/60 underline-offset-4 hover:text-ink"
+            >
+              www.aerztekammer-saarland.de
+            </a>
           </p>
         </div>
 
         <div id="aufsichtsbehoerden">
-          <p className="kicker">Aufsichtsbehörden</p>
-          <p className="mt-2">Ärztekammer des Saarlandes, [wird ergänzt]</p>
-          <p>Kassenärztliche Vereinigung Saarland, [wird ergänzt]</p>
+          <p className="kicker">Aufsichtsbehörde</p>
+          <p className="mt-2 text-ink">
+            Ministerium für Soziales, Gesundheit, Frauen und Familie des
+            Saarlandes
+          </p>
+          <p>
+            Franz-Josef-Röder-Straße 23
+            <br />
+            66119 Saarbrücken
+            <br />
+            Telefon: 0681 / 501-00
+            <br />
+            <a
+              href="https://www.saarland.de/msgff"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-gold/60 underline-offset-4 hover:text-ink"
+            >
+              www.saarland.de/msgff
+            </a>
+          </p>
+          <p className="mt-3">
+            Kassenärztliche Vereinigung Saarland, Europaallee 7, 66113
+            Saarbrücken.
+          </p>
         </div>
 
         <div>
           <p className="kicker">Berufsrechtliche Regelungen</p>
           <p className="mt-2">
             Berufsordnung für die Ärztinnen und Ärzte des Saarlandes.
-            Heilberufekammergesetz. Gebührenordnung für Ärzte (GOÄ). Einsehbar
-            über die zuständige Kammer.
+            Heilberufekammergesetz des Saarlandes. Gebührenordnung für Ärzte
+            (GOÄ). Die genannten Regelungen sind über die Ärztekammer des
+            Saarlandes einsehbar.
           </p>
         </div>
 
         <div>
           <p className="kicker">Redaktionell verantwortlich</p>
-          <p className="mt-2">{site.fullName}, Adresse wie oben.</p>
+          <p className="mt-2">{site.fullName}, Anschrift wie oben.</p>
+        </div>
+
+        <div>
+          <p className="kicker">EU-Streitschlichtung</p>
+          <p className="mt-2">
+            Die Europäische Kommission stellt eine Plattform zur
+            Online-Streitbeilegung (OS) bereit:{" "}
+            <a
+              href="https://ec.europa.eu/consumers/odr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-gold/60 underline-offset-4 hover:text-ink"
+            >
+              ec.europa.eu/consumers/odr
+            </a>
+            . Zur Teilnahme an einem Streitbeilegungsverfahren vor einer
+            Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht
+            bereit.
+          </p>
         </div>
       </div>
     </section>

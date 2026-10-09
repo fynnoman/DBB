@@ -34,16 +34,14 @@ export default function Kontakt() {
               </ContactRow>
               <ContactRow label="Telefon">{site.phone}</ContactRow>
               <ContactRow label="E-Mail">{site.email}</ContactRow>
-              <div className="pt-4 mt-2 text-[#b3261e]">
-                <div className="text-[12px] tracking-[0.10em] font-extrabold uppercase mb-1.5">
-                  Notfall
+              <div className="pt-4 mt-2">
+                <div className="text-[12px] tracking-[0.14em] font-extrabold uppercase text-forest mb-1.5">
+                  Terminabsage
                 </div>
-                <p className="text-[14px] leading-[1.6] m-0">
-                  Bei akuten Beschwerden bitte{" "}
-                  <strong className="tracking-wider">
-                    {site.emergencyNumber}
-                  </strong>{" "}
-                  wählen.
+                <p className="text-[14px] leading-[1.6] text-ink m-0">
+                  Bitte sagen Sie Termine spätestens 24 Stunden vorher ab. Nicht
+                  oder zu spät abgesagte Termine müssen wir in Rechnung
+                  stellen.
                 </p>
               </div>
             </div>
@@ -97,6 +95,41 @@ export default function Kontakt() {
             </form>
           </Reveal>
         </div>
+
+        <Reveal>
+          <div className="mt-10 md:mt-12 overflow-hidden rounded-[22px] border border-line bg-white/70">
+            <div className="px-6 pt-6 md:px-8 md:pt-8">
+              <div className="kicker mb-2">Anfahrt</div>
+              <h3 className="font-display text-[22px] md:text-[26px] leading-[1.2]">
+                So finden Sie zu uns.
+              </h3>
+              <p className="text-muted text-[14px] md:text-[15px] leading-[1.7] mt-2 max-w-[560px]">
+                {site.address.street}, {site.address.zipCity}. Praxis im
+                Stadtteil {site.address.district}.
+              </p>
+            </div>
+            <div className="relative mt-6 aspect-[16/9] md:aspect-[21/9] w-full">
+              <iframe
+                src={site.mapsEmbed}
+                title="Karte zur Praxis"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 h-full w-full border-0"
+                allowFullScreen
+              />
+            </div>
+            <div className="flex items-center justify-end px-6 pb-6 md:px-8 md:pb-8 pt-4">
+              <a
+                href={site.mapsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[40px] px-5 rounded-full items-center justify-center text-[11px] font-extrabold tracking-[0.1em] uppercase border border-line text-ink hover:border-gold transition-colors"
+              >
+                In Google Maps öffnen
+              </a>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

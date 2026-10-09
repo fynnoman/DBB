@@ -77,14 +77,14 @@ const rules = [
     kicker: "Nichts eigenständig",
     title: "Keine Selbst-Anpassung.",
     body:
-      "Medikamente sollten nie eigenständig begonnen, abgesetzt oder in der Dosis verändert werden — Rücksprache mit der Ärztin ist entscheidend, auch wenn es „nur eine Kleinigkeit“ ist.",
+      "Medikamente sollten nie eigenständig begonnen, abgesetzt oder in der Dosis verändert werden. Rücksprache mit der Ärztin ist entscheidend, auch wenn es „nur eine Kleinigkeit“ scheint.",
   },
   {
     numeral: "02",
     kicker: "Wechselwirkungen",
     title: "Alles auf den Tisch.",
     body:
-      "Bitte informieren Sie uns über alle regelmäßig eingenommenen Präparate — inklusive frei verkäuflicher Mittel, Nahrungsergänzung und pflanzlicher Präparate.",
+      "Bitte informieren Sie uns über alle regelmäßig eingenommenen Präparate, inklusive frei verkäuflicher Mittel, Nahrungsergänzung und pflanzlicher Präparate.",
   },
   {
     numeral: "03",
@@ -108,7 +108,7 @@ export default function MedikamentePage() {
             <span className="italic text-muted">verständlich erklärt.</span>
           </>
         }
-        lead="Die folgenden Informationen dienen der Orientierung und ersetzen keine individuelle ärztliche Beratung. Für konkrete Fragen zu Ihrer Medikation sprechen Sie uns bitte persönlich an."
+        lead="Die folgenden Informationen dienen der Orientierung und ersetzen keine individuelle ärztliche Beratung. Für konkrete Fragen sprechen Sie uns bitte persönlich an."
       />
 
       <section className="relative overflow-hidden border-y border-line bg-cream-300/40">
@@ -138,9 +138,9 @@ export default function MedikamentePage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="font-display italic text-muted text-[clamp(16px,1.8vw,22px)] leading-[1.5] mt-6 max-w-[720px] mx-auto">
-              ACE-Hemmer, Betablocker, Statine, Diuretika, Antikoagulanzien — was
-              hinter den Buchstaben steckt, entscheidet über den Alltag mit dem
-              Herzen.
+              ACE-Hemmer, Betablocker, Statine, Diuretika und Antikoagulanzien.
+              Was hinter den Buchstaben steckt, entscheidet über den Alltag mit
+              dem Herzen.
             </p>
           </Reveal>
         </div>
@@ -189,7 +189,7 @@ export default function MedikamentePage() {
         tone="ink"
         footer={
           <>
-            Diese Übersicht ist eine Orientierungshilfe — kein Ersatz für die
+            Diese Übersicht ist eine Orientierungshilfe. Kein Ersatz für die
             persönliche Beratung. Ob eine Substanzklasse zu Ihnen passt, hängt von
             Diagnose, Vorerkrankungen, weiterer Medikation und individuellen Werten
             ab.
@@ -208,31 +208,10 @@ export default function MedikamentePage() {
             <span className="italic text-muted">die Therapie.</span>
           </>
         }
-        intro="Die meisten kardiovaskulären Medikamente sind gut verträglich — vorausgesetzt, drei einfache Regeln werden konsequent eingehalten."
+        intro="Die meisten kardiovaskulären Medikamente sind gut verträglich. Vorausgesetzt, drei einfache Regeln werden konsequent eingehalten."
         items={rules}
       />
 
-      <section className="container-shell max-w-[1440px] pb-16 md:pb-20 px-4">
-        <Reveal>
-          <div className="rounded-[22px] border border-[#e2c9c6] bg-[#fdf1ef] p-6 md:p-8">
-            <div className="text-[12px] tracking-[0.10em] uppercase font-extrabold text-[#b3261e] mb-2">
-              Notfall
-            </div>
-            <p className="text-[15px] leading-[1.7] text-ink m-0 max-w-[720px]">
-              Bei akuten Symptomen — Brustschmerz, plötzliche Luftnot, Schwindel mit
-              Übelkeit — bitte umgehend die{" "}
-              <strong className="tracking-wider">{site.emergencyNumber}</strong>{" "}
-              wählen. Diese Seite ersetzt keinen Notruf.
-            </p>
-          </div>
-        </Reveal>
-      </section>
-
-      <PageCta
-        title="Frage zu Ihrer Medikation?"
-        lead="Ob Neuverordnung, Dosisanpassung oder Nebenwirkung — wir besprechen die Details persönlich, nicht am Telefon-Bot."
-        primaryLabel="TERMIN ANFRAGEN"
-      />
     </>
   );
 }

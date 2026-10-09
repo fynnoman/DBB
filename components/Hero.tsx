@@ -85,9 +85,9 @@ export default function Hero() {
             className="max-w-[820px] mx-auto mt-7 mb-8 text-[16px] md:text-[17px] leading-[1.7] text-[#4a4743] animate-floatIn"
             style={{ animationDelay: "0.7s" }}
           >
-            Für Privatpatienten, Beihilfeberechtigte und Selbstzahler.
-            <br className="hidden sm:inline" /> Gesetzlich Versicherte können
-            Termine als Selbstzahler vereinbaren.
+            Für Privatpatienten, Beihilfeberechtigte und Selbstzahler in Saarlouis,
+            <br className="hidden sm:inline" /> Merzig und Saarbrücken. Termine
+            werden ausschließlich persönlich vereinbart.
           </p>
 
           <div
@@ -110,15 +110,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Down cue */}
-      <div
-        aria-hidden
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 text-muted text-[11px] tracking-[0.24em] uppercase flex flex-col items-center gap-2 animate-floatIn"
-        style={{ animationDelay: "1.2s", opacity: 0.6 }}
-      >
-        <span>Scrollen</span>
-        <span className="block h-[26px] w-px bg-gradient-to-b from-gold to-transparent" />
-      </div>
     </section>
   );
 }

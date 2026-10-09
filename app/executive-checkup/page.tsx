@@ -10,7 +10,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Executive Check-up | ${site.brand} ${site.city}`,
   description:
-    "Executive Check-up bei DBB Kardio in St. Ingbert: umfassende kardiovaskuläre Risikoanalyse mit Carotis-Duplex, Ergometrie, erweiterter Labordiagnostik und individueller Prävention.",
+    "Executive Check-up bei DBB Kardio in Saarlouis: umfassende kardiovaskuläre Risikoanalyse mit Carotis-Duplex, Ergometrie, erweiterter Labordiagnostik und individueller Prävention.",
 };
 
 const included = [
@@ -28,14 +28,14 @@ const modules = [
     kicker: "Gefäße",
     title: "Carotis-Doppler",
     body:
-      "Ultraschall der hirnversorgenden Gefäße zur frühen Erkennung arteriosklerotischer Veränderungen — ein wichtiger Frühindikator für das kardiovaskuläre Gesamtrisiko.",
+      "Ultraschall der hirnversorgenden Gefäße zur frühen Erkennung arteriosklerotischer Veränderungen. Ein wichtiger Frühindikator für das kardiovaskuläre Gesamtrisiko.",
   },
   {
     numeral: "02",
     kicker: "Belastung",
     title: "Ergometrie",
     body:
-      "Belastungs-EKG unter standardisierter Steigerung zur Beurteilung von Rhythmus, Belastbarkeit und Sauerstoffversorgung. Der klassische Stress-Test — bei uns ohne Zeitdruck.",
+      "Belastungs-EKG unter standardisierter Steigerung zur Beurteilung von Rhythmus, Belastbarkeit und Sauerstoffversorgung. Der klassische Stress-Test. Bei uns ohne Zeitdruck.",
   },
   {
     numeral: "03",
@@ -49,14 +49,14 @@ const modules = [
     kicker: "Synthese",
     title: "Individueller Risiko-Score",
     body:
-      "Alle Werte fließen in eine individuelle kardiovaskuläre Risikoeinschätzung — als Grundlage für konkrete, umsetzbare Präventionsempfehlungen.",
+      "Alle Werte fließen in eine individuelle kardiovaskuläre Risikoeinschätzung. Als Grundlage für konkrete, umsetzbare Präventionsempfehlungen.",
   },
 ];
 
 const targets = [
   {
     kicker: "Führungskräfte",
-    body: "Menschen mit hoher Verantwortungsdichte, Reisetätigkeit oder Schichtarbeit — kardiovaskuläre Belastungen bleiben oft unentdeckt.",
+    body: "Menschen mit hoher Verantwortungsdichte, Reisetätigkeit oder Schichtarbeit. Kardiovaskuläre Belastungen bleiben oft unentdeckt.",
   },
   {
     kicker: "Familiäre Vorbelastung",
@@ -81,14 +81,14 @@ export default function ExecutiveCheckupPage() {
             <span className="italic text-muted">Wenn Sie mehr wissen wollen.</span>
           </>
         }
-        lead="Die umfassendere Variante für eine vertiefte kardiovaskuläre Risikoanalyse — mit Carotis-Diagnostik, Ergometrie, erweitertem Labor und individuellem Präventionskonzept."
+        lead="Die umfassendere Variante für eine vertiefte kardiovaskuläre Risikoanalyse. Mit Carotis-Diagnostik, Ergometrie, erweitertem Labor und individuellem Präventionskonzept."
       />
 
       <EditorialImage
         src="https://images.unsplash.com/photo-1666214277657-e0aa03b1c8a4?w=1920&auto=format&fit=crop&q=80"
-        alt="Symbolisches Bild — Executive-Diagnostik"
+        alt="Symbolisches Bild. Executive-Diagnostik"
         overline="Executive Check-up"
-        caption="Ein tragfähiges Bild — nicht nur eine Momentaufnahme."
+        caption="Ein tragfähiges Bild. Nicht nur eine Momentaufnahme."
         aspect="cinema"
         fullBleed
       />
@@ -170,7 +170,7 @@ export default function ExecutiveCheckupPage() {
         footer={
           <>
             Der Executive Check-up ist kein Premium-Paket im Marketing-Sinne. Er ist
-            die richtige Wahl, wenn Sie ein tragfähiges Bild wollen — nicht nur eine
+            die richtige Wahl, wenn Sie ein tragfähiges Bild wollen. Nicht nur eine
             Momentaufnahme.
           </>
         }
@@ -206,7 +206,7 @@ export default function ExecutiveCheckupPage() {
 
       <PageCta
         title="Executive Check-up anfragen."
-        lead="Umfang und Zeitrahmen stimmen wir vorab persönlich mit Ihnen ab — damit der Termin exakt zu Ihrer Situation passt."
+        lead="Umfang und Zeitrahmen stimmen wir vorab persönlich mit Ihnen ab. Damit der Termin exakt zu Ihrer Situation passt."
         primaryLabel="TERMIN ANFRAGEN"
         secondaryLabel="Basis Check-up ansehen"
         secondaryHref="/basis-checkup"

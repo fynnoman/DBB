@@ -35,7 +35,7 @@ export default function AbrechnungDatenschutz() {
                   Einwilligung & Datenschutz
                 </h3>
                 <p className="text-muted leading-[1.65]">
-                  Wenn Untersuchungen über ein Kooperationslabor erfolgen oder
+                  Wenn Untersuchungen über ein Partnerlabor erfolgen oder
                   Daten zur Abrechnung an eine PVS übermittelt werden, erhalten
                   Sie die hierfür notwendigen Datenschutz- und
                   Einwilligungsformulare bereits zu Beginn der Behandlung.

@@ -11,7 +11,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Über die Ärztin | ${site.fullName}`,
   description:
-    "Dr. medic Denisa Babeanu-Bauer — Kardiologin in St. Ingbert. Werdegang, Schwerpunkte, Haltung. Persönliche Betreuung ohne Fließbandmedizin.",
+    "Dr. medic Denisa Babeanu-Bauer. Kardiologin in Saarlouis. Werdegang, Schwerpunkte, Haltung. Persönliche Betreuung ohne Fließbandmedizin.",
 };
 
 const schwerpunkte = [
@@ -20,7 +20,7 @@ const schwerpunkte = [
     kicker: "Bildgebung",
     title: "Echokardiographie & Speckle Tracking",
     body:
-      "Hochauflösende Ultraschalluntersuchung des Herzens inklusive Speckle-Tracking-Analyse zur frühen Erkennung feinster Funktionsstörungen — bevor sie im klassischen Echo sichtbar werden.",
+      "Hochauflösende Ultraschalluntersuchung des Herzens inklusive Speckle-Tracking-Analyse zur frühen Erkennung feinster Funktionsstörungen. Bevor sie im klassischen Echo sichtbar werden.",
   },
   {
     numeral: "02",
@@ -34,7 +34,7 @@ const schwerpunkte = [
     kicker: "Gender-Kardiologie",
     title: "Frauenherz",
     body:
-      "Herzerkrankungen zeigen bei Frauen oft andere Symptome — und werden deshalb später erkannt. Dedizierte Diagnostik unter Berücksichtigung geschlechtsspezifischer Besonderheiten.",
+      "Herzerkrankungen zeigen bei Frauen oft andere Symptome. Und werden deshalb später erkannt. Dedizierte Diagnostik unter Berücksichtigung geschlechtsspezifischer Besonderheiten.",
   },
   {
     numeral: "04",
@@ -53,6 +53,10 @@ const vita = [
     year: "Zusatzqualifikationen",
     body: "Echokardiographie · Speckle Tracking · Cardio-Onkologie",
   },
+  {
+    year: "Mitgliedschaften",
+    body: "Deutsche Gesellschaft für Amyloid-Krankheiten e.V. (DGAK)",
+  },
   { year: "Niederlassung", body: `Privatpraxis ${site.city}` },
 ];
 
@@ -69,7 +73,7 @@ export default function AerztinPage() {
             <span className="text-muted italic">Persönlich. Präzise. Zugewandt.</span>
           </>
         }
-        lead="Kardiologie beginnt für mich mit einem Gespräch, nicht mit einem Gerät. Wer Zeit für seine Patienten hat, sieht mehr — und muss weniger reparieren."
+        lead="Kardiologie beginnt für mich mit einem Gespräch, nicht mit einem Gerät. Wer Zeit für seine Patienten hat, sieht mehr. Und muss weniger reparieren."
       />
 
       <section className="container-shell max-w-[1440px] px-4 pb-20 md:pb-32">
@@ -166,7 +170,7 @@ export default function AerztinPage() {
                     Minuten
                   </div>
                   <p className="text-muted text-[14px] leading-[1.6] mt-2 max-w-[260px]">
-                    typische Termin-Dauer für den Basis-Check — ohne getakteten
+                    typische Termin-Dauer für den Basis-Check. Ohne getakteten
                     Nachfolger im Warteraum.
                   </p>
                 </div>
@@ -205,7 +209,7 @@ export default function AerztinPage() {
             </span> wird.
           </>
         }
-        intro="Vier Bereiche, in denen wir gezielt Zeit investiert haben. Nicht, weil es Trends sind — sondern weil wir sehen, wo klassische Standardversorgung an Grenzen stößt."
+        intro="Vier Bereiche, in denen wir gezielt Zeit investiert haben. Nicht, weil es Trends sind. Sondern weil wir sehen, wo klassische Standardversorgung an Grenzen stößt."
         items={schwerpunkte}
       />
 
@@ -215,7 +219,7 @@ export default function AerztinPage() {
         footer={
           <>
             Deshalb keine Serien-Termine, keine anonyme Abläufe, keine Delegation an
-            fachfremdes Personal. Der Preis ist Zeit — und die geben wir jedem
+            fachfremdes Personal. Der Preis ist Zeit. Und die geben wir jedem
             Patienten bewusst.
           </>
         }
@@ -223,6 +227,36 @@ export default function AerztinPage() {
         Medizin, die Zeit braucht, kann man nicht optimieren.<br />
         <span className="italic text-cream/85">Man kann sie nur ernst nehmen.</span>
       </Statement>
+
+      <section className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
+        <Reveal>
+          <div className="rounded-[22px] border border-forest/25 bg-forest/[0.06] p-7 md:p-9">
+            <div className="kicker text-forest mb-3">Mitgliedschaft</div>
+            <h2 className="font-display text-[clamp(24px,2.8vw,34px)] leading-[1.2] tracking-[-0.01em] mb-4">
+              Deutsche Gesellschaft für Amyloid-Krankheiten e.V.
+            </h2>
+            <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] max-w-[720px]">
+              Dr. medic Denisa Babeanu-Bauer ist Mitglied der Deutschen
+              Gesellschaft für Amyloid-Krankheiten (DGAK). Die Gesellschaft
+              wurde 1993 gegründet und ist mit der International Society of
+              Amyloidosis assoziiert. Sie unterstützt Ärztinnen und Ärzte,
+              die Ursachen, Diagnostik und Therapie der Amyloidosen erforschen.
+              Diese Vernetzung fließt direkt in die Betreuung von Patientinnen
+              und Patienten mit kardialer Amyloidose und verwandten
+              Erkrankungen ein.
+            </p>
+            <a
+              href="https://www.amyloid.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase font-extrabold text-forest hover:text-forest/80 transition-colors"
+            >
+              Zur DGAK
+              <span aria-hidden>→</span>
+            </a>
+          </div>
+        </Reveal>
+      </section>
 
       <section className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
         <Reveal>
@@ -257,7 +291,7 @@ export default function AerztinPage() {
 
       <PageCta
         title="Termin bei Frau Dr. Babeanu-Bauer anfragen."
-        lead="Erstgespräch, Basis-Check-up oder gezielte Fragestellung — wir besprechen im Vorfeld, was für Sie sinnvoll ist."
+        lead="Erstgespräch, Basis-Check-up oder gezielte Fragestellung. Wir besprechen im Vorfeld, was für Sie sinnvoll ist."
       />
     </>
   );

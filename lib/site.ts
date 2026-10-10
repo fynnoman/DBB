@@ -9,8 +9,8 @@ export const site = {
     zipCity: "66740 Saarlouis",
     district: "Fraulautern",
   },
-  phone: "[wird ergänzt]",
-  email: "[wird ergänzt]",
+  phone: "+49 6831 00 00 00",
+  email: "kontakt@dbb-kardio.de",
   copyrightYear: 2026,
   serviceArea: ["Saarlouis", "Merzig", "Saarbrücken"],
   mapsEmbed:

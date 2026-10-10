@@ -89,7 +89,7 @@ export default function Hero() {
           </p>
 
           <div
-            className="flex gap-2.5 justify-center flex-wrap animate-floatIn"
+            className="flex justify-center animate-floatIn"
             style={{ animationDelay: "0.85s" }}
           >
             <a
@@ -97,12 +97,6 @@ export default function Hero() {
               className="min-h-[48px] px-5 md:px-6 rounded-full inline-flex items-center justify-center text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
             >
               TERMIN BUCHEN
-            </a>
-            <a
-              href="#leistungen"
-              className="min-h-[48px] px-5 md:px-6 rounded-full inline-flex items-center justify-center text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-all duration-500 ease-editorial"
-            >
-              LEISTUNGEN ANSEHEN
             </a>
           </div>
         </div>

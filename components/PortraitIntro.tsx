@@ -23,7 +23,7 @@ export default function PortraitIntro() {
           }}
         >
           <Image
-            src="/portrait-babeanu-bauer.jpg"
+            src="/portrait-babeanu-bauer.png"
             alt={`Portrait ${site.fullName}`}
             fill
             sizes="(max-width: 640px) 82vw, 430px"

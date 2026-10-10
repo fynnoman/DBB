@@ -26,7 +26,6 @@ export default function Praxis() {
         <SectionTitle
           kicker="Praxis"
           title="Praxisräume."
-          lead="Zwei zentrale Räume prägen den Besuch in der Praxis: das ruhige Sprechzimmer und der ausgestattete Untersuchungsraum. Beide Bilder dienen als Platzhalter und werden bei Praxisstart durch eigene Aufnahmen ersetzt."
         />
 
         <Stagger className="grid md:grid-cols-2 gap-5 md:gap-6">

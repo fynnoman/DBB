@@ -78,7 +78,6 @@ export default function Leistungen() {
         <SectionTitle
           kicker="Leistungen"
           title="Kardiologische Diagnostik und Betreuung."
-          lead="Zwei Check-up-Formate zur direkten Buchung, dazu das gesamte diagnostische Spektrum für die persönliche Betreuung nach ärztlicher Indikation."
         />
 
         {/* Feature check-ups */}

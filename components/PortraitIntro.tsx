@@ -23,42 +23,13 @@ export default function PortraitIntro() {
           }}
         >
           <Image
-            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900&auto=format&fit=crop&q=80"
-            alt="Platzhalter-Portrait der Ärztin, Schwarz-Weiß"
+            src="/portrait-babeanu-bauer.jpg"
+            alt={`Portrait ${site.fullName}`}
             fill
             sizes="(max-width: 640px) 82vw, 430px"
-            className="object-cover grayscale contrast-105 transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.02]"
+            className="object-cover transition-transform duration-[1200ms] ease-editorial group-hover:scale-[1.02]"
             priority
           />
-          <div
-            aria-hidden
-            className="absolute inset-0"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(24,24,24,0.10) 0%, rgba(24,24,24,0.35) 55%, rgba(24,24,24,0.78) 100%)",
-            }}
-          />
-
-          <div
-            aria-hidden
-            className="absolute inset-0 grid place-items-center pointer-events-none"
-          >
-            <span className="font-display text-white/25 tracking-[0.22em] text-[clamp(28px,6vw,54px)] uppercase select-none">
-              Platzhalter
-            </span>
-          </div>
-
-          <div className="absolute inset-x-0 bottom-0 p-6 md:p-7 text-left">
-            <div className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold">
-              Portraitfoto folgt
-            </div>
-            <div className="mt-1.5 font-display text-white text-[18px] md:text-[20px] leading-tight">
-              {site.fullName}
-            </div>
-            <div className="mt-1 text-white/75 text-[12px] md:text-[13px]">
-              Das eigene Portrait der Ärztin wird in Kürze eingefügt.
-            </div>
-          </div>
 
           <div
             aria-hidden

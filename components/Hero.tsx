@@ -86,8 +86,6 @@ export default function Hero() {
             style={{ animationDelay: "0.7s" }}
           >
             Für Privatpatienten, Beihilfeberechtigte und Selbstzahler.
-            <br className="hidden sm:inline" /> Praxis in Saarlouis. Termine
-            nach Vereinbarung.
           </p>
 
           <div

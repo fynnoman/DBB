@@ -16,11 +16,6 @@ export default function Kontakt() {
             <h2 className="font-display leading-[1.1] text-[clamp(30px,4vw,50px)] title-rule">
               Sprechen wir persönlich.
             </h2>
-            <p className="text-muted text-[16px] md:text-[17px] leading-[1.75] mt-5 max-w-[720px]">
-              Termine werden individuell vereinbart. Für Rückfragen zu
-              Vorbereitungen, Abrechnung oder speziellen Anliegen ist das
-              Kontaktformular der einfachste Weg.
-            </p>
           </div>
         </Reveal>
 

@@ -103,15 +103,30 @@ export default function Kontakt() {
                 Stadtteil {site.address.district}.
               </p>
             </div>
-            <div className="relative mt-6 aspect-[16/9] md:aspect-[21/9] w-full">
-              <iframe
-                src={site.mapsEmbed}
-                title="Karte zur Praxis"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 h-full w-full border-0"
-                allowFullScreen
-              />
+            <div className="mt-6 grid gap-0 lg:grid-cols-[1.3fr_1fr]">
+              <div className="relative aspect-[16/9] lg:aspect-auto lg:min-h-[360px] w-full">
+                <iframe
+                  src={site.mapsEmbed}
+                  title="Karte zur Praxis"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 h-full w-full border-0"
+                  allowFullScreen
+                />
+              </div>
+              <div className="px-6 py-7 md:px-8 md:py-8 border-t lg:border-t-0 lg:border-l border-line bg-white/60">
+                <ul className="divide-y divide-line text-[14px] md:text-[15px] leading-[1.6]">
+                  <AnfahrtRow label="Parken">
+                    Kostenlose Parkplätze im Hinterhof, begrenzt verfügbar.
+                    Zufahrt über die Brückenstraße.
+                  </AnfahrtRow>
+                  <AnfahrtRow label="Aufzug">Aufzug im Haus vorhanden.</AnfahrtRow>
+                  <AnfahrtRow label="Zug">Bahnhof Saarlouis.</AnfahrtRow>
+                  <AnfahrtRow label="Bus">
+                    Bushaltestelle am Bahnhof Saarlouis.
+                  </AnfahrtRow>
+                </ul>
+              </div>
             </div>
             <div className="flex items-center justify-end px-6 pb-6 md:px-8 md:pb-8 pt-4">
               <a
@@ -144,6 +159,23 @@ function ContactRow({
       </div>
       <div className="text-muted">{children}</div>
     </div>
+  );
+}
+
+function AnfahrtRow({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <li className="py-3 first:pt-0 last:pb-0">
+      <div className="text-[11px] tracking-[0.14em] font-extrabold uppercase text-gold mb-1">
+        {label}
+      </div>
+      <div className="text-ink">{children}</div>
+    </li>
   );
 }
 

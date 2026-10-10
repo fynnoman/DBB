@@ -22,26 +22,26 @@ export default function BookingBar() {
       }`}
     >
       <div className="flex gap-2 items-center bg-white/97 border border-[rgba(183,154,98,0.45)] shadow-booking rounded-full p-2 backdrop-blur-md max-w-[95vw] overflow-x-auto">
-        <a
-          href="/kontakt"
+        <button
+          type="button"
           title="Anrufen"
           className="whitespace-nowrap min-h-[40px] px-4 rounded-full inline-flex items-center gap-2 text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-forest text-white border border-forest hover:bg-forest/90 transition-colors"
         >
           <PhoneMark /> ANRUF
-        </a>
-        <a
-          href="/kontakt"
+        </button>
+        <button
+          type="button"
           title="E-Mail"
           className="whitespace-nowrap min-h-[40px] px-4 rounded-full inline-flex items-center gap-2 text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-colors"
         >
           <MailMark /> E-MAIL
-        </a>
-        <a
-          href="/kontakt"
+        </button>
+        <button
+          type="button"
           className="whitespace-nowrap min-h-[40px] px-4 md:px-5 rounded-full inline-flex items-center text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 transition-colors"
         >
           TERMIN BUCHEN
-        </a>
+        </button>
       </div>
     </div>
   );

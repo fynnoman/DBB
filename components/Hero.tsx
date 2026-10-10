@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
 
           <p
-            className="font-display italic leading-[1.15] tracking-[0.005em] mb-4 text-[clamp(18px,2.4vw,28px)] shiny-gold animate-floatIn"
+            className="font-display leading-[1.1] tracking-[-0.005em] mb-5 text-[clamp(24px,4vw,46px)] font-semibold text-gold animate-floatIn"
             style={{ animationDelay: "0.15s" }}
           >
             {site.descriptor}
@@ -79,12 +79,12 @@ export default function Hero() {
             className="flex justify-center animate-floatIn"
             style={{ animationDelay: "0.7s" }}
           >
-            <a
-              href="#kontakt"
+            <button
+              type="button"
               className="min-h-[48px] px-5 md:px-6 rounded-full inline-flex items-center justify-center text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
             >
               TERMIN BUCHEN
-            </a>
+            </button>
           </div>
         </div>
       </div>

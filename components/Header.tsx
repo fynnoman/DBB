@@ -71,7 +71,6 @@ export default function Header() {
     };
   }, [open]);
 
-  const bookHref = "/kontakt";
   const groupedMenu = menuLinks.reduce<Record<string, MenuLink[]>>((acc, link) => {
     const g = link.group ?? "Weitere";
     if (!acc[g]) acc[g] = [];
@@ -140,26 +139,26 @@ export default function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-1.5 md:gap-2 flex-shrink-0">
-          <a
-            href={bookHref}
+          <button
+            type="button"
             className="hidden sm:inline-flex min-h-[44px] px-[18px] rounded-full items-center justify-center text-[12px] font-extrabold tracking-[.05em] bg-gold text-white border border-gold hover:bg-gold-600 transition-colors duration-500 ease-editorial"
           >
             TERMIN BUCHEN
-          </a>
-          <a
-            href={bookHref}
+          </button>
+          <button
+            type="button"
             aria-label="Telefon"
             className="hidden sm:grid w-11 h-11 rounded-full border border-forest/40 text-white bg-forest hover:bg-forest/90 place-items-center transition-colors"
           >
             <PhoneIcon />
-          </a>
-          <a
-            href={bookHref}
+          </button>
+          <button
+            type="button"
             aria-label="E-Mail"
             className="hidden sm:grid w-11 h-11 rounded-full border border-line place-items-center text-ink/80 hover:text-ink hover:border-gold transition-colors"
           >
             <MailIcon />
-          </a>
+          </button>
 
           <div className="relative" ref={wrapRef}>
             <button

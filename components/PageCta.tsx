@@ -4,15 +4,13 @@ import { Reveal } from "@/components/Reveal";
 export function PageCta({
   title,
   lead,
-  primaryLabel = "TERMIN ANFRAGEN",
-  primaryHref = "/#kontakt",
-  secondaryLabel = "Zur Kontaktseite",
-  secondaryHref = "/kontakt",
+  primaryLabel = "TERMIN BUCHEN",
+  secondaryLabel,
+  secondaryHref,
 }: {
   title?: string;
   lead?: string;
   primaryLabel?: string;
-  primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
 }) {
@@ -42,18 +40,20 @@ export function PageCta({
                 )}
               </div>
               <div className="flex flex-wrap gap-3 md:justify-end">
-                <Link
-                  href={primaryHref}
+                <button
+                  type="button"
                   className="min-h-[52px] px-6 rounded-full inline-flex items-center justify-center text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
                 >
                   {primaryLabel}
-                </Link>
-                <Link
-                  href={secondaryHref}
-                  className="min-h-[52px] px-6 rounded-full inline-flex items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-line text-ink hover:border-gold transition-colors"
-                >
-                  {secondaryLabel}
-                </Link>
+                </button>
+                {secondaryHref && secondaryLabel && (
+                  <Link
+                    href={secondaryHref}
+                    className="min-h-[52px] px-6 rounded-full inline-flex items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-line text-ink hover:border-gold transition-colors"
+                  >
+                    {secondaryLabel}
+                  </Link>
+                )}
               </div>
             </div>
           </div>

@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
 
           <p
-            className="kicker mb-4 animate-floatIn"
+            className="font-display italic leading-[1.15] tracking-[0.005em] mb-4 text-[clamp(18px,2.4vw,28px)] shiny-gold animate-floatIn"
             style={{ animationDelay: "0.15s" }}
           >
             {site.descriptor}
@@ -68,29 +68,16 @@ export default function Hero() {
             <span className="block sm:inline">Babeanu-Bauer</span>
           </h1>
 
-          <div
-            className="font-display leading-[1.15] tracking-[0.01em] mt-5 text-[clamp(17px,3.2vw,52px)] animate-floatIn break-words"
-            style={{ animationDelay: "0.4s" }}
-          >
-            KARDIOLOGISCHE PRIVATPRAXIS
-          </div>
-
-          <div
-            aria-hidden
-            className="mx-auto mt-7 h-px w-[120px] bg-gradient-to-r from-transparent via-gold to-transparent animate-floatIn"
-            style={{ animationDelay: "0.55s" }}
-          />
-
           <p
-            className="max-w-[820px] mx-auto mt-7 mb-8 text-[16px] md:text-[17px] leading-[1.7] text-[#4a4743] animate-floatIn"
-            style={{ animationDelay: "0.7s" }}
+            className="max-w-[820px] mx-auto mt-5 mb-6 text-[16px] md:text-[17px] leading-[1.7] text-[#4a4743] animate-floatIn"
+            style={{ animationDelay: "0.55s" }}
           >
             Für Privatpatienten und Selbstzahler.
           </p>
 
           <div
             className="flex justify-center animate-floatIn"
-            style={{ animationDelay: "0.85s" }}
+            style={{ animationDelay: "0.7s" }}
           >
             <a
               href="#kontakt"

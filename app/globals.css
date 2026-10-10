@@ -112,6 +112,36 @@ a {
   text-transform: uppercase;
 }
 
+/* Shiny gold text (gradient + subtle shimmer) */
+.shiny-gold {
+  background: linear-gradient(
+    100deg,
+    #a07f3b 0%,
+    #d9b86a 18%,
+    #f3dc96 35%,
+    #ffe9a8 50%,
+    #f3dc96 65%,
+    #d9b86a 82%,
+    #a07f3b 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shinyGoldShift 7s ease-in-out infinite;
+}
+
+@keyframes shinyGoldShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
 /* Section rhythm */
 .container-shell {
   width: 100%;

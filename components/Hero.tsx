@@ -85,9 +85,9 @@ export default function Hero() {
             className="max-w-[820px] mx-auto mt-7 mb-8 text-[16px] md:text-[17px] leading-[1.7] text-[#4a4743] animate-floatIn"
             style={{ animationDelay: "0.7s" }}
           >
-            Für Privatpatienten, Beihilfeberechtigte und Selbstzahler in Saarlouis,
-            <br className="hidden sm:inline" /> Merzig und Saarbrücken. Termine
-            werden ausschließlich persönlich vereinbart.
+            Für Privatpatienten, Beihilfeberechtigte und Selbstzahler.
+            <br className="hidden sm:inline" /> Praxis in Saarlouis. Termine
+            nach Vereinbarung.
           </p>
 
           <div

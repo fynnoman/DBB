@@ -8,14 +8,9 @@ const items = [
     body: "Abrechnung der ärztlichen Leistungen nach der Gebührenordnung für Ärzte (GOÄ).",
   },
   {
-    kicker: "Beihilfe",
-    title: "Beihilfeberechtigte",
-    body: "Auch beihilfeberechtigte Patientinnen und Patienten können sämtliche angebotenen Leistungen in Anspruch nehmen.",
-  },
-  {
     kicker: "Selbstzahler",
     title: "Selbstzahler",
-    body: "Selbstzahlerinnen und Selbstzahler sind willkommen. Die Behandlung wird privatärztlich nach GOÄ abgerechnet.",
+    body: "Auch gesetzlich versicherte Patientinnen und Patienten sind willkommen. Die Behandlung wird privatärztlich nach GOÄ abgerechnet.",
   },
 ];
 
@@ -28,7 +23,7 @@ export default function Abrechnung() {
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
         <SectionTitle kicker="Patienteninformation" title="Abrechnung." />
 
-        <Stagger className="grid md:grid-cols-3 gap-4 md:gap-5">
+        <Stagger className="grid md:grid-cols-2 gap-4 md:gap-5">
           {items.map((it) => (
             <StaggerItem key={it.title}>
               <article className="h-full bg-white/60 border border-line rounded-[20px] p-7 card-lift">

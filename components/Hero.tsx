@@ -85,7 +85,7 @@ export default function Hero() {
             className="max-w-[820px] mx-auto mt-7 mb-8 text-[16px] md:text-[17px] leading-[1.7] text-[#4a4743] animate-floatIn"
             style={{ animationDelay: "0.7s" }}
           >
-            Für Privatpatienten, Beihilfeberechtigte und Selbstzahler.
+            Für Privatpatienten und Selbstzahler.
           </p>
 
           <div

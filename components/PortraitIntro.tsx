@@ -97,11 +97,8 @@ export default function PortraitIntro() {
                 {site.fullName}
               </h3>
               <p className="text-muted leading-[1.75]">
-                Die Ärztin ist Mitglied der Deutschen Gesellschaft für
-                Amyloid-Krankheiten e.V. und bringt besondere Expertise in der
-                Diagnostik seltener Herzerkrankungen wie der kardialen
-                Amyloidose mit. Weitere Stationen, Qualifikationen und
-                Schwerpunkte folgen in Kürze an dieser Stelle.
+                Weitere Stationen, Qualifikationen und Schwerpunkte folgen in
+                Kürze an dieser Stelle.
               </p>
             </div>
           </motion.div>

@@ -65,35 +65,7 @@ export default function ImpressumPage() {
           </p>
         </div>
 
-        <div id="aufsichtsbehoerden">
-          <p className="kicker">Aufsichtsbehörde</p>
-          <p className="mt-2 text-ink">
-            Ministerium für Soziales, Gesundheit, Frauen und Familie des
-            Saarlandes
-          </p>
-          <p>
-            Franz-Josef-Röder-Straße 23
-            <br />
-            66119 Saarbrücken
-            <br />
-            Telefon: 0681 / 501-00
-            <br />
-            <a
-              href="https://www.saarland.de/msgff"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-gold/60 underline-offset-4 hover:text-ink"
-            >
-              www.saarland.de/msgff
-            </a>
-          </p>
-          <p className="mt-3">
-            Kassenärztliche Vereinigung Saarland, Europaallee 7, 66113
-            Saarbrücken.
-          </p>
-        </div>
-
-        <div>
+<div>
           <p className="kicker">Berufsrechtliche Regelungen</p>
           <p className="mt-2">
             Berufsordnung für die Ärztinnen und Ärzte des Saarlandes.

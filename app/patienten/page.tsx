@@ -11,7 +11,7 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Für Patienten | ${site.brand}`,
   description:
-    "Informationen für Privatpatienten, Beihilfeberechtigte und Selbstzahlerinnen und Selbstzahler. Vorbereitung auf den Termin, Abrechnung nach GOÄ, Aktuelles zu Sprechzeiten und Medikamente.",
+    "Informationen für Privatpatienten und Selbstzahlerinnen und Selbstzahler. Vorbereitung auf den Termin, Abrechnung nach GOÄ, Aktuelles zu Öffnungszeiten und Medikamente.",
 };
 
 const groups = [
@@ -24,17 +24,10 @@ const groups = [
   },
   {
     numeral: "02",
-    kicker: "Beihilfe",
-    title: "Beihilfeberechtigte",
-    body:
-      "Beamtinnen und Beamte sind ebenso willkommen. Die Rechnung entspricht den Anforderungen der Beihilfestellen des Bundes und der Länder, inklusive der geforderten Positionsschlüssel.",
-  },
-  {
-    numeral: "03",
     kicker: "Selbstzahler",
     title: "Selbstzahler",
     body:
-      "Selbstzahlerinnen und Selbstzahler können alle Leistungen der Praxis in Anspruch nehmen. Sie erhalten eine transparente Rechnung nach GOÄ.",
+      "Auch gesetzlich versicherte Patientinnen und Patienten sind willkommen. Selbstzahlerinnen und Selbstzahler können alle Leistungen der Praxis in Anspruch nehmen. Sie erhalten eine transparente Rechnung nach GOÄ.",
   },
 ];
 
@@ -59,8 +52,8 @@ const prep = [
 const news = [
   {
     date: "[Datum]",
-    title: "Sprechzeiten und Urlaub",
-    body: "Aktuelle Sprechzeiten und geplante Abwesenheiten werden hier bekannt gegeben und ergänzt, wenn der Praxisbetrieb offiziell startet.",
+    title: "Öffnungszeiten und Urlaub",
+    body: "Aktuelle Öffnungszeiten und geplante Abwesenheiten werden hier bekannt gegeben und ergänzt, wenn der Praxisbetrieb offiziell startet.",
   },
   {
     date: "[Datum]",
@@ -137,7 +130,7 @@ export default function PatientenPage() {
             <span className="italic text-muted">offen ist.</span>
           </>
         }
-        intro="Wir behandeln Privatversicherte, Beihilfeberechtigte sowie Selbstzahlerinnen und Selbstzahler. Der medizinische Standard ist derselbe. Nur die administrative Abwicklung unterscheidet sich."
+        intro="Wir behandeln Privatversicherte sowie Selbstzahlerinnen und Selbstzahler. Auch gesetzlich versicherte Patientinnen und Patienten sind willkommen. Der medizinische Standard ist derselbe. Nur die administrative Abwicklung unterscheidet sich."
         items={groups}
       />
 
@@ -213,12 +206,12 @@ export default function PatientenPage() {
               <div>
                 <div className="kicker mb-3">Aktuelles</div>
                 <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
-                  Sprechzeiten<br />
+                  Öffnungszeiten<br />
                   <span className="italic text-muted">und Abwesenheiten.</span>
                 </h2>
                 <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
                   Hier veröffentlichen wir kurzfristige Änderungen der
-                  Sprechzeiten, geplante Urlaubszeiten und die zuständigen
+                  Öffnungszeiten, geplante Urlaubszeiten und die zuständigen
                   Vertretungen.
                 </p>
                 <Link

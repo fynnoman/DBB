@@ -180,7 +180,7 @@ export default function PraxisPage() {
           <Reveal delay={0.1}>
             <div className="rounded-[22px] border border-line bg-white/70 overflow-hidden">
               <div className="p-7 md:p-8">
-                <div className="kicker mb-4">Sprechzeiten</div>
+                <div className="kicker mb-4">Öffnungszeiten</div>
                 <ul className="divide-y divide-line text-[14px] leading-[1.7]">
                   <li className="flex justify-between py-3">
                     <span>Montag bis Donnerstag</span>

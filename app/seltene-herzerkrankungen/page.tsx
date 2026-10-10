@@ -3,7 +3,6 @@ import { site } from "@/lib/site";
 import { PageHero } from "@/components/PageHero";
 import { EditorialImage } from "@/components/EditorialImage";
 import { PageCta } from "@/components/PageCta";
-import { Statement } from "@/components/Statement";
 import { SplitFeature } from "@/components/SplitFeature";
 import { Reveal } from "@/components/Reveal";
 
@@ -106,23 +105,7 @@ export default function SelteneHerzerkrankungenPage() {
         items={diagnosen}
       />
 
-      <Statement
-        eyebrow="Mitgliedschaft"
-        tone="forest"
-        footer={
-          <>
-            Die Praxis ist Mitglied der Deutschen Gesellschaft für
-            Amyloid-Krankheiten und arbeitet eng mit spezialisierten Zentren
-            zusammen. So entsteht ein belastbarer Pfad von der Erstdiagnose
-            über die Therapieentscheidung bis zur Verlaufskontrolle.
-          </>
-        }
-      >
-        Spezialisierung ist<br />
-        <span className="italic text-cream/85">kein Zufall.</span>
-      </Statement>
-
-      <section className="border-t border-line bg-white/[0.62]">
+<section className="border-t border-line bg-white/[0.62]">
         <div className="container-shell max-w-[1440px] py-[80px] md:py-[112px] px-4">
           <Reveal>
             <div className="max-w-[900px] mb-10 md:mb-14">

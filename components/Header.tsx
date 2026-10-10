@@ -21,7 +21,7 @@ const menuLinks: MenuLink[] = [
   { href: "/basis-checkup", label: "Basis Check-up", group: "Leistungen" },
   { href: "/executive-checkup", label: "Executive Check-up", group: "Leistungen" },
   { href: "/seltene-herzerkrankungen", label: "Seltene Herzerkrankungen", group: "Leistungen" },
-  { href: "/patienten", label: "Privatpatienten & Beihilfe", group: "Patienten" },
+  { href: "/patienten", label: "Privatpatienten", group: "Patienten" },
   { href: "/selbstzahler", label: "Selbstzahler", group: "Patienten" },
   { href: "/aktuelles", label: "Aktuelles & Abwesenheiten", group: "Patienten" },
   { href: "/medikamente", label: "Medikamente erklärt", group: "Patienten" },

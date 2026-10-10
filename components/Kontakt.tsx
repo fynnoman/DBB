@@ -14,7 +14,7 @@ export default function Kontakt() {
           <div className="mb-9 md:mb-10 max-w-[900px]">
             <div className="kicker mb-3">Kontakt & Termin</div>
             <h2 className="font-display leading-[1.1] text-[clamp(30px,4vw,50px)] title-rule">
-              Sprechen wir persönlich.
+              Termin online buchen.
             </h2>
           </div>
         </Reveal>

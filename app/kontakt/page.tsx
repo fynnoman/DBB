@@ -9,7 +9,7 @@ import Kontakt from "@/components/Kontakt";
 
 export const metadata: Metadata = {
   title: `Kontakt und Termin | ${site.brand}`,
-  description: `Kontakt zur kardiologischen Privatpraxis ${site.brand} in ${site.city}, ${site.address.district}. Adresse, Sprechzeiten, Kontaktformular und Anfahrtshinweise.`,
+  description: `Kontakt zur kardiologischen Privatpraxis ${site.brand} in ${site.city}, ${site.address.district}. Adresse, Öffnungszeiten, Kontaktformular und Anfahrtshinweise.`,
 };
 
 const ways = [
@@ -17,7 +17,7 @@ const ways = [
     numeral: "01",
     kicker: "Telefon",
     label: site.phone,
-    note: "Innerhalb der Sprechzeiten. Rückruf bei Bedarf.",
+    note: "Innerhalb der Öffnungszeiten. Rückruf bei Bedarf.",
   },
   {
     numeral: "02",
@@ -129,7 +129,7 @@ export default function KontaktPage() {
             <Reveal delay={0.1}>
               <div className="relative rounded-[22px] border border-line bg-white/70 overflow-hidden">
                 <div className="p-7 md:p-8">
-                  <div className="kicker mb-3">Sprechzeiten</div>
+                  <div className="kicker mb-3">Öffnungszeiten</div>
                   <ul className="divide-y divide-line text-[14px] leading-[1.7]">
                     <li className="flex justify-between py-3">
                       <span>Montag bis Donnerstag</span>

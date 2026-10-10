@@ -30,7 +30,7 @@ const sans = Inter({
 export const metadata: Metadata = {
   title: `${site.fullName} | ${site.descriptor} ${site.city}`,
   description:
-    "Kardiologische Privatpraxis Dr. medic Denisa Babeanu-Bauer in Saarlouis. Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz. Für Privatpatienten, Beihilfeberechtigte und Selbstzahler.",
+    "Kardiologische Privatpraxis Dr. medic Denisa Babeanu-Bauer in Saarlouis. Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz. Für Privatpatienten und Selbstzahler.",
   metadataBase: new URL("https://dbb-kardio.de"),
   applicationName: site.brand,
   formatDetection: { telephone: true, address: true, email: true },
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${site.brand} · ${site.descriptor} ${site.city}`,
     description:
-      "Persönliche Kardiologie in Saarlouis. Für Privatpatienten, Beihilfeberechtigte und Selbstzahler.",
+      "Persönliche Kardiologie in Saarlouis. Für Privatpatienten und Selbstzahler.",
     locale: "de_DE",
     type: "website",
     images: [{ url: "/logo.png", width: 512, height: 512 }],

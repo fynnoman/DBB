@@ -33,12 +33,13 @@ export function PageCta({
               <div>
                 <div className="kicker mb-3">Nächster Schritt</div>
                 <h3 className="font-display text-[clamp(24px,3vw,36px)] leading-[1.15] text-ink title-rule">
-                  {title ?? "Sprechen wir persönlich."}
+                  {title ?? "Termin online buchen."}
                 </h3>
-                <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-5 max-w-[520px]">
-                  {lead ??
-                    "Termine werden individuell vereinbart. Für Rückfragen zu Vorbereitung, Abrechnung oder speziellen Anliegen ist der direkte Weg der einfachste."}
-                </p>
+                {lead && (
+                  <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-5 max-w-[520px]">
+                    {lead}
+                  </p>
+                )}
               </div>
               <div className="flex flex-wrap gap-3 md:justify-end">
                 <Link

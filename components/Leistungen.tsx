@@ -50,7 +50,7 @@ const services: Service[] = [
     id: "seltene-herzerkrankungen",
     kicker: "Spezialdiagnostik",
     title: "Seltene Herzerkrankungen",
-    body: "Abklärung bei Verdacht auf Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie. Die Praxis ist Mitglied der Deutschen Gesellschaft für Amyloid-Krankheiten.",
+    body: "Abklärung bei Verdacht auf Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie.",
     tone: "forest",
   },
 ];

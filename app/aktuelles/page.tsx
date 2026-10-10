@@ -9,15 +9,15 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Aktuelles & Abwesenheiten | ${site.brand}`,
   description:
-    "Aktuelle Sprechzeiten, geplante Abwesenheiten und Vertretungsregelungen der Privatpraxis DBB Kardio in Saarlouis für Patientinnen und Patienten aus Saarlouis, Merzig und Saarbrücken.",
+    "Aktuelle Öffnungszeiten, geplante Abwesenheiten und Vertretungsregelungen der Privatpraxis DBB Kardio in Saarlouis für Patientinnen und Patienten aus Saarlouis, Merzig und Saarbrücken.",
 };
 
 const news = [
   {
     date: "[Datum]",
-    tag: "Sprechzeiten",
-    title: "Angepasste Sprechzeiten",
-    body: "Falls sich die regulären Sprechzeiten kurzfristig ändern, veröffentlichen wir das an dieser Stelle mit ausreichend Vorlauf.",
+    tag: "Öffnungszeiten",
+    title: "Angepasste Öffnungszeiten",
+    body: "Falls sich die regulären Öffnungszeiten kurzfristig ändern, veröffentlichen wir das an dieser Stelle mit ausreichend Vorlauf.",
   },
   {
     date: "[Datum]",
@@ -46,7 +46,7 @@ export default function AktuellesPage() {
             <span className="italic text-muted">wichtig ist.</span>
           </>
         }
-        lead="An dieser Stelle veröffentlichen wir kurzfristige Änderungen der Sprechzeiten, geplante Urlaubszeiten und die jeweils zuständigen Vertretungen."
+        lead="An dieser Stelle veröffentlichen wir kurzfristige Änderungen der Öffnungszeiten, geplante Urlaubszeiten und die jeweils zuständigen Vertretungen."
       />
 
       <EditorialImage
@@ -109,13 +109,13 @@ export default function AktuellesPage() {
           <div className="grid gap-12 md:grid-cols-2 items-start">
             <Reveal>
               <div>
-                <div className="kicker mb-3">Reguläre Sprechzeiten</div>
+                <div className="kicker mb-3">Reguläre Öffnungszeiten</div>
                 <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
                   Wann Sie uns<br />
                   <span className="italic text-muted">erreichen.</span>
                 </h2>
                 <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
-                  Die regulären Sprechzeiten dienen als Orientierung. Termine werden
+                  Die regulären Öffnungszeiten dienen als Orientierung. Termine werden
                   ausschließlich nach persönlicher Vereinbarung vergeben.
                 </p>
               </div>

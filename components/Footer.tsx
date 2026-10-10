@@ -5,7 +5,6 @@ const legal = [
   { href: "/impressum", label: "Impressum" },
   { href: "/datenschutz", label: "Datenschutz" },
   { href: "/barrierefreiheit", label: "Barrierefreiheit" },
-  { href: "/impressum#aufsichtsbehoerden", label: "Aufsichtsbehörden" },
 ];
 
 export default function Footer() {
@@ -41,7 +40,7 @@ export default function Footer() {
             </div>
           </FooterCol>
 
-          <FooterCol label="Sprechzeiten">
+          <FooterCol label="Öffnungszeiten">
             <ul className="text-[13px] leading-[1.7] text-muted space-y-1">
               <li className="flex justify-between gap-4">
                 <span>Mo bis Do</span>

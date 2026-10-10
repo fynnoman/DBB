@@ -52,7 +52,7 @@ const checkups = [
     duration: "nach Vereinbarung",
     href: "/seltene-herzerkrankungen",
     body:
-      "Spezialisierte Diagnostik bei Verdacht auf kardiale Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie. Die Praxis ist Mitglied der Deutschen Gesellschaft für Amyloid-Krankheiten.",
+      "Spezialisierte Diagnostik bei Verdacht auf kardiale Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie.",
     highlights: [
       "Fokussierte Spezialanamnese",
       "Speckle-Tracking-Echokardiographie",
@@ -104,7 +104,7 @@ const spezial = [
   },
   {
     title: "Seltene Herzerkrankungen",
-    body: "Spezialisierte Abklärung bei Verdacht auf kardiale Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie. Die Praxis ist Mitglied der Deutschen Gesellschaft für Amyloid-Krankheiten.",
+    body: "Spezialisierte Abklärung bei Verdacht auf kardiale Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie.",
   },
 ];
 

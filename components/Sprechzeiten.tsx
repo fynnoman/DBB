@@ -12,7 +12,7 @@ export default function Sprechzeiten() {
       <div className="container-shell max-w-[720px] py-[56px] md:py-[80px] px-4">
         <Reveal>
           <div className="text-center mb-8">
-            <div className="kicker mb-3">Sprechzeiten</div>
+            <div className="kicker mb-3">Öffnungszeiten</div>
           </div>
         </Reveal>
 

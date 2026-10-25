@@ -12,7 +12,9 @@ export default function Kontakt() {
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
         <Reveal>
           <div className="mb-9 md:mb-10 max-w-[900px]">
-            <div className="kicker mb-3">Kontakt & Termin</div>
+            <h2 className="text-[clamp(36px,5.5vw,64px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
+              Kontakt und Termin
+            </h2>
           </div>
         </Reveal>
 

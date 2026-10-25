@@ -21,7 +21,7 @@ export default function Abrechnung() {
       className="relative border-y border-line bg-white/[0.35] cv-auto"
     >
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
-        <SectionTitle kicker="Patienteninformation" title="Abrechnung." />
+        <SectionTitle kicker="Abrechnung" />
 
         <Stagger className="grid md:grid-cols-2 gap-4 md:gap-5">
           {items.map((it) => (

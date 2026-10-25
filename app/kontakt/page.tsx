@@ -37,7 +37,7 @@ export default function KontaktPage() {
   return (
     <>
       <PageHero
-        eyebrow="Kontakt"
+        eyebrow="Kontakt und Termin"
         kicker="Kontakt und Termin"
         chapter="06"
         title={

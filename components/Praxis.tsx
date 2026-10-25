@@ -17,10 +17,7 @@ export default function Praxis() {
   return (
     <section id="praxis" className="relative cv-auto">
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
-        <SectionTitle
-          kicker="Praxis"
-          title="Praxisräume."
-        />
+        <SectionTitle kicker="Praxisräume" />
 
         <Stagger className="grid md:grid-cols-2 gap-5 md:gap-6">
           {rooms.map((room, i) => (

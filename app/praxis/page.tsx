@@ -54,7 +54,7 @@ export default function PraxisPage() {
   return (
     <>
       <PageHero
-        eyebrow="Praxis"
+        eyebrow="Praxisräume"
         kicker="Praxisräume"
         chapter="03"
         title={

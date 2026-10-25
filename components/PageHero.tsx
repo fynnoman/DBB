@@ -11,7 +11,7 @@ export function PageHero({
   align = "left",
 }: {
   kicker: string;
-  title: ReactNode;
+  title?: ReactNode;
   lead?: ReactNode;
   chapter?: string;
   eyebrow?: string;
@@ -69,31 +69,11 @@ export function PageHero({
         <div className={align === "center" ? "text-center" : ""}>
           {eyebrow && (
             <Reveal>
-              <div
-                className={`inline-flex items-center gap-3 mb-6 md:mb-8 ${
-                  align === "center" ? "" : ""
-                }`}
-              >
-                <span
-                  aria-hidden
-                  className="h-px w-10 bg-gradient-to-r from-gold to-transparent"
-                />
-                <span className="text-[12px] tracking-[0.22em] uppercase font-extrabold text-gold">
-                  {eyebrow}
-                </span>
-              </div>
+              <h1 className="text-[clamp(36px,5.5vw,64px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
+                {eyebrow}
+              </h1>
             </Reveal>
           )}
-
-          <Reveal delay={0.05}>
-            <h1
-              className={`font-display leading-[0.98] tracking-[-0.02em] text-ink text-[clamp(48px,8vw,123px)] ${
-                align === "center" ? "mx-auto max-w-[16ch]" : "max-w-[18ch]"
-              }`}
-            >
-              {title}
-            </h1>
-          </Reveal>
 
           {lead && (
             <Reveal delay={0.15}>

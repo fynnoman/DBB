@@ -8,7 +8,7 @@ export function SectionTitle({
   align = "left",
 }: {
   kicker?: string;
-  title: ReactNode;
+  title?: ReactNode;
   lead?: ReactNode;
   align?: "left" | "center";
 }) {
@@ -19,10 +19,11 @@ export function SectionTitle({
           align === "center" ? "mx-auto text-center" : ""
         }`}
       >
-        {kicker && <div className="kicker mb-3">{kicker}</div>}
-        <h2 className="font-display leading-[1.1] text-[clamp(33px,4vw,55px)] title-rule">
-          {title}
-        </h2>
+        {kicker && (
+          <h2 className="text-[clamp(36px,5.5vw,64px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
+            {kicker}
+          </h2>
+        )}
         {lead && (
           <p className="text-muted text-[18px] md:text-[19px] leading-[1.75] mt-5 max-w-[720px]">
             {lead}

@@ -110,7 +110,7 @@ export default function SelteneHerzerkrankungenPage() {
           <Reveal>
             <div className="max-w-[900px] mb-10 md:mb-14">
               <div className="kicker mb-3">Umfang der Spezialsprechstunde</div>
-              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                 Sechs Bausteine,<br />
                 <span className="italic text-muted">individuell gewichtet.</span>
               </h2>
@@ -121,7 +121,7 @@ export default function SelteneHerzerkrankungenPage() {
               <Reveal key={f.kicker} delay={0.05}>
                 <article className="rounded-[22px] border border-line bg-white/70 p-6 md:p-7 h-full">
                   <div className="kicker mb-2">{f.kicker}</div>
-                  <p className="text-muted text-[14px] leading-[1.7]">{f.body}</p>
+                  <p className="text-muted text-[15px] leading-[1.7]">{f.body}</p>
                 </article>
               </Reveal>
             ))}
@@ -134,11 +134,11 @@ export default function SelteneHerzerkrankungenPage() {
           <Reveal>
             <div>
               <div className="kicker mb-3">Rhythmus der Betreuung</div>
-              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                 Verlässliche<br />
                 <span className="italic text-muted">Begleitung.</span>
               </h2>
-              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
+              <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] mt-8 max-w-[520px]">
                 Seltene Herzerkrankungen brauchen Kontinuität. Der genaue
                 Kontrollrhythmus wird im Erstgespräch festgelegt und bei Bedarf
                 angepasst.
@@ -154,7 +154,7 @@ export default function SelteneHerzerkrankungenPage() {
                   className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-2 md:gap-6 px-6 py-6"
                 >
                   <div className="kicker">{c.label}</div>
-                  <p className="text-muted text-[14px] leading-[1.7] m-0">{c.body}</p>
+                  <p className="text-muted text-[15px] leading-[1.7] m-0">{c.body}</p>
                 </li>
               ))}
             </ul>

@@ -25,20 +25,20 @@ export default function BookingBar() {
         <button
           type="button"
           title="Anrufen"
-          className="whitespace-nowrap min-h-[40px] px-4 rounded-full inline-flex items-center gap-2 text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-forest text-white border border-forest hover:bg-forest/90 transition-colors"
+          className="whitespace-nowrap min-h-[40px] px-4 rounded-full inline-flex items-center gap-2 text-[12px] md:text-[13px] font-extrabold tracking-[0.05em] bg-forest text-white border border-forest hover:bg-forest/90 transition-colors"
         >
           <PhoneMark /> ANRUF
         </button>
         <button
           type="button"
           title="E-Mail"
-          className="whitespace-nowrap min-h-[40px] px-4 rounded-full inline-flex items-center gap-2 text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-colors"
+          className="whitespace-nowrap min-h-[40px] px-4 rounded-full inline-flex items-center gap-2 text-[12px] md:text-[13px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-colors"
         >
           <MailMark /> E-MAIL
         </button>
         <button
           type="button"
-          className="whitespace-nowrap min-h-[40px] px-4 md:px-5 rounded-full inline-flex items-center text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 transition-colors"
+          className="whitespace-nowrap min-h-[40px] px-4 md:px-5 rounded-full inline-flex items-center text-[12px] md:text-[13px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 transition-colors"
         >
           TERMIN BUCHEN
         </button>

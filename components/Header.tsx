@@ -94,10 +94,10 @@ export default function Header() {
             />
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block font-display text-[15px] md:text-[20px] xl:text-[24px] tracking-[0.05em] md:tracking-brand text-ink leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+            <span className="block font-display text-[16px] md:text-[22px] xl:text-[26px] tracking-[0.05em] md:tracking-brand text-ink leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
               {site.brand}
             </span>
-            <span className="block text-[10px] md:text-[11px] xl:text-[13px] text-muted mt-[3px] leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
+            <span className="block text-[11px] md:text-[12px] xl:text-[14px] text-muted mt-[3px] leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
               <span className="hidden md:inline">{site.descriptor} · </span>
               <span>{site.city}</span>
             </span>
@@ -105,7 +105,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop primary nav */}
-        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-[12px] xl:text-[13px] text-ink/85">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-[13px] xl:text-[14px] text-ink/85">
           {primaryNav.map((item) => {
             const active =
               item.href === "/"
@@ -132,7 +132,7 @@ export default function Header() {
         <div className="flex items-center gap-1.5 md:gap-2 flex-shrink-0">
           <button
             type="button"
-            className="hidden sm:inline-flex min-h-[44px] px-[18px] rounded-full items-center justify-center text-[12px] font-extrabold tracking-[.05em] bg-gold text-white border border-gold hover:bg-gold-600 transition-colors duration-500 ease-editorial"
+            className="hidden sm:inline-flex min-h-[44px] px-[18px] rounded-full items-center justify-center text-[13px] font-extrabold tracking-[.05em] bg-gold text-white border border-gold hover:bg-gold-600 transition-colors duration-500 ease-editorial"
           >
             TERMIN BUCHEN
           </button>
@@ -171,11 +171,11 @@ export default function Header() {
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                   className="absolute right-0 top-[54px] w-[min(400px,92vw)] rounded-[20px] border border-line bg-white shadow-menu p-[18px] origin-top-right"
                 >
-                  <h4 className="font-display text-[20px] mt-1 mb-3">Menü</h4>
+                  <h4 className="font-display text-[22px] mt-1 mb-3">Menü</h4>
                   <div className="max-h-[70vh] overflow-y-auto -mx-[18px] px-[18px] pr-2">
                     {Object.entries(groupedMenu).map(([group, links]) => (
                       <div key={group} className="mb-4 last:mb-0">
-                        <div className="text-[10px] tracking-[0.18em] uppercase font-extrabold text-gold mb-1.5 mt-3 first:mt-0">
+                        <div className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold mb-1.5 mt-3 first:mt-0">
                           {group}
                         </div>
                         <ul>
@@ -186,7 +186,7 @@ export default function Header() {
                                 <Link
                                   href={link.href}
                                   onClick={() => setOpen(false)}
-                                  className={`block py-[10px] border-b border-line last:border-b-0 text-[14px] transition-colors ${
+                                  className={`block py-[10px] border-b border-line last:border-b-0 text-[15px] transition-colors ${
                                     active
                                       ? "text-ink font-semibold"
                                       : "text-ink/85 hover:text-ink"

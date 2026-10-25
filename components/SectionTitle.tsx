@@ -20,11 +20,11 @@ export function SectionTitle({
         }`}
       >
         {kicker && <div className="kicker mb-3">{kicker}</div>}
-        <h2 className="font-display leading-[1.1] text-[clamp(30px,4vw,50px)] title-rule">
+        <h2 className="font-display leading-[1.1] text-[clamp(33px,4vw,55px)] title-rule">
           {title}
         </h2>
         {lead && (
-          <p className="text-muted text-[16px] md:text-[17px] leading-[1.75] mt-5 max-w-[720px]">
+          <p className="text-muted text-[18px] md:text-[19px] leading-[1.75] mt-5 max-w-[720px]">
             {lead}
           </p>
         )}

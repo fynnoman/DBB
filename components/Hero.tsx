@@ -46,14 +46,15 @@ export default function Hero() {
                 alt="DBB KARDIO"
                 fill
                 priority
-                sizes="160px"
+                sizes="(min-width: 768px) 320px, 264px"
+                quality={95}
                 className="object-contain"
               />
             </div>
           </div>
 
           <p
-            className="font-display leading-[1.1] tracking-[-0.005em] mb-5 text-[clamp(28px,4.4vw,52px)] font-semibold text-gold animate-floatIn"
+            className="font-display leading-[1.1] tracking-[-0.005em] mb-5 text-[clamp(31px,4.4vw,57px)] font-semibold text-gold animate-floatIn"
             style={{ animationDelay: "0.15s" }}
           >
             {site.descriptor}
@@ -61,7 +62,7 @@ export default function Hero() {
 
           <h1
             id="hero-title"
-            className="font-display leading-[1.06] tracking-[-0.02em] text-ink text-[clamp(34px,6.8vw,104px)] m-0 animate-floatIn"
+            className="font-display leading-[1.06] tracking-[-0.02em] text-ink text-[clamp(37px,6.8vw,114px)] m-0 animate-floatIn"
             style={{ animationDelay: "0.25s" }}
           >
             <span className="block sm:inline">Dr. medic Denisa</span>{" "}
@@ -69,7 +70,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="max-w-[820px] mx-auto mt-6 mb-7 text-[17px] md:text-[18px] leading-[1.7] text-[#4a4743] animate-floatIn"
+            className="max-w-[820px] mx-auto mt-6 mb-7 text-[19px] md:text-[20px] leading-[1.7] text-[#4a4743] animate-floatIn"
             style={{ animationDelay: "0.55s" }}
           >
             Für Privatpatienten und Selbstzahler.
@@ -81,7 +82,7 @@ export default function Hero() {
           >
             <button
               type="button"
-              className="min-h-[48px] px-5 md:px-6 rounded-full inline-flex items-center justify-center text-[11px] md:text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
+              className="min-h-[48px] px-5 md:px-6 rounded-full inline-flex items-center justify-center text-[12px] md:text-[13px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
             >
               TERMIN BUCHEN
             </button>

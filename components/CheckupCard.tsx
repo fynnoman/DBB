@@ -65,10 +65,10 @@ export default function CheckupCard({
         className="w-full text-left p-7 md:p-8 pr-16 relative cursor-pointer"
       >
         <div className="kicker">{kicker}</div>
-        <h3 className="font-display text-[22px] md:text-[26px] mt-2 mb-1.5">
+        <h3 className="font-display text-[24px] md:text-[29px] mt-2 mb-1.5">
           {title}
         </h3>
-        <div className="mt-2 text-muted text-[13px] font-semibold tracking-[0.02em]">
+        <div className="mt-2 text-muted text-[14px] font-semibold tracking-[0.02em]">
           {open ? "Weniger anzeigen" : "Leistungen anzeigen"}
         </div>
 
@@ -108,7 +108,7 @@ export default function CheckupCard({
               <div className="mt-5">
                 <a
                   href="#kontakt"
-                  className="inline-flex min-h-[46px] px-5 rounded-full items-center justify-center text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
+                  className="inline-flex min-h-[46px] px-5 rounded-full items-center justify-center text-[13px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
                 >
                   {ctaLabel}
                 </a>

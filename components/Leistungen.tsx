@@ -82,7 +82,7 @@ export default function Leistungen() {
 
         <div className="mb-8 md:mb-10 max-w-[720px]">
           <div className="kicker mb-3">Spektrum</div>
-          <h3 className="font-display text-[24px] md:text-[32px] leading-[1.15] title-rule">
+          <h3 className="font-display text-[26px] md:text-[35px] leading-[1.15] title-rule">
             Diagnostik und Schwerpunkte auf einen Blick.
           </h3>
         </div>
@@ -119,7 +119,7 @@ export default function Leistungen() {
                       />
                     )}
                   </div>
-                  <h3 className="font-display text-[22px] mt-2.5 mb-2.5 leading-tight">
+                  <h3 className="font-display text-[24px] mt-2.5 mb-2.5 leading-tight">
                     {s.title}
                   </h3>
                   <p className="text-muted leading-[1.65] m-0">{s.body}</p>
@@ -130,41 +130,26 @@ export default function Leistungen() {
         </Stagger>
 
         <div className="mt-16 md:mt-20 mb-8 md:mb-10 max-w-[720px]">
-          <div className="kicker mb-3">Check-ups</div>
-          <h3 className="font-display text-[24px] md:text-[32px] leading-[1.15] title-rule">
-            Direkt buchbare Check-up-Pakete.
+          <div className="kicker mb-3">Check-up</div>
+          <h3 className="font-display text-[26px] md:text-[35px] leading-[1.15] title-rule">
+            Direkt buchbarer Check-up.
           </h3>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-4 md:gap-5">
-          <CheckupCard
-            id="basis-checkup"
-            kicker="Direkt buchbar"
-            title="Basis Check-up"
-            intro="Der Basis Check-up eignet sich für Patientinnen und Patienten, die eine strukturierte kardiologische Ersteinschätzung wünschen."
-            items={[
-              "ausführliche Anamnese",
-              "körperliche Untersuchung",
-              "12-Kanal-EKG",
-              "Basis-Echokardiographie",
-              "Lipidprofil über unser Partnerlabor",
-              "kurzer ärztlicher Bericht",
-            ]}
-            notice="Laborleistungen werden vom Partnerlabor separat in Rechnung gestellt."
-            ctaLabel="BASIS CHECK-UP BUCHEN"
-            tone="gold"
-          />
+        <div className="grid gap-4 md:gap-5">
           <CheckupCard
             id="executive-checkup"
             kicker="Direkt buchbar"
             title="Executive Check-up"
             intro="Der Executive Check-up ist die umfassendere Variante für eine vertiefte kardiovaskuläre Risikoanalyse und individuelle Prävention."
             items={[
-              "alle Leistungen des Basis Check-ups",
+              "ausführliche Anamnese und individuelle Risikoeinschätzung",
+              "körperliche Untersuchung",
+              "12-Kanal-EKG",
+              "Belastungs-EKG und Ergometrie",
+              "Echokardiographie",
               "Carotis-Doppler sowie Duplexsonographie",
-              "Ergometrie und Belastungs-EKG",
-              "umfassendere Labordiagnostik über das Partnerlabor",
-              "vertiefte Anamnese und individuelle Risikoeinschätzung",
+              "umfassende Labordiagnostik über das Partnerlabor",
               "ausführlicher ärztlicher Bericht mit persönlichen Empfehlungen",
             ]}
             notice="Laborleistungen werden vom Partnerlabor separat in Rechnung gestellt."

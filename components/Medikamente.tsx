@@ -74,10 +74,10 @@ export default function Medikamente() {
             {meds.map((m) => (
               <StaggerItem key={m.title}>
                 <article className="h-full bg-white/60 border border-line rounded-[18px] p-6 md:p-7 card-lift">
-                  <div className="text-[11px] text-gold font-extrabold tracking-[0.10em] uppercase">
+                  <div className="text-[12px] text-gold font-extrabold tracking-[0.10em] uppercase">
                     {m.badge}
                   </div>
-                  <h3 className="font-display text-[21px] mt-1.5 mb-2">
+                  <h3 className="font-display text-[23px] mt-1.5 mb-2">
                     {m.title}
                   </h3>
                   <p className="text-muted leading-[1.62] m-0">

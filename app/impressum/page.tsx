@@ -8,14 +8,14 @@ export default function ImpressumPage() {
   return (
     <section className="container-shell max-w-3xl py-24 md:py-32">
       <p className="kicker mb-3">Impressum</p>
-      <h1 className="font-display text-[clamp(30px,4vw,50px)] leading-[1.1] title-rule">
+      <h1 className="font-display text-[clamp(33px,4vw,55px)] leading-[1.1] title-rule">
         Angaben gemäß § 5 TMG.
       </h1>
 
       <div className="mt-10 space-y-8 text-muted leading-[1.7]">
         <div>
           <p className="kicker">Praxis</p>
-          <p className="mt-2 font-display text-[24px] text-ink">
+          <p className="mt-2 font-display text-[26px] text-ink">
             {site.fullName}
           </p>
           <p>{site.descriptor}</p>

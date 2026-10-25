@@ -44,20 +44,20 @@ export function Statement({
                 aria-hidden
                 className="h-px w-10 bg-gradient-to-r from-gold to-transparent"
               />
-              <span className="text-[11px] tracking-[0.22em] uppercase font-extrabold text-gold">
+              <span className="text-[12px] tracking-[0.22em] uppercase font-extrabold text-gold">
                 {eyebrow}
               </span>
             </div>
           </Reveal>
         )}
         <Reveal delay={0.05}>
-          <div className="font-display leading-[1.08] tracking-[-0.015em] text-[clamp(30px,4.6vw,64px)] max-w-[22ch]">
+          <div className="font-display leading-[1.08] tracking-[-0.015em] text-[clamp(33px,4.6vw,70px)] max-w-[22ch]">
             {children}
           </div>
         </Reveal>
         {footer && (
           <Reveal delay={0.15}>
-            <div className="mt-10 md:mt-14 text-cream/75 text-[14px] md:text-[15px] leading-[1.7] max-w-[640px]">
+            <div className="mt-10 md:mt-14 text-cream/75 text-[15px] md:text-[16px] leading-[1.7] max-w-[640px]">
               {footer}
             </div>
           </Reveal>

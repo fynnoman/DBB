@@ -45,7 +45,7 @@ export default function PortraitIntro() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="bio-details"
-          className="min-h-[48px] px-6 rounded-full inline-flex items-center justify-center text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
+          className="min-h-[48px] px-6 rounded-full inline-flex items-center justify-center text-[13px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
         >
           ÜBER MICH
         </button>
@@ -64,7 +64,7 @@ export default function PortraitIntro() {
           >
             <div className="max-w-[900px] mx-auto mt-7 text-left border border-line rounded-[22px] p-7 md:p-8 bg-white/60 backdrop-blur-sm">
               <div className="kicker">Vita und beruflicher Werdegang</div>
-              <h3 className="font-display text-[26px] md:text-[28px] mt-2 mb-3">
+              <h3 className="font-display text-[29px] md:text-[31px] mt-2 mb-3">
                 {site.fullName}
               </h3>
               <p className="text-muted leading-[1.75]">

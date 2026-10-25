@@ -83,10 +83,10 @@ export default function PraxisPage() {
           <Reveal>
             <div className="max-w-[900px] mb-10 md:mb-14">
               <div className="kicker mb-3">Praxisräume</div>
-              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                 Zwei Räume, eine Handschrift.
               </h2>
-              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-5 max-w-[720px]">
+              <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] mt-5 max-w-[720px]">
                 Die abgebildeten Fotos sind Platzhalter bis zur eigenen
                 Bildproduktion. Sie geben einen ersten Eindruck der Atmosphäre,
                 die uns wichtig ist.
@@ -115,21 +115,21 @@ export default function PraxisPage() {
                       }}
                     />
                     <div aria-hidden className="absolute top-4 right-4">
-                      <span className="text-[10px] tracking-[0.18em] uppercase font-extrabold text-white/90 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
+                      <span className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-white/90 bg-black/40 backdrop-blur-sm rounded-full px-3 py-1">
                         Platzhalter
                       </span>
                     </div>
                     <div
                       aria-hidden
-                      className="absolute top-4 left-4 font-display italic text-white/80 text-[13px]"
+                      className="absolute top-4 left-4 font-display italic text-white/80 text-[14px]"
                     >
                       Nr. {String(i + 1).padStart(2, "0")}
                     </div>
                     <figcaption className="absolute inset-x-0 bottom-0 p-5 md:p-6 text-white">
-                      <div className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold">
+                      <div className="text-[12px] tracking-[0.18em] uppercase font-extrabold text-gold">
                         {r.label}
                       </div>
-                      <div className="mt-1 text-[14px] leading-[1.5]">{r.caption}</div>
+                      <div className="mt-1 text-[15px] leading-[1.5]">{r.caption}</div>
                     </figcaption>
                   </div>
                 </figure>
@@ -149,17 +149,17 @@ export default function PraxisPage() {
           <Reveal>
             <div>
               <div className="kicker mb-3">Standort</div>
-              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                 {site.city},<br />
                 <span className="italic text-muted">{site.address.street}.</span>
               </h2>
-              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
+              <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] mt-8 max-w-[520px]">
                 Die Praxis befindet sich im Stadtteil {site.address.district},
                 verkehrsgünstig und ruhig zugleich. Patientinnen und Patienten
                 erreichen uns bequem aus Saarlouis, Merzig und Saarbrücken.
               </p>
-              <address className="not-italic mt-8 text-[15px] leading-[1.7] text-ink">
-                <span className="font-display text-[18px]">{site.brand}</span>
+              <address className="not-italic mt-8 text-[16px] leading-[1.7] text-ink">
+                <span className="font-display text-[20px]">{site.brand}</span>
                 <br />
                 {site.address.street}
                 <br />
@@ -170,7 +170,7 @@ export default function PraxisPage() {
                   href={site.mapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[44px] px-5 rounded-full items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-forest text-forest hover:bg-forest hover:text-white transition-colors"
+                  className="inline-flex min-h-[44px] px-5 rounded-full items-center justify-center text-[13px] font-extrabold tracking-[0.05em] border border-forest text-forest hover:bg-forest hover:text-white transition-colors"
                 >
                   In Google Maps öffnen
                 </a>
@@ -181,7 +181,7 @@ export default function PraxisPage() {
             <div className="rounded-[22px] border border-line bg-white/70 overflow-hidden">
               <div className="p-7 md:p-8">
                 <div className="kicker mb-4">Öffnungszeiten</div>
-                <ul className="divide-y divide-line text-[14px] leading-[1.7]">
+                <ul className="divide-y divide-line text-[15px] leading-[1.7]">
                   <li className="flex justify-between py-3">
                     <span>Montag bis Donnerstag</span>
                     <span className="text-muted">[wird ergänzt]</span>
@@ -195,7 +195,7 @@ export default function PraxisPage() {
                     <span className="text-muted">Geschlossen</span>
                   </li>
                 </ul>
-                <p className="mt-4 text-[12px] leading-[1.6] text-muted">
+                <p className="mt-4 text-[13px] leading-[1.6] text-muted">
                   Termine ausschließlich nach Vereinbarung.
                 </p>
               </div>

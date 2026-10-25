@@ -119,7 +119,7 @@ export default function MedikamentePage() {
                 aria-hidden
                 className="inline-block h-px w-8 bg-gradient-to-r from-transparent to-gold"
               />
-              <span className="text-[10px] tracking-[0.24em] uppercase font-extrabold text-gold">
+              <span className="text-[11px] tracking-[0.24em] uppercase font-extrabold text-gold">
                 Index
               </span>
               <span
@@ -131,13 +131,13 @@ export default function MedikamentePage() {
           <Reveal delay={0.05}>
             <div
               aria-hidden
-              className="font-display tracking-[-0.03em] leading-none text-ink/[0.10] select-none text-[clamp(80px,16vw,240px)]"
+              className="font-display tracking-[-0.03em] leading-none text-ink/[0.10] select-none text-[clamp(88px,16vw,264px)]"
             >
               A · B · S · D · A
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="font-display italic text-muted text-[clamp(16px,1.8vw,22px)] leading-[1.5] mt-6 max-w-[720px] mx-auto">
+            <p className="font-display italic text-muted text-[clamp(18px,1.8vw,24px)] leading-[1.5] mt-6 max-w-[720px] mx-auto">
               ACE-Hemmer, Betablocker, Statine, Diuretika und Antikoagulanzien.
               Was hinter den Buchstaben steckt, entscheidet über den Alltag mit
               dem Herzen.
@@ -150,7 +150,7 @@ export default function MedikamentePage() {
         <Reveal>
           <div className="max-w-[900px] mb-10 md:mb-14">
             <div className="kicker mb-3">Häufig verordnete Wirkstoffgruppen</div>
-            <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+            <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
               Wirkung<br />
               <span className="italic text-muted">und typische Nebenwirkungen.</span>
             </h2>
@@ -163,18 +163,18 @@ export default function MedikamentePage() {
               <article className="group relative rounded-[22px] border border-line bg-white/70 p-6 md:p-8 h-full transition-all duration-500 ease-editorial hover:shadow-cardHover hover:border-gold/60 overflow-hidden">
                 <span
                   aria-hidden
-                  className="absolute top-6 right-6 md:top-8 md:right-8 font-display text-gold/25 leading-none text-[clamp(40px,5vw,64px)] tracking-[-0.03em]"
+                  className="absolute top-6 right-6 md:top-8 md:right-8 font-display text-gold/25 leading-none text-[clamp(44px,5vw,70px)] tracking-[-0.03em]"
                 >
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <div className="text-[11px] text-gold font-extrabold tracking-[0.14em] uppercase">
+                <div className="text-[12px] text-gold font-extrabold tracking-[0.14em] uppercase">
                   {m.badge}
                 </div>
-                <h3 className="font-display text-[24px] mt-2 mb-4">{m.title}</h3>
-                <p className="text-muted leading-[1.7] m-0 text-[14px] md:text-[15px]">
+                <h3 className="font-display text-[26px] mt-2 mb-4">{m.title}</h3>
+                <p className="text-muted leading-[1.7] m-0 text-[15px] md:text-[16px]">
                   <strong className="text-ink">Wirkung:</strong> {m.effect}
                 </p>
-                <p className="text-muted leading-[1.7] mt-3 text-[14px] md:text-[15px]">
+                <p className="text-muted leading-[1.7] mt-3 text-[15px] md:text-[16px]">
                   <strong className="text-ink">Mögliche Nebenwirkungen:</strong>{" "}
                   {m.side}
                 </p>

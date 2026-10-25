@@ -18,7 +18,7 @@ export default function Sprechzeiten() {
 
         <Reveal delay={0.1}>
           <div className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8">
-            <ul className="divide-y divide-line text-[14px] md:text-[15px] leading-[1.7]">
+            <ul className="divide-y divide-line text-[15px] md:text-[16px] leading-[1.7]">
               {hours.map((row) => (
                 <li key={row.label} className="flex justify-between py-3">
                   <span>{row.label}</span>

@@ -52,14 +52,14 @@ export function EditorialSplit({
             style={{ boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.14)" }}
           />
           <div className="absolute top-5 right-5">
-            <span className="text-[10px] tracking-[0.22em] uppercase font-extrabold text-white/70 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1">
+            <span className="text-[11px] tracking-[0.22em] uppercase font-extrabold text-white/70 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1">
               Platzhalter
             </span>
           </div>
           {overline && (
             <div className="absolute bottom-5 left-5 md:bottom-7 md:left-7 flex items-center gap-3">
               <span aria-hidden className="inline-block h-px w-6 bg-gold" />
-              <span className="text-[10px] tracking-[0.22em] uppercase font-extrabold text-white/95">
+              <span className="text-[11px] tracking-[0.22em] uppercase font-extrabold text-white/95">
                 {overline}
               </span>
             </div>
@@ -73,10 +73,10 @@ export function EditorialSplit({
     <Reveal delay={0.1}>
       <div className={side === "left" ? "md:pl-4" : "md:pr-4"}>
         {kicker && <div className="kicker mb-4">{kicker}</div>}
-        <h2 className="font-display leading-[1.05] text-[clamp(28px,3.8vw,48px)] tracking-[-0.015em] title-rule">
+        <h2 className="font-display leading-[1.05] text-[clamp(31px,3.8vw,53px)] tracking-[-0.015em] title-rule">
           {heading}
         </h2>
-        <div className="text-muted text-[15px] md:text-[17px] leading-[1.8] mt-7 max-w-[560px] space-y-4">
+        <div className="text-muted text-[16px] md:text-[19px] leading-[1.8] mt-7 max-w-[560px] space-y-4">
           {body}
         </div>
       </div>

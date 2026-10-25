@@ -112,7 +112,7 @@ export default function SelbstzahlerPage() {
           <Reveal>
             <div className="max-w-[900px] mb-10 md:mb-14">
               <div className="kicker mb-3">Was Sie wissen sollten</div>
-              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                 Vier Fakten<br />
                 <span className="italic text-muted">vorab.</span>
               </h2>
@@ -123,7 +123,7 @@ export default function SelbstzahlerPage() {
               <Reveal key={f.kicker} delay={0.05}>
                 <article className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
                   <div className="kicker mb-3">{f.kicker}</div>
-                  <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
+                  <p className="text-muted text-[15px] md:text-[16px] leading-[1.75]">
                     {f.body}
                   </p>
                 </article>

@@ -39,7 +39,7 @@ export function PageHero({
       {chapter && (
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-4 md:right-4 lg:right-10 top-1/2 -translate-y-1/2 font-display text-gold/[0.07] leading-none select-none text-[clamp(260px,42vw,560px)] tracking-[-0.04em]"
+          className="pointer-events-none absolute -right-4 md:right-4 lg:right-10 top-1/2 -translate-y-1/2 font-display text-gold/[0.07] leading-none select-none text-[clamp(286px,42vw,616px)] tracking-[-0.04em]"
         >
           {chapter}
         </div>
@@ -49,7 +49,7 @@ export function PageHero({
         <Reveal>
           <nav
             aria-label="Breadcrumb"
-            className={`flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase text-muted mb-10 md:mb-14 ${
+            className={`flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase text-muted mb-10 md:mb-14 ${
               align === "center" ? "justify-center" : ""
             }`}
           >
@@ -78,7 +78,7 @@ export function PageHero({
                   aria-hidden
                   className="h-px w-10 bg-gradient-to-r from-gold to-transparent"
                 />
-                <span className="text-[11px] tracking-[0.22em] uppercase font-extrabold text-gold">
+                <span className="text-[12px] tracking-[0.22em] uppercase font-extrabold text-gold">
                   {eyebrow}
                 </span>
               </div>
@@ -87,7 +87,7 @@ export function PageHero({
 
           <Reveal delay={0.05}>
             <h1
-              className={`font-display leading-[0.98] tracking-[-0.02em] text-ink text-[clamp(44px,8vw,112px)] ${
+              className={`font-display leading-[0.98] tracking-[-0.02em] text-ink text-[clamp(48px,8vw,123px)] ${
                 align === "center" ? "mx-auto max-w-[16ch]" : "max-w-[18ch]"
               }`}
             >
@@ -98,7 +98,7 @@ export function PageHero({
           {lead && (
             <Reveal delay={0.15}>
               <p
-                className={`text-muted text-[17px] md:text-[20px] leading-[1.65] mt-8 md:mt-12 max-w-[720px] ${
+                className={`text-muted text-[19px] md:text-[22px] leading-[1.65] mt-8 md:mt-12 max-w-[720px] ${
                   align === "center" ? "mx-auto" : ""
                 }`}
               >
@@ -115,7 +115,7 @@ export function PageHero({
             }`}
           >
             {chapter && (
-              <span className="font-display italic text-muted text-[13px] tracking-wide">
+              <span className="font-display italic text-muted text-[14px] tracking-wide">
                 Kapitel {chapter}
               </span>
             )}

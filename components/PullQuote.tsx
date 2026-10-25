@@ -20,7 +20,7 @@ export function PullQuote({
                 aria-hidden
                 className="h-px w-16 bg-gradient-to-r from-transparent to-gold"
               />
-              <span className="font-display italic text-[13px] text-muted tracking-wide">
+              <span className="font-display italic text-[14px] text-muted tracking-wide">
                 Haltung
               </span>
               <span
@@ -28,7 +28,7 @@ export function PullQuote({
                 className="h-px w-16 bg-gradient-to-l from-transparent to-gold"
               />
             </div>
-            <blockquote className="font-display italic text-ink leading-[1.2] tracking-[-0.01em] text-[clamp(26px,3.4vw,44px)]">
+            <blockquote className="font-display italic text-ink leading-[1.2] tracking-[-0.01em] text-[clamp(29px,3.4vw,48px)]">
               <span className="text-gold text-[1.4em] leading-none align-[-0.1em] pr-2">
                 &ldquo;
               </span>
@@ -38,10 +38,10 @@ export function PullQuote({
               </span>
             </blockquote>
             {author && (
-              <footer className="mt-10 md:mt-12 text-[12px] tracking-[0.18em] uppercase font-extrabold text-ink">
+              <footer className="mt-10 md:mt-12 text-[13px] tracking-[0.18em] uppercase font-extrabold text-ink">
                 {author}
                 {role && (
-                  <span className="block mt-1 font-normal text-muted tracking-[0.10em] text-[11px] normal-case">
+                  <span className="block mt-1 font-normal text-muted tracking-[0.10em] text-[12px] normal-case">
                     {role}
                   </span>
                 )}

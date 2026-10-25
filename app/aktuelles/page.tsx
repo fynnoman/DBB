@@ -61,7 +61,7 @@ export default function AktuellesPage() {
         <Reveal>
           <div className="max-w-[900px] mb-10 md:mb-14">
             <div className="kicker mb-3">Neueste Hinweise</div>
-            <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+            <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
               Aktuell<br />
               <span className="italic text-muted">in der Praxis.</span>
             </h2>
@@ -73,23 +73,23 @@ export default function AktuellesPage() {
             <Reveal key={n.title} delay={0.05}>
               <li className="py-10 md:py-14 grid grid-cols-1 md:grid-cols-[minmax(0,0.4fr)_minmax(0,1fr)] gap-6 md:gap-14 group">
                 <div>
-                  <span className="font-display text-gold/70 leading-none text-[clamp(48px,6vw,88px)] tracking-[-0.03em]">
+                  <span className="font-display text-gold/70 leading-none text-[clamp(53px,6vw,97px)] tracking-[-0.03em]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="mt-4 flex flex-wrap items-center gap-3">
-                    <span className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold">
+                    <span className="text-[12px] tracking-[0.18em] uppercase font-extrabold text-gold">
                       {n.date}
                     </span>
-                    <span className="inline-flex items-center rounded-full border border-line bg-white px-3 py-1 text-[11px] tracking-[0.05em] text-ink/75">
+                    <span className="inline-flex items-center rounded-full border border-line bg-white px-3 py-1 text-[12px] tracking-[0.05em] text-ink/75">
                       {n.tag}
                     </span>
                   </div>
                 </div>
                 <div className="md:pt-6">
-                  <h3 className="font-display text-[clamp(22px,2.4vw,30px)] leading-[1.2] mb-3">
+                  <h3 className="font-display text-[clamp(24px,2.4vw,33px)] leading-[1.2] mb-3">
                     {n.title}
                   </h3>
-                  <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] max-w-[60ch]">
+                  <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] max-w-[60ch]">
                     {n.body}
                   </p>
                 </div>
@@ -110,11 +110,11 @@ export default function AktuellesPage() {
             <Reveal>
               <div>
                 <div className="kicker mb-3">Reguläre Öffnungszeiten</div>
-                <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+                <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                   Wann Sie uns<br />
                   <span className="italic text-muted">erreichen.</span>
                 </h2>
-                <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
+                <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] mt-8 max-w-[520px]">
                   Die regulären Öffnungszeiten dienen als Orientierung. Termine werden
                   ausschließlich nach persönlicher Vereinbarung vergeben.
                 </p>
@@ -123,7 +123,7 @@ export default function AktuellesPage() {
 
             <Reveal delay={0.1}>
               <div className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8">
-                <ul className="divide-y divide-line text-[14px] leading-[1.7]">
+                <ul className="divide-y divide-line text-[15px] leading-[1.7]">
                   <li className="flex justify-between py-3">
                     <span>Montag bis Donnerstag</span>
                     <span className="text-muted">[wird ergänzt]</span>
@@ -138,10 +138,10 @@ export default function AktuellesPage() {
                   </li>
                 </ul>
                 <div className="mt-6 rounded-[16px] border border-forest/25 bg-forest/[0.06] p-4">
-                  <div className="text-[11px] tracking-[0.14em] uppercase font-extrabold text-forest mb-1">
+                  <div className="text-[12px] tracking-[0.14em] uppercase font-extrabold text-forest mb-1">
                     Terminabsage
                   </div>
-                  <p className="text-[13px] leading-[1.6] text-ink m-0">
+                  <p className="text-[14px] leading-[1.6] text-ink m-0">
                     Bitte sagen Sie Termine spätestens 24 Stunden vorher ab.
                     Nicht abgesagte Termine müssen wir in Rechnung stellen.
                   </p>

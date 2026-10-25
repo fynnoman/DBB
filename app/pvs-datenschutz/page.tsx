@@ -78,14 +78,14 @@ export default function PvsDatenschutzPage() {
                 { label: "§ 630", note: "BGB · Behandlungsvertrag" },
               ].map((k, i) => (
                 <div key={k.label} className="flex md:block items-center gap-4">
-                  <span className="font-display text-gold/70 leading-none text-[clamp(38px,4vw,60px)] tracking-[-0.03em]">
+                  <span className="font-display text-gold/70 leading-none text-[clamp(42px,4vw,66px)] tracking-[-0.03em]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="md:mt-4">
-                    <div className="font-display text-[22px] leading-tight">
+                    <div className="font-display text-[24px] leading-tight">
                       {k.label}
                     </div>
-                    <div className="text-[12px] tracking-[0.10em] uppercase font-extrabold text-muted mt-1.5">
+                    <div className="text-[13px] tracking-[0.10em] uppercase font-extrabold text-muted mt-1.5">
                       {k.note}
                     </div>
                   </div>
@@ -118,7 +118,7 @@ export default function PvsDatenschutzPage() {
           <Reveal>
             <div className="max-w-[900px] mb-10 md:mb-14">
               <div className="kicker mb-3">Häufige Fragen</div>
-              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                 Was Patientinnen<br />
                 <span className="italic text-muted">und Patienten meist fragen.</span>
               </h2>
@@ -130,15 +130,15 @@ export default function PvsDatenschutzPage() {
               <Reveal key={c.q} delay={0.05}>
                 <li className="grid grid-cols-1 md:grid-cols-[minmax(0,0.35fr)_minmax(0,1fr)] gap-4 md:gap-14 py-10 md:py-12">
                   <div>
-                    <span className="font-display text-gold/70 leading-none text-[clamp(44px,5vw,72px)] tracking-[-0.03em]">
+                    <span className="font-display text-gold/70 leading-none text-[clamp(48px,5vw,79px)] tracking-[-0.03em]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
                   <div className="md:pt-4">
-                    <h3 className="font-display text-[clamp(20px,2.2vw,28px)] leading-[1.25] mb-3">
+                    <h3 className="font-display text-[clamp(22px,2.2vw,31px)] leading-[1.25] mb-3">
                       {c.q}
                     </h3>
-                    <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] max-w-[60ch] m-0">
+                    <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] max-w-[60ch] m-0">
                       {c.a}
                     </p>
                   </div>

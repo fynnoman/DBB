@@ -68,19 +68,19 @@ export function EditorialImage({
                     aria-hidden
                     className="inline-block h-px w-6 bg-gold"
                   />
-                  <span className="text-[10px] tracking-[0.22em] uppercase font-extrabold text-white/95">
+                  <span className="text-[11px] tracking-[0.22em] uppercase font-extrabold text-white/95">
                     {overline}
                   </span>
                 </div>
               )}
               <div className="absolute top-5 right-5 md:top-8 md:right-8">
-                <span className="text-[10px] tracking-[0.22em] uppercase font-extrabold text-white/70 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1">
+                <span className="text-[11px] tracking-[0.22em] uppercase font-extrabold text-white/70 bg-black/30 backdrop-blur-sm rounded-full px-3 py-1">
                   Platzhalter
                 </span>
               </div>
               {caption && (
                 <figcaption className="absolute inset-x-0 bottom-0 p-6 md:p-12 text-white">
-                  <p className="font-display italic text-white/95 text-[clamp(18px,2.2vw,30px)] leading-[1.3] max-w-[820px]">
+                  <p className="font-display italic text-white/95 text-[clamp(20px,2.2vw,33px)] leading-[1.3] max-w-[820px]">
                     {caption}
                   </p>
                 </figcaption>

@@ -154,7 +154,7 @@ export default function PatientenPage() {
         <Reveal>
           <div className="max-w-[900px] mb-10 md:mb-14">
             <div className="kicker mb-3">Ablauf</div>
-            <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+            <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
               Drei Schritte zu Ihrem Termin.
             </h2>
           </div>
@@ -165,7 +165,7 @@ export default function PatientenPage() {
             <Reveal key={p.kicker} delay={0.05}>
               <article className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8 h-full">
                 <div className="flex items-baseline gap-4 mb-3">
-                  <span className="font-display text-[26px] text-gold/80">
+                  <span className="font-display text-[29px] text-gold/80">
                     {p.kicker}
                   </span>
                   <span
@@ -173,10 +173,10 @@ export default function PatientenPage() {
                     className="h-px flex-1 bg-gradient-to-r from-gold/60 to-transparent"
                   />
                 </div>
-                <h3 className="font-display text-[22px] leading-[1.2] mb-3">
+                <h3 className="font-display text-[24px] leading-[1.2] mb-3">
                   {p.title}
                 </h3>
-                <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
+                <p className="text-muted text-[15px] md:text-[16px] leading-[1.75]">
                   {p.body}
                 </p>
               </article>
@@ -186,10 +186,10 @@ export default function PatientenPage() {
 
         <Reveal delay={0.15}>
           <div className="mt-12 rounded-[22px] border border-forest/30 bg-forest/[0.06] p-6 md:p-7">
-            <div className="text-[12px] tracking-[0.14em] uppercase font-extrabold text-forest mb-1.5">
+            <div className="text-[13px] tracking-[0.14em] uppercase font-extrabold text-forest mb-1.5">
               Terminabsage
             </div>
-            <p className="text-[14px] leading-[1.7] text-ink m-0 max-w-[720px]">
+            <p className="text-[15px] leading-[1.7] text-ink m-0 max-w-[720px]">
               Bitte sagen Sie vereinbarte Termine spätestens 24 Stunden vorher
               ab. Nur so können wir den freiwerdenden Platz an andere
               Patientinnen und Patienten vergeben. Später oder nicht abgesagte
@@ -205,18 +205,18 @@ export default function PatientenPage() {
             <Reveal>
               <div>
                 <div className="kicker mb-3">Aktuelles</div>
-                <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+                <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                   Öffnungszeiten<br />
                   <span className="italic text-muted">und Abwesenheiten.</span>
                 </h2>
-                <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
+                <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] mt-8 max-w-[520px]">
                   Hier veröffentlichen wir kurzfristige Änderungen der
                   Öffnungszeiten, geplante Urlaubszeiten und die zuständigen
                   Vertretungen.
                 </p>
                 <Link
                   href="/aktuelles"
-                  className="mt-8 inline-flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase font-extrabold text-ink hover:text-gold transition-colors"
+                  className="mt-8 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase font-extrabold text-ink hover:text-gold transition-colors"
                 >
                   Zum vollständigen Feed
                   <span aria-hidden>→</span>
@@ -228,13 +228,13 @@ export default function PatientenPage() {
               <ul className="rounded-[22px] border border-line bg-white/70 divide-y divide-line overflow-hidden">
                 {news.map((n) => (
                   <li key={n.title} className="p-6 md:p-7">
-                    <div className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold mb-2">
+                    <div className="text-[12px] tracking-[0.18em] uppercase font-extrabold text-gold mb-2">
                       {n.date}
                     </div>
-                    <div className="font-display text-[18px] leading-[1.3] mb-1.5">
+                    <div className="font-display text-[20px] leading-[1.3] mb-1.5">
                       {n.title}
                     </div>
-                    <p className="text-muted text-[14px] leading-[1.7]">{n.body}</p>
+                    <p className="text-muted text-[15px] leading-[1.7]">{n.body}</p>
                   </li>
                 ))}
               </ul>
@@ -248,11 +248,11 @@ export default function PatientenPage() {
           <Reveal>
             <div>
               <div className="kicker mb-3">Medikamente erklärt</div>
-              <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,52px)] tracking-[-0.015em] title-rule">
+              <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,57px)] tracking-[-0.015em] title-rule">
                 Was Sie einnehmen<br />
                 <span className="italic text-muted">und warum.</span>
               </h2>
-              <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-8 max-w-[520px]">
+              <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] mt-8 max-w-[520px]">
                 In der Sprechstunde nehmen wir uns die Zeit, gängige
                 kardiologische Medikamente in verständlicher Sprache zu
                 erklären. Wirkung, Wechselwirkungen und typische
@@ -260,7 +260,7 @@ export default function PatientenPage() {
               </p>
               <Link
                 href="/medikamente"
-                className="mt-8 inline-flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase font-extrabold text-ink hover:text-gold transition-colors"
+                className="mt-8 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase font-extrabold text-ink hover:text-gold transition-colors"
               >
                 Zur Wirkstoff-Übersicht
                 <span aria-hidden>→</span>
@@ -270,7 +270,7 @@ export default function PatientenPage() {
           <Reveal delay={0.1}>
             <div className="rounded-[22px] border border-line bg-white/70 p-7 md:p-8">
               <div className="kicker mb-4">Häufig besprochen</div>
-              <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-[14px] leading-[1.6] text-ink/85">
+              <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-[15px] leading-[1.6] text-ink/85">
                 {meds.map((m) => (
                   <li key={m} className="flex items-center gap-3">
                     <span aria-hidden className="inline-block h-px w-4 bg-gold" />

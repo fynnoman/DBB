@@ -11,42 +11,28 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Leistungen | ${site.brand}, Kardiologie ${site.city}`,
   description:
-    "Kardiologische Leistungen bei DBB Kardio in Saarlouis: Basis Check-up, Executive Check-up, Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz und spezialisierte Diagnostik seltener Herzerkrankungen.",
+    "Kardiologische Leistungen bei DBB Kardio in Saarlouis: Executive Check-up, Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz und spezialisierte Diagnostik seltener Herzerkrankungen.",
 };
 
 const checkups = [
   {
     tag: "01",
-    label: "Basis",
-    title: "Basis Check-up",
-    duration: "60 bis 75 Min.",
-    href: "/basis-checkup",
-    body:
-      "Anamnese, klinische Untersuchung, EKG, Belastungs-EKG und Echokardiographie inklusive Speckle Tracking. Das strukturierte Fundament einer kardiologischen Standortbestimmung.",
-    highlights: [
-      "Ausführliches Erstgespräch",
-      "Ruhe- und Belastungs-EKG",
-      "Farbdoppler-Echokardiographie",
-      "Persönliche Befundbesprechung",
-    ],
-  },
-  {
-    tag: "02",
     label: "Executive",
     title: "Executive Check-up",
     duration: "90 bis 120 Min.",
     href: "/executive-checkup",
     body:
-      "Erweitertes Untersuchungsprogramm mit zusätzlichen Modulen für Menschen mit hoher Alltagsbelastung, Reisetätigkeit oder familiärer Vorbelastung.",
+      "Umfassendes Untersuchungsprogramm mit Anamnese, Echokardiographie, Belastungs-EKG, Carotis-Diagnostik und erweiterter Labordiagnostik. Für Menschen mit hoher Alltagsbelastung, Reisetätigkeit oder familiärer Vorbelastung.",
     highlights: [
-      "Alles aus dem Basis Check-up",
+      "Ausführliches Erstgespräch",
+      "Ruhe- und Belastungs-EKG",
+      "Farbdoppler-Echokardiographie",
       "Erweitertes Laborprofil",
-      "Langzeit-Blutdruck und Langzeit-EKG",
       "Individuelles Präventionskonzept",
     ],
   },
   {
-    tag: "03",
+    tag: "02",
     label: "Spezial",
     title: "Seltene Herzerkrankungen",
     duration: "nach Vereinbarung",
@@ -121,7 +107,7 @@ export default function LeistungenPage() {
             <span className="italic text-muted">mit Zeit.</span>
           </>
         }
-        lead="Vom präzise abgestimmten Basis-Check bis zum umfassenden Executive-Programm. Jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
+        lead="Vom umfassenden Executive-Programm bis zur spezialisierten Diagnostik seltener Herzerkrankungen. Jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
       />
 
       <EditorialImage
@@ -134,7 +120,7 @@ export default function LeistungenPage() {
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-28 px-4">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2">
           {checkups.map((c) => (
             <Reveal key={c.tag} delay={0.05}>
               <Link
@@ -146,24 +132,24 @@ export default function LeistungenPage() {
                   className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                 />
                 <div className="flex items-start justify-between mb-5">
-                  <span className="font-display text-gold/60 leading-none text-[clamp(52px,6vw,80px)] tracking-[-0.03em]">
+                  <span className="font-display text-gold/60 leading-none text-[clamp(57px,6vw,88px)] tracking-[-0.03em]">
                     {c.tag}
                   </span>
-                  <span className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-muted mt-2 text-right">
+                  <span className="text-[12px] tracking-[0.18em] uppercase font-extrabold text-muted mt-2 text-right">
                     {c.label}
                     <br />
-                    <span className="font-normal text-ink/70 tracking-[0.08em] text-[10px]">
+                    <span className="font-normal text-ink/70 tracking-[0.08em] text-[11px]">
                       {c.duration}
                     </span>
                   </span>
                 </div>
-                <h3 className="font-display text-[26px] leading-[1.15] mb-4">
+                <h3 className="font-display text-[29px] leading-[1.15] mb-4">
                   {c.title}
                 </h3>
-                <p className="text-muted text-[14px] md:text-[15px] leading-[1.7] mb-5">
+                <p className="text-muted text-[15px] md:text-[16px] leading-[1.7] mb-5">
                   {c.body}
                 </p>
-                <ul className="space-y-2 text-[13px] leading-[1.7] text-ink/80 mt-auto">
+                <ul className="space-y-2 text-[14px] leading-[1.7] text-ink/80 mt-auto">
                   {c.highlights.map((h) => (
                     <li key={h} className="flex gap-3 items-start">
                       <span
@@ -174,7 +160,7 @@ export default function LeistungenPage() {
                     </li>
                   ))}
                 </ul>
-                <span className="mt-6 inline-flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase font-extrabold text-ink/85 group-hover:text-gold transition-colors">
+                <span className="mt-6 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase font-extrabold text-ink/85 group-hover:text-gold transition-colors">
                   Zur Übersicht
                   <span
                     aria-hidden
@@ -220,7 +206,7 @@ export default function LeistungenPage() {
         <Reveal>
           <div className="max-w-[900px] mb-10 md:mb-14">
             <div className="kicker mb-3">Spezialsprechstunden</div>
-            <h2 className="font-display leading-[1.05] text-[clamp(30px,4vw,50px)] tracking-[-0.015em] title-rule">
+            <h2 className="font-display leading-[1.05] text-[clamp(33px,4vw,55px)] tracking-[-0.015em] title-rule">
               Wenn Standard nicht reicht.
             </h2>
           </div>
@@ -234,10 +220,10 @@ export default function LeistungenPage() {
                   aria-hidden
                   className="mb-5 inline-block h-px w-10 bg-gradient-to-r from-gold to-transparent"
                 />
-                <h3 className="font-display text-[22px] leading-[1.2] mb-3">
+                <h3 className="font-display text-[24px] leading-[1.2] mb-3">
                   {s.title}
                 </h3>
-                <p className="text-muted text-[14px] md:text-[15px] leading-[1.75]">
+                <p className="text-muted text-[15px] md:text-[16px] leading-[1.75]">
                   {s.body}
                 </p>
               </article>

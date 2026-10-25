@@ -16,7 +16,7 @@ export default function PatientenService() {
           <StaggerItem>
             <article className="h-full bg-white/60 border border-line rounded-[20px] p-7 card-lift">
               <div className="kicker">Aktuelles</div>
-              <h3 className="font-display text-[22px] mt-2.5 mb-2.5">
+              <h3 className="font-display text-[24px] mt-2.5 mb-2.5">
                 Urlaub & Fortbildung
               </h3>
               <p className="text-muted leading-[1.65]">
@@ -30,7 +30,7 @@ export default function PatientenService() {
           <StaggerItem>
             <article className="h-full bg-white/60 border border-line rounded-[20px] p-7 card-lift">
               <div className="kicker">Prävention</div>
-              <h3 className="font-display text-[22px] mt-2.5 mb-2.5">
+              <h3 className="font-display text-[24px] mt-2.5 mb-2.5">
                 Herz-Risiko-Check
               </h3>
               <p className="text-muted leading-[1.65]">
@@ -41,7 +41,7 @@ export default function PatientenService() {
               <div className="mt-5">
                 <a
                   href="#"
-                  className="inline-flex min-h-[44px] px-5 rounded-full items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-all duration-500 ease-editorial"
+                  className="inline-flex min-h-[44px] px-5 rounded-full items-center justify-center text-[13px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-all duration-500 ease-editorial"
                 >
                   RISIKO-CHECK ÖFFNEN
                 </a>
@@ -52,7 +52,7 @@ export default function PatientenService() {
           <StaggerItem>
             <article className="h-full bg-white/60 border border-line rounded-[20px] p-7 card-lift">
               <div className="kicker">Wissen</div>
-              <h3 className="font-display text-[22px] mt-2.5 mb-2.5">
+              <h3 className="font-display text-[24px] mt-2.5 mb-2.5">
                 Medikamente verständlich erklärt
               </h3>
               <p className="text-muted leading-[1.65]">
@@ -63,7 +63,7 @@ export default function PatientenService() {
               <div className="mt-5">
                 <a
                   href="#medikamente"
-                  className="inline-flex min-h-[44px] px-5 rounded-full items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-all duration-500 ease-editorial"
+                  className="inline-flex min-h-[44px] px-5 rounded-full items-center justify-center text-[13px] font-extrabold tracking-[0.05em] border border-gold text-ink hover:bg-gold/10 transition-all duration-500 ease-editorial"
                 >
                   MEDIKAMENTE ANSEHEN
                 </a>

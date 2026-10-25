@@ -16,7 +16,7 @@ export default function AbrechnungDatenschutz() {
             <StaggerItem>
               <article className="h-full bg-white/60 border border-line rounded-[20px] p-7 card-lift">
                 <div className="kicker">Private Verrechnungsstelle</div>
-                <h3 className="font-display text-[22px] mt-2.5 mb-2.5">
+                <h3 className="font-display text-[24px] mt-2.5 mb-2.5">
                   Abrechnung über eine PVS
                 </h3>
                 <p className="text-muted leading-[1.65]">
@@ -31,7 +31,7 @@ export default function AbrechnungDatenschutz() {
             <StaggerItem>
               <article className="h-full bg-white/60 border border-line rounded-[20px] p-7 card-lift">
                 <div className="kicker">Labor & Datenübermittlung</div>
-                <h3 className="font-display text-[22px] mt-2.5 mb-2.5">
+                <h3 className="font-display text-[24px] mt-2.5 mb-2.5">
                   Einwilligung & Datenschutz
                 </h3>
                 <p className="text-muted leading-[1.65]">

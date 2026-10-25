@@ -30,11 +30,11 @@ export function PageCta({
             <div className="relative p-8 md:p-14 grid gap-6 md:gap-8 md:grid-cols-[1.4fr_1fr] items-center">
               <div>
                 <div className="kicker mb-3">Nächster Schritt</div>
-                <h3 className="font-display text-[clamp(24px,3vw,36px)] leading-[1.15] text-ink title-rule">
+                <h3 className="font-display text-[clamp(26px,3vw,40px)] leading-[1.15] text-ink title-rule">
                   {title ?? "Termin online buchen."}
                 </h3>
                 {lead && (
-                  <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-5 max-w-[520px]">
+                  <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] mt-5 max-w-[520px]">
                     {lead}
                   </p>
                 )}
@@ -42,14 +42,14 @@ export function PageCta({
               <div className="flex flex-wrap gap-3 md:justify-end">
                 <button
                   type="button"
-                  className="min-h-[52px] px-6 rounded-full inline-flex items-center justify-center text-[12px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
+                  className="min-h-[52px] px-6 rounded-full inline-flex items-center justify-center text-[13px] font-extrabold tracking-[0.05em] bg-gold text-white border border-gold hover:bg-gold-600 hover:shadow-cardHover transition-all duration-500 ease-editorial"
                 >
                   {primaryLabel}
                 </button>
                 {secondaryHref && secondaryLabel && (
                   <Link
                     href={secondaryHref}
-                    className="min-h-[52px] px-6 rounded-full inline-flex items-center justify-center text-[12px] font-extrabold tracking-[0.05em] border border-line text-ink hover:border-gold transition-colors"
+                    className="min-h-[52px] px-6 rounded-full inline-flex items-center justify-center text-[13px] font-extrabold tracking-[0.05em] border border-line text-ink hover:border-gold transition-colors"
                   >
                     {secondaryLabel}
                   </Link>

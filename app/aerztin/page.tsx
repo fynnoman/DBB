@@ -103,18 +103,18 @@ export default function AerztinPage() {
                   aria-hidden
                   className="absolute inset-0 grid place-items-center pointer-events-none"
                 >
-                  <span className="font-display text-white/25 tracking-[0.22em] text-[clamp(28px,6vw,54px)] uppercase select-none">
+                  <span className="font-display text-white/25 tracking-[0.22em] text-[clamp(31px,6vw,59px)] uppercase select-none">
                     Platzhalter
                   </span>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                  <div className="text-[11px] tracking-[0.18em] uppercase font-extrabold text-gold">
+                  <div className="text-[12px] tracking-[0.18em] uppercase font-extrabold text-gold">
                     Portraitfoto folgt
                   </div>
-                  <div className="mt-1.5 font-display text-white text-[22px] leading-tight">
+                  <div className="mt-1.5 font-display text-white text-[24px] leading-tight">
                     {site.fullName}
                   </div>
-                  <div className="mt-1 text-white/75 text-[13px]">
+                  <div className="mt-1 text-white/75 text-[14px]">
                     {site.descriptor} · {site.city}
                   </div>
                 </div>
@@ -124,7 +124,7 @@ export default function AerztinPage() {
                   style={{ boxShadow: "inset 0 0 0 1px rgba(183,154,98,0.35)" }}
                 />
               </div>
-              <div className="mt-6 flex items-start gap-3 text-[12px] tracking-[0.10em] uppercase text-muted">
+              <div className="mt-6 flex items-start gap-3 text-[13px] tracking-[0.10em] uppercase text-muted">
                 <span
                   aria-hidden
                   className="mt-[7px] h-px w-8 bg-gold flex-shrink-0"
@@ -143,17 +143,17 @@ export default function AerztinPage() {
           <div>
             <Reveal>
               <div className="kicker mb-4">Haltung</div>
-              <h2 className="font-display text-[clamp(32px,4vw,52px)] leading-[1.1] tracking-[-0.015em] title-rule">
+              <h2 className="font-display text-[clamp(35px,4vw,57px)] leading-[1.1] tracking-[-0.015em] title-rule">
                 Medizin,<br />die zuhört,<br />bevor sie misst.
               </h2>
-              <p className="text-muted text-[17px] md:text-[18px] leading-[1.8] mt-8">
+              <p className="text-muted text-[19px] md:text-[20px] leading-[1.8] mt-8">
                 Die Kardiologie hat in den letzten Jahren einen enormen technologischen
                 Sprung gemacht. Doch der wertvollste Teil einer Untersuchung bleibt das
                 Gespräch. In der Praxis nehmen wir uns die Zeit, die es braucht, um
                 Beschwerden einzuordnen, Kontext zu verstehen und daraus einen Weg
                 abzuleiten, der wirklich zu Ihnen passt.
               </p>
-              <p className="text-muted text-[16px] md:text-[17px] leading-[1.8] mt-5">
+              <p className="text-muted text-[18px] md:text-[19px] leading-[1.8] mt-5">
                 Jede Untersuchung wird persönlich durchgeführt, jeder Befund persönlich
                 besprochen. Kein Delegieren an Assistenzpersonal, keine Standardpakete
                 ohne Rücksicht auf Ihre Vorgeschichte.
@@ -163,25 +163,25 @@ export default function AerztinPage() {
             <Reveal delay={0.1}>
               <div className="mt-14 grid grid-cols-2 gap-6 md:gap-10 border-t border-line pt-10">
                 <div>
-                  <div className="font-display text-gold/80 leading-none text-[clamp(48px,6vw,84px)] tracking-[-0.02em]">
+                  <div className="font-display text-gold/80 leading-none text-[clamp(53px,6vw,92px)] tracking-[-0.02em]">
                     45
                   </div>
-                  <div className="mt-3 text-[12px] tracking-[0.10em] uppercase font-extrabold text-ink">
+                  <div className="mt-3 text-[13px] tracking-[0.10em] uppercase font-extrabold text-ink">
                     Minuten
                   </div>
-                  <p className="text-muted text-[14px] leading-[1.6] mt-2 max-w-[260px]">
-                    typische Termin-Dauer für den Basis-Check. Ohne getakteten
-                    Nachfolger im Warteraum.
+                  <p className="text-muted text-[15px] leading-[1.6] mt-2 max-w-[260px]">
+                    typische Termin-Dauer für einen Standard-Termin. Ohne
+                    getakteten Nachfolger im Warteraum.
                   </p>
                 </div>
                 <div>
-                  <div className="font-display text-gold/80 leading-none text-[clamp(48px,6vw,84px)] tracking-[-0.02em]">
+                  <div className="font-display text-gold/80 leading-none text-[clamp(53px,6vw,92px)] tracking-[-0.02em]">
                     01
                   </div>
-                  <div className="mt-3 text-[12px] tracking-[0.10em] uppercase font-extrabold text-ink">
+                  <div className="mt-3 text-[13px] tracking-[0.10em] uppercase font-extrabold text-ink">
                     Ansprechpartnerin
                   </div>
-                  <p className="text-muted text-[14px] leading-[1.6] mt-2 max-w-[260px]">
+                  <p className="text-muted text-[15px] leading-[1.6] mt-2 max-w-[260px]">
                     Die gesamte Untersuchung und Befundbesprechung findet bei
                     derselben Ärztin statt.
                   </p>
@@ -232,10 +232,10 @@ export default function AerztinPage() {
         <Reveal>
           <div className="rounded-[22px] border border-forest/25 bg-forest/[0.06] p-7 md:p-9">
             <div className="kicker text-forest mb-3">Mitgliedschaft</div>
-            <h2 className="font-display text-[clamp(24px,2.8vw,34px)] leading-[1.2] tracking-[-0.01em] mb-4">
+            <h2 className="font-display text-[clamp(26px,2.8vw,37px)] leading-[1.2] tracking-[-0.01em] mb-4">
               Deutsche Gesellschaft für Amyloid-Krankheiten e.V.
             </h2>
-            <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] max-w-[720px]">
+            <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] max-w-[720px]">
               Dr. medic Denisa Babeanu-Bauer ist Mitglied der Deutschen
               Gesellschaft für Amyloid-Krankheiten (DGAK). Die Gesellschaft
               wurde 1993 gegründet und ist mit der International Society of
@@ -249,7 +249,7 @@ export default function AerztinPage() {
               href="https://www.amyloid.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center gap-2 text-[11px] tracking-[0.18em] uppercase font-extrabold text-forest hover:text-forest/80 transition-colors"
+              className="mt-5 inline-flex items-center gap-2 text-[12px] tracking-[0.18em] uppercase font-extrabold text-forest hover:text-forest/80 transition-colors"
             >
               Zur DGAK
               <span aria-hidden>→</span>
@@ -262,10 +262,10 @@ export default function AerztinPage() {
         <Reveal>
           <div className="max-w-[900px] mb-10 md:mb-12">
             <div className="kicker mb-3">Werdegang</div>
-            <h2 className="font-display leading-[1.05] text-[clamp(28px,3.6vw,44px)] title-rule">
+            <h2 className="font-display leading-[1.05] text-[clamp(31px,3.6vw,48px)] title-rule">
               Vita in Stationen.
             </h2>
-            <p className="text-muted text-[15px] md:text-[16px] leading-[1.75] mt-5 max-w-[720px]">
+            <p className="text-muted text-[16px] md:text-[18px] leading-[1.75] mt-5 max-w-[720px]">
               Die vollständige Vita mit Ausbildungsstationen, Weiterbildungen,
               Publikationen und Mitgliedschaften wird zeitnah ergänzt.
             </p>
@@ -279,10 +279,10 @@ export default function AerztinPage() {
                 key={v.year}
                 className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-2 md:gap-8 px-6 py-5 md:px-8 md:py-7"
               >
-                <div className="text-[12px] tracking-[0.10em] uppercase font-extrabold text-ink">
+                <div className="text-[13px] tracking-[0.10em] uppercase font-extrabold text-ink">
                   {v.year}
                 </div>
-                <div className="text-muted text-[15px] leading-[1.7]">{v.body}</div>
+                <div className="text-muted text-[16px] leading-[1.7]">{v.body}</div>
               </li>
             ))}
           </ol>
@@ -291,7 +291,7 @@ export default function AerztinPage() {
 
       <PageCta
         title="Termin bei Frau Dr. Babeanu-Bauer anfragen."
-        lead="Erstgespräch, Basis-Check-up oder gezielte Fragestellung. Wir besprechen im Vorfeld, was für Sie sinnvoll ist."
+        lead="Erstgespräch oder gezielte Fragestellung. Wir besprechen im Vorfeld, was für Sie sinnvoll ist."
       />
     </>
   );

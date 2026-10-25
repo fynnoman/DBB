@@ -13,9 +13,6 @@ export default function Kontakt() {
         <Reveal>
           <div className="mb-9 md:mb-10 max-w-[900px]">
             <div className="kicker mb-3">Kontakt & Termin</div>
-            <h2 className="font-display leading-[1.1] text-[clamp(30px,4vw,50px)] title-rule">
-              Termin online buchen.
-            </h2>
           </div>
         </Reveal>
 
@@ -117,8 +114,8 @@ export default function Kontakt() {
               <div className="px-6 py-7 md:px-8 md:py-8 border-t lg:border-t-0 lg:border-l border-line bg-white/60">
                 <ul className="divide-y divide-line text-[14px] md:text-[15px] leading-[1.6]">
                   <AnfahrtRow label="Parken">
-                    Kostenlose Parkplätze im Hinterhof, begrenzt verfügbar.
-                    Zufahrt über die Brückenstraße.
+                    Kostenlose Parkplätze im Hinterhof. Zufahrt über die
+                    Brückenstraße.
                   </AnfahrtRow>
                   <AnfahrtRow label="Aufzug">Aufzug im Haus vorhanden.</AnfahrtRow>
                   <AnfahrtRow label="Zug">Bahnhof Saarlouis.</AnfahrtRow>

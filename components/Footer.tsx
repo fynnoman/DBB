@@ -43,22 +43,18 @@ export default function Footer() {
           <FooterCol label="Öffnungszeiten">
             <ul className="text-[13px] leading-[1.7] text-muted space-y-1">
               <li className="flex justify-between gap-4">
-                <span>Mo bis Do</span>
-                <span>[wird ergänzt]</span>
+                <span>Mo bis Fr</span>
+                <span>8 bis 13 Uhr</span>
               </li>
               <li className="flex justify-between gap-4">
-                <span>Freitag</span>
-                <span>[wird ergänzt]</span>
+                <span>Mo, Di, Do Nachmittag</span>
+                <span>nach Vereinbarung</span>
               </li>
               <li className="flex justify-between gap-4">
                 <span>Sa und So</span>
                 <span>Geschlossen</span>
               </li>
             </ul>
-            <p className="mt-3 text-[12px] leading-[1.6] text-muted/80">
-              Termine ausschließlich nach Vereinbarung. Bitte spätestens 24
-              Stunden vor dem Termin absagen.
-            </p>
           </FooterCol>
         </div>
       </div>

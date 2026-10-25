@@ -14,30 +14,21 @@ type MenuLink = {
 };
 
 const menuLinks: MenuLink[] = [
-  { href: "/", label: "Home", group: "Praxis" },
+  { href: "/", label: "Startseite", group: "Praxis" },
   { href: "/aerztin", label: "Über mich", group: "Praxis" },
-  { href: "/praxis", label: "Praxisräume", group: "Praxis" },
-  { href: "/leistungen", label: "Leistungen, Übersicht", group: "Leistungen" },
-  { href: "/basis-checkup", label: "Basis Check-up", group: "Leistungen" },
-  { href: "/executive-checkup", label: "Executive Check-up", group: "Leistungen" },
-  { href: "/seltene-herzerkrankungen", label: "Seltene Herzerkrankungen", group: "Leistungen" },
-  { href: "/patienten", label: "Privatpatienten", group: "Patienten" },
-  { href: "/selbstzahler", label: "Selbstzahler", group: "Patienten" },
-  { href: "/aktuelles", label: "Aktuelles & Abwesenheiten", group: "Patienten" },
-  { href: "/medikamente", label: "Medikamente erklärt", group: "Patienten" },
-  { href: "/pvs-datenschutz", label: "PVS & Datenschutz", group: "Patienten" },
-  { href: "/kontakt", label: "Kontakt", group: "Kontakt" },
+  { href: "/praxis", label: "Praxis", group: "Praxis" },
+  { href: "/leistungen", label: "Leistungen", group: "Praxis" },
+  { href: "/kontakt", label: "Kontakt, Anfahrt & Terminbuchung", group: "Praxis" },
   { href: "/datenschutz", label: "Datenschutz", group: "Rechtliches" },
   { href: "/impressum", label: "Impressum", group: "Rechtliches" },
   { href: "/barrierefreiheit", label: "Barrierefreiheit", group: "Rechtliches" },
 ];
 
 const primaryNav = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Startseite" },
   { href: "/aerztin", label: "Über mich" },
+  { href: "/praxis", label: "Praxis" },
   { href: "/leistungen", label: "Leistungen" },
-  { href: "/praxis", label: "Praxisräume" },
-  { href: "/patienten", label: "Patienteninfo" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 

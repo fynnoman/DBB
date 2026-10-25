@@ -34,10 +34,10 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="container-shell max-w-[1220px] min-h-[calc(100vh-88px)] grid place-items-center text-center py-[64px] md:py-[90px] min-w-0">
-        <div className="max-w-[1000px] w-full min-w-0">
+      <div className="container-shell max-w-[1220px] min-h-[calc(100vh-88px)] grid place-items-center text-center pt-[24px] pb-[64px] md:pt-[32px] md:pb-[90px] min-w-0">
+        <div className="max-w-[1100px] w-full min-w-0">
           <div
-            className="mx-auto mb-6 w-[96px] h-[96px] md:w-[112px] md:h-[112px] rounded-full overflow-hidden relative animate-floatIn"
+            className="mx-auto mb-7 w-[132px] h-[132px] md:w-[160px] md:h-[160px] rounded-full overflow-hidden relative animate-floatIn"
             style={{ animationDelay: "0.05s" }}
           >
             <div className="absolute inset-0 animate-pulse60 will-change-transform">
@@ -46,14 +46,14 @@ export default function Hero() {
                 alt="DBB KARDIO"
                 fill
                 priority
-                sizes="112px"
+                sizes="160px"
                 className="object-contain"
               />
             </div>
           </div>
 
           <p
-            className="font-display leading-[1.1] tracking-[-0.005em] mb-5 text-[clamp(24px,4vw,46px)] font-semibold text-gold animate-floatIn"
+            className="font-display leading-[1.1] tracking-[-0.005em] mb-5 text-[clamp(28px,4.4vw,52px)] font-semibold text-gold animate-floatIn"
             style={{ animationDelay: "0.15s" }}
           >
             {site.descriptor}
@@ -61,7 +61,7 @@ export default function Hero() {
 
           <h1
             id="hero-title"
-            className="font-display leading-[1.08] tracking-[-0.02em] text-ink text-[clamp(26px,5.8vw,88px)] m-0 animate-floatIn"
+            className="font-display leading-[1.06] tracking-[-0.02em] text-ink text-[clamp(34px,6.8vw,104px)] m-0 animate-floatIn"
             style={{ animationDelay: "0.25s" }}
           >
             <span className="block sm:inline">Dr. medic Denisa</span>{" "}
@@ -69,7 +69,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="max-w-[820px] mx-auto mt-5 mb-6 text-[16px] md:text-[17px] leading-[1.7] text-[#4a4743] animate-floatIn"
+            className="max-w-[820px] mx-auto mt-6 mb-7 text-[17px] md:text-[18px] leading-[1.7] text-[#4a4743] animate-floatIn"
             style={{ animationDelay: "0.55s" }}
           >
             Für Privatpatienten und Selbstzahler.

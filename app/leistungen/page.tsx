@@ -11,14 +11,14 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Leistungen | ${site.brand}, Kardiologie ${site.city}`,
   description:
-    "Kardiologische Leistungen bei DBB Kardio in Saarlouis: Kardio Check-up, Executive Check-up, Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz und spezialisierte Diagnostik seltener Herzerkrankungen.",
+    "Kardiologische Leistungen bei DBB Kardio in Saarlouis: Kardiologischer Check-up, Executive Check-up, Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz und spezialisierte Diagnostik seltener Herzerkrankungen.",
 };
 
 const checkups = [
   {
     tag: "01",
     label: "Kardio",
-    title: "Kardio Check-up",
+    title: "Kardiologischer Check-up",
     duration: "60 bis 75 Min.",
     href: "/kardio-checkup",
     body:
@@ -39,7 +39,7 @@ const checkups = [
     body:
       "Umfassendes Untersuchungsprogramm mit Anamnese, Echokardiographie, Belastungs-EKG, Carotis-Diagnostik und erweiterter Labordiagnostik. Für Menschen mit hoher Alltagsbelastung, Reisetätigkeit oder familiärer Vorbelastung.",
     highlights: [
-      "Alles aus dem Kardio Check-up",
+      "Alles aus dem Kardiologischen Check-up",
       "Erweitertes Laborprofil",
       "Langzeit-Blutdruck und Langzeit-EKG",
       "Individuelles Präventionskonzept",
@@ -121,7 +121,7 @@ export default function LeistungenPage() {
             <span className="italic text-muted">mit Zeit.</span>
           </>
         }
-        lead="Vom strukturierten Kardio Check-up bis zum umfassenden Executive-Programm. Jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
+        lead="Vom strukturierten Kardiologischen Check-up bis zum umfassenden Executive-Programm. Jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
       />
 
       <EditorialImage

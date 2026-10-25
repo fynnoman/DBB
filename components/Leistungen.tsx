@@ -1,72 +1,55 @@
-import CheckupCard from "@/components/CheckupCard";
+import Link from "next/link";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Stagger, StaggerItem } from "@/components/Reveal";
 
-type Tone = "default" | "warm" | "forest";
-
-type Service = {
-  id?: string;
+type Group = {
   kicker: string;
   title: string;
-  body: string;
-  tone?: Tone;
+  items: string[];
 };
 
-const services: Service[] = [
+const groups: Group[] = [
   {
-    kicker: "Herzultraschall",
-    title: "Echokardiographie und Speckle Tracking",
-    body: "Hochauflösender Herzultraschall mit differenzierter Funktionsanalyse und bei Bedarf Speckle-Tracking-Analyse.",
-    tone: "warm",
+    kicker: "Vorsorge und Nachsorge",
+    title: "Kardiologische Vorsorge und Nachsorge",
+    items: [
+      "Herz-Kreislauf-Vorsorge und Prävention",
+      "Nachsorge und langfristige Betreuung aller Krankheitsbilder",
+    ],
   },
   {
-    kicker: "Rhythmus",
-    title: "EKG und Langzeitdiagnostik",
-    body: "Ruhe, Belastungs- und Langzeit-EKG sowie Langzeit-Blutdruckmessung zur gezielten Abklärung.",
+    kicker: "Diagnostik",
+    title: "Kardiologische Diagnostik",
+    items: [
+      "Echokardiographie",
+      "Speckle-Tracking-Analyse",
+      "Ruhe-EKG",
+      "Belastungsergometrie",
+      "Langzeit-EKG mit KI-gestützter Analyse",
+      "Langzeit-Blutdruckmessung",
+      "Stressechokardiographie",
+      "Carotis-Duplexsonographie",
+      "Labordiagnostik inklusive genetischer Testung",
+    ],
   },
   {
-    kicker: "Funktionsdiagnostik",
-    title: "Stressechokardiographie",
-    body: "Belastungsabhängige Echokardiographie bei entsprechender medizinischer Indikation.",
-  },
-  {
-    kicker: "Gefäße",
-    title: "Carotis und Gefäßdiagnostik",
-    body: "Ultraschallgestützte Untersuchung ausgewählter Gefäßregionen zur kardiovaskulären Risikoeinschätzung.",
-  },
-  {
-    kicker: "Spezialgebiet",
-    title: "Kardio-Onkologie",
-    body: "Kardiologische Begleitung vor, während und nach potenziell kardiotoxischen Therapien.",
-    tone: "forest",
-  },
-  {
-    kicker: "Schwerpunkt",
-    title: "Frauenherz",
-    body: "Diagnostik mit besonderem Blick auf frauenspezifische Herz-Kreislauf-Risiken.",
-    tone: "warm",
-  },
-  {
-    id: "seltene-herzerkrankungen",
-    kicker: "Spezialdiagnostik",
-    title: "Seltene Herzerkrankungen",
-    body: "Abklärung bei Verdacht auf Amyloidose, Morbus Fabry oder hypertrophe Kardiomyopathie.",
-    tone: "forest",
+    kicker: "Schwerpunkte",
+    title: "Weitere kardiologische Leistungen",
+    items: [
+      "Präoperative kardiologische Risikobeurteilung",
+      "Kardiologische Zweitmeinung",
+      "Kardio-Onkologie",
+      "Kardio-Rheumatologie",
+      "Frauenherzsprechstunde",
+      "Abklärung seltener Herzerkrankungen",
+    ],
   },
 ];
 
-const toneStyles: Record<Tone, string> = {
-  default: "bg-white/40 border-line",
-  warm: "bg-gradient-to-br from-gold-50/70 to-white/40 border-gold/35",
-  forest:
-    "bg-gradient-to-br from-[rgba(35,79,67,0.06)] to-white/40 border-[rgba(35,79,67,0.22)]",
-};
-
-const kickerStyles: Record<Tone, string> = {
-  default: "text-gold",
-  warm: "text-gold",
-  forest: "text-forest",
-};
+const checkups = [
+  { title: "Kardiologischer Check-up", href: "#kontakt" },
+  { title: "Executive Check-up", href: "#kontakt" },
+];
 
 export default function Leistungen() {
   return (
@@ -80,98 +63,68 @@ export default function Leistungen() {
           title="Kardiologische Diagnostik und Betreuung."
         />
 
-        <div className="mb-8 md:mb-10 max-w-[720px]">
-          <div className="kicker mb-3">Spektrum</div>
-          <h3 className="font-display text-[26px] md:text-[35px] leading-[1.15] title-rule">
-            Diagnostik und Schwerpunkte auf einen Blick.
-          </h3>
-        </div>
-
-        <Stagger className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-          {services.map((s) => {
-            const tone: Tone = s.tone ?? "default";
-            return (
-              <StaggerItem key={s.title}>
-                <article
-                  id={s.id}
-                  className={`group relative h-full rounded-[20px] border p-7 card-lift overflow-hidden ${toneStyles[tone]}`}
-                >
-                  {tone !== "default" && (
-                    <span
-                      aria-hidden
-                      className={`pointer-events-none absolute top-0 left-0 right-0 h-px ${
-                        tone === "warm"
-                          ? "bg-gradient-to-r from-transparent via-gold to-transparent"
-                          : "bg-gradient-to-r from-transparent via-forest to-transparent"
-                      }`}
-                    />
-                  )}
-                  <div className="flex items-start justify-between gap-3">
-                    <div className={`kicker ${kickerStyles[tone]}`}>
-                      {s.kicker}
-                    </div>
-                    {tone !== "default" && (
+        <Stagger className="grid md:grid-cols-2 gap-5 md:gap-6">
+          {groups.map((g) => (
+            <StaggerItem key={g.title}>
+              <article className="h-full bg-white/40 border border-line rounded-[20px] p-7 md:p-9 card-lift">
+                <div className="kicker">{g.kicker}</div>
+                <h3 className="font-display text-[22px] md:text-[26px] mt-3 mb-6 leading-tight">
+                  {g.title}
+                </h3>
+                <ul className="space-y-3 text-[16px] md:text-[17px] leading-[1.65] text-ink/85">
+                  {g.items.map((it) => (
+                    <li key={it} className="flex gap-3 items-start">
                       <span
                         aria-hidden
-                        className={`inline-block h-1.5 w-1.5 rounded-full mt-1 ${
-                          tone === "warm" ? "bg-gold" : "bg-forest"
-                        }`}
+                        className="mt-[11px] inline-block h-px w-3 bg-gold flex-shrink-0"
                       />
-                    )}
-                  </div>
-                  <h3 className="font-display text-[24px] mt-2.5 mb-2.5 leading-tight">
-                    {s.title}
-                  </h3>
-                  <p className="text-muted leading-[1.65] m-0">{s.body}</p>
-                </article>
-              </StaggerItem>
-            );
-          })}
+                      <span>{it}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </StaggerItem>
+          ))}
+
+          <StaggerItem>
+            <article className="h-full relative overflow-hidden border border-gold/40 bg-gradient-to-br from-gold-50/70 to-white/60 rounded-[20px] p-7 md:p-9 card-lift">
+              <span
+                aria-hidden
+                className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
+              />
+              <div className="kicker text-gold">Direkt buchbar</div>
+              <h3 className="font-display text-[22px] md:text-[26px] mt-3 mb-6 leading-tight">
+                Kardiologische Check-ups
+              </h3>
+              <div className="space-y-3">
+                {checkups.map((c) => (
+                  <a
+                    key={c.title}
+                    href={c.href}
+                    className="group flex items-center justify-between gap-4 rounded-[14px] border border-gold/50 bg-white/80 px-5 py-4 hover:border-gold hover:bg-white hover:shadow-cardHover transition-all duration-500 ease-editorial"
+                  >
+                    <span className="text-[16px] md:text-[17px] font-semibold text-ink">
+                      {c.title}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-[11px] md:text-[12px] tracking-[0.12em] font-extrabold uppercase text-gold group-hover:gap-2 transition-all duration-500 ease-editorial">
+                      Buchen
+                      <span aria-hidden>→</span>
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </article>
+          </StaggerItem>
         </Stagger>
 
-        <div className="mt-16 md:mt-20 mb-8 md:mb-10 max-w-[720px]">
-          <div className="kicker mb-3">Check-ups</div>
-          <h3 className="font-display text-[26px] md:text-[35px] leading-[1.15] title-rule">
-            Direkt buchbare Check-up-Pakete.
-          </h3>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-4 md:gap-5">
-          <CheckupCard
-            id="kardio-checkup"
-            kicker="Direkt buchbar"
-            title="Kardio Check-up"
-            intro="Der Kardio Check-up eignet sich für Patientinnen und Patienten, die eine strukturierte kardiologische Ersteinschätzung wünschen."
-            items={[
-              "ausführliche Anamnese",
-              "körperliche Untersuchung",
-              "12-Kanal-EKG",
-              "Echokardiographie",
-              "Belastungs-EKG",
-              "ärztlicher Befundbericht",
-            ]}
-            ctaLabel="KARDIO CHECK-UP BUCHEN"
-            tone="gold"
-          />
-          <CheckupCard
-            id="executive-checkup"
-            kicker="Direkt buchbar"
-            title="Executive Check-up"
-            intro="Der Executive Check-up ist die umfassendere Variante für eine vertiefte kardiovaskuläre Risikoanalyse und individuelle Prävention."
-            items={[
-              "ausführliche Anamnese und individuelle Risikoeinschätzung",
-              "körperliche Untersuchung",
-              "12-Kanal-EKG",
-              "Belastungs-EKG und Ergometrie",
-              "Echokardiographie",
-              "Carotis-Doppler sowie Duplexsonographie",
-              "umfassende Labordiagnostik über das Partnerlabor",
-              "ausführlicher ärztlicher Bericht mit persönlichen Empfehlungen",
-            ]}
-            notice="Laborleistungen werden vom Partnerlabor separat in Rechnung gestellt."
-            ctaLabel="EXECUTIVE CHECK-UP BUCHEN"
-            tone="gold"
-          />
+        <div className="mt-10 md:mt-14 flex justify-center">
+          <Link
+            href="/leistungen"
+            className="inline-flex items-center gap-2 text-[14px] md:text-[15px] font-semibold tracking-[0.02em] text-forest border-b border-gold/60 pb-1 hover:border-gold hover:text-gold transition-colors duration-500 ease-editorial"
+          >
+            Alle Leistungen und Schwerpunkte entdecken
+            <span aria-hidden>→</span>
+          </Link>
         </div>
       </div>
     </section>

@@ -11,12 +11,27 @@ import { Reveal } from "@/components/Reveal";
 export const metadata: Metadata = {
   title: `Leistungen | ${site.brand}, Kardiologie ${site.city}`,
   description:
-    "Kardiologische Leistungen bei DBB Kardio in Saarlouis: Executive Check-up, Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz und spezialisierte Diagnostik seltener Herzerkrankungen.",
+    "Kardiologische Leistungen bei DBB Kardio in Saarlouis: Kardio Check-up, Executive Check-up, Echokardiographie, Speckle Tracking, Cardio-Onkologie, Frauenherz und spezialisierte Diagnostik seltener Herzerkrankungen.",
 };
 
 const checkups = [
   {
     tag: "01",
+    label: "Kardio",
+    title: "Kardio Check-up",
+    duration: "60 bis 75 Min.",
+    href: "/kardio-checkup",
+    body:
+      "Anamnese, klinische Untersuchung, EKG, Belastungs-EKG und Echokardiographie inklusive Speckle Tracking. Das strukturierte Fundament einer kardiologischen Standortbestimmung.",
+    highlights: [
+      "Ausführliches Erstgespräch",
+      "Ruhe- und Belastungs-EKG",
+      "Farbdoppler-Echokardiographie",
+      "Persönliche Befundbesprechung",
+    ],
+  },
+  {
+    tag: "02",
     label: "Executive",
     title: "Executive Check-up",
     duration: "90 bis 120 Min.",
@@ -24,15 +39,14 @@ const checkups = [
     body:
       "Umfassendes Untersuchungsprogramm mit Anamnese, Echokardiographie, Belastungs-EKG, Carotis-Diagnostik und erweiterter Labordiagnostik. Für Menschen mit hoher Alltagsbelastung, Reisetätigkeit oder familiärer Vorbelastung.",
     highlights: [
-      "Ausführliches Erstgespräch",
-      "Ruhe- und Belastungs-EKG",
-      "Farbdoppler-Echokardiographie",
+      "Alles aus dem Kardio Check-up",
       "Erweitertes Laborprofil",
+      "Langzeit-Blutdruck und Langzeit-EKG",
       "Individuelles Präventionskonzept",
     ],
   },
   {
-    tag: "02",
+    tag: "03",
     label: "Spezial",
     title: "Seltene Herzerkrankungen",
     duration: "nach Vereinbarung",
@@ -107,7 +121,7 @@ export default function LeistungenPage() {
             <span className="italic text-muted">mit Zeit.</span>
           </>
         }
-        lead="Vom umfassenden Executive-Programm bis zur spezialisierten Diagnostik seltener Herzerkrankungen. Jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
+        lead="Vom strukturierten Kardio Check-up bis zum umfassenden Executive-Programm. Jede Leistung ist so aufgebaut, dass Diagnostik, Gespräch und Empfehlung an einem einzigen Termin zusammenfinden."
       />
 
       <EditorialImage
@@ -120,7 +134,7 @@ export default function LeistungenPage() {
       />
 
       <section className="container-shell max-w-[1440px] pb-20 md:pb-28 px-4">
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-3">
           {checkups.map((c) => (
             <Reveal key={c.tag} delay={0.05}>
               <Link

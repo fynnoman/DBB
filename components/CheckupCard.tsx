@@ -36,7 +36,7 @@ export default function CheckupCard({
   title: string;
   intro: string;
   items: string[];
-  notice: ReactNode;
+  notice?: ReactNode;
   ctaLabel: string;
   tone?: Tone;
 }) {
@@ -102,9 +102,11 @@ export default function CheckupCard({
                   <li key={it}>{it}</li>
                 ))}
               </ul>
-              <div className="mt-5 pl-4 pr-4 py-4 border-l-[3px] border-gold rounded-[12px] bg-gold/[0.06] text-[#4a4743] leading-[1.65]">
-                {notice}
-              </div>
+              {notice && (
+                <div className="mt-5 pl-4 pr-4 py-4 border-l-[3px] border-gold rounded-[12px] bg-gold/[0.06] text-[#4a4743] leading-[1.65]">
+                  {notice}
+                </div>
+              )}
               <div className="mt-5">
                 <a
                   href="#kontakt"

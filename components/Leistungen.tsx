@@ -130,13 +130,29 @@ export default function Leistungen() {
         </Stagger>
 
         <div className="mt-16 md:mt-20 mb-8 md:mb-10 max-w-[720px]">
-          <div className="kicker mb-3">Check-up</div>
+          <div className="kicker mb-3">Check-ups</div>
           <h3 className="font-display text-[26px] md:text-[35px] leading-[1.15] title-rule">
-            Direkt buchbarer Check-up.
+            Direkt buchbare Check-up-Pakete.
           </h3>
         </div>
 
-        <div className="grid gap-4 md:gap-5">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-5">
+          <CheckupCard
+            id="kardio-checkup"
+            kicker="Direkt buchbar"
+            title="Kardio Check-up"
+            intro="Der Kardio Check-up eignet sich für Patientinnen und Patienten, die eine strukturierte kardiologische Ersteinschätzung wünschen."
+            items={[
+              "ausführliche Anamnese",
+              "körperliche Untersuchung",
+              "12-Kanal-EKG",
+              "Echokardiographie",
+              "Belastungs-EKG",
+              "ärztlicher Befundbericht",
+            ]}
+            ctaLabel="KARDIO CHECK-UP BUCHEN"
+            tone="gold"
+          />
           <CheckupCard
             id="executive-checkup"
             kicker="Direkt buchbar"

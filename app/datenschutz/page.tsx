@@ -5,12 +5,9 @@ export const metadata = {
 export default function DatenschutzPage() {
   return (
     <section className="container-shell max-w-3xl py-24 md:py-32">
-      <p className="kicker mb-3">Datenschutz</p>
-      <h1 className="font-display text-[clamp(33px,4vw,55px)] leading-[1.1] title-rule">
-        Ihre Daten sind bei uns geschützt.
-      </h1>
+      <p className="kicker mb-6">Datenschutz</p>
 
-      <div className="mt-10 space-y-6 text-muted leading-[1.75]">
+      <div className="space-y-6 text-muted leading-[1.75] text-[17px]">
         <p>
           Der Schutz Ihrer personenbezogenen Daten hat für uns höchste
           Priorität. Die Praxis ist zudem barrierefrei über den Hinterhof

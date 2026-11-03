@@ -8,9 +8,9 @@ export default function ImpressumPage() {
   return (
     <section className="container-shell max-w-3xl py-24 md:py-32">
       <p className="kicker mb-3">Impressum</p>
-      <h1 className="font-display text-[clamp(33px,4vw,55px)] leading-[1.1] title-rule">
-        Angaben gemäß § 5 TMG.
-      </h1>
+      <p className="text-muted text-[16px] leading-[1.6] mt-2">
+        Angaben gemäß § 5 DDG.
+      </p>
 
       <div className="mt-10 space-y-8 text-muted leading-[1.7]">
         <div>
@@ -43,7 +43,7 @@ export default function ImpressumPage() {
         </div>
 
         <div>
-          <p className="kicker">Zuständige Kammer</p>
+          <p className="kicker">Zuständige Kammer und Aufsichtsbehörde</p>
           <p className="mt-2 text-ink">Ärztekammer des Saarlandes</p>
           <p>
             Faktoreistraße 4
@@ -65,7 +65,7 @@ export default function ImpressumPage() {
           </p>
         </div>
 
-<div>
+        <div>
           <p className="kicker">Berufsrechtliche Regelungen</p>
           <p className="mt-2">
             Berufsordnung für die Ärztinnen und Ärzte des Saarlandes.
@@ -76,8 +76,28 @@ export default function ImpressumPage() {
         </div>
 
         <div>
+          <p className="kicker">Berufshaftpflichtversicherung</p>
+          <p className="mt-2">
+            Name und Anschrift der Berufshaftpflichtversicherung werden auf
+            Anfrage mitgeteilt. Geltungsbereich: Bundesrepublik Deutschland.
+          </p>
+        </div>
+
+        <div>
+          <p className="kicker">Umsatzsteuer</p>
+          <p className="mt-2">
+            Heilbehandlungen im Bereich der Humanmedizin sind nach § 4 Nr. 14
+            Umsatzsteuergesetz (UStG) von der Umsatzsteuer befreit. Eine
+            Umsatzsteuer-Identifikationsnummer wird daher nicht ausgewiesen.
+          </p>
+        </div>
+
+        <div>
           <p className="kicker">Redaktionell verantwortlich</p>
-          <p className="mt-2">{site.fullName}, Anschrift wie oben.</p>
+          <p className="mt-2">
+            Inhaltlich verantwortlich gemäß § 18 Abs. 2 Medienstaatsvertrag
+            (MStV): {site.fullName}, Anschrift wie oben.
+          </p>
         </div>
 
         <div>
@@ -94,8 +114,21 @@ export default function ImpressumPage() {
               ec.europa.eu/consumers/odr
             </a>
             . Zur Teilnahme an einem Streitbeilegungsverfahren vor einer
-            Verbraucherschlichtungsstelle sind wir nicht verpflichtet und nicht
-            bereit.
+            Verbraucherschlichtungsstelle sind wir nach § 36 VSBG weder
+            verpflichtet noch bereit.
+          </p>
+        </div>
+
+        <div>
+          <p className="kicker">Haftung für Inhalte und Links</p>
+          <p className="mt-2">
+            Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene
+            Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
+            verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter
+            jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
+            Informationen zu überwachen oder nach Umständen zu forschen, die
+            auf eine rechtswidrige Tätigkeit hinweisen. Für die Inhalte
+            externer Links sind ausschließlich deren Betreiber verantwortlich.
           </p>
         </div>
       </div>

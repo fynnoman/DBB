@@ -161,12 +161,12 @@ function CheckupCard({ data }: { data: Checkup }) {
   const panelId = `checkup-${data.id}`;
 
   return (
-    <article className="group relative h-full overflow-hidden border border-gold/60 bg-gradient-to-br from-gold-100 via-gold-50 to-white rounded-[22px] p-7 md:p-9 card-lift flex flex-col">
+    <article className="group relative h-full overflow-hidden border border-gold/60 bg-gradient-to-br from-gold-100 via-gold-50 to-white rounded-[22px] p-7 md:p-9 flex flex-col">
       <span
         aria-hidden
         className="pointer-events-none absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent"
       />
-      <h3 className="font-display text-[27px] md:text-[27px] mb-2 leading-tight">
+      <h3 className="font-display text-[27px] md:text-[27px] mb-3 leading-tight">
         {data.title}
       </h3>
       <button
@@ -174,7 +174,8 @@ function CheckupCard({ data }: { data: Checkup }) {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls={panelId}
-        className="self-start text-[13px] font-extrabold tracking-[0.1em] uppercase text-muted hover:text-ink transition-colors"
+        className="relative z-10 self-start inline-flex items-center min-h-[44px] -mx-2 px-2 py-2 text-[13px] font-extrabold tracking-[0.1em] uppercase text-muted hover:text-ink active:text-ink transition-colors rounded-md"
+        style={{ touchAction: "manipulation", WebkitTapHighlightColor: "transparent" }}
       >
         {open ? "Weniger anzeigen" : "Mehr anzeigen"}
       </button>

@@ -20,7 +20,7 @@ export function SectionTitle({
         }`}
       >
         {kicker && (
-          <h2 className="text-[clamp(36px,5.5vw,64px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
+          <h2 className="text-[clamp(26px,4.4vw,52px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
             {kicker}
           </h2>
         )}

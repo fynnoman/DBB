@@ -12,7 +12,7 @@ export default function Kontakt() {
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[100px] px-4">
         <Reveal>
           <div className="mb-9 md:mb-10 max-w-[900px]">
-            <h2 className="text-[clamp(36px,5.5vw,64px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
+            <h2 className="text-[clamp(26px,4.4vw,52px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
               Kontakt und Termin
             </h2>
           </div>
@@ -49,12 +49,9 @@ export default function Kontakt() {
                 setTimeout(() => setStatus("sent"), 800);
               }}
             >
-              <h3 className="font-display text-[26px] mt-0 mb-1">
+              <h3 className="font-display text-[26px] mt-0 mb-5">
                 Kontaktformular
               </h3>
-              <p className="text-muted text-[14px] mb-5">
-                Wir melden uns zeitnah persönlich zurück.
-              </p>
 
               <Field label="Name *" name="name" type="text" required />
               <Field label="E-Mail *" name="email" type="email" required />
@@ -97,9 +94,6 @@ export default function Kontakt() {
           <div className="mt-10 md:mt-12 overflow-hidden rounded-[22px] border border-line bg-white/70">
             <div className="px-6 pt-6 md:px-8 md:pt-8">
               <div className="kicker mb-2">Anfahrt</div>
-              <h3 className="font-display text-[24px] md:text-[29px] leading-[1.2]">
-                So finden Sie zu uns.
-              </h3>
               <p className="text-muted text-[15px] md:text-[16px] leading-[1.7] mt-2 max-w-[560px]">
                 {site.address.street}, {site.address.zipCity}. Praxis im
                 Stadtteil {site.address.district}.

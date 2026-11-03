@@ -7,10 +7,7 @@ export default function AbrechnungDatenschutz() {
     <MenuOnlySection id="abrechnung-datenschutz">
       <div className="border-y border-line bg-white/[0.35]">
         <div className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
-          <SectionTitle
-            kicker="Abrechnung & Datenschutz"
-            title="Transparent geregelt, von Anfang an."
-          />
+          <SectionTitle kicker="Abrechnung & Datenschutz" />
 
           <Stagger className="grid md:grid-cols-2 gap-4 md:gap-5">
             <StaggerItem>

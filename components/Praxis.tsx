@@ -17,7 +17,7 @@ export default function Praxis() {
     <section id="praxis" className="relative cv-auto">
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
         <div className="max-w-[900px] mb-9 md:mb-10">
-          <h2 className="text-[clamp(32px,3.6vw,44px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
+          <h2 className="text-[clamp(24px,3.2vw,40px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
             Praxisräume
           </h2>
         </div>

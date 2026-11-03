@@ -8,7 +8,6 @@ export default function PatientenService() {
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
         <SectionTitle
           kicker="Patienteninformation"
-          title="Aktuelles, Abwesenheiten & wichtige Hinweise."
           lead="Urlaub, Fortbildungen, kurzfristige Abwesenheiten und organisatorische Hinweise werden hier aktuell veröffentlicht."
         />
 

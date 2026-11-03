@@ -3,55 +3,14 @@ import { site } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: `Wichtige Informationen | ${site.brand}`,
+  title: `Kontakt | ${site.brand}`,
   description:
-    "Wichtige Informationen zur kardiologischen Privatpraxis Dr. medic Denisa Babeanu-Bauer in Saarlouis-Fraulautern. Vorbereitung, Abrechnung, Terminabsagen und Hinweise für medizinische Notfälle.",
+    "Vorbereitung auf Ihren Termin, Abrechnung für Privatpatienten und Selbstzahler, Terminabsagen und Hinweise für medizinische Notfälle in der kardiologischen Privatpraxis Dr. medic Denisa Babeanu-Bauer in Saarlouis.",
 };
 
-export default function WichtigeInformationenPage() {
+export default function KontaktPage() {
   return (
     <section className="container-shell max-w-[900px] px-4 py-20 md:py-28">
-      <Reveal>
-        <div className="mb-14 md:mb-20">
-          <p className="kicker mb-4">Intro</p>
-          <h1 className="font-display text-[clamp(34px,4.4vw,58px)] leading-[1.08] tracking-[-0.015em] title-rule">
-            Ihr Herz in guten Händen.
-          </h1>
-          <p className="mt-7 font-display text-[clamp(20px,2.1vw,26px)] text-gold leading-[1.4]">
-            Moderne Kardiologie. Persönliche Betreuung. Individuelle Medizin.
-          </p>
-
-          <div className="mt-9 space-y-5 text-[17px] md:text-[18px] leading-[1.75] text-ink/85">
-            <p>
-              Herzlich willkommen in meiner kardiologischen Privatpraxis in
-              Saarlouis-Fraulautern.
-            </p>
-            <p>
-              Als Fachärztin für Innere Medizin und Kardiologie verbinde ich
-              langjährige klinische und ambulante Erfahrung mit moderner
-              kardiologischer Diagnostik und einer individuellen,
-              patientenorientierten Betreuung.
-            </p>
-            <p>
-              Mein Anspruch ist es, Herz-Kreislauf-Erkrankungen frühzeitig zu
-              erkennen, bestehende Erkrankungen sorgfältig zu begleiten und
-              gemeinsam mit Ihnen ein auf Ihre Bedürfnisse abgestimmtes
-              Behandlungskonzept zu entwickeln.
-            </p>
-            <p>
-              Ein besonderer Schwerpunkt liegt auf der modernen
-              Echokardiographie einschließlich Speckle-Tracking, der
-              Diagnostik komplexer Herzerkrankungen sowie der kardiologischen
-              Vorsorge und langfristigen Nachsorge.
-            </p>
-            <p className="text-ink">
-              Im Mittelpunkt stehen Sie, mit Ihrer Gesundheit, Ihren Fragen
-              und Ihren individuellen Bedürfnissen.
-            </p>
-          </div>
-        </div>
-      </Reveal>
-
       <Reveal>
         <section className="mb-14 md:mb-20">
           <p className="kicker mb-3">Gut vorbereitet zu Ihrem Termin</p>

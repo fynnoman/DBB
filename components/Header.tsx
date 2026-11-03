@@ -15,7 +15,8 @@ type MenuLink = {
 
 const menuLinks: MenuLink[] = [
   { href: "/", label: "Home", group: "Praxis" },
-  { href: "/wichtige-informationen", label: "Wichtige Informationen", group: "Praxis" },
+  { href: "/ueber-mich", label: "Über mich", group: "Praxis" },
+  { href: "/kontakt", label: "Kontakt", group: "Praxis" },
   { href: "/datenschutz", label: "Datenschutz", group: "Rechtliches" },
   { href: "/impressum", label: "Impressum", group: "Rechtliches" },
   { href: "/barrierefreiheit", label: "Barrierefreiheit", group: "Rechtliches" },

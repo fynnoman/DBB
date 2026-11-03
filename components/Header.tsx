@@ -14,22 +14,11 @@ type MenuLink = {
 };
 
 const menuLinks: MenuLink[] = [
-  { href: "/", label: "Startseite", group: "Praxis" },
-  { href: "/aerztin", label: "Über mich", group: "Praxis" },
-  { href: "/praxis", label: "Praxis", group: "Praxis" },
-  { href: "/leistungen", label: "Leistungen", group: "Praxis" },
-  { href: "/kontakt", label: "Kontakt, Anfahrt & Terminbuchung", group: "Praxis" },
+  { href: "/", label: "Home", group: "Praxis" },
+  { href: "/wichtige-informationen", label: "Wichtige Informationen", group: "Praxis" },
   { href: "/datenschutz", label: "Datenschutz", group: "Rechtliches" },
   { href: "/impressum", label: "Impressum", group: "Rechtliches" },
   { href: "/barrierefreiheit", label: "Barrierefreiheit", group: "Rechtliches" },
-];
-
-const primaryNav = [
-  { href: "/", label: "Startseite" },
-  { href: "/aerztin", label: "Über mich" },
-  { href: "/praxis", label: "Praxis" },
-  { href: "/leistungen", label: "Leistungen" },
-  { href: "/kontakt", label: "Kontakt" },
 ];
 
 export default function Header() {
@@ -71,13 +60,13 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-[1000] transition-[background,border-color,box-shadow] duration-500 ease-editorial ${
+      className={`sticky top-0 z-[1000] transition-[background,box-shadow] duration-500 ease-editorial ${
         scrolled
-          ? "bg-white/98 border-b border-[rgba(183,154,98,0.45)] shadow-header backdrop-blur-md"
-          : "bg-white/95 border-b border-transparent backdrop-blur-sm"
+          ? "bg-white/98 shadow-header backdrop-blur-md"
+          : "bg-white/95 backdrop-blur-sm"
       }`}
     >
-      <div className="container-shell min-h-[76px] md:min-h-[88px] py-[11px] grid grid-cols-[minmax(0,1fr)_auto] lg:grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-3 md:gap-4 xl:gap-6">
+      <div className="container-shell min-h-[76px] md:min-h-[88px] py-[11px] grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 md:gap-4 xl:gap-6">
         {/* Brand */}
         <Link
           href="/"
@@ -103,30 +92,6 @@ export default function Header() {
             </span>
           </span>
         </Link>
-
-        {/* Desktop primary nav */}
-        <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-[13px] xl:text-[14px] text-ink/85">
-          {primaryNav.map((item) => {
-            const active =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname === item.href ||
-                  (item.href !== "/" && pathname?.startsWith(item.href));
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`relative py-1 transition-colors hover:text-ink after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-px after:bg-gold after:origin-left after:transition-transform after:duration-500 after:ease-editorial ${
-                  active
-                    ? "text-ink after:scale-x-100"
-                    : "after:scale-x-0 hover:after:scale-x-100"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
 
         {/* Actions */}
         <div className="flex items-center gap-1.5 md:gap-2 flex-shrink-0">
@@ -207,7 +172,65 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* ECG line as the bottom border of the navbar */}
+      <div className="ecg-navbar" aria-hidden>
+        <div className="ecg-navbar__scroll">
+          <EcgWave />
+          <EcgWave />
+        </div>
+      </div>
     </header>
+  );
+}
+
+function EcgWave() {
+  return (
+    <svg
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+      aria-hidden
+      className="text-gold"
+    >
+      <defs>
+        <linearGradient id="ecgFade" x1="0" x2="1">
+          <stop offset="0%" stopColor="currentColor" stopOpacity="0" />
+          <stop offset="18%" stopColor="currentColor" stopOpacity="0.9" />
+          <stop offset="82%" stopColor="currentColor" stopOpacity="0.9" />
+          <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      {/* Baseline */}
+      <line
+        x1="0"
+        y1="60"
+        x2="1200"
+        y2="60"
+        stroke="url(#ecgFade)"
+        strokeWidth="1"
+        opacity="0.55"
+      />
+      {/* Single cardiac complex per cycle: round P-wave close to spike, large QRS spike,
+          then a longer flat gap before the next cycle (wave further away). */}
+      <path
+        d="M0,60 L240,60
+           Q275,54 310,60
+           L336,60 L343,20 L350,100 L357,60
+           L600,60
+           Q635,54 670,60
+           L696,60 L703,20 L710,100 L717,60
+           L960,60
+           Q995,54 1030,60
+           L1056,60 L1063,20 L1070,100 L1077,60
+           L1200,60"
+        fill="none"
+        stroke="url(#ecgFade)"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.95"
+      />
+    </svg>
   );
 }
 

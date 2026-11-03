@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { SectionTitle } from "@/components/SectionTitle";
 import { Stagger, StaggerItem } from "@/components/Reveal";
 
 const rooms = [
@@ -17,7 +16,11 @@ export default function Praxis() {
   return (
     <section id="praxis" className="relative cv-auto">
       <div className="container-shell max-w-[1440px] py-[72px] md:py-[96px] px-4">
-        <SectionTitle kicker="Praxisräume" />
+        <div className="max-w-[900px] mb-9 md:mb-10">
+          <h2 className="text-[clamp(32px,3.6vw,44px)] tracking-[0.08em] uppercase font-extrabold text-gold leading-[1.1]">
+            Praxisräume
+          </h2>
+        </div>
 
         <Stagger className="grid md:grid-cols-2 gap-5 md:gap-6">
           {rooms.map((room, i) => (

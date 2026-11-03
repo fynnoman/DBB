@@ -10,7 +10,7 @@ export const site = {
     district: "Fraulautern",
   },
   phone: "+49 6831 00 00 00",
-  email: "kontakt@dbb-kardio.de",
+  email: "info@kardiopraxis-saarlouis.de",
   copyrightYear: 2026,
   serviceArea: ["Saarlouis", "Merzig", "Saarbrücken"],
   mapsEmbed:

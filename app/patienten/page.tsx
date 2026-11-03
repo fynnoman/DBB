@@ -288,7 +288,7 @@ export default function PatientenPage() {
         lead="Wir klären alle Details vor Ihrem Termin. Telefonisch, per E-Mail oder über das Kontaktformular."
         primaryLabel="TERMIN ANFRAGEN"
         secondaryLabel="Zu den Leistungen"
-        secondaryHref="/leistungen"
+        secondaryHref="/#leistungen"
       />
     </>
   );

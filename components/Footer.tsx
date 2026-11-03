@@ -43,15 +43,15 @@ export default function Footer() {
           <FooterCol label="Öffnungszeiten">
             <ul className="text-[14px] leading-[1.7] text-muted space-y-1">
               <li className="flex justify-between gap-4">
-                <span>Mo bis Fr</span>
+                <span>Montag bis Freitag</span>
                 <span>8 bis 13 Uhr</span>
               </li>
               <li className="flex justify-between gap-4">
-                <span>Mo, Di, Do Nachmittag</span>
+                <span>Montag, Dienstag und Donnerstag Nachmittag</span>
                 <span>nach Vereinbarung</span>
               </li>
               <li className="flex justify-between gap-4">
-                <span>Sa und So</span>
+                <span>Samstag und Sonntag</span>
                 <span>Geschlossen</span>
               </li>
             </ul>

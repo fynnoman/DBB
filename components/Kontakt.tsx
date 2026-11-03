@@ -28,14 +28,13 @@ export default function Kontakt() {
               </ContactRow>
               <ContactRow label="Telefon">{site.phone}</ContactRow>
               <ContactRow label="E-Mail">{site.email}</ContactRow>
-              <div className="pt-4 mt-2">
-                <div className="text-[13px] tracking-[0.14em] font-extrabold uppercase text-forest mb-1.5">
+              <div className="mt-6 rounded-[16px] border-l-4 border-gold bg-gold-50/80 p-5">
+                <div className="text-[13px] tracking-[0.14em] font-extrabold uppercase text-gold-700 mb-1.5">
                   Terminabsage
                 </div>
-                <p className="text-[15px] leading-[1.6] text-ink m-0">
-                  Bitte sagen Sie Termine spätestens 24 Stunden vorher ab. Nicht
-                  oder zu spät abgesagte Termine müssen wir in Rechnung
-                  stellen.
+                <p className="text-[15px] leading-[1.6] text-ink m-0 font-medium">
+                  Sollten Sie den Termin nicht wahrnehmen können, bitten wir um
+                  eine Absage spätestens 24 Stunden vorher.
                 </p>
               </div>
             </div>
@@ -57,18 +56,22 @@ export default function Kontakt() {
                 Wir melden uns zeitnah persönlich zurück.
               </p>
 
-              <Field label="Name" name="name" type="text" required />
-              <Field label="E-Mail" name="email" type="email" required />
-              <Field label="Telefon (optional)" name="phone" type="tel" />
+              <Field label="Name *" name="name" type="text" required />
+              <Field label="E-Mail *" name="email" type="email" required />
+              <Field label="Telefon *" name="phone" type="tel" required />
 
               <label className="block text-[13px] text-muted mt-3 mb-1.5">
-                Ihre Nachricht
+                Ihre Nachricht *
               </label>
               <textarea
                 name="message"
                 required
+                aria-required="true"
                 className="w-full border border-line rounded-[12px] px-3.5 py-3.5 min-h-[130px] bg-white focus:border-gold focus:outline-none transition-colors"
               />
+              <p className="text-[12px] text-muted mt-2">
+                * Pflichtfeld
+              </p>
 
               <button
                 type="submit"
@@ -102,8 +105,8 @@ export default function Kontakt() {
                 Stadtteil {site.address.district}.
               </p>
             </div>
-            <div className="mt-6 grid gap-0 lg:grid-cols-[1.3fr_1fr]">
-              <div className="relative aspect-[16/9] lg:aspect-auto lg:min-h-[360px] w-full">
+            <div className="mt-6">
+              <div className="relative aspect-[16/9] w-full">
                 <iframe
                   src={site.mapsEmbed}
                   title="Karte zur Praxis"
@@ -112,19 +115,6 @@ export default function Kontakt() {
                   className="absolute inset-0 h-full w-full border-0"
                   allowFullScreen
                 />
-              </div>
-              <div className="px-6 py-7 md:px-8 md:py-8 border-t lg:border-t-0 lg:border-l border-line bg-white/60">
-                <ul className="divide-y divide-line text-[15px] md:text-[16px] leading-[1.6]">
-                  <AnfahrtRow label="Parken">
-                    Kostenlose Parkplätze im Hinterhof. Zufahrt über die
-                    Brückenstraße.
-                  </AnfahrtRow>
-                  <AnfahrtRow label="Aufzug">Aufzug im Haus vorhanden.</AnfahrtRow>
-                  <AnfahrtRow label="Zug">Bahnhof Saarlouis.</AnfahrtRow>
-                  <AnfahrtRow label="Bus">
-                    Bushaltestelle am Bahnhof Saarlouis.
-                  </AnfahrtRow>
-                </ul>
               </div>
             </div>
             <div className="flex items-center justify-end px-6 pb-6 md:px-8 md:pb-8 pt-4">
@@ -158,23 +148,6 @@ function ContactRow({
       </div>
       <div className="text-muted">{children}</div>
     </div>
-  );
-}
-
-function AnfahrtRow({
-  label,
-  children,
-}: {
-  label: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <li className="py-3 first:pt-0 last:pb-0">
-      <div className="text-[12px] tracking-[0.14em] font-extrabold uppercase text-gold mb-1">
-        {label}
-      </div>
-      <div className="text-ink">{children}</div>
-    </li>
   );
 }
 

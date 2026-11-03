@@ -4,12 +4,10 @@ import { Stagger, StaggerItem } from "@/components/Reveal";
 const items = [
   {
     kicker: "Privatpatienten",
-    title: "Private Krankenversicherung",
     body: "Abrechnung der ärztlichen Leistungen nach der Gebührenordnung für Ärzte (GOÄ).",
   },
   {
     kicker: "Selbstzahler",
-    title: "Selbstzahler",
     body: "Auch gesetzlich versicherte Patientinnen und Patienten sind willkommen. Die Behandlung wird privatärztlich nach GOÄ abgerechnet.",
   },
 ];
@@ -25,11 +23,10 @@ export default function Abrechnung() {
 
         <Stagger className="grid md:grid-cols-2 gap-4 md:gap-5">
           {items.map((it) => (
-            <StaggerItem key={it.title}>
+            <StaggerItem key={it.kicker}>
               <article className="h-full bg-white/60 border border-line rounded-[20px] p-7 card-lift">
-                <div className="kicker">{it.kicker}</div>
-                <h3 className="font-display text-[24px] mt-2.5 mb-2.5">
-                  {it.title}
+                <h3 className="font-display text-[24px] mt-0 mb-3">
+                  {it.kicker}
                 </h3>
                 <p className="text-muted leading-[1.65] m-0">{it.body}</p>
               </article>

@@ -2,7 +2,10 @@ import { Reveal } from "@/components/Reveal";
 
 const hours = [
   { label: "Montag bis Freitag", value: "8 bis 13 Uhr" },
-  { label: "Mo, Di, Do Nachmittag", value: "nach Vereinbarung" },
+  {
+    label: "Montag, Dienstag und Donnerstag Nachmittag",
+    value: "nach Vereinbarung",
+  },
   { label: "Samstag und Sonntag", value: "Geschlossen" },
 ];
 

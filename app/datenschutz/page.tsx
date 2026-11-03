@@ -13,12 +13,8 @@ export default function DatenschutzPage() {
       <div className="mt-10 space-y-6 text-muted leading-[1.75]">
         <p>
           Der Schutz Ihrer personenbezogenen Daten hat für uns höchste
-          Priorität. Diese Datenschutzerklärung informiert Sie über Art,
-          Umfang und Zwecke der Verarbeitung personenbezogener Daten im Rahmen
-          unserer Website und der Kontaktaufnahme.
-        </p>
-        <p className="italic text-ink/70">
-          Vollständiger Text wird zum Praxisstart ergänzt.
+          Priorität. Die Praxis ist zudem barrierefrei über den Hinterhof
+          erreichbar.
         </p>
       </div>
     </section>

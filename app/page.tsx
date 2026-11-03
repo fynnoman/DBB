@@ -13,8 +13,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Sprechzeiten />
       <PortraitIntro />
+      <Sprechzeiten />
 
       <div className="border-t border-line bg-white/[0.62]">
         <Leistungen />

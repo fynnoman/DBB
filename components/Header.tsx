@@ -185,9 +185,15 @@ export default function Header() {
 }
 
 function EcgWave() {
+  // Realistic cardiac complex per cycle (width 400 within a 1200 viewBox → 3 cycles):
+  //   flat baseline → P-wave (round bump) → short PR segment →
+  //   small Q dip → tall R spike → deep S dip → return to baseline →
+  //   long ST segment (T-wave kept well away from the spike) →
+  //   T-wave (round bump) → flat baseline.
+  // viewBox is kept shallow so the R spike visually dominates even in a thin bar.
   return (
     <svg
-      viewBox="0 0 1200 120"
+      viewBox="0 0 1200 60"
       preserveAspectRatio="none"
       aria-hidden
       className="text-gold"
@@ -195,40 +201,49 @@ function EcgWave() {
       <defs>
         <linearGradient id="ecgFade" x1="0" x2="1">
           <stop offset="0%" stopColor="currentColor" stopOpacity="0" />
-          <stop offset="18%" stopColor="currentColor" stopOpacity="0.9" />
-          <stop offset="82%" stopColor="currentColor" stopOpacity="0.9" />
+          <stop offset="15%" stopColor="currentColor" stopOpacity="1" />
+          <stop offset="85%" stopColor="currentColor" stopOpacity="1" />
           <stop offset="100%" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
       </defs>
-      {/* Baseline */}
-      <line
-        x1="0"
-        y1="60"
-        x2="1200"
-        y2="60"
-        stroke="url(#ecgFade)"
-        strokeWidth="1"
-        opacity="0.55"
-      />
-      {/* Single cardiac complex per cycle: round P-wave close to spike, large QRS spike,
-          then a longer flat gap before the next cycle (wave further away). */}
       <path
-        d="M0,60 L240,60
-           Q275,54 310,60
-           L336,60 L343,20 L350,100 L357,60
-           L600,60
-           Q635,54 670,60
-           L696,60 L703,20 L710,100 L717,60
-           L960,60
-           Q995,54 1030,60
-           L1056,60 L1063,20 L1070,100 L1077,60
-           L1200,60"
+        d="M0,30 L60,30
+           Q78,22 96,30
+           L130,30
+           L138,34 L142,2 L146,56 L150,30
+           L220,30
+           Q238,20 256,30
+           L300,30
+
+           L360,30
+           Q378,22 396,30
+           L430,30
+           L438,34 L442,2 L446,56 L450,30
+           L520,30
+           Q538,20 556,30
+           L600,30
+
+           L660,30
+           Q678,22 696,30
+           L730,30
+           L738,34 L742,2 L746,56 L750,30
+           L820,30
+           Q838,20 856,30
+           L900,30
+
+           L960,30
+           Q978,22 996,30
+           L1030,30
+           L1038,34 L1042,2 L1046,56 L1050,30
+           L1120,30
+           Q1138,20 1156,30
+           L1200,30"
         fill="none"
         stroke="url(#ecgFade)"
         strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity="0.95"
+        vectorEffect="non-scaling-stroke"
       />
     </svg>
   );

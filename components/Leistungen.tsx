@@ -44,6 +44,7 @@ const groups: Group[] = [
       "Kardio-Rheumatologie",
       "Frauenherzsprechstunde",
       "Abklärung seltener Herzerkrankungen",
+      "Labordiagnostik",
     ],
   },
 ];
@@ -82,7 +83,7 @@ const checkups: Checkup[] = [
       "körperliche Untersuchung",
       "12-Kanal-EKG mit Vektorkardiographie",
       "Echokardiographie inkl. Speckle Tracking Analyse",
-      "Stressechokardiographie",
+      "Belastungs-EKG oder Stressechokardiographie",
       "Dopplersonographie der Halsgefäße",
       "Abschlussgespräch",
       "ärztlicher Befundbericht",

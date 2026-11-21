@@ -131,6 +131,110 @@ export default function ImpressumPage() {
             externer Links sind ausschließlich deren Betreiber verantwortlich.
           </p>
         </div>
+
+        <div>
+          <p className="kicker">Rechtlicher Hinweis</p>
+          <p className="mt-2 text-ink">Inhalt des Online-Angebotes</p>
+          <p className="mt-2">
+            Die auf unseren Internetseiten zur Verfügung gestellten Inhalte sind
+            unseres Erachtens verlässlich und sorgfältig erarbeitet. Wir
+            übernehmen jedoch keine Gewährleistung für die Vollständigkeit,
+            Richtigkeit und Genauigkeit sämtlicher Inhalte auf den Webseiten.
+            Wir übernehmen keinerlei Gewähr für die Aktualität, Korrektheit,
+            Vollständigkeit oder Qualität der bereitgestellten Informationen.
+            Haftungsansprüche gegen den Autor, welche sich auf Schäden
+            materieller oder ideeller Art beziehen, die durch die Nutzung oder
+            Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung
+            fehlerhafter und unvollständiger Informationen verursacht wurden,
+            sind grundsätzlich ausgeschlossen, sofern seitens des Autors kein
+            nachweislich vorsätzliches oder grob fahrlässiges Verschulden
+            vorliegt.
+          </p>
+          <p className="mt-4">
+            Die auf unserer Homepage für Sie bereitgestellten
+            Gesundheitsinformationen dürfen weder als Ersatz für professionelle
+            Beratung und/oder Behandlung durch approbierte Ärztinnen und Ärzte
+            angesehen werden, noch dürfen aufgrund der Informationen
+            eigenständig Diagnosen gestellt oder Behandlungen begonnen oder
+            abgesetzt werden. Beachten Sie bitte, dass unsere
+            Gesundheitsinformationen nicht den Arztbesuch ersetzen.
+          </p>
+          <p className="mt-4">
+            Alle Angebote sind frei bleibend und unverbindlich. Wir behalten es
+            uns ausdrücklich vor, Teile der Seiten oder das gesamte Angebot
+            ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu löschen
+            oder die Veröffentlichung zeitweise oder endgültig einzustellen.
+          </p>
+        </div>
+
+        <div>
+          <p className="kicker">Verweise und Links</p>
+          <p className="mt-2">
+            Trotz sorgfältiger Kontrolle externer Links übernehmen wir keine
+            Haftung für deren Inhalte. Für den Inhalt verlinkter Stellen sind
+            ausschließlich deren Betreiber verantwortlich. Bei direkten oder
+            indirekten Verweisen auf fremde Internet-Seiten („Links"), die
+            außerhalb des Verantwortungsbereiches des Autors liegen, würde eine
+            Haftungsverpflichtung ausschließlich in dem Fall in Kraft treten,
+            in dem wir von den Inhalten Kenntnis hätten und es uns technisch
+            möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger
+            Inhalte zu verhindern. Wir erklären hiermit ausdrücklich, dass zum
+            Zeitpunkt der Link-Setzung keine illegalen Inhalte auf den zu
+            verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige
+            Gestaltung, die Inhalte oder die Urheberschaft der
+            gelinkten/verknüpften Seiten haben wir keinerlei Einfluss. Deshalb
+            distanzieren wir uns hiermit ausdrücklich von allen Inhalten aller
+            gelinkten/verknüpften Seiten, die nach der Link-Setzung verändert
+            wurden. Diese Feststellung gilt für alle innerhalb des eigenen
+            Internet-Angebotes gesetzten Links und Verweise sowie für
+            Fremdeinträge in vom Autor eingerichteten Gästebüchern,
+            Diskussionsforen und Mailing-Listen. Für illegale, fehlerhafte oder
+            unvollständige Inhalte und insbesondere für Schäden, die aus der
+            Nutzung oder Nichtnutzung solcherart dargebotenen Informationen
+            entstehen, haftet allein der Anbieter der Seite, auf welche
+            verwiesen wurde, nicht derjenige, der über Links auf die jeweilige
+            Veröffentlichung lediglich verweist.
+          </p>
+        </div>
+
+        <div>
+          <p className="kicker">Urheber- und Kennzeichenrecht</p>
+          <p className="mt-2">
+            Wir sind bestrebt, in allen Publikationen die Urheberrechte der
+            verwendeten Grafiken, Tondokumente, Videosequenzen und Texte zu
+            beachten, selbst erstellte Grafiken, Tondokumente, Videosequenzen
+            und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente,
+            Videosequenzen und Texte zurückzugreifen. Alle innerhalb des
+            Internet-Angebotes genannten und ggf. durch Dritte geschützten
+            Marken- und Warenzeichen unterliegen uneingeschränkt den
+            Bestimmungen des jeweils gültigen Kennzeichenrechts und den
+            Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein
+            aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass
+            Markenzeichen nicht durch Rechte Dritter geschützt sind. Das
+            Copyright für veröffentlichte, vom Autor selbst erstellte Objekte
+            bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder
+            Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte
+            in anderen elektronischen oder gedruckten Publikationen ist ohne
+            ausdrückliche Zustimmung des Autors nicht gestattet.
+          </p>
+        </div>
+
+        <div>
+          <p className="kicker">Hinweis zum Allgemeinen Gleichbehandlungsgesetz (AGG)</p>
+          <p className="mt-2">
+            Aus Gründen der leichteren Lesbarkeit wird teilweise auf eine
+            geschlechterspezifische Differenzierung verzichtet. Entsprechende
+            Begriffe gelten im Sinne der Gleichbehandlung für alle Geschlechter.
+          </p>
+        </div>
+
+        <div>
+          <p className="kicker">Copyright</p>
+          <p className="mt-2">
+            Vervielfältigung der hier veröffentlichten Inhalte und Grafiken nur
+            mit ausdrücklicher schriftlicher Genehmigung.
+          </p>
+        </div>
       </div>
     </section>
   );

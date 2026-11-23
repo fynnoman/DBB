@@ -60,10 +60,17 @@ export default function Hero() {
           </h1>
 
           <p
+            className="font-display italic text-gold mt-3 md:mt-4 text-[clamp(15px,1.4vw,18px)] tracking-[0.005em] animate-floatIn"
+            style={{ animationDelay: "0.4s" }}
+          >
+            Fachärztin für Innere Medizin und Kardiologie
+          </p>
+
+          <p
             className="max-w-[820px] mx-auto mt-5 md:mt-6 mb-6 md:mb-7 text-[18px] md:text-[18px] leading-[1.7] text-[#4a4743] animate-floatIn"
             style={{ animationDelay: "0.55s" }}
           >
-            Für Privatpatienten und Selbstzahler.
+            Für Privatpatienten und Selbstzahler
           </p>
 
           <div

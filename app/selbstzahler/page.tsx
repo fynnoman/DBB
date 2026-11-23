@@ -26,7 +26,7 @@ const flow = [
     kicker: "Untersuchung",
     title: "Identisch zur privatärztlichen Sprechstunde.",
     body:
-      "Ablauf und Diagnostik unterscheiden sich nicht von unseren privatärztlichen Terminen. Sie erhalten dieselbe Zeit, dieselben Untersuchungen und denselben Bericht.",
+      "Ablauf und Diagnostik unterscheiden sich nicht von den privatärztlichen Terminen. Sie erhalten dieselbe Zeit, dieselben Untersuchungen und denselben Bericht.",
   },
   {
     numeral: "03",
@@ -88,7 +88,7 @@ export default function SelbstzahlerPage() {
             <span className="italic text-muted">ein klarer Weg.</span>
           </>
         }
-        intro="Als Selbstzahlerin oder Selbstzahler durchlaufen Sie denselben ärztlichen Weg wie unsere Privatpatienten. Mit demselben Standard und einer transparenten Kostenstruktur."
+        intro="Als Selbstzahlerin oder Selbstzahler durchlaufen Sie denselben ärztlichen Weg wie die Privatpatientinnen und Privatpatienten der Praxis. Mit demselben Standard und einer transparenten Kostenstruktur."
         items={flow}
       />
 

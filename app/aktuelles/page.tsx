@@ -154,7 +154,7 @@ export default function AktuellesPage() {
 
       <PageCta
         title="Frage zur Erreichbarkeit?"
-        lead="Für organisatorische Rückfragen steht Ihnen unser Kontaktformular jederzeit zur Verfügung."
+        lead="Für organisatorische Rückfragen steht Ihnen das Kontaktformular der Praxis jederzeit zur Verfügung."
         primaryLabel="KONTAKT AUFNEHMEN"
       />
     </>

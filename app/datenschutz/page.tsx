@@ -8,9 +8,6 @@ export default function DatenschutzPage() {
   return (
     <section className="container-shell max-w-3xl py-24 md:py-32">
       <p className="kicker mb-3">Datenschutz</p>
-      <h1 className="font-display text-[32px] md:text-[38px] text-ink leading-[1.2]">
-        Datenschutzerklärung
-      </h1>
 
       <div className="mt-10 space-y-8 text-muted leading-[1.75] text-[16px]">
         <p>
@@ -25,12 +22,13 @@ export default function DatenschutzPage() {
           Datenschutzerklärung über die Ihnen zustehenden Rechte aufgeklärt.
         </p>
         <p>
-          Im Allgemeinen ist es für die Nutzung unserer Internetseite nicht
+          Im Allgemeinen ist es für die Nutzung dieser Internetseite nicht
           erforderlich, dass Sie personenbezogene Daten angeben. Um im
-          Einzelfall jedoch unsere Services anbieten zu können, benötigen wir
-          ggf. Ihre personenbezogenen Daten, zum Beispiel bei der Zusendung von
-          Informationsmaterial sowie auch für die Beantwortung individueller
-          Anfragen oder Anmeldung zu unseren Online-Services. Ist die
+          Einzelfall jedoch die angebotenen Services anbieten zu können,
+          benötigen wir ggf. Ihre personenbezogenen Daten, zum Beispiel bei
+          der Zusendung von Informationsmaterial sowie auch für die
+          Beantwortung individueller Anfragen oder Anmeldung zu den
+          Online-Services. Ist die
           Verarbeitung personenbezogener Daten erforderlich und besteht für
           eine solche Verarbeitung keine gesetzliche Grundlage, holen wir
           generell die Einwilligung der betroffenen Person ein.
@@ -79,13 +77,13 @@ export default function DatenschutzPage() {
             Rechtsgrundlage. Dies gilt auch für Verarbeitungsvorgänge, die zur
             Durchführung vorvertraglicher Maßnahmen erforderlich sind. Soweit
             eine Verarbeitung personenbezogener Daten zur Erfüllung einer
-            rechtlichen Verpflichtung erforderlich ist, der unsere Praxis
+            rechtlichen Verpflichtung erforderlich ist, der die Praxis
             unterliegt, dient Art. 6 Abs. 1 lit. c DSGVO als Rechtsgrundlage.
             Für den Fall, dass lebenswichtige Interessen der betroffenen Person
             oder einer anderen natürlichen Person eine Verarbeitung
             personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1
             lit. d DSGVO als Rechtsgrundlage. Ist die Verarbeitung zur Wahrung
-            eines berechtigten Interesses unserer Praxis oder eines Dritten
+            eines berechtigten Interesses der Praxis oder eines Dritten
             erforderlich und überwiegen die Interessen, Grundrechte und
             Grundfreiheiten des Betroffenen das erstgenannte Interesse nicht,
             so dient Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage für die
@@ -96,15 +94,15 @@ export default function DatenschutzPage() {
         <div>
           <p className="kicker">Log-Files</p>
           <p className="mt-2">
-            Beim Zugriff auf unsere Internetseiten übermittelt Ihr
-            Internet-Browser automatisch Daten an unseren Webserver. Hierbei
+            Beim Zugriff auf diese Internetseiten übermittelt Ihr
+            Internet-Browser automatisch Daten an den Webserver. Hierbei
             handelt es sich unter anderem um Browsertyp und Version, verwendetes
             Betriebssystem, verweisende URL, Name der abgerufenen Datei,
             übertragene Datenmenge, Datum und Uhrzeit des Zugriffs sowie Ihre
             IP-Adresse. Die Erhebung und Speicherung erfolgt ausschließlich in
             anonymisierter oder pseudonymisierter Form und lässt keinen
             Rückschluss auf Sie als natürliche Person zu. Sie werden getrennt
-            von anderen Daten, die Sie im Rahmen der Nutzung unseres
+            von anderen Daten, die Sie im Rahmen der Nutzung des
             Internetangebots eingeben, gespeichert. Ihre Auswertung erfolgt nur
             zu statistischen Zwecken.
           </p>
@@ -119,18 +117,18 @@ export default function DatenschutzPage() {
             Bei Cookies handelt es sich um spezifische Identifikationszeichen,
             die auf die Festplatte Ihres Computers oder sonstige Endgeräte
             übertragen werden können, um die ordnungsgemäße Funktionalität
-            unserer Internetseiten sicherzustellen.
+            dieser Internetseiten sicherzustellen.
           </p>
           <p className="mt-4">Cookies können von uns zu weiteren Zwecken verwendet werden, insbesondere können wir:</p>
           <ul className="mt-2 list-disc pl-6 space-y-2">
             <li>
-              Sie automatisch erkennen, wenn Sie sich auf unserer Internetseite
+              Sie automatisch erkennen, wenn Sie sich auf dieser Internetseite
               anmelden. Dadurch besteht die Möglichkeit, Ihnen gezielte
               Hinweise zu geben sowie ggf. weitere Funktionen und Dienste
               anzubieten.
             </li>
             <li>
-              auf unserer Internetseite Inhalte darstellen, die speziell auf
+              auf dieser Internetseite Inhalte darstellen, die speziell auf
               Ihre Interessen zugeschnitten sind.
             </li>
             <li>
@@ -141,7 +139,7 @@ export default function DatenschutzPage() {
             <li>die Sicherheit verbessern.</li>
           </ul>
           <p className="mt-4">
-            Beim Aufruf unserer Internetseiten werden Sie um Einwilligung in
+            Beim Aufruf dieser Internetseiten werden Sie um Einwilligung in
             das Setzen von Cookies gebeten. Sie haben die Möglichkeit, nur
             notwendige Cookies zuzulassen oder auch Cookies zu akzeptieren, die
             weitergehenden Zwecken dienen.
@@ -166,7 +164,7 @@ export default function DatenschutzPage() {
         <div>
           <p className="kicker">Google Maps</p>
           <p className="mt-2">
-            Auf unserer Internetseite verwenden wir die Google Maps API, um
+            Auf dieser Internetseite verwenden wir die Google Maps API, um
             geographische Informationen visuell darzustellen. Google Maps ist
             ein Kartendienst von Google Ireland Limited, Gordon House, Barrow
             Street, Dublin 4, Irland. Bei der Nutzung von Google Maps werden
@@ -190,23 +188,26 @@ export default function DatenschutzPage() {
         <div>
           <p className="kicker">Social Media</p>
           <p className="mt-2">
-            Auf unseren Seiten sind keine Plugins eingebunden, die durch
-            soziale Netzwerke wie Facebook, Instagram, X, LinkedIn oder
-            WhatsApp zur Verfügung gestellt werden. Eine automatische
-            Übertragung von Nutzerdaten an die Betreiber dieser Plattformen
-            findet auf unseren Seiten nicht statt. Sofern wir überhaupt
-            Social-Buttons einsetzen, stellen diese den direkten Kontakt
-            zwischen den Netzwerken und Nutzern erst dann her, wenn der Nutzer
-            aktiv auf einen dieser Buttons klickt.
+            Auf dieser Website sind keine Social-Media-Plugins (etwa Like-,
+            Share- oder Follow-Buttons) eingebunden, die beim Aufruf einer
+            Seite automatisch Daten an soziale Netzwerke übertragen.
+          </p>
+          <p className="mt-2">
+            Im Footer dieser Website befindet sich ein einfacher Link zum
+            LinkedIn-Profil von {site.fullName}. Dieser Link überträgt
+            keine personenbezogenen Daten an LinkedIn, solange Sie ihn
+            nicht aktiv anklicken. Sobald Sie ihn anklicken, verlassen Sie
+            diese Website; es gelten dann die Datenschutzbestimmungen von
+            LinkedIn (LinkedIn Ireland Unlimited Company, Wilton Place,
+            Dublin 2, Irland).
           </p>
         </div>
 
         <div>
-          <p className="kicker">Kontaktaufnahme über unsere Website</p>
+          <p className="kicker">Kontaktaufnahme über diese Website</p>
           <p className="mt-2">
-            Über die Kontaktformulare und Kontaktwege auf unserer Website
-            (Terminwunsch, Rezept- oder Überweisungsanfrage, allgemeine
-            Nachricht) können Sie direkt mit uns Kontakt aufnehmen. Wir
+            Über die Kontaktformulare und Kontaktwege auf dieser Website
+            können Sie direkt mit uns Kontakt aufnehmen. Wir
             erheben, verarbeiten, speichern und nutzen die von Ihnen über das
             Formular oder per E-Mail mitgeteilten Kontaktdaten und
             Informationen ausschließlich für die Bearbeitung Ihres konkreten
@@ -244,7 +245,7 @@ export default function DatenschutzPage() {
             über Ihre bei uns gespeicherten Daten. Sie können jederzeit Ihre
             bei uns erhobenen Daten sperren, berichtigen oder löschen lassen
             und der anonymisierten oder pseudonymisierten Datenerhebung und
-            Datenspeicherung zu Optimierungszwecken unserer Internetseite
+            Datenspeicherung zu Optimierungszwecken dieser Internetseite
             widersprechen.
           </p>
           <p className="mt-2">
@@ -256,35 +257,9 @@ export default function DatenschutzPage() {
           </p>
           <p className="mt-2">
             Gemäß Art. 77 DSGVO haben Sie das Recht, sich bei einer
-            Aufsichtsbehörde (für die Praxis in {site.city} bei der
-            Landesbeauftragten für Datenschutz und Informationsfreiheit des
-            Saarlandes) zu beschweren, wenn Sie der Ansicht sind, dass die
-            Verarbeitung Ihrer personenbezogenen Daten rechtswidrig erfolgt.
-          </p>
-        </div>
-
-        <div>
-          <p className="kicker">
-            Datenschutz bei Bewerbungen und im Bewerbungsverfahren
-          </p>
-          <p className="mt-2">
-            Wir erheben und verarbeiten die personenbezogenen Daten von
-            Bewerbenden zum Zwecke der Abwicklung des Bewerbungsverfahrens. Die
-            Verarbeitung kann auch auf elektronischem Wege erfolgen. Dies ist
-            insbesondere dann der Fall, wenn ein Bewerber oder eine Bewerberin
-            entsprechende Bewerbungsunterlagen auf dem elektronischen Wege,
-            beispielsweise per E-Mail, an den für die Verarbeitung
-            Verantwortlichen übermittelt. Schließen wir einen Anstellungsvertrag
-            mit einem Bewerber oder einer Bewerberin, werden die übermittelten
-            Daten zum Zwecke der Abwicklung des Beschäftigungsverhältnisses
-            unter Beachtung der gesetzlichen Vorschriften gespeichert. Wird von
-            uns kein Anstellungsvertrag geschlossen, so werden die
-            Bewerbungsunterlagen sechs Monate nach Bekanntgabe der
-            Absageentscheidung automatisch gelöscht, sofern einer Löschung
-            keine sonstigen berechtigten Interessen des für die Verarbeitung
-            Verantwortlichen entgegenstehen. Sonstiges berechtigtes Interesse
-            in diesem Sinne ist beispielsweise eine Beweispflicht in einem
-            Verfahren nach dem Allgemeinen Gleichbehandlungsgesetz (AGG).
+            zuständigen Datenschutzaufsichtsbehörde zu beschweren,
+            insbesondere bei der oder dem jeweiligen Landesbeauftragten
+            für Datenschutz.
           </p>
         </div>
 

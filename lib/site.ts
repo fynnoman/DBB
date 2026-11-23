@@ -9,7 +9,7 @@ export const site = {
     zipCity: "66740 Saarlouis",
     district: "Fraulautern",
   },
-  phone: "+49 6831 00 00 00",
+  phone: "+49 6831 9669990",
   email: "info@kardiopraxis-saarlouis.de",
   copyrightYear: 2026,
   serviceArea: ["Saarlouis", "Merzig", "Saarbrücken"],

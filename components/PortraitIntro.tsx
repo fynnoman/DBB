@@ -112,30 +112,6 @@ export default function PortraitIntro() {
                   guten Herzgesundheit zu begleiten.
                 </p>
               </div>
-
-              <div className="mt-12 pt-10 border-t border-line">
-                <p className="kicker mb-4">Persönliches</p>
-                <div className="space-y-5 text-[16px] md:text-[17px] leading-[1.8] text-ink/85">
-                  <p>
-                    Auch außerhalb der Medizin bin ich neugierig und
-                    vielseitig interessiert. Zu meinen Leidenschaften
-                    gehören Fernreisen, das Entdecken fremder Kulturen und
-                    das Kochen. Meine Freude am Reisen und an der Kulinarik
-                    teile ich gelegentlich auch auf meinem YouTube-Kanal.
-                  </p>
-                  <p>
-                    In jüngerer Zeit habe ich außerdem die Acrylmalerei für
-                    mich entdeckt. Dabei experimentiere ich gerne mit
-                    unterschiedlichen Stilrichtungen, Farben und Techniken.
-                    Einige meiner selbst gemalten Bilder finden Sie auch in
-                    den Räumlichkeiten meiner Praxis.
-                  </p>
-                  <p>
-                    Die kreative Beschäftigung bietet mir einen schönen
-                    Ausgleich zum medizinischen Berufsalltag.
-                  </p>
-                </div>
-              </div>
             </div>
           </motion.div>
         )}

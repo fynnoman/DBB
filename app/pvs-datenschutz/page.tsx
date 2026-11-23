@@ -110,7 +110,7 @@ export default function PvsDatenschutzPage() {
 
       <PullQuote author="Grundsatz" role="Datenschutz">
         Ohne Ihre Einwilligung geht kein Datensatz aus dieser Praxis. Das ist keine
-        Marketing-Formel, sondern die Grundlage unserer Arbeit.
+        Marketing-Formel, sondern die Grundlage der Arbeit in der Praxis.
       </PullQuote>
 
       <section className="border-t border-line bg-white/[0.62]">

@@ -136,8 +136,8 @@ export default function ImpressumPage() {
           <p className="kicker">Rechtlicher Hinweis</p>
           <p className="mt-2 text-ink">Inhalt des Online-Angebotes</p>
           <p className="mt-2">
-            Die auf unseren Internetseiten zur Verfügung gestellten Inhalte sind
-            unseres Erachtens verlässlich und sorgfältig erarbeitet. Wir
+            Die auf diesen Internetseiten zur Verfügung gestellten Inhalte sind
+            nach bestem Wissen verlässlich und sorgfältig erarbeitet. Wir
             übernehmen jedoch keine Gewährleistung für die Vollständigkeit,
             Richtigkeit und Genauigkeit sämtlicher Inhalte auf den Webseiten.
             Wir übernehmen keinerlei Gewähr für die Aktualität, Korrektheit,
@@ -151,13 +151,14 @@ export default function ImpressumPage() {
             vorliegt.
           </p>
           <p className="mt-4">
-            Die auf unserer Homepage für Sie bereitgestellten
+            Die auf dieser Homepage für Sie bereitgestellten
             Gesundheitsinformationen dürfen weder als Ersatz für professionelle
             Beratung und/oder Behandlung durch approbierte Ärztinnen und Ärzte
             angesehen werden, noch dürfen aufgrund der Informationen
             eigenständig Diagnosen gestellt oder Behandlungen begonnen oder
-            abgesetzt werden. Beachten Sie bitte, dass unsere
-            Gesundheitsinformationen nicht den Arztbesuch ersetzen.
+            abgesetzt werden. Beachten Sie bitte, dass die hier
+            bereitgestellten Gesundheitsinformationen nicht den Arztbesuch
+            ersetzen.
           </p>
           <p className="mt-4">
             Alle Angebote sind frei bleibend und unverbindlich. Wir behalten es
@@ -198,28 +199,6 @@ export default function ImpressumPage() {
         </div>
 
         <div>
-          <p className="kicker">Urheber- und Kennzeichenrecht</p>
-          <p className="mt-2">
-            Wir sind bestrebt, in allen Publikationen die Urheberrechte der
-            verwendeten Grafiken, Tondokumente, Videosequenzen und Texte zu
-            beachten, selbst erstellte Grafiken, Tondokumente, Videosequenzen
-            und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente,
-            Videosequenzen und Texte zurückzugreifen. Alle innerhalb des
-            Internet-Angebotes genannten und ggf. durch Dritte geschützten
-            Marken- und Warenzeichen unterliegen uneingeschränkt den
-            Bestimmungen des jeweils gültigen Kennzeichenrechts und den
-            Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein
-            aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass
-            Markenzeichen nicht durch Rechte Dritter geschützt sind. Das
-            Copyright für veröffentlichte, vom Autor selbst erstellte Objekte
-            bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder
-            Verwendung solcher Grafiken, Tondokumente, Videosequenzen und Texte
-            in anderen elektronischen oder gedruckten Publikationen ist ohne
-            ausdrückliche Zustimmung des Autors nicht gestattet.
-          </p>
-        </div>
-
-        <div>
           <p className="kicker">Hinweis zum Allgemeinen Gleichbehandlungsgesetz (AGG)</p>
           <p className="mt-2">
             Aus Gründen der leichteren Lesbarkeit wird teilweise auf eine
@@ -229,10 +208,12 @@ export default function ImpressumPage() {
         </div>
 
         <div>
-          <p className="kicker">Copyright</p>
+          <p className="kicker">Urheber- und Kennzeichenrecht / Copyright</p>
           <p className="mt-2">
-            Vervielfältigung der hier veröffentlichten Inhalte und Grafiken nur
-            mit ausdrücklicher schriftlicher Genehmigung.
+            Alle auf dieser Website verwendeten Grafiken, Bilder und Texte
+            sind selbst erstellt. Die Rechte daran liegen bei{" "}
+            {site.fullName}. Eine Vervielfältigung oder Verwendung ist nur
+            mit ausdrücklicher schriftlicher Genehmigung gestattet.
           </p>
         </div>
       </div>

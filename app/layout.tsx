@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BookingBar from "@/components/BookingBar";
 import FloatingActions from "@/components/FloatingActions";
+import ScrollNav from "@/components/ScrollNav";
 import { site } from "@/lib/site";
 
 const serif = Fraunces({
@@ -106,6 +107,7 @@ export default function RootLayout({
           </main>
           <BookingBar />
           <FloatingActions />
+          <ScrollNav />
           <Footer />
         </MenuOnlyProvider>
       </body>

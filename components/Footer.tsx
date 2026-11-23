@@ -41,18 +41,20 @@ export default function Footer() {
           </FooterCol>
 
           <FooterCol label="Öffnungszeiten">
-            <ul className="text-[14px] leading-[1.7] text-muted space-y-1">
-              <li className="flex justify-between gap-4">
-                <span>Montag bis Freitag</span>
-                <span>8 bis 13 Uhr</span>
+            <ul className="text-[14px] leading-[1.6] text-muted space-y-3">
+              <li>
+                <div className="text-ink/90">Montag bis Freitag</div>
+                <div>8 bis 12 Uhr</div>
               </li>
-              <li className="flex justify-between gap-4">
-                <span>Montag, Dienstag und Donnerstag Nachmittag</span>
-                <span>nach Vereinbarung</span>
+              <li>
+                <div className="text-ink/90">
+                  Montag, Dienstag und Donnerstag Nachmittag
+                </div>
+                <div>nach Vereinbarung</div>
               </li>
-              <li className="flex justify-between gap-4">
-                <span>Samstag und Sonntag</span>
-                <span>Geschlossen</span>
+              <li>
+                <div className="text-ink/90">Samstag und Sonntag</div>
+                <div>Geschlossen</div>
               </li>
             </ul>
           </FooterCol>

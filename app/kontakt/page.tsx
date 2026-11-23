@@ -13,7 +13,7 @@ export default function KontaktPage() {
     <section className="container-shell max-w-[900px] px-4 py-20 md:py-28">
       <Reveal>
         <section className="mb-14 md:mb-20">
-          <p className="kicker mb-3">Gut vorbereitet zu Ihrem Termin</p>
+          <p className="kicker mb-3">Gut vorbereitet für Ihren Termin</p>
           <h2 className="font-display text-[clamp(26px,2.8vw,36px)] leading-[1.15] mb-5">
             Was sollten Sie mitbringen?
           </h2>

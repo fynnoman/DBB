@@ -26,7 +26,6 @@ export default function ScrollNav() {
     };
   }, [pathname]);
 
-  if (pathname === "/") return null;
   if (!visible) return null;
 
   const scrollTo = () => {

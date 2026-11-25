@@ -85,6 +85,16 @@ export default function Footer() {
             >
               <LinkedInIcon />
             </a>
+            <a
+              href="https://www.jameda.de/profil/denisa-babeanu-bauer"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jameda-Profil von Dr. medic Denisa Babeanu-Bauer"
+              title="Jameda"
+              className="w-9 h-9 rounded-full grid place-items-center border border-cream/30 text-cream/85 hover:text-white hover:border-gold transition-colors"
+            >
+              <JamedaIcon />
+            </a>
             <span
               aria-hidden
               className="inline-block h-px w-8 bg-gradient-to-r from-gold to-transparent"
@@ -126,6 +136,20 @@ function LinkedInIcon() {
       aria-hidden
     >
       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.602 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.98 0 1.778-.773 1.778-1.729V1.729C24 .774 23.206 0 22.225 0z" />
+    </svg>
+  );
+}
+
+function JamedaIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden
+    >
+      <path d="M14.5 3.5c0-.828.672-1.5 1.5-1.5s1.5.672 1.5 1.5S16.828 5 16 5s-1.5-.672-1.5-1.5zM10 7h4v10.5c0 2.485-2.015 4.5-4.5 4.5a4.5 4.5 0 0 1-4.5-4.5v-1h4v1a.5.5 0 0 0 1 0V7z" />
     </svg>
   );
 }

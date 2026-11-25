@@ -86,6 +86,18 @@ export default function Kontakt() {
                   Vielen Dank, wir melden uns bei Ihnen.
                 </p>
               )}
+              <p className="mt-5 text-[13px] md:text-[13.5px] leading-[1.6] text-ink/70">
+                Das Kontaktformular dient ausschließlich organisatorischen
+                Anliegen. Eine medizinische Beratung erfolgt hierüber nicht. Bei
+                lebensbedrohlichen Notfällen wählen Sie bitte die{" "}
+                <a
+                  href="tel:112"
+                  className="font-semibold underline-offset-4 hover:underline"
+                >
+                  112
+                </a>
+                .
+              </p>
             </form>
           </Reveal>
         </div>

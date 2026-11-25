@@ -7,15 +7,45 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { site } from "@/lib/site";
 
+type MenuChild = {
+  href: string;
+  label: string;
+};
+
 type MenuLink = {
   href: string;
   label: string;
   group?: string;
+  children?: MenuChild[];
 };
 
 const menuLinks: MenuLink[] = [
   { href: "/", label: "Home", group: "Praxis" },
   { href: "/ueber-mich", label: "Über mich", group: "Praxis" },
+  {
+    href: "/untersuchungen",
+    label: "Untersuchungen",
+    group: "Praxis",
+    children: [
+      { href: "/untersuchungen#ruhe-ekg", label: "Ruhe-EKG" },
+      { href: "/untersuchungen#vektorkardiographie", label: "Vektorkardiographie" },
+      { href: "/untersuchungen#belastungs-ekg", label: "Belastungs-EKG" },
+      { href: "/untersuchungen#echokardiographie", label: "Echokardiographie" },
+      { href: "/untersuchungen#speckle-tracking", label: "Speckle-Tracking-Analyse" },
+      { href: "/untersuchungen#stressecho", label: "Stressechokardiographie" },
+      { href: "/untersuchungen#duplexsonographie", label: "Duplexsonographie der Halsgefäße" },
+      { href: "/untersuchungen#langzeit-ekg", label: "Langzeit-EKG" },
+      { href: "/untersuchungen#langzeit-rr", label: "Langzeit-Blutdruckmessung" },
+      { href: "/untersuchungen#praeoperativ", label: "Präoperative Risikobeurteilung" },
+      { href: "/untersuchungen#zweitmeinung", label: "Kardiologische Zweitmeinung" },
+      { href: "/untersuchungen#kardio-onkologie", label: "Kardio-Onkologie" },
+      { href: "/untersuchungen#kardio-rheumatologie", label: "Kardio-Rheumatologie" },
+      { href: "/untersuchungen#frauenherz", label: "Frauenherzsprechstunde" },
+      { href: "/untersuchungen#seltene-herzerkrankungen", label: "Seltene Herzerkrankungen" },
+      { href: "/untersuchungen#labordiagnostik", label: "Labordiagnostik" },
+    ],
+  },
+  { href: "/wichtige-informationen", label: "Wichtige Informationen", group: "Praxis" },
   { href: "/kontakt", label: "Kontakt", group: "Praxis" },
   { href: "/datenschutz", label: "Datenschutz", group: "Rechtliches" },
   { href: "/impressum", label: "Impressum", group: "Rechtliches" },
@@ -152,14 +182,29 @@ export default function Header() {
                                 <Link
                                   href={link.href}
                                   onClick={() => setOpen(false)}
-                                  className={`block py-[10px] border-b border-line last:border-b-0 text-[15px] transition-colors ${
+                                  className={`block py-[10px] border-b border-line text-[15px] transition-colors ${
                                     active
                                       ? "text-ink font-semibold"
                                       : "text-ink/85 hover:text-ink"
-                                  }`}
+                                  } ${link.children ? "" : "last:border-b-0"}`}
                                 >
                                   {link.label}
                                 </Link>
+                                {link.children && (
+                                  <ul className="mb-2 pl-3 border-l border-gold/40 ml-1">
+                                    {link.children.map((c) => (
+                                      <li key={c.href}>
+                                        <Link
+                                          href={c.href}
+                                          onClick={() => setOpen(false)}
+                                          className="block py-[7px] text-[13.5px] text-ink/70 hover:text-ink transition-colors"
+                                        >
+                                          {c.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                )}
                               </li>
                             );
                           })}
